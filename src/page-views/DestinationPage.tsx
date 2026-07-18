@@ -2,15 +2,29 @@ import { Link } from "@tanstack/react-router";
 import type { Lang } from "@/i18n/routes";
 import { ROUTES } from "@/i18n/routes";
 import { getContent } from "@/i18n/content";
+import { SITE_CONFIG } from "@/config/site";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
 import costaBrava from "@/assets/costa-brava.jpg";
 import mallorca from "@/assets/mallorca.jpg";
 import ibiza from "@/assets/ibiza.jpg";
 import barcelona from "@/assets/barcelona.jpg";
+import andalusia from "@/assets/andalusia.jpg";
+import catalonia from "@/assets/catalonia.jpg";
 import oliveGrove from "@/assets/olive-grove.jpg";
+import interior from "@/assets/interior.jpg";
 
-const REGION_IMAGES = [barcelona, costaBrava, mallorca, ibiza, oliveGrove];
+// Map keyed by destination.regions[].key
+const REGION_IMAGE_BY_KEY: Record<string, string> = {
+  barcelona,
+  catalonia,
+  "costa-brava": costaBrava,
+  mallorca,
+  ibiza,
+  andalusia,
+  seville: oliveGrove,
+  granada: interior,
+};
 
 export function DestinationPage({ lang }: { lang: Lang }) {
   const c = getContent(lang);
@@ -76,15 +90,14 @@ export function DestinationPage({ lang }: { lang: Lang }) {
                   </ul>
                 )}
 
-                {/* Special: after "regions" section, render region cards */}
                 {s.id === "regions" && (
                   <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {t.regions.map((r, i) => (
-                      <article key={r.name} className="group">
+                    {t.regions.map((r) => (
+                      <article key={r.key} className="group">
                         <div className="aspect-[4/3] overflow-hidden">
                           <img
-                            src={REGION_IMAGES[i]}
-                            alt={r.name}
+                            src={REGION_IMAGE_BY_KEY[r.key] ?? oliveGrove}
+                            alt={`${r.name} wedding scene`}
                             loading="lazy"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                           />
@@ -96,9 +109,8 @@ export function DestinationPage({ lang }: { lang: Lang }) {
                   </div>
                 )}
 
-                {/* Special: after "common-mistakes" section, render the list */}
                 {s.id === "common-mistakes" && (
-                  <ol className="mt-8 space-y-6 counter-reset-none">
+                  <ol className="mt-8 space-y-6">
                     {t.mistakes.items.map((it, i) => (
                       <li key={i} className="grid grid-cols-[auto_1fr] gap-5">
                         <span className="font-serif text-3xl text-gold/60 leading-none">
@@ -112,12 +124,18 @@ export function DestinationPage({ lang }: { lang: Lang }) {
               </section>
             ))}
 
-            {/* Closing card */}
             <section className="p-10 md:p-14 bg-sand/60 border-l-2 border-gold">
               <h2 className="text-balance">{t.closing.title}</h2>
               <p className="mt-4 text-lg text-navy/80 leading-relaxed">{t.closing.body}</p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Link to={ROUTES.contact[lang]} className="btn-primary">{c.common.bookCall}</Link>
+                <a
+                  href={SITE_CONFIG.discoveryCallUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  {c.common.bookCall}
+                </a>
                 <Link to={ROUTES.services[lang]} className="btn-outline">{c.common.exploreServices}</Link>
               </div>
             </section>

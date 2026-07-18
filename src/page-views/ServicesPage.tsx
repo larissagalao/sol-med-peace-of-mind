@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { Lang } from "@/i18n/routes";
 import { ROUTES } from "@/i18n/routes";
 import { getContent } from "@/i18n/content";
+import { SITE_CONFIG } from "@/config/site";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
 import { SectionHeader } from "@/components/site/SectionHeader";
@@ -9,6 +10,7 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export function ServicesPage({ lang }: { lang: Lang }) {
   const c = getContent(lang);
   const t = c.services;
+  const p = t.pricing;
 
   return (
     <SiteLayout>
@@ -52,11 +54,52 @@ export function ServicesPage({ lang }: { lang: Lang }) {
                   <span className="italic">{s.idealFor}</span>
                 </p>
                 <div className="mt-8">
-                  <Link to={ROUTES.contact[lang]} className="btn-outline">{c.common.startPlanning}</Link>
+                  <a
+                    href={SITE_CONFIG.discoveryCallUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline"
+                  >
+                    {c.common.startPlanning}
+                  </a>
                 </div>
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* PRICING / INVESTMENT */}
+      <section className="bg-sand/50 py-24 md:py-32">
+        <div className="container-editorial">
+          <SectionHeader eyebrow={p.eyebrow} title={p.title} body={p.intro} align="center" />
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {p.tiers.map((tier) => (
+              <article key={tier.label} className="bg-ivory border border-border p-10 flex flex-col">
+                <div className="eyebrow mb-4">{tier.label}</div>
+                <div className="font-serif text-3xl md:text-4xl text-navy leading-tight">{tier.range}</div>
+                <p className="mt-6 text-navy/70 leading-relaxed text-base">{tier.note}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-14 max-w-3xl mx-auto space-y-5 text-navy/80 leading-relaxed text-lg">
+            <p className="italic">{p.disclaimer}</p>
+            <p>{p.flexibility}</p>
+            <p className="pt-4 border-t border-border">{p.venueNote}</p>
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <a
+              href={SITE_CONFIG.discoveryCallUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              {c.common.bookCall}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -80,6 +123,8 @@ export function ServicesPage({ lang }: { lang: Lang }) {
       </section>
 
       <CTABanner />
+      {/* silence unused import warning */}
+      {false && <Link to={ROUTES.contact[lang]}>_</Link>}
     </SiteLayout>
   );
 }

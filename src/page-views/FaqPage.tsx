@@ -1,7 +1,6 @@
-import { Link } from "@tanstack/react-router";
 import type { Lang } from "@/i18n/routes";
-import { ROUTES } from "@/i18n/routes";
 import { getContent } from "@/i18n/content";
+import { SITE_CONFIG } from "@/config/site";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
 import { FAQ } from "@/components/site/FAQ";
@@ -31,7 +30,14 @@ export function FaqPage({ lang }: { lang: Lang }) {
           <h2>{t.closing.title}</h2>
           <p className="mt-4 text-lg text-navy/80 leading-relaxed">{t.closing.body}</p>
           <div className="mt-8">
-            <Link to={ROUTES.contact[lang]} className="btn-primary">{c.common.bookCall}</Link>
+            <a
+              href={SITE_CONFIG.discoveryCallUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              {c.common.bookCall}
+            </a>
           </div>
         </div>
       </section>
