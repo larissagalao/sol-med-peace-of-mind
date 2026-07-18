@@ -4,8 +4,10 @@ import { Logo } from "./Logo";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
 import { ROUTES, ALL_PAGE_IDS, altPath, type PageId } from "@/i18n/routes";
+import { SITE_CONFIG } from "@/config/site";
 
 const NAV_ITEMS: { id: PageId; key: keyof ReturnType<typeof getContent>["nav"] }[] = [
+  { id: "home", key: "home" },
   { id: "about", key: "about" },
   { id: "services", key: "services" },
   { id: "destination", key: "destination" },
@@ -34,7 +36,6 @@ export function Navbar() {
 
   const homeHref = ROUTES.home[lang];
 
-  // Find the current pageId to route the language switcher to its mirror.
   const currentPageId: PageId =
     (ALL_PAGE_IDS.find(
       (id) => ROUTES[id].en === pathname || ROUTES[id].pt === pathname,
@@ -53,21 +54,26 @@ export function Navbar() {
           scrolled || open ? "bg-ivory/95 backdrop-blur-md border-b border-border" : "bg-transparent"
         }`}
       >
-        <div className="container-editorial flex items-center justify-between py-5">
-          <Link to={homeHref} className="flex items-center gap-3">
-            <Logo variant="mark" className="w-8 h-8" />
-            <span className="font-serif text-xl tracking-tight text-navy hidden sm:inline">
+        <div className="container-editorial flex items-center justify-between py-4">
+          <Link
+            to={homeHref}
+            className="flex items-center gap-3"
+            aria-label={c.nav.home}
+          >
+            <Logo variant="mark" className="w-12 h-12 md:w-14 md:h-14" />
+            <span className="font-serif text-xl md:text-2xl tracking-tight text-navy hidden sm:inline leading-none">
               Sol Mediterraneo
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-7">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.id}
                 to={ROUTES[item.id][lang]}
                 className="text-sm text-navy/80 hover:text-gold transition-colors font-medium"
                 activeProps={{ className: "text-gold" }}
+                activeOptions={{ exact: item.id === "home" }}
               >
                 {c.nav[item.key]}
               </Link>
@@ -96,9 +102,14 @@ export function Navbar() {
                 PT
               </button>
             </div>
-            <Link to={ROUTES.contact[lang]} className="hidden md:inline-flex btn-primary text-[0.7rem] py-3 px-5">
+            <a
+              href={SITE_CONFIG.discoveryCallUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex btn-primary text-[0.7rem] py-3 px-5"
+            >
               {c.nav.cta}
-            </Link>
+            </a>
             <button
               className="lg:hidden text-navy p-2"
               onClick={() => setOpen((v) => !v)}
@@ -145,14 +156,18 @@ export function Navbar() {
                   PT
                 </button>
               </div>
-              <Link to={ROUTES.contact[lang]} className="btn-primary self-start mt-2">
+              <a
+                href={SITE_CONFIG.discoveryCallUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary self-start mt-2"
+              >
                 {c.nav.cta}
-              </Link>
+              </a>
             </div>
           </div>
         )}
       </header>
-      {/* Spacer so fixed nav doesn't overlap content */}
       <div className="h-20" aria-hidden />
     </>
   );

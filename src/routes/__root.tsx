@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { LanguageProvider } from "../i18n/LanguageProvider";
+import { SITE_CONFIG } from "../config/site";
 
 function NotFoundComponent() {
   return (
@@ -71,14 +72,18 @@ const ORG_JSONLD = {
   name: "Sol Mediterraneo Weddings Co.",
   description:
     "Boutique destination wedding planner in Spain, specializing in weddings for international couples.",
-  areaServed: [
-    { "@type": "Country", name: "Spain" },
-  ],
+  areaServed: [{ "@type": "Country", name: "Spain" }],
   knowsLanguage: ["en", "pt", "es", "ca"],
   email: "hello@solmediterraneo.com",
   address: { "@type": "PostalAddress", addressCountry: "ES" },
   sameAs: [],
 };
+
+const GA_ID = SITE_CONFIG.gaMeasurementId;
+const GA_INIT = `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`;
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -109,11 +114,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap",
       },
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(ORG_JSONLD) },
+      { src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`, async: true },
+      { children: GA_INIT },
     ],
   }),
   shellComponent: RootShell,
@@ -139,7 +146,6 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
-  // Initial lang inferred from current URL — /pt/... => pt, otherwise en.
   const initialLang =
     typeof window !== "undefined" &&
     (window.location.pathname === "/pt" || window.location.pathname.startsWith("/pt/"))
@@ -149,7 +155,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider initialLang={initialLang}>
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        {/* Required: nested routes render here. */}
         <Outlet />
       </LanguageProvider>
     </QueryClientProvider>

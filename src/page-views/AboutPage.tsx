@@ -1,7 +1,6 @@
-import { Link } from "@tanstack/react-router";
 import type { Lang } from "@/i18n/routes";
-import { ROUTES } from "@/i18n/routes";
 import { getContent } from "@/i18n/content";
+import { SITE_CONFIG } from "@/config/site";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
 import { SectionHeader } from "@/components/site/SectionHeader";
@@ -50,25 +49,51 @@ export function AboutPage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* TRUST */}
+      {/* BOUTIQUE / 12 WEDDINGS */}
       <section className="container-editorial py-24 md:py-32">
-        <SectionHeader eyebrow="02" title={t.trust.title} align="center" />
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
-          {t.trust.items.map((it, i) => (
-            <article key={it.name} className="grid grid-cols-[auto_1fr] gap-6">
-              <span className="font-serif text-3xl text-gold leading-none pt-1">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3 className="text-xl font-serif text-navy">{it.name}</h3>
-                <p className="mt-3 text-navy/75 leading-relaxed">{it.body}</p>
-              </div>
-            </article>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-5 text-center md:text-left">
+            <div className="eyebrow mb-6">{t.boutique.eyebrow}</div>
+            <div className="font-serif text-[10rem] md:text-[13rem] leading-[0.9] text-gold">
+              {t.boutique.stat.number}
+            </div>
+            <div className="mt-4 text-sm tracking-[0.25em] uppercase text-navy/70">
+              {t.boutique.stat.label}
+            </div>
+          </div>
+          <div className="md:col-span-6 md:col-start-7">
+            <h2 className="text-balance">{t.boutique.title}</h2>
+            <p className="mt-6 text-xl font-serif italic text-navy/85 leading-snug">
+              {t.boutique.lead}
+            </p>
+            <div className="mt-6 space-y-5 text-lg text-navy/80 leading-relaxed">
+              {t.boutique.body.map((p, i) => <p key={i}>{p}</p>)}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* PHILOSOPHY — full-width editorial image */}
+      {/* TRUST */}
+      <section className="bg-sand/40 py-24 md:py-32">
+        <div className="container-editorial">
+          <SectionHeader eyebrow="02" title={t.trust.title} align="center" />
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
+            {t.trust.items.map((it, i) => (
+              <article key={it.name} className="grid grid-cols-[auto_1fr] gap-6">
+                <span className="font-serif text-3xl text-gold leading-none pt-1">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="text-xl font-serif text-navy">{it.name}</h3>
+                  <p className="mt-3 text-navy/75 leading-relaxed">{it.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PHILOSOPHY */}
       <section className="relative isolate overflow-hidden">
         <img
           src={oliveGrove}
@@ -107,8 +132,14 @@ export function AboutPage({ lang }: { lang: Lang }) {
           ))}
         </ol>
         <div className="mt-16 flex flex-wrap gap-4">
-          <Link to={ROUTES.contact[lang]} className="btn-primary">{c.common.bookCall}</Link>
-          <Link to={ROUTES.services[lang]} className="btn-outline">{c.common.exploreServices}</Link>
+          <a
+            href={SITE_CONFIG.discoveryCallUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            {c.common.bookCall}
+          </a>
         </div>
       </section>
 

@@ -2,22 +2,25 @@ import { Link } from "@tanstack/react-router";
 import type { Lang } from "@/i18n/routes";
 import { ROUTES } from "@/i18n/routes";
 import { getContent } from "@/i18n/content";
+import { SITE_CONFIG } from "@/config/site";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
 import { SectionHeader } from "@/components/site/SectionHeader";
-import heroVilla from "@/assets/hero-villa.jpg";
 import tablescape from "@/assets/tablescape.jpg";
 import costaBrava from "@/assets/costa-brava.jpg";
 import mallorca from "@/assets/mallorca.jpg";
 import ibiza from "@/assets/ibiza.jpg";
 import barcelona from "@/assets/barcelona.jpg";
-import oliveGrove from "@/assets/olive-grove.jpg";
+import andalusia from "@/assets/andalusia.jpg";
+import catalonia from "@/assets/catalonia.jpg";
 
-const REGION_IMAGES = [barcelona, costaBrava, mallorca, ibiza, oliveGrove];
+// Order mirrors home.regions.items in content.ts
+const REGION_IMAGES = [barcelona, catalonia, costaBrava, mallorca, ibiza, andalusia];
 
 export function HomePage({ lang }: { lang: Lang }) {
   const c = getContent(lang);
   const t = c.home;
+  const heroImage = SITE_CONFIG.heroImage;
 
   return (
     <SiteLayout>
@@ -25,39 +28,82 @@ export function HomePage({ lang }: { lang: Lang }) {
       <section className="relative isolate -mt-20 pt-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroVilla}
+            src={heroImage}
             alt="Mediterranean villa terrace set for a wedding dinner at golden hour"
             width={1920}
             height={1280}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             fetchPriority="high"
           />
+          {/* Editorial darkening: navy from bottom, gentle ivory kiss at top edge for the fixed nav. */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, color-mix(in oklab, var(--ivory) 85%, transparent) 0%, color-mix(in oklab, var(--ivory) 30%, transparent) 40%, color-mix(in oklab, var(--navy) 30%, transparent) 100%)",
+                "linear-gradient(180deg, color-mix(in oklab, var(--navy) 55%, transparent) 0%, color-mix(in oklab, var(--navy) 35%, transparent) 40%, color-mix(in oklab, var(--navy) 78%, transparent) 100%)",
+            }}
+            aria-hidden
+          />
+          {/* Focused vignette behind headline for guaranteed contrast */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse at 30% 70%, color-mix(in oklab, var(--navy) 55%, transparent) 0%, transparent 60%)",
             }}
             aria-hidden
           />
         </div>
-        <div className="relative container-editorial min-h-[92vh] flex flex-col justify-end pb-20 md:pb-32">
+        <div className="relative container-editorial min-h-[92vh] flex flex-col justify-end pb-24 md:pb-32">
           <div className="max-w-3xl fade-up">
-            <div className="eyebrow mb-6 text-gold">{t.hero.eyebrow}</div>
-            <h1 className="text-navy text-balance whitespace-pre-line">{t.hero.title}</h1>
-            <p className="mt-8 text-lg md:text-xl text-navy/80 max-w-2xl leading-relaxed">
+            <div className="eyebrow mb-6 text-gold-soft">{t.hero.eyebrow}</div>
+            <h1 className="text-ivory text-balance whitespace-pre-line drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]">
+              {t.hero.title}
+            </h1>
+            <p className="mt-8 text-lg md:text-xl text-ivory/95 max-w-2xl leading-relaxed">
               {t.hero.body}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to={ROUTES.contact[lang]} className="btn-primary">
+              <a
+                href={SITE_CONFIG.discoveryCallUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+                style={{ background: "var(--gold)", borderColor: "var(--gold)" }}
+              >
                 {t.hero.primary}
-              </Link>
-              <Link to={ROUTES.services[lang]} className="btn-outline">
+              </a>
+              <Link
+                to={ROUTES.services[lang]}
+                className="btn-outline"
+                style={{ color: "var(--ivory)", borderColor: "color-mix(in oklab, var(--ivory) 60%, transparent)" }}
+              >
                 {t.hero.secondary}
               </Link>
             </div>
           </div>
         </div>
+        {/* Scroll cue */}
+        <a
+          href="#promise"
+          aria-label={c.common.scrollCue}
+          className="absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-8 flex flex-col items-center gap-2 text-ivory/85 hover:text-gold transition-colors"
+        >
+          <span className="text-[0.65rem] tracking-[0.3em] uppercase font-medium">
+            {c.common.scrollCue}
+          </span>
+          <span className="scroll-cue">
+            <svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden>
+              <rect x="1" y="1" width="20" height="28" rx="10" />
+              <line x1="11" y1="7" x2="11" y2="13" strokeLinecap="round" />
+            </svg>
+          </span>
+          <span className="scroll-cue" style={{ animationDelay: "150ms" }}>
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden>
+              <path d="M2 2 L9 8 L16 2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </a>
       </section>
 
       {/* TRUST STRIP */}
@@ -73,7 +119,7 @@ export function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       {/* PROMISE */}
-      <section className="container-editorial py-24 md:py-32">
+      <section id="promise" className="container-editorial py-24 md:py-32 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-5">
             <div className="eyebrow mb-5">{t.promise.eyebrow}</div>
@@ -94,17 +140,17 @@ export function HomePage({ lang }: { lang: Lang }) {
       <section className="relative py-24 md:py-32 bg-sand/50">
         <div className="container-editorial">
           <SectionHeader eyebrow={t.services.eyebrow} title={t.services.title} body={t.services.intro} align="center" />
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.services.items.map((s, i) => (
               <article
                 key={s.name}
-                className="bg-ivory p-10 flex flex-col group hover:shadow-elegant transition-all duration-500 border border-border/60"
+                className="bg-ivory p-8 flex flex-col group hover:shadow-elegant transition-all duration-500 border border-border/60"
               >
-                <div className="font-serif text-6xl text-gold/40 leading-none mb-6">
+                <div className="font-serif text-5xl text-gold/40 leading-none mb-6">
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="text-navy">{s.name}</h3>
-                <p className="mt-4 text-navy/75 leading-relaxed flex-1">{s.body}</p>
+                <h3 className="text-navy text-xl">{s.name}</h3>
+                <p className="mt-4 text-navy/75 leading-relaxed flex-1 text-base">{s.body}</p>
                 <Link
                   to={ROUTES.services[lang]}
                   className="mt-8 inline-flex items-center gap-2 text-xs tracking-widest uppercase text-gold group-hover:gap-3 transition-all"
@@ -117,7 +163,7 @@ export function HomePage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* EDITORIAL IMAGE + PROCESS */}
+      {/* PROCESS */}
       <section className="container-editorial py-24 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5">
@@ -159,20 +205,20 @@ export function HomePage({ lang }: { lang: Lang }) {
             <h2 className="text-ivory text-balance">{t.regions.title}</h2>
             <p className="mt-6 text-lg text-ivory/75 leading-relaxed">{t.regions.intro}</p>
           </div>
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {t.regions.items.map((r, i) => (
               <article key={r.name} className="group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={REGION_IMAGES[i]}
-                    alt={r.name}
+                    alt={`${r.name} wedding scene`}
                     loading="lazy"
                     width={800}
                     height={1000}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mt-5 text-ivory text-2xl">{r.name}</h3>
+                <h3 className="mt-5 text-ivory text-xl">{r.name}</h3>
                 <p className="mt-2 text-sm text-ivory/70 leading-relaxed">{r.body}</p>
               </article>
             ))}

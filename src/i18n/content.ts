@@ -1,5 +1,9 @@
 // All copy for the site — English and Portuguese.
 // Keep strings in sync between languages. No fallback: every field must exist in both.
+//
+// Localization rule (PT): industry terms "Wedding Planner", "Wedding Planning"
+// and "Destination Wedding" are intentionally kept in English in Portuguese
+// copy — they are commonly used by Portuguese-speaking clients.
 
 import type { Lang } from "./routes";
 
@@ -17,9 +21,16 @@ export type PageMeta = {
   description: string;
 };
 
+export type PricingTier = {
+  label: string;
+  range: string;
+  note: string;
+};
+
 export type Content = {
   brand: { name: string; tagline: string };
   nav: {
+    home: string;
     about: string;
     services: string;
     destination: string;
@@ -32,11 +43,7 @@ export type Content = {
   };
   footer: {
     tagline: string;
-    columns: {
-      explore: string;
-      company: string;
-      contact: string;
-    };
+    columns: { explore: string; company: string; contact: string };
     based: string;
     email: string;
     rights: string;
@@ -52,6 +59,7 @@ export type Content = {
     getInTouch: string;
     viewAll: string;
     languageLabel: string;
+    scrollCue: string;
   };
   ctaBanner: {
     eyebrow: string;
@@ -68,11 +76,7 @@ export type Content = {
       primary: string;
       secondary: string;
     };
-    promise: {
-      eyebrow: string;
-      title: string;
-      body: string[];
-    };
+    promise: { eyebrow: string; title: string; body: string[] };
     trust: { label: string }[];
     services: {
       eyebrow: string;
@@ -92,10 +96,7 @@ export type Content = {
       intro: string;
       items: { name: string; body: string }[];
     };
-    testimonialsSection: {
-      eyebrow: string;
-      title: string;
-    };
+    testimonialsSection: { eyebrow: string; title: string };
   };
   about: {
     meta: PageMeta;
@@ -103,10 +104,14 @@ export type Content = {
     story: { title: string; body: string[] };
     trust: { title: string; items: { name: string; body: string }[] };
     philosophy: { title: string; body: string[] };
-    howWeWork: {
+    boutique: {
+      eyebrow: string;
       title: string;
-      steps: { name: string; body: string }[];
+      lead: string;
+      body: string[];
+      stat: { number: string; label: string };
     };
+    howWeWork: { title: string; steps: { name: string; body: string }[] };
   };
   services: {
     meta: PageMeta;
@@ -119,17 +124,22 @@ export type Content = {
       includes: string[];
       idealFor: string;
     }[];
-    concierge: {
+    concierge: { title: string; body: string; items: string[] };
+    pricing: {
+      eyebrow: string;
       title: string;
-      body: string;
-      items: string[];
+      intro: string;
+      tiers: PricingTier[];
+      disclaimer: string;
+      flexibility: string;
+      venueNote: string;
     };
   };
   destination: {
     meta: PageMeta;
     hero: { eyebrow: string; title: string; body: string };
     sections: { id: string; title: string; body: string[]; list?: string[] }[];
-    regions: { name: string; body: string }[];
+    regions: { key: string; name: string; body: string }[];
     mistakes: { title: string; items: string[] };
     closing: { title: string; body: string };
   };
@@ -137,6 +147,19 @@ export type Content = {
     meta: PageMeta;
     hero: { eyebrow: string; title: string; body: string };
     items: Testimonial[];
+    caseStudy: {
+      eyebrow: string;
+      title: string;
+      couple: string;
+      location: string;
+      dateLabel: string;
+      story: string[];
+      highlightsTitle: string;
+      highlights: string[];
+      galleryEyebrow: string;
+      galleryTitle: string;
+      galleryNote: string;
+    };
   };
   faq: {
     meta: PageMeta;
@@ -165,15 +188,13 @@ export type Content = {
 
 /* ---------- ENGLISH ---------- */
 const en: Content = {
-  brand: {
-    name: "Sol Mediterraneo",
-    tagline: "Weddings Co.",
-  },
+  brand: { name: "Sol Mediterraneo", tagline: "Weddings Co." },
   nav: {
+    home: "Home",
     about: "About",
     services: "Services",
     destination: "Weddings in Spain",
-    testimonials: "Testimonials",
+    testimonials: "Real Wedding",
     faq: "FAQ",
     contact: "Contact",
     cta: "Book a Discovery Call",
@@ -182,11 +203,7 @@ const en: Content = {
   },
   footer: {
     tagline: "You keep living your life. We take care of everything in Spain.",
-    columns: {
-      explore: "Explore",
-      company: "Company",
-      contact: "Get in touch",
-    },
+    columns: { explore: "Explore", company: "Company", contact: "Get in touch" },
     based: "Based in Spain. Planning for couples worldwide.",
     email: "hello@solmediterraneo.com",
     rights: "All rights reserved.",
@@ -202,6 +219,7 @@ const en: Content = {
     getInTouch: "Get in touch",
     viewAll: "View all",
     languageLabel: "Language",
+    scrollCue: "Scroll to explore",
   },
   ctaBanner: {
     eyebrow: "The next step",
@@ -214,10 +232,10 @@ const en: Content = {
     meta: {
       title: "Sol Mediterraneo Weddings Co. — Destination Wedding Planner in Spain",
       description:
-        "A boutique destination wedding planner in Spain. We plan quiet, elegant weddings for international couples — so you can keep living your life while we take care of everything on the ground.",
+        "A boutique Destination Wedding planner in Spain. We plan quiet, elegant weddings for international couples — so you can keep living your life while we take care of everything on the ground.",
     },
     hero: {
-      eyebrow: "Destination weddings in Spain",
+      eyebrow: "Destination Weddings in Spain",
       title: "You keep living your life.\nWe take care of everything in Spain.",
       body: "Sol Mediterraneo is a boutique wedding consultancy for international couples getting married in Spain. Local expertise, one point of contact, and a calmer path from first idea to the last song.",
       primary: "Book a Discovery Call",
@@ -225,7 +243,7 @@ const en: Content = {
     },
     promise: {
       eyebrow: "Our promise",
-      title: "We don't sell wedding planning. We sell peace of mind.",
+      title: "We don't sell Wedding Planning. We sell peace of mind.",
       body: [
         "Planning a wedding from another country shouldn't feel like a second full-time job. Different language, different suppliers, different rules, different currency — from abroad, every small decision grows a little heavier than it should.",
         "We are your trusted local partner on the ground. We speak the languages, we know the venues, we've worked with the vendors for years. You keep your calendar. We keep everything in Spain organized, honest, and moving forward.",
@@ -239,21 +257,13 @@ const en: Content = {
     ],
     services: {
       eyebrow: "How we help",
-      title: "Three ways to plan with us",
+      title: "Four ways to plan with us",
       intro: "Every couple arrives at a different stage. We meet you where you are.",
       items: [
-        {
-          name: "Full Planning",
-          body: "From the first venue longlist to the last vendor invoice. We coordinate every decision, meeting, and moving piece — you enjoy the process, we hold the map.",
-        },
-        {
-          name: "Partial Planning",
-          body: "You've started. Perhaps you have a venue, or a date, or a rough idea. We step in, review what's on the table, and take the remaining planning off your hands.",
-        },
-        {
-          name: "Elopements & Micro-weddings",
-          body: "Intimate ceremonies of two to thirty. Legal or symbolic. A cliff above the sea, a small chapel, a private terrace — quietly and beautifully arranged.",
-        },
+        { name: "Full Planning", body: "From the first venue longlist to the last vendor invoice. We coordinate every decision, meeting, and moving piece — you enjoy the process, we hold the map." },
+        { name: "Partial Planning", body: "You've started. Perhaps you have a venue, or a date, or a rough idea. We step in, review what's on the table, and take the remaining planning off your hands." },
+        { name: "Wedding Day Coordination", body: "You've planned the wedding. We step in as your local coordinator to manage suppliers, timelines, and every detail on the day — so you can actually enjoy it." },
+        { name: "Elopements & Micro-weddings", body: "Intimate ceremonies of two to thirty. Legal or symbolic. A cliff above the sea, a small chapel, a private terrace — quietly and beautifully arranged." },
       ],
     },
     process: {
@@ -272,16 +282,17 @@ const en: Content = {
       title: "The regions we know by heart",
       intro: "We plan across Spain, with a boutique focus on Catalonia and the Balearics.",
       items: [
-        { name: "Barcelona", body: "City weddings in restored palaces, private rooftops, and Modernista courtyards." },
-        { name: "Costa Brava", body: "Cliffside villas above the Mediterranean, whitewashed chapels, and pine-scented coves." },
-        { name: "Mallorca", body: "Fincas in the Tramuntana, olive-grove ceremonies, and coastal boutique hotels." },
-        { name: "Ibiza", body: "Whitewashed country estates, slow candlelit dinners, and long, warm evenings." },
-        { name: "Andalusia", body: "Hilltop haciendas, courtyard patios, and old-world Spanish elegance." },
+        { name: "Barcelona", body: "Elegant city weddings in restored palaces, private rooftops, and Modernista courtyards." },
+        { name: "Catalonia", body: "Vineyards, masias, country houses, sea views, olive groves and charming villages. Far more than Barcelona." },
+        { name: "Costa Brava", body: "Beach ceremonies, sea cliffs, Mediterranean villas and pine-scented coves." },
+        { name: "Mallorca", body: "Luxury seaside venues, olive groves, and stone fincas across the Tramuntana." },
+        { name: "Ibiza", body: "Elegant beach weddings, boutique luxury and slow sunset ceremonies." },
+        { name: "Andalusia", body: "Historic estates, tiled courtyards, orange trees and old-world Spanish elegance." },
       ],
     },
     testimonialsSection: {
       eyebrow: "In their own words",
-      title: "Couples who trusted us with Spain.",
+      title: "A couple who trusted us with Spain.",
     },
   },
 
@@ -289,7 +300,7 @@ const en: Content = {
     meta: {
       title: "About — Sol Mediterraneo Weddings Co.",
       description:
-        "Meet Sol Mediterraneo — a boutique destination wedding consultancy in Spain, planning weddings for international couples living abroad. Local, honest, and quietly obsessive about the details.",
+        "Meet Sol Mediterraneo — a boutique Destination Wedding consultancy in Spain, planning weddings for international couples. Brazilian founder living in Spain, bridging both worlds.",
     },
     hero: {
       eyebrow: "About us",
@@ -299,17 +310,17 @@ const en: Content = {
     story: {
       title: "Our story",
       body: [
-        "Sol Mediterraneo was born out of a simple observation: international couples were falling in love with the idea of a wedding in Spain, and then quietly drowning in the logistics of pulling it off from abroad.",
-        "We started as local hosts. We knew the villas, the vendors, the mayors' offices, the little coves you could only reach by foot. Friends started asking us to help. Then friends of friends. Then couples in Brazil, in London, in New York, in Sydney.",
-        "Today, we are a boutique consultancy. We stay small on purpose — a handful of weddings a year, each planned end to end by the same team. That is how we protect the calm we promise our couples.",
+        "I'm Brazilian. I built my life in Spain — and along the way I learned this country the slow way: living in it, cooking in it, arguing about wine in it, driving its back roads on a Sunday.",
+        "Sol Mediterraneo was born out of a simple observation: international couples were falling in love with the idea of a wedding in Spain, and then quietly drowning in the logistics of pulling it off from abroad. Different language, different suppliers, a different way of doing business.",
+        "Because I understand international couples and I understand the local Spanish wedding world, I bridge the two naturally. Nothing gets lost in translation — culturally or literally.",
       ],
     },
     trust: {
       title: "Why couples trust us",
       items: [
-        { name: "We are local, and we live here", body: "We are not a Spanish office of a foreign brand. We are on the ground, in the country, every week of the year — reachable in the same time zone as your venue." },
+        { name: "Bridging two worlds", body: "Brazilian by origin, based in Spain. I understand how international couples think, and I understand how Spanish and Catalan suppliers actually work. That combination is the whole point." },
         { name: "One team, from first email to farewell", body: "You will not be handed off to a junior coordinator after signing. The person you meet on the discovery call is the person who runs your wedding week." },
-        { name: "We speak your languages", body: "English and Portuguese fluently. Spanish and Catalan natively. Every conversation with your vendors goes through us, in the language that works." },
+        { name: "We work in your language", body: "Fluent English and native Portuguese. I work with Spanish and Catalan suppliers every week, so every conversation with your vendors goes through me — in the language that works." },
         { name: "Our vendors are our long-term partners", body: "We work with the same florists, chefs, photographers, and musicians year after year. You get quality that has been vetted for you — no surprises on the day." },
         { name: "Honesty over upsell", body: "If a decision won't move the wedding forward, we'll tell you. If a supplier is a poor fit, we'll steer you elsewhere. We are advisors first." },
         { name: "Fewer weddings, deeper care", body: "We deliberately cap the number of weddings we take each year. Your wedding is not one of many — it has our full attention." },
@@ -321,6 +332,16 @@ const en: Content = {
         "A wedding in Spain should feel like the best version of a long, slow, sunlit dinner — with people you love, in a place you'll return to for the rest of your life. That is what we plan for.",
         "We are not maximalists. We do not chase trends. We favour natural materials, honest food, generous light, and a rhythm that lets you actually be there. Elegance, to us, is what's left after you remove the noise.",
       ],
+    },
+    boutique: {
+      eyebrow: "Boutique by design",
+      title: "A maximum of 12 weddings a year.",
+      lead: "We intentionally cap the calendar. It is the single most important decision we make.",
+      body: [
+        "Twelve weddings a year is what allows us to give every couple personalized attention, real availability when you need us, exceptional organization on the day, and a close relationship that lasts long after the last song.",
+        "It means we know your parents' names. It means we answer the phone. It means your wedding week has our whole team, not a fragment of it.",
+      ],
+      stat: { number: "12", label: "weddings per year, maximum" },
     },
     howWeWork: {
       title: "How we work with you",
@@ -337,7 +358,7 @@ const en: Content = {
     meta: {
       title: "Services — Wedding Planning in Spain | Sol Mediterraneo",
       description:
-        "Full planning, partial planning, and elopement services for destination weddings in Spain. Discover the right level of support for your wedding and how we work.",
+        "Full planning, partial planning, wedding day coordination, and elopement services for Destination Weddings in Spain. Discover the right level of support for your wedding.",
     },
     hero: {
       eyebrow: "Services",
@@ -345,7 +366,7 @@ const en: Content = {
       body: "Every couple arrives at a different point. Some come to us with only a country in mind. Others already have a venue and simply want a calmer path forward. Here is how we work.",
     },
     intro:
-      "Our services are boutique by design. We take on a limited number of weddings each year so that every couple has the full attention of the same team from first email to farewell.",
+      "Our services are boutique by design. We take on a maximum of twelve weddings a year so that every couple has the full attention of the same team from first email to farewell.",
     items: [
       {
         name: "Full Planning",
@@ -378,6 +399,20 @@ const en: Content = {
         idealFor: "Couples who have started planning themselves but want the wedding week handled locally.",
       },
       {
+        name: "Wedding Day Coordination",
+        tagline: "You planned it. We run it.",
+        body: "For couples who have planned their own wedding but want an experienced local coordinator to manage suppliers, timelines and every detail on the day — so you can be fully present, not on the phone.",
+        includes: [
+          "Handover meeting to absorb everything you've built",
+          "Vendor confirmation and single point of contact in the final weeks",
+          "Detailed run-of-show and minute-by-minute timeline",
+          "On-site coordination from set-up to farewell",
+          "Ceremony cueing and reception flow",
+          "Discreet problem-solving throughout the day",
+        ],
+        idealFor: "Couples who have done the planning themselves and want the wedding day handled by a professional on the ground.",
+      },
+      {
         name: "Elopements & Micro-Weddings",
         tagline: "Intimate ceremonies, up to 30 guests.",
         body: "A cliff above the Mediterranean. A stone chapel above the olive groves. A private terrace with the ten people who matter most. Quiet, beautiful, and thoughtfully arranged.",
@@ -403,17 +438,34 @@ const en: Content = {
         "Airport transfers and in-country transport",
       ],
     },
+    pricing: {
+      eyebrow: "Investment",
+      title: "A wedding budget is a conversation, not a price list.",
+      intro:
+        "There is no fixed price for a wedding in Spain. Your investment depends on guest count, region, venue, season, level of luxury, and the logistics of the week. What we can share are honest reference ranges from the weddings we plan.",
+      tiers: [
+        { label: "Elopements", range: "€3,000 – €9,000+", note: "Two to a small handful of guests. Location, officiant, small dinner." },
+        { label: "Weddings around 30 guests", range: "€20,000 – €45,000+", note: "Intimate micro-weddings at a boutique villa or restaurant." },
+        { label: "Weddings of 30–100 guests", range: "€35,000 – €120,000+", note: "Full weddings across a weekend, with the guest experience built around them." },
+      ],
+      disclaimer:
+        "These are reference ranges only, not fixed prices. Every wedding is unique, and each proposal is tailored to your priorities, guest count, location, season and overall vision.",
+      flexibility:
+        "We are happy to work together to design a celebration that aligns with your available investment while protecting the quality, organization and experience we believe in. Whatever the number, we plan against it honestly.",
+      venueNote:
+        "Venues in particular can vary significantly with season, duration and guest count. The same venue may cost €7,000 in low season and €21,000 on a peak-summer Saturday. We steer you toward the season and structure that gives you the most wedding for your investment.",
+    },
   },
 
   destination: {
     meta: {
       title: "Destination Weddings in Spain — The Complete Guide | Sol Mediterraneo",
       description:
-        "Everything international couples need to know about planning a destination wedding in Spain: legal requirements, costs, regions, timeline, and common mistakes to avoid.",
+        "Everything international couples need to know about planning a Destination Wedding in Spain: legal requirements, costs, regions, timeline, and common mistakes to avoid.",
     },
     hero: {
       eyebrow: "The complete guide",
-      title: "Destination weddings in Spain.",
+      title: "Destination Weddings in Spain.",
       body: "A calm, honest guide for international couples planning a wedding in Spain from abroad. What to expect, what to avoid, and what makes this country worth the trip.",
     },
     sections: [
@@ -421,7 +473,7 @@ const en: Content = {
         id: "why-spain",
         title: "Why get married in Spain",
         body: [
-          "Spain is one of the most rewarding destination wedding countries in Europe. It offers Mediterranean light, an outdoor culture built around long meals, world-class food and wine, and an infrastructure of boutique villas, historic estates, and hotels equipped to host international weddings.",
+          "Spain is one of the most rewarding Destination Wedding countries in Europe. It offers Mediterranean light, an outdoor culture built around long meals, world-class food and wine, and an infrastructure of boutique villas, historic estates, and hotels equipped to host international weddings.",
           "For couples flying in from Brazil, the United States, the United Kingdom, Canada, Australia, or elsewhere in Europe, Spain also offers something less obvious: a warmth of hospitality that makes the whole week feel like the wedding, not just the ceremony.",
         ],
       },
@@ -440,21 +492,23 @@ const en: Content = {
         id: "civil-vs-symbolic",
         title: "Civil vs symbolic ceremony",
         body: [
-          "A symbolic ceremony carries the same emotion as a legal one — vows, rings, readings, an officiant of your choosing — without the paperwork. It can happen anywhere: a cliff, a garden, a chapel, a rooftop. For international couples, this is nearly always the practical choice.",
-          "We coordinate the paperwork, the officiant, and the ceremony flow so that whichever path you choose, the day itself feels seamless.",
+          "A civil ceremony is the legally binding version — the paperwork, the registrar, the signatures that make the marriage official in the eyes of the state. In Spain, for non-residents, a civil ceremony is administratively heavy: certified translations, apostilles, in some regions medical certificates, and residency requirements that vary by autonomous community. It has to happen where the paperwork allows, on the day the registrar allows, in the language the registrar uses.",
+          "A symbolic ceremony carries the same emotion and meaning — the vows, the rings, the readings, the officiant of your choosing, the friends who cry — without the legal machinery. It can happen anywhere: a cliff above the sea, a garden, a stone chapel, a rooftop, an olive grove. It can be in your language. It can be on the exact day and hour you want. There is no registrar. There is no waiting list.",
+          "For international couples, a symbolic ceremony is almost always the easiest and most beautiful choice. The overwhelming majority of the couples we work with — well over ninety percent — get legally married in a short registry visit back home (often months before, sometimes the week before), and then travel to Spain for the wedding that actually feels like the wedding. Full freedom on venue, timing, officiant, and format, and zero risk that a bureaucratic detail could reshape the day.",
+          "Whichever path you choose, we coordinate the paperwork, the officiant, and the ceremony flow so the day itself feels seamless.",
         ],
       },
       {
         id: "costs",
         title: "How much a wedding in Spain costs",
         body: [
-          "Honest ranges for international couples planning a boutique wedding in Spain, all-in for 60–90 guests, excluding travel and attire:",
+          "There is no fixed price for a wedding in Spain — investment depends on guest count, region, venue, season, level of luxury and logistics. What we can share are honest reference ranges. These are ranges, not quotes.",
         ],
         list: [
-          "Intimate & elopement (2–30 guests): from €15,000",
-          "Boutique (40–70 guests): €45,000–€85,000",
-          "Full boutique with premium villa (70–120 guests): €90,000–€180,000+",
-          "Ultra-boutique / multi-day (invitation only): on request",
+          "Elopements — typically around €3,000 to €9,000+",
+          "Weddings around 30 guests — typically €20,000 to €45,000+",
+          "Weddings of 30 to 100 guests — typically €35,000 to €120,000+",
+          "Venue cost alone varies significantly with season: the same venue may be €7,000 in low season and €21,000 in high season",
         ],
       },
       {
@@ -476,19 +530,22 @@ const en: Content = {
       },
       {
         id: "why-local",
-        title: "Why hire a local wedding planner in Spain",
+        title: "Why hire a local Wedding Planner in Spain",
         body: [
-          "Distance is the real cost of a destination wedding. A local planner is not a luxury — it's the mechanism that keeps distance from becoming stress. Vendors return calls faster to a local number. Contracts read differently in Spanish. Site visits happen this Tuesday instead of on your next flight.",
+          "Distance is the real cost of a Destination Wedding. A local planner is not a luxury — it's the mechanism that keeps distance from becoming stress. Vendors return calls faster to a local number. Contracts read differently in Spanish. Site visits happen this Tuesday instead of on your next flight.",
           "You could plan a wedding in Spain from abroad. Most couples we speak to could, in theory. Very few enjoy it.",
         ],
       },
     ],
     regions: [
-      { name: "Barcelona", body: "Restored palaces, Modernista courtyards, and rooftop ceremonies with the Mediterranean on the horizon. Ideal for couples who want a wedding that feels like a city." },
-      { name: "Costa Brava", body: "Cliffside villas, whitewashed chapels, and pine-scented coves an hour from Barcelona. The most cinematic coastline in Catalonia." },
-      { name: "Mallorca", body: "Stone fincas in the Tramuntana mountains, olive-grove ceremonies, and boutique coastal hotels. Quiet, refined, and increasingly booked." },
-      { name: "Ibiza", body: "Whitewashed country estates, candlelit dinners under the pines, and long warm evenings. For couples who want Ibiza's beauty without the club scene." },
-      { name: "Andalusia", body: "Hilltop haciendas, courtyard patios, and old-world Spanish elegance. Slower, warmer, and full of character." },
+      { key: "barcelona", name: "Barcelona", body: "Restored palaces, Modernista courtyards, and rooftop ceremonies with the Mediterranean on the horizon. Ideal for couples who want a wedding that feels like a city." },
+      { key: "catalonia", name: "Catalonia (beyond Barcelona)", body: "Catalonia is much more than its capital. Inland: vineyards in the Penedès and Priorat, historic masias, and country estates surrounded by rolling hills. On the coast: sea views, cliffside villas, and Mediterranean landscapes. Throughout: olive groves, charming stone villages, and boutique estates that feel like they've been waiting for you. Some of our favourite weddings happen here." },
+      { key: "costa-brava", name: "Costa Brava", body: "Cliffside villas, whitewashed chapels, and pine-scented coves an hour from Barcelona. The most cinematic coastline in Catalonia." },
+      { key: "mallorca", name: "Mallorca", body: "Stone fincas in the Tramuntana mountains, olive-grove ceremonies, and boutique coastal hotels. Quiet, refined, and increasingly booked." },
+      { key: "ibiza", name: "Ibiza", body: "Whitewashed country estates, candlelit dinners under the pines, and long warm evenings. For couples who want Ibiza's beauty without the club scene." },
+      { key: "andalusia", name: "Andalusia", body: "Hilltop haciendas, courtyard patios, orange trees, and old-world Spanish elegance. Slower, warmer, and full of character." },
+      { key: "seville", name: "Seville", body: "The soul of Andalusia. Tiled palaces, orange-tree courtyards, and a city that celebrates until dawn. Ideal for weddings that want warmth, flamenco culture, and a distinctly Spanish night." },
+      { key: "granada", name: "Granada", body: "The Alhambra on the horizon, cármenes with garden views, and a slower, more intimate rhythm. A romantic choice for couples drawn to history and quiet beauty." },
     ],
     mistakes: {
       title: "Five mistakes to avoid",
@@ -508,23 +565,47 @@ const en: Content = {
 
   testimonials: {
     meta: {
-      title: "Testimonials — Real Couples, Real Weddings in Spain | Sol Mediterraneo",
+      title: "A Real Wedding in Spain — Case Study | Sol Mediterraneo",
       description:
-        "Read what international couples say about planning their destination wedding in Spain with Sol Mediterraneo — from Brazil, the US, the UK, and beyond.",
+        "A close look at one of the international weddings we planned in Spain — the couple, the location, the planning journey, and what made it feel like theirs.",
     },
     hero: {
-      eyebrow: "Testimonials",
-      title: "Couples who trusted us with Spain.",
-      body: "A few words from the couples we've had the privilege of planning for — from Rio, London, Sydney, and everywhere in between.",
+      eyebrow: "A real wedding",
+      title: "One wedding, told properly.",
+      body: "We stay small on purpose. Rather than a wall of quotes, here is a proper look at one of the weddings we planned — the couple, the place, and what it took to make it feel effortless.",
     },
     items: [
-      { quote: "We live in São Paulo. We had never been to the Costa Brava. From the very first call, it felt like we finally had someone on our side in Spain. Everything — and I mean everything — was handled.", couple: "Beatriz & Rafael", origin: "São Paulo, Brazil", region: "Costa Brava" },
-      { quote: "The calm they bring to the process is the actual product. We stopped losing sleep over things we couldn't control from London. That alone paid for their fee twice over.", couple: "Sophie & James", origin: "London, United Kingdom", region: "Mallorca" },
-      { quote: "We wanted intimate — twelve people, a cliff, dinner afterwards. They made it feel like the most obvious, easy thing in the world. It wasn't. They just made it look that way.", couple: "Anna & Michael", origin: "New York, USA", region: "Ibiza" },
-      { quote: "As a Portuguese-speaking couple planning from Lisbon, having someone who spoke our language and understood Spanish logistics changed everything. Nothing got lost in translation.", couple: "Mariana & Tiago", origin: "Lisbon, Portugal", region: "Barcelona" },
-      { quote: "Their vendor recommendations were spot on. Every single one. The florist, the chef, the DJ — we would work with all of them again in a heartbeat.", couple: "Emily & David", origin: "Toronto, Canada", region: "Costa Brava" },
-      { quote: "We visited Spain once, for four days, to see three venues. They planned every hour. We flew home with the venue booked and a plan we actually understood.", couple: "Chloe & Tom", origin: "Sydney, Australia", region: "Mallorca" },
+      {
+        quote: "We live in São Paulo. We had never been to the Costa Brava. From the very first call, it felt like we finally had someone on our side in Spain. Everything — and I mean everything — was handled.",
+        couple: "Beatriz & Rafael",
+        origin: "São Paulo, Brazil",
+        region: "Costa Brava",
+      },
     ],
+    caseStudy: {
+      eyebrow: "Case study",
+      title: "Beatriz & Rafael, a Costa Brava wedding.",
+      couple: "Beatriz & Rafael",
+      location: "A private villa above the Costa Brava, Catalonia",
+      dateLabel: "Late September — golden hour every hour",
+      story: [
+        "Beatriz and Rafael live in São Paulo. They had never been to the Costa Brava. What they had was a picture in their heads — a long dinner table, a cliff, the Mediterranean somewhere in the frame, and forty people they actually wanted to spend a weekend with.",
+        "We started the planning nine months out, entirely by video. Together we shortlisted three venues along the coast, ran a two-day scouting trip when they flew in that spring, and locked the villa in a single afternoon. From there, the rest of the planning happened in weekly calls on their São Paulo schedule.",
+        "The wedding itself unfolded over three days: a welcome dinner in a small fishing village, a symbolic ceremony at sunset on the villa's terrace, a long dinner under the olive trees, and a farewell brunch by the pool the next morning. Nothing rushed. Nothing missing.",
+      ],
+      highlightsTitle: "Planning highlights",
+      highlights: [
+        "Nine months of remote planning, weekly video calls",
+        "A two-day scouting trip with three shortlisted venues",
+        "Symbolic ceremony coordinated locally; legal ceremony held in Brazil",
+        "Curated vendor team: florist, chef, photographer, DJ, officiant",
+        "Three-day guest experience — welcome dinner, wedding, brunch",
+        "Full on-the-ground coordination for the entire wedding week",
+      ],
+      galleryEyebrow: "The wedding, in pictures",
+      galleryTitle: "A closer look.",
+      galleryNote: "Full gallery coming soon. The photographs from Beatriz and Rafael's wedding are being finished by the photographer and will replace the placeholders below.",
+    },
   },
 
   faq: {
@@ -540,16 +621,15 @@ const en: Content = {
     },
     items: [
       { q: "Can foreigners legally get married in Spain?", a: "Yes. Non-resident couples can marry legally in Spain, though paperwork and requirements vary by autonomous community and religion. Most international couples we work with choose to marry legally in their home country and hold a symbolic ceremony in Spain — this gives full freedom on venue and timing without the residency and translation requirements. We handle the coordination either way." },
-      { q: "How much does a wedding in Spain cost?", a: "For a boutique wedding of 60–90 guests, all-in budgets typically range from €45,000 to €180,000 depending on venue, region, and level of service. Elopements start from €15,000. We provide honest, region-specific ranges on our discovery call so you can decide before committing." },
+      { q: "How much does a wedding in Spain cost?", a: "There is no fixed price — it depends on guest count, region, venue, season, level of luxury and logistics. As reference ranges: elopements typically €3,000–€9,000+, weddings around 30 guests €20,000–€45,000+, and weddings of 30–100 guests €35,000–€120,000+. Every proposal is tailored to your priorities, and we're happy to plan against whatever investment you're working with." },
       { q: "How many times do we need to travel to Spain?", a: "Most of our couples visit once or twice before the wedding week — a first trip for venue visits and a second closer to the date for tastings and final decisions. We host video walkthroughs of everything else, so nothing depends on you being here." },
       { q: "Do you help with guest accommodation?", a: "Yes. Guest logistics are included in every package — hotel blocks, welcome bags, transport, rehearsal dinners, and farewell brunches. Your guests will feel looked after from the moment they land." },
       { q: "Do you work with English-speaking vendors?", a: "We work with a curated network of vendors — florists, chefs, photographers, musicians, officiants — who are used to international weddings. Where a vendor prefers Spanish, we act as the language bridge on every call, email, and contract." },
       { q: "How do payments work?", a: "You pay each vendor directly, in Euros, through their own contracts — we never sit in the middle of your money. Our own fee is billed transparently in stages: a booking fee, planning milestones, and a final balance in the month before the wedding." },
       { q: "How far in advance should we start planning?", a: "For a full wedding, 12–18 months. For an elopement, 4–6 months. Peak-season Saturdays in Ibiza, Mallorca, and Costa Brava book out fastest — often 18 months in advance." },
-      { q: "Do you speak Portuguese?", a: "Yes. Portuguese and English fluently. Spanish and Catalan natively. Every conversation with your vendors goes through us, in the language that works." },
-      { q: "What regions of Spain do you cover?", a: "We plan across Spain with a boutique focus on Catalonia (Barcelona, Costa Brava), the Balearics (Mallorca, Ibiza), and Andalusia. If you are drawn to another region, tell us on the discovery call — we may still be the right team." },
-      { q: "What if it rains?", a: "Every wedding week we run includes a fully costed weather-plan B — the tent, the alternative indoor space, the timing shifts. You never make that decision on the day. We do, hours in advance, calmly." },
-      { q: "Are you insured?", a: "Yes. We carry full professional liability insurance for our planning work in Spain, and every vendor in our network is contracted and insured independently." },
+      { q: "Do you speak Portuguese?", a: "Yes. Portuguese is my first language and English is fluent. I work with Spanish and Catalan suppliers every week, so I act as the language bridge with the local vendor world on every call, email and contract." },
+      { q: "What regions of Spain do you cover?", a: "We plan across Spain with a boutique focus on Catalonia (Barcelona, Costa Brava and the countryside beyond), the Balearics (Mallorca, Ibiza), and Andalusia (including Seville and Granada). If you are drawn to another region, tell us on the discovery call — we may still be the right team." },
+      { q: "What if it rains?", a: "Rain planning is part of our planning process, not an afterthought. Every wedding we run includes a carefully thought-through weather contingency — the tent, the alternative indoor space, the timing shifts — decided calmly, months in advance. When a backup solution requires additional spend (renting a tent, reserving an indoor venue), it is built into your wedding budget from the beginning, so nothing is a surprise later. Those costs sit with you as part of the wedding investment; our role is making sure every scenario is already planned and rehearsed, so on the day itself you never make that call under pressure." },
       { q: "How do we start?", a: "The first step is a 30-minute discovery call — no pressure, no scripts. You tell us what you're picturing, we tell you honestly whether we're the right team to bring it to life in Spain." },
     ],
     closing: {
@@ -586,38 +666,28 @@ const en: Content = {
       budget: "Approximate total budget",
       message: "Anything else we should know",
       submit: "Send message",
-      placeholders: {
-        name: "Full name",
-        partner: "Full name",
-        email: "you@example.com",
-        message: "The story so far, in a few lines...",
-      },
-      regionOptions: ["Not sure yet", "Barcelona", "Costa Brava", "Mallorca", "Ibiza", "Andalusia", "Somewhere else"],
+      placeholders: { name: "Full name", partner: "Full name", email: "you@example.com", message: "The story so far, in a few lines..." },
+      regionOptions: ["Not sure yet", "Barcelona", "Catalonia", "Costa Brava", "Mallorca", "Ibiza", "Andalusia", "Seville", "Granada", "Somewhere else"],
       guestOptions: ["Just the two of us", "Under 30", "30–60", "60–100", "100–150", "150+"],
-      budgetOptions: ["Under €30,000", "€30,000–€60,000", "€60,000–€100,000", "€100,000–€180,000", "€180,000+", "Rather discuss on the call"],
+      budgetOptions: ["Under €10,000", "€10,000–€30,000", "€30,000–€60,000", "€60,000–€120,000", "€120,000+", "Rather discuss on the call"],
     },
     success: {
       title: "Thank you — your message is on its way.",
       body: "We'll be in touch within one business day to schedule a discovery call. In the meantime, feel free to reply to our confirmation email with anything else you'd like us to know.",
     },
-    directContact: {
-      label: "Prefer email?",
-      email: "hello@solmediterraneo.com",
-    },
+    directContact: { label: "Prefer email?", email: "hello@solmediterraneo.com" },
   },
 };
 
 /* ---------- PORTUGUÊS ---------- */
 const pt: Content = {
-  brand: {
-    name: "Sol Mediterraneo",
-    tagline: "Weddings Co.",
-  },
+  brand: { name: "Sol Mediterraneo", tagline: "Weddings Co." },
   nav: {
+    home: "Início",
     about: "Sobre",
     services: "Serviços",
     destination: "Casar na Espanha",
-    testimonials: "Depoimentos",
+    testimonials: "Casamento Real",
     faq: "Perguntas",
     contact: "Contato",
     cta: "Agende uma conversa",
@@ -626,15 +696,11 @@ const pt: Content = {
   },
   footer: {
     tagline: "Você segue com a sua vida. Nós cuidamos de tudo na Espanha.",
-    columns: {
-      explore: "Explorar",
-      company: "A empresa",
-      contact: "Fale com a gente",
-    },
+    columns: { explore: "Explorar", company: "A empresa", contact: "Fale com a gente" },
     based: "Baseados na Espanha. Planejamos para casais no mundo inteiro.",
     email: "hello@solmediterraneo.com",
     rights: "Todos os direitos reservados.",
-    legal: "Consultoria boutique em casamentos de destino.",
+    legal: "Consultoria boutique em Destination Weddings.",
   },
   common: {
     bookCall: "Agende uma conversa",
@@ -646,6 +712,7 @@ const pt: Content = {
     getInTouch: "Entre em contato",
     viewAll: "Ver tudo",
     languageLabel: "Idioma",
+    scrollCue: "Role para explorar",
   },
   ctaBanner: {
     eyebrow: "O próximo passo",
@@ -656,23 +723,23 @@ const pt: Content = {
 
   home: {
     meta: {
-      title: "Sol Mediterraneo Weddings Co. — Planejamento de Casamentos na Espanha",
+      title: "Sol Mediterraneo Weddings Co. — Wedding Planner de Destination Weddings na Espanha",
       description:
-        "Consultoria boutique de casamentos de destino na Espanha. Planejamos casamentos elegantes e tranquilos para casais internacionais — enquanto você segue com a sua vida, nós cuidamos de tudo aqui.",
+        "Consultoria boutique de Wedding Planning para Destination Weddings na Espanha. Planejamos casamentos elegantes e tranquilos para casais internacionais — enquanto você segue com a sua vida, nós cuidamos de tudo aqui.",
     },
     hero: {
-      eyebrow: "Casamentos de destino na Espanha",
+      eyebrow: "Destination Weddings na Espanha",
       title: "Você segue com a sua vida.\nNós cuidamos de tudo na Espanha.",
-      body: "A Sol Mediterraneo é uma consultoria boutique de casamentos para casais internacionais que se casam na Espanha. Especialistas locais, um único ponto de contato e um caminho mais calmo, da primeira ideia à última música.",
+      body: "A Sol Mediterraneo é uma consultoria boutique de Wedding Planning para casais internacionais que se casam na Espanha. Especialistas locais, um único ponto de contato e um caminho mais calmo, da primeira ideia à última música.",
       primary: "Agende uma conversa",
       secondary: "Como trabalhamos",
     },
     promise: {
       eyebrow: "Nossa promessa",
-      title: "Não vendemos planejamento de casamento. Vendemos tranquilidade.",
+      title: "Não vendemos Wedding Planning. Vendemos tranquilidade.",
       body: [
         "Planejar um casamento em outro país não deveria virar um segundo trabalho de tempo integral. Outro idioma, outros fornecedores, outras regras, outra moeda — vista de fora, cada pequena decisão pesa um pouco mais do que deveria.",
-        "Somos o seu parceiro local de confiança na Espanha. Falamos os idiomas, conhecemos os lugares, trabalhamos com os fornecedores há anos. Você mantém a sua agenda. Nós mantemos tudo aqui organizado, honesto e em movimento.",
+        "Somos o seu parceiro local de confiança na Espanha. Conhecemos os lugares, trabalhamos com os fornecedores há anos e falamos a sua língua. Você mantém a sua agenda. Nós mantemos tudo aqui organizado, honesto e em movimento.",
       ],
     },
     trust: [
@@ -683,21 +750,13 @@ const pt: Content = {
     ],
     services: {
       eyebrow: "Como ajudamos",
-      title: "Três formas de planejar com a gente",
+      title: "Quatro formas de planejar com a gente",
       intro: "Cada casal chega em um momento diferente. Nós nos adaptamos ao seu.",
       items: [
-        {
-          name: "Planejamento Completo",
-          body: "Do primeiro contato com os locais à última fatura de fornecedor. Coordenamos cada decisão, cada reunião, cada detalhe — você aproveita o processo, nós seguramos o mapa.",
-        },
-        {
-          name: "Planejamento Parcial",
-          body: "Você já começou. Talvez tenha um local, uma data ou uma ideia inicial. Entramos, revisamos o que já está definido e assumimos o resto do planejamento.",
-        },
-        {
-          name: "Elopements & Mini-casamentos",
-          body: "Cerimônias íntimas, de duas a trinta pessoas. Legal ou simbólica. Um penhasco sobre o mar, uma pequena capela, um terraço reservado — organizado com calma e beleza.",
-        },
+        { name: "Wedding Planning Completo", body: "Do primeiro contato com os locais à última fatura de fornecedor. Coordenamos cada decisão, cada reunião, cada detalhe — você aproveita o processo, nós seguramos o mapa." },
+        { name: "Wedding Planning Parcial", body: "Você já começou. Talvez tenha um local, uma data ou uma ideia inicial. Entramos, revisamos o que já está definido e assumimos o resto do planejamento." },
+        { name: "Coordenação no Dia", body: "Você já planejou o casamento. Entramos como coordenadores locais para conduzir fornecedores, cronograma e cada detalhe no dia — para que você possa estar de fato presente." },
+        { name: "Elopements & Mini-casamentos", body: "Cerimônias íntimas, de duas a trinta pessoas. Legal ou simbólica. Um penhasco sobre o mar, uma pequena capela, um terraço reservado — organizado com calma e beleza." },
       ],
     },
     process: {
@@ -716,16 +775,17 @@ const pt: Content = {
       title: "As regiões que conhecemos de cor",
       intro: "Planejamos em toda a Espanha, com foco boutique na Catalunha e nas Ilhas Baleares.",
       items: [
-        { name: "Barcelona", body: "Casamentos urbanos em palácios restaurados, rooftops privados e pátios modernistas." },
-        { name: "Costa Brava", body: "Villas em falésias sobre o Mediterrâneo, capelas caiadas de branco e enseadas de pinheiros." },
-        { name: "Mallorca", body: "Fincas na serra de Tramuntana, cerimônias entre oliveiras e hotéis boutique à beira-mar." },
-        { name: "Ibiza", body: "Fincas rurais brancas, jantares longos à luz de velas e noites quentes que não têm pressa." },
-        { name: "Andaluzia", body: "Haciendas no alto das colinas, pátios internos e a elegância espanhola de outro tempo." },
+        { name: "Barcelona", body: "Casamentos urbanos elegantes em palácios restaurados, rooftops privados e pátios modernistas." },
+        { name: "Catalunha", body: "Vinhedos, masias, casas de campo, vistas para o mar, olivais e vilarejos encantadores. Muito além de Barcelona." },
+        { name: "Costa Brava", body: "Cerimônias à beira-mar, falésias, villas mediterrâneas e vistas para o oceano." },
+        { name: "Mallorca", body: "Locais de luxo à beira-mar, olivais e fincas de pedra na serra de Tramuntana." },
+        { name: "Ibiza", body: "Casamentos elegantes na praia, luxo boutique e cerimônias tranquilas ao pôr do sol." },
+        { name: "Andaluzia", body: "Propriedades históricas, pátios de azulejos, laranjeiras e a elegância espanhola de outro tempo." },
       ],
     },
     testimonialsSection: {
       eyebrow: "Nas palavras deles",
-      title: "Casais que confiaram a Espanha à gente.",
+      title: "Um casal que confiou a Espanha à gente.",
     },
   },
 
@@ -733,7 +793,7 @@ const pt: Content = {
     meta: {
       title: "Sobre — Sol Mediterraneo Weddings Co.",
       description:
-        "Conheça a Sol Mediterraneo — consultoria boutique de casamentos de destino na Espanha, especializada em casais internacionais. Local, honesta e obsessiva pelos detalhes.",
+        "Conheça a Sol Mediterraneo — consultoria boutique de Destination Weddings na Espanha. Fundadora brasileira vivendo na Espanha, fazendo a ponte entre casais internacionais e o mundo dos fornecedores locais.",
     },
     hero: {
       eyebrow: "Sobre nós",
@@ -743,17 +803,17 @@ const pt: Content = {
     story: {
       title: "Nossa história",
       body: [
-        "A Sol Mediterraneo nasceu de uma observação simples: casais internacionais se apaixonavam pela ideia de um casamento na Espanha e, em seguida, se afogavam em silêncio na logística de fazer isso acontecer de longe.",
-        "Começamos como anfitriões locais. Conhecíamos as villas, os fornecedores, as prefeituras, as pequenas enseadas que só se alcança a pé. Amigos começaram a pedir ajuda. Depois amigos de amigos. Depois casais no Brasil, em Londres, em Nova York, em Sydney.",
-        "Hoje somos uma consultoria boutique. Ficamos pequenos de propósito — poucos casamentos por ano, cada um planejado do início ao fim pela mesma equipe. É assim que protegemos a tranquilidade que prometemos.",
+        "Sou brasileira. Construí a minha vida na Espanha — e no caminho aprendi este país devagar: morando, cozinhando, discutindo sobre vinho, dirigindo por estradas secundárias no domingo.",
+        "A Sol Mediterraneo nasceu de uma observação simples: casais internacionais se apaixonavam pela ideia de um casamento na Espanha e, em seguida, se afogavam em silêncio na logística de fazer isso acontecer de longe. Outro idioma, outros fornecedores, outra forma de fazer negócios.",
+        "Como entendo casais internacionais e entendo o mundo dos fornecedores de casamento espanhóis e catalães, faço a ponte entre os dois de forma natural. Nada se perde na tradução — cultural nem literal.",
       ],
     },
     trust: {
       title: "Por que os casais confiam na gente",
       items: [
-        { name: "Somos locais, moramos aqui", body: "Não somos o braço espanhol de uma marca estrangeira. Estamos em campo, no país, todas as semanas do ano — no mesmo fuso do seu local." },
+        { name: "A ponte entre dois mundos", body: "Brasileira de origem, baseada na Espanha. Entendo como casais internacionais pensam e entendo como os fornecedores espanhóis e catalães trabalham. Essa combinação é o ponto principal." },
         { name: "Uma equipe, do primeiro e-mail à despedida", body: "Você não será repassado para um coordenador júnior depois de assinar. Quem te conhece na primeira conversa é quem conduz a semana do casamento." },
-        { name: "Falamos os seus idiomas", body: "Inglês e português fluentes. Espanhol e catalão nativos. Cada conversa com os fornecedores passa por nós, no idioma que funciona." },
+        { name: "Trabalhamos no seu idioma", body: "Português nativo e inglês fluente. Trabalho com fornecedores espanhóis e catalães toda semana, então cada conversa com eles passa por mim — no idioma que funciona." },
         { name: "Nossos fornecedores são parceiros de longa data", body: "Trabalhamos com os mesmos floristas, chefs, fotógrafos e músicos ano após ano. Qualidade avaliada por nós — sem surpresas no dia." },
         { name: "Honestidade acima de venda", body: "Se uma decisão não faz o casamento avançar, dizemos. Se um fornecedor não combina, sugerimos outro caminho. Somos consultores antes de qualquer coisa." },
         { name: "Menos casamentos, mais cuidado", body: "Limitamos deliberadamente o número de casamentos por ano. O seu não é mais um da lista — tem a nossa atenção inteira." },
@@ -765,6 +825,16 @@ const pt: Content = {
         "Um casamento na Espanha deveria ter o gosto da melhor versão de um jantar longo, lento e ensolarado — com quem vocês amam, num lugar em que vão querer voltar pelo resto da vida. É para isso que planejamos.",
         "Não somos maximalistas. Não perseguimos tendências. Preferimos materiais naturais, comida honesta, luz generosa e um ritmo que permite estar de fato ali. Elegância, para nós, é o que sobra depois de tirar o ruído.",
       ],
+    },
+    boutique: {
+      eyebrow: "Boutique por escolha",
+      title: "No máximo 12 casamentos por ano.",
+      lead: "Limitamos a agenda de propósito. É a decisão mais importante que tomamos.",
+      body: [
+        "Doze casamentos por ano é o que nos permite oferecer a cada casal atenção personalizada, disponibilidade real quando precisam de nós, organização excepcional no dia e uma relação próxima que dura muito além da última música.",
+        "Significa que sabemos o nome dos seus pais. Significa que atendemos o telefone. Significa que a sua semana de casamento tem a nossa equipe inteira, não um pedaço dela.",
+      ],
+      stat: { number: "12", label: "casamentos por ano, no máximo" },
     },
     howWeWork: {
       title: "Como trabalhamos com você",
@@ -779,9 +849,9 @@ const pt: Content = {
 
   services: {
     meta: {
-      title: "Serviços — Planejamento de Casamentos na Espanha | Sol Mediterraneo",
+      title: "Serviços — Wedding Planning na Espanha | Sol Mediterraneo",
       description:
-        "Planejamento completo, parcial e elopements para casamentos de destino na Espanha. Descubra o nível de suporte certo para o seu casamento.",
+        "Wedding Planning completo, parcial, coordenação no dia e elopements para Destination Weddings na Espanha. Descubra o nível de suporte certo para o seu casamento.",
     },
     hero: {
       eyebrow: "Serviços",
@@ -789,14 +859,14 @@ const pt: Content = {
       body: "Cada casal chega em um ponto diferente. Alguns só sabem o país. Outros já têm o local e querem apenas um caminho mais calmo até o fim. Aqui está como trabalhamos.",
     },
     intro:
-      "Nossos serviços são boutique por natureza. Aceitamos um número limitado de casamentos por ano para que cada casal tenha a atenção total da mesma equipe, do primeiro e-mail à despedida.",
+      "Nossos serviços são boutique por natureza. Aceitamos no máximo doze casamentos por ano para que cada casal tenha a atenção total da mesma equipe, do primeiro e-mail à despedida.",
     items: [
       {
-        name: "Planejamento Completo",
+        name: "Wedding Planning Completo",
         tagline: "Início ao fim, tudo incluído.",
         body: "Para casais que querem chegar à Espanha e simplesmente estar presentes. Da busca por locais à última fatura, conduzimos todo o processo, no seu fuso.",
         includes: [
-          "Descoberta, briefing e proposta de planejamento sob medida",
+          "Descoberta, briefing e proposta de Wedding Planning sob medida",
           "Seleção curada de locais e visitas (presenciais ou por vídeo)",
           "Direção de design completa e painéis de referência",
           "Seleção, negociação e contratos com fornecedores",
@@ -808,7 +878,7 @@ const pt: Content = {
         idealFor: "Casais no exterior que querem um único parceiro de confiança na Espanha.",
       },
       {
-        name: "Planejamento Parcial",
+        name: "Wedding Planning Parcial",
         tagline: "Você começou. Nós assumimos daqui.",
         body: "Para casais que já iniciaram — talvez um local, uma data ou uma lista de fornecedores — e querem um parceiro local para revisar, refinar e conduzir o restante do planejamento até o fim.",
         includes: [
@@ -820,6 +890,20 @@ const pt: Content = {
           "Coordenação em campo na semana do casamento",
         ],
         idealFor: "Casais que começaram sozinhos e querem a semana do casamento nas mãos de alguém local.",
+      },
+      {
+        name: "Coordenação no Dia",
+        tagline: "Você planejou. Nós conduzimos.",
+        body: "Para casais que planejaram o próprio casamento, mas querem um coordenador local experiente para conduzir fornecedores, cronograma e cada detalhe no dia — para que possam de fato estar presentes.",
+        includes: [
+          "Reunião de transição para absorver tudo o que vocês construíram",
+          "Confirmação com fornecedores e ponto de contato único nas semanas finais",
+          "Roteiro detalhado do dia, minuto a minuto",
+          "Coordenação em campo, da montagem à despedida",
+          "Condução da cerimônia e do fluxo da recepção",
+          "Resolução discreta de imprevistos durante o dia",
+        ],
+        idealFor: "Casais que já planejaram o casamento sozinhos e querem o dia conduzido por um profissional em campo.",
       },
       {
         name: "Elopements & Mini-casamentos",
@@ -847,17 +931,34 @@ const pt: Content = {
         "Transfers de aeroporto e transporte em campo",
       ],
     },
+    pricing: {
+      eyebrow: "Investimento",
+      title: "Orçamento de casamento é uma conversa, não uma tabela de preços.",
+      intro:
+        "Não existe preço fixo para um casamento na Espanha. O investimento depende do número de convidados, da região, do local, da temporada, do nível de luxo e da logística da semana. O que podemos compartilhar são faixas de referência honestas, tiradas dos casamentos que planejamos.",
+      tiers: [
+        { label: "Elopements", range: "€3.000 – €9.000+", note: "De dois a poucos convidados. Local, celebrante, um jantar pequeno." },
+        { label: "Casamentos com cerca de 30 convidados", range: "€20.000 – €45.000+", note: "Mini-casamentos íntimos em uma villa boutique ou restaurante." },
+        { label: "Casamentos de 30 a 100 convidados", range: "€35.000 – €120.000+", note: "Casamentos completos ao longo de um fim de semana, com a experiência dos convidados construída em volta." },
+      ],
+      disclaimer:
+        "Estas são faixas de referência apenas, não valores fixos. Cada casamento é único, e cada proposta é feita sob medida para as suas prioridades, número de convidados, local, temporada e visão geral.",
+      flexibility:
+        "Ficamos felizes em desenhar junto com vocês uma celebração alinhada ao investimento disponível, sem abrir mão da qualidade, da organização e da experiência em que acreditamos. Qualquer que seja o valor, planejamos com honestidade em torno dele.",
+      venueNote:
+        "Os locais em particular variam muito com temporada, duração e número de convidados. O mesmo local pode custar €7.000 em baixa temporada e €21.000 num sábado de alta temporada. Ajudamos a escolher a época e o formato que oferecem o máximo de casamento pelo seu investimento.",
+    },
   },
 
   destination: {
     meta: {
-      title: "Casar na Espanha — O Guia Completo | Sol Mediterraneo",
+      title: "Casar na Espanha — O Guia Completo de Destination Weddings | Sol Mediterraneo",
       description:
-        "Tudo o que casais internacionais precisam saber para planejar um casamento de destino na Espanha: requisitos legais, custos, regiões, cronograma e erros a evitar.",
+        "Tudo o que casais internacionais precisam saber para planejar um Destination Wedding na Espanha: requisitos legais, custos, regiões, cronograma e erros a evitar.",
     },
     hero: {
       eyebrow: "Guia completo",
-      title: "Casamentos de destino na Espanha.",
+      title: "Destination Weddings na Espanha.",
       body: "Um guia calmo e honesto para casais internacionais que planejam se casar na Espanha de longe. O que esperar, o que evitar e por que este país vale a viagem.",
     },
     sections: [
@@ -865,7 +966,7 @@ const pt: Content = {
         id: "why-spain",
         title: "Por que se casar na Espanha",
         body: [
-          "A Espanha é um dos destinos de casamento mais recompensadores da Europa. Oferece a luz mediterrânea, uma cultura ao ar livre construída em torno de refeições longas, gastronomia e vinhos de nível mundial e uma infraestrutura de villas boutique, propriedades históricas e hotéis prontos para receber casamentos internacionais.",
+          "A Espanha é um dos destinos mais recompensadores da Europa para um Destination Wedding. Oferece a luz mediterrânea, uma cultura ao ar livre construída em torno de refeições longas, gastronomia e vinhos de nível mundial e uma infraestrutura de villas boutique, propriedades históricas e hotéis prontos para receber casamentos internacionais.",
           "Para casais que voam do Brasil, dos Estados Unidos, do Reino Unido, do Canadá, da Austrália ou de qualquer parte da Europa, a Espanha também oferece algo menos óbvio: um calor de hospitalidade que faz a semana inteira parecer o casamento — não só a cerimônia.",
         ],
       },
@@ -884,21 +985,23 @@ const pt: Content = {
         id: "civil-vs-symbolic",
         title: "Cerimônia civil vs simbólica",
         body: [
-          "Uma cerimônia simbólica carrega a mesma emoção da legal — votos, alianças, leituras, um celebrante à sua escolha — sem a burocracia. Pode acontecer em qualquer lugar: um penhasco, um jardim, uma capela, um rooftop. Para casais internacionais, é quase sempre a escolha prática.",
-          "Coordenamos a documentação, o celebrante e o fluxo da cerimônia para que, qualquer que seja o caminho, o dia em si flua sem esforço.",
+          "A cerimônia civil é a versão legalmente reconhecida — a burocracia, o cartório, as assinaturas que tornam o casamento oficial para o Estado. Na Espanha, para não residentes, uma cerimônia civil é administrativamente pesada: traduções juramentadas, apostilas, em algumas regiões atestados médicos, e exigências de residência que variam por comunidade autônoma. Precisa acontecer onde a papelada permite, no dia em que o cartório permite, no idioma em que o cartório fala.",
+          "A cerimônia simbólica carrega a mesma emoção e o mesmo significado — votos, alianças, leituras, um celebrante à sua escolha, os amigos emocionados — sem a máquina legal. Pode acontecer em qualquer lugar: um penhasco sobre o mar, um jardim, uma capela de pedra, um rooftop, um olival. Pode ser no seu idioma. Pode ser no dia e na hora exatos que vocês quiserem. Sem cartório. Sem fila de espera.",
+          "Para casais internacionais, a cerimônia simbólica é quase sempre a escolha mais simples e mais bonita. A grande maioria dos casais que atendemos — bem mais de noventa por cento — se casa legalmente numa rápida visita ao cartório de casa (muitas vezes meses antes, às vezes na semana anterior) e viaja para a Espanha para o casamento que de fato parece casamento. Liberdade total sobre local, horário, celebrante e formato — e zero risco de um detalhe burocrático reescrever o dia.",
+          "Em qualquer um dos caminhos, coordenamos a documentação, o celebrante e o fluxo da cerimônia para que o dia em si flua sem esforço.",
         ],
       },
       {
         id: "costs",
         title: "Quanto custa um casamento na Espanha",
         body: [
-          "Faixas honestas para casais internacionais planejando um casamento boutique na Espanha, tudo incluso para 60–90 convidados, exceto viagem e trajes:",
+          "Não existe preço fixo para um casamento na Espanha — o investimento depende de número de convidados, região, local, temporada, nível de luxo e logística. O que podemos compartilhar são faixas de referência honestas. São faixas, não orçamentos.",
         ],
         list: [
-          "Íntimo & elopement (2–30 convidados): a partir de €15.000",
-          "Boutique (40–70 convidados): €45.000–€85.000",
-          "Boutique completo com villa premium (70–120 convidados): €90.000–€180.000+",
-          "Ultra-boutique / multi-dia (apenas por convite): sob consulta",
+          "Elopements — em geral entre €3.000 e €9.000+",
+          "Casamentos com cerca de 30 convidados — em geral entre €20.000 e €45.000+",
+          "Casamentos de 30 a 100 convidados — em geral entre €35.000 e €120.000+",
+          "O local por si só varia bastante com a temporada: o mesmo local pode custar €7.000 na baixa e €21.000 na alta temporada",
         ],
       },
       {
@@ -920,19 +1023,22 @@ const pt: Content = {
       },
       {
         id: "why-local",
-        title: "Por que contratar um planejador local na Espanha",
+        title: "Por que contratar um Wedding Planner local na Espanha",
         body: [
-          "A distância é o verdadeiro custo de um casamento de destino. Um planejador local não é luxo — é o mecanismo que impede a distância de virar estresse. Fornecedores respondem mais rápido a um número local. Contratos leem diferente em espanhol. Visitas técnicas acontecem nesta terça, e não no seu próximo voo.",
+          "A distância é o verdadeiro custo de um Destination Wedding. Um Wedding Planner local não é luxo — é o mecanismo que impede a distância de virar estresse. Fornecedores respondem mais rápido a um número local. Contratos leem diferente em espanhol. Visitas técnicas acontecem nesta terça, e não no seu próximo voo.",
           "Você poderia planejar um casamento na Espanha de longe. Em tese, a maior parte dos casais que conhecemos poderia. Poucos aproveitam.",
         ],
       },
     ],
     regions: [
-      { name: "Barcelona", body: "Palácios restaurados, pátios modernistas e cerimônias em rooftops com o Mediterrâneo no horizonte. Ideal para casais que querem um casamento com espírito de cidade." },
-      { name: "Costa Brava", body: "Villas em falésias, capelas caiadas e enseadas de pinheiros a uma hora de Barcelona. O litoral mais cinematográfico da Catalunha." },
-      { name: "Mallorca", body: "Fincas de pedra na serra de Tramuntana, cerimônias entre oliveiras e hotéis boutique à beira-mar. Discreta, refinada e cada vez mais requisitada." },
-      { name: "Ibiza", body: "Fincas rurais brancas, jantares à luz de velas sob os pinheiros e noites longas e quentes. Para casais que querem a beleza de Ibiza sem o clima de balada." },
-      { name: "Andaluzia", body: "Haciendas nas colinas, pátios internos e a elegância espanhola de outro tempo. Mais lenta, mais quente e cheia de caráter." },
+      { key: "barcelona", name: "Barcelona", body: "Palácios restaurados, pátios modernistas e cerimônias em rooftops com o Mediterrâneo no horizonte. Ideal para casais que querem um casamento com espírito de cidade." },
+      { key: "catalonia", name: "Catalunha (além de Barcelona)", body: "A Catalunha é muito mais do que sua capital. No interior: vinhedos do Penedès e Priorat, masias históricas e casas de campo cercadas de colinas. No litoral: vistas para o mar, villas em falésias e paisagens mediterrâneas. Em todo lugar: olivais, vilarejos de pedra e propriedades boutique que parecem ter esperado por vocês. Alguns dos nossos casamentos favoritos acontecem aqui." },
+      { key: "costa-brava", name: "Costa Brava", body: "Villas em falésias, capelas caiadas e enseadas de pinheiros a uma hora de Barcelona. O litoral mais cinematográfico da Catalunha." },
+      { key: "mallorca", name: "Mallorca", body: "Fincas de pedra na serra de Tramuntana, cerimônias entre oliveiras e hotéis boutique à beira-mar. Discreta, refinada e cada vez mais requisitada." },
+      { key: "ibiza", name: "Ibiza", body: "Fincas rurais brancas, jantares à luz de velas sob os pinheiros e noites longas e quentes. Para casais que querem a beleza de Ibiza sem o clima de balada." },
+      { key: "andalusia", name: "Andaluzia", body: "Haciendas nas colinas, pátios de azulejos, laranjeiras e a elegância espanhola de outro tempo. Mais lenta, mais quente e cheia de caráter." },
+      { key: "seville", name: "Sevilha", body: "A alma da Andaluzia. Palácios com azulejos, pátios de laranjeiras e uma cidade que celebra até o amanhecer. Ideal para casamentos que querem calor, cultura flamenca e uma noite genuinamente espanhola." },
+      { key: "granada", name: "Granada", body: "A Alhambra no horizonte, cármenes com vistas para o jardim e um ritmo mais lento e íntimo. Escolha romântica para casais atraídos por história e beleza silenciosa." },
     ],
     mistakes: {
       title: "Cinco erros a evitar",
@@ -952,28 +1058,52 @@ const pt: Content = {
 
   testimonials: {
     meta: {
-      title: "Depoimentos — Casais Reais, Casamentos Reais na Espanha | Sol Mediterraneo",
+      title: "Casamento Real na Espanha — Estudo de Caso | Sol Mediterraneo",
       description:
-        "Leia o que casais internacionais dizem sobre planejar o casamento de destino na Espanha com a Sol Mediterraneo — do Brasil, dos EUA, do Reino Unido e além.",
+        "Um olhar detalhado sobre um dos casamentos internacionais que planejamos na Espanha — o casal, o lugar, o processo de planejamento e o que fez tudo parecer sem esforço.",
     },
     hero: {
-      eyebrow: "Depoimentos",
-      title: "Casais que confiaram a Espanha à gente.",
-      body: "Algumas palavras dos casais que tivemos o privilégio de planejar — do Rio, de Londres, de Sydney e de todo lugar no meio.",
+      eyebrow: "Um casamento real",
+      title: "Um casamento, contado como merece.",
+      body: "Ficamos pequenos de propósito. No lugar de uma parede de citações, um olhar cuidadoso sobre um dos casamentos que planejamos — o casal, o lugar e o que foi preciso para tudo parecer natural.",
     },
     items: [
-      { quote: "Moramos em São Paulo. Nunca tínhamos ido à Costa Brava. Desde a primeira conversa, senti que finalmente tínhamos alguém do nosso lado na Espanha. Tudo — literalmente tudo — foi resolvido.", couple: "Beatriz & Rafael", origin: "São Paulo, Brasil", region: "Costa Brava" },
-      { quote: "A calma que trazem para o processo é o produto de verdade. Paramos de perder o sono com coisas que não controlávamos de Londres. Só isso já pagou o serviço duas vezes.", couple: "Sophie & James", origin: "Londres, Reino Unido", region: "Mallorca" },
-      { quote: "Queríamos algo íntimo — doze pessoas, um penhasco, um jantar depois. Eles fizeram parecer a coisa mais óbvia do mundo. Não era. Só pareceu.", couple: "Anna & Michael", origin: "Nova York, EUA", region: "Ibiza" },
-      { quote: "Como um casal falante de português planejando de Lisboa, ter alguém que falava a nossa língua e entendia a logística espanhola mudou tudo. Nada se perdeu na tradução.", couple: "Mariana & Tiago", origin: "Lisboa, Portugal", region: "Barcelona" },
-      { quote: "As recomendações de fornecedores foram certeiras. Todas. A florista, o chef, o DJ — trabalharíamos com todos de novo sem pensar.", couple: "Emily & David", origin: "Toronto, Canadá", region: "Costa Brava" },
-      { quote: "Fomos à Espanha uma vez, por quatro dias, para ver três locais. Eles planejaram cada hora. Voltamos com o local reservado e um plano que a gente de fato entendia.", couple: "Chloe & Tom", origin: "Sydney, Austrália", region: "Mallorca" },
+      {
+        quote: "Moramos em São Paulo. Nunca tínhamos ido à Costa Brava. Desde a primeira conversa, senti que finalmente tínhamos alguém do nosso lado na Espanha. Tudo — literalmente tudo — foi resolvido.",
+        couple: "Beatriz & Rafael",
+        origin: "São Paulo, Brasil",
+        region: "Costa Brava",
+      },
     ],
+    caseStudy: {
+      eyebrow: "Estudo de caso",
+      title: "Beatriz & Rafael, um casamento na Costa Brava.",
+      couple: "Beatriz & Rafael",
+      location: "Uma villa privada sobre a Costa Brava, Catalunha",
+      dateLabel: "Fim de setembro — golden hour a cada hora",
+      story: [
+        "Beatriz e Rafael moram em São Paulo. Nunca tinham ido à Costa Brava. O que eles tinham era uma imagem na cabeça — uma mesa longa de jantar, um penhasco, o Mediterrâneo em algum lugar do quadro, e quarenta pessoas com quem realmente queriam passar um fim de semana.",
+        "Começamos o planejamento nove meses antes, inteiramente por vídeo. Juntos selecionamos três locais no litoral, organizamos uma viagem de dois dias quando eles vieram na primavera, e fechamos a villa em uma tarde. Dali em diante, o resto do planejamento aconteceu em reuniões semanais no fuso deles.",
+        "O casamento em si se desdobrou em três dias: um jantar de boas-vindas num pequeno vilarejo de pescadores, uma cerimônia simbólica ao pôr do sol no terraço da villa, um longo jantar debaixo das oliveiras, e um brunch de despedida à beira da piscina na manhã seguinte. Nada corrido. Nada faltando.",
+      ],
+      highlightsTitle: "Destaques do planejamento",
+      highlights: [
+        "Nove meses de planejamento remoto, com reuniões semanais por vídeo",
+        "Uma viagem de dois dias visitando três locais pré-selecionados",
+        "Cerimônia simbólica coordenada localmente; cerimônia legal no Brasil",
+        "Equipe curada de fornecedores: florista, chef, fotógrafo, DJ, celebrante",
+        "Experiência de três dias — jantar de boas-vindas, casamento, brunch",
+        "Coordenação total em campo durante toda a semana do casamento",
+      ],
+      galleryEyebrow: "O casamento, em imagens",
+      galleryTitle: "Um olhar mais próximo.",
+      galleryNote: "Galeria completa em breve. As fotografias do casamento de Beatriz e Rafael estão sendo finalizadas pelo fotógrafo e substituirão os placeholders abaixo.",
+    },
   },
 
   faq: {
     meta: {
-      title: "Perguntas Frequentes — Casamentos na Espanha para Casais Internacionais",
+      title: "Perguntas Frequentes — Wedding Planning na Espanha | Sol Mediterraneo",
       description:
         "Respostas para as perguntas mais comuns de casais internacionais planejando um casamento na Espanha: requisitos legais, custos, viagens, idioma e pagamentos.",
     },
@@ -984,16 +1114,15 @@ const pt: Content = {
     },
     items: [
       { q: "Estrangeiros podem se casar legalmente na Espanha?", a: "Sim. Casais não residentes podem se casar legalmente na Espanha, mas a documentação e os requisitos variam conforme a comunidade autônoma e a religião. A maior parte dos casais internacionais com quem trabalhamos opta por se casar legalmente no país de origem e fazer uma cerimônia simbólica na Espanha — isso garante liberdade total de local e horário, sem exigências de residência e tradução. Coordenamos os dois caminhos." },
-      { q: "Quanto custa um casamento na Espanha?", a: "Para um casamento boutique de 60 a 90 convidados, o orçamento total costuma variar entre €45.000 e €180.000, dependendo do local, da região e do nível de serviço. Elopements começam em €15.000. Damos faixas honestas e específicas por região logo na primeira conversa, para que você decida antes de qualquer compromisso." },
+      { q: "Quanto custa um casamento na Espanha?", a: "Não existe preço fixo — depende do número de convidados, da região, do local, da temporada, do nível de luxo e da logística. Como faixas de referência: elopements em geral €3.000–€9.000+, casamentos com cerca de 30 convidados €20.000–€45.000+, e casamentos de 30 a 100 convidados €35.000–€120.000+. Cada proposta é feita sob medida, e ficamos felizes em planejar dentro do investimento disponível." },
       { q: "Quantas vezes precisamos viajar à Espanha?", a: "A maior parte dos nossos casais viaja uma ou duas vezes antes da semana do casamento — uma primeira visita para conhecer locais e uma segunda mais perto da data para degustações e decisões finais. Fazemos videochamadas para o resto, para que nada dependa da sua presença aqui." },
       { q: "Vocês ajudam com a hospedagem dos convidados?", a: "Sim. A logística dos convidados está inclusa em todos os pacotes — bloqueios de hotel, kits de boas-vindas, transporte, jantares de ensaio e brunches de despedida. Seus convidados se sentem acolhidos desde o momento em que pousam." },
       { q: "Vocês trabalham com fornecedores que falam inglês?", a: "Trabalhamos com uma rede curada de fornecedores — floristas, chefs, fotógrafos, músicos, celebrantes — acostumados a casamentos internacionais. Quando algum prefere o espanhol, servimos de ponte em cada e-mail, ligação e contrato." },
       { q: "Como funcionam os pagamentos?", a: "Você paga cada fornecedor diretamente, em euros, pelos contratos deles — nunca entramos no meio do seu dinheiro. Nossos honorários são cobrados de forma transparente, em etapas: taxa inicial, marcos de planejamento e saldo final no mês anterior ao casamento." },
       { q: "Com quanta antecedência devemos começar a planejar?", a: "Para um casamento completo, 12 a 18 meses. Para um elopement, 4 a 6 meses. Sábados de alta temporada em Ibiza, Mallorca e Costa Brava esgotam mais rápido — muitas vezes 18 meses antes." },
-      { q: "Vocês falam português?", a: "Sim. Português e inglês fluentes. Espanhol e catalão nativos. Cada conversa com os fornecedores passa por nós, no idioma que funciona." },
-      { q: "Que regiões da Espanha vocês atendem?", a: "Planejamos em toda a Espanha, com foco boutique em Catalunha (Barcelona, Costa Brava), Ilhas Baleares (Mallorca, Ibiza) e Andaluzia. Se você tem outra região em mente, conte na conversa — pode ser que ainda sejamos a equipe certa." },
-      { q: "E se chover?", a: "Toda semana de casamento que organizamos inclui um plano B climático totalmente orçado — a tenda, o espaço interno alternativo, os ajustes de horário. Você nunca toma essa decisão no dia. Nós tomamos, com horas de antecedência, com calma." },
-      { q: "Vocês têm seguro?", a: "Sim. Temos seguro de responsabilidade civil profissional para o nosso trabalho de planejamento na Espanha, e cada fornecedor da nossa rede é contratado e segurado de forma independente." },
+      { q: "Vocês falam português?", a: "Sim. Português é a minha primeira língua e o inglês é fluente. Trabalho com fornecedores espanhóis e catalães toda semana, então faço a ponte com o mundo dos fornecedores locais em cada ligação, e-mail e contrato." },
+      { q: "Que regiões da Espanha vocês atendem?", a: "Planejamos em toda a Espanha, com foco boutique em Catalunha (Barcelona, Costa Brava e o interior além dela), Ilhas Baleares (Mallorca, Ibiza) e Andaluzia (incluindo Sevilha e Granada). Se você tem outra região em mente, conte na conversa — pode ser que ainda sejamos a equipe certa." },
+      { q: "E se chover?", a: "O planejamento de chuva faz parte do nosso processo de planejamento, não é um detalhe deixado para depois. Cada casamento que organizamos inclui uma contingência climática cuidadosamente pensada — a tenda, o espaço interno alternativo, os ajustes de horário — decidida com calma, meses antes. Quando a solução de backup exige um custo adicional (alugar uma tenda, reservar um espaço interno), esse custo é incluído no orçamento do casamento desde o início, para que nada seja surpresa depois. Esses custos ficam com vocês como parte do investimento do casamento; o nosso papel é garantir que cada cenário já esteja planejado e ensaiado, para que no dia vocês nunca precisem tomar essa decisão sob pressão." },
       { q: "Como começamos?", a: "O primeiro passo é uma conversa de 30 minutos — sem pressão, sem roteiros. Você conta o que está imaginando, e nós dizemos com honestidade se somos a equipe certa para tornar isso real na Espanha." },
     ],
     closing: {
@@ -1006,7 +1135,7 @@ const pt: Content = {
     meta: {
       title: "Contato — Agende uma Conversa | Sol Mediterraneo",
       description:
-        "Agende uma conversa de 30 minutos com a Sol Mediterraneo. Conselhos honestos, planejamento boutique e um caminho mais calmo até o seu casamento na Espanha.",
+        "Agende uma conversa de 30 minutos com a Sol Mediterraneo. Conselhos honestos, Wedding Planning boutique e um caminho mais calmo até o seu casamento na Espanha.",
     },
     hero: {
       eyebrow: "Fale com a gente",
@@ -1030,24 +1159,16 @@ const pt: Content = {
       budget: "Orçamento total aproximado",
       message: "Algo mais que devemos saber",
       submit: "Enviar mensagem",
-      placeholders: {
-        name: "Nome completo",
-        partner: "Nome completo",
-        email: "voce@exemplo.com",
-        message: "A história até aqui, em poucas linhas...",
-      },
-      regionOptions: ["Ainda não sei", "Barcelona", "Costa Brava", "Mallorca", "Ibiza", "Andaluzia", "Outro lugar"],
+      placeholders: { name: "Nome completo", partner: "Nome completo", email: "voce@exemplo.com", message: "A história até aqui, em poucas linhas..." },
+      regionOptions: ["Ainda não sei", "Barcelona", "Catalunha", "Costa Brava", "Mallorca", "Ibiza", "Andaluzia", "Sevilha", "Granada", "Outro lugar"],
       guestOptions: ["Só nós dois", "Menos de 30", "30–60", "60–100", "100–150", "150+"],
-      budgetOptions: ["Menos de €30.000", "€30.000–€60.000", "€60.000–€100.000", "€100.000–€180.000", "€180.000+", "Prefiro discutir na conversa"],
+      budgetOptions: ["Menos de €10.000", "€10.000–€30.000", "€30.000–€60.000", "€60.000–€120.000", "€120.000+", "Prefiro discutir na conversa"],
     },
     success: {
       title: "Obrigado — sua mensagem está a caminho.",
       body: "Entraremos em contato em até um dia útil para agendar uma conversa. Enquanto isso, sinta-se à vontade para responder ao nosso e-mail de confirmação com qualquer outra coisa que quiser nos contar.",
     },
-    directContact: {
-      label: "Prefere e-mail?",
-      email: "hello@solmediterraneo.com",
-    },
+    directContact: { label: "Prefere e-mail?", email: "hello@solmediterraneo.com" },
   },
 };
 

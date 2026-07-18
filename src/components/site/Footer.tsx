@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
 import { ROUTES } from "@/i18n/routes";
+import { SITE_CONFIG } from "@/config/site";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -10,6 +11,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   const explore: { label: string; href: string }[] = [
+    { label: c.nav.home, href: ROUTES.home[lang] },
     { label: c.nav.about, href: ROUTES.about[lang] },
     { label: c.nav.services, href: ROUTES.services[lang] },
     { label: c.nav.destination, href: ROUTES.destination[lang] },
@@ -22,7 +24,7 @@ export function Footer() {
       <div className="container-editorial py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
-            <Logo variant="mark" color="ivory" className="w-10 h-10 mb-6" />
+            <Logo variant="mark" color="ivory" className="w-16 h-16 mb-6" />
             <p className="font-serif text-2xl leading-snug text-ivory/95 max-w-sm">
               {c.footer.tagline}
             </p>
@@ -52,12 +54,14 @@ export function Footer() {
             >
               {c.footer.email}
             </a>
-            <Link
-              to={ROUTES.contact[lang]}
+            <a
+              href={SITE_CONFIG.discoveryCallUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-ivory transition-colors"
             >
               {c.nav.cta} →
-            </Link>
+            </a>
           </div>
         </div>
 
