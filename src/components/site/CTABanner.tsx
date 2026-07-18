@@ -1,7 +1,6 @@
-import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
-import { ROUTES } from "@/i18n/routes";
+import { SITE_CONFIG } from "@/config/site";
 import interiorImg from "@/assets/interior.jpg";
 
 export function CTABanner() {
@@ -25,13 +24,15 @@ export function CTABanner() {
           <h2 className="text-ivory text-balance">{c.ctaBanner.title}</h2>
           <p className="mt-6 text-lg text-ivory/80 max-w-xl leading-relaxed">{c.ctaBanner.body}</p>
           <div className="mt-10">
-            <Link
-              to={ROUTES.contact[lang]}
+            <a
+              href={SITE_CONFIG.discoveryCallUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
               style={{ background: "var(--gold)", borderColor: "var(--gold)" }}
             >
               {c.ctaBanner.button}
-            </Link>
+            </a>
           </div>
         </div>
       </div>
