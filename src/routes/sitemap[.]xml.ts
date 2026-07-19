@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { ALL_PAGE_IDS, ROUTES } from "@/i18n/routes";
+import { SITE_CONFIG } from "@/config/site";
 
-// TODO: replace with your project URL once a project name or custom domain is set.
-const BASE_URL = "";
+const BASE_URL = SITE_CONFIG.url;
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
