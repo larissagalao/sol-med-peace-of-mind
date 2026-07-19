@@ -1,4 +1,4 @@
-import brandMark from "@/assets/brand-mark.png.asset.json";
+import brandMark from "@/assets/brand-mark.png";
 
 interface Props {
   className?: string;
