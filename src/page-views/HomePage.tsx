@@ -92,17 +92,6 @@ export function HomePage({ lang }: { lang: Lang }) {
         </a>
       </section>
 
-      {/* TRUST STRIP */}
-      <section className="border-y border-border bg-sand/40">
-        <div className="container-editorial py-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-navy/70">
-          {t.trust.map((item) => (
-            <div key={item.label} className="flex items-center gap-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold" aria-hidden />
-              <span className="text-xs tracking-[0.25em] uppercase font-medium">{item.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* PROMISE */}
       <section id="promise" className="container-editorial py-24 md:py-32 scroll-mt-32">
