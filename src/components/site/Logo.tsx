@@ -1,3 +1,5 @@
+import brandMark from "@/assets/brand-mark.png.asset.json";
+
 interface Props {
   className?: string;
   variant?: "full" | "mark";
@@ -5,99 +7,49 @@ interface Props {
 }
 
 /**
- * Sol Mediterraneo brand mark — hand-drawn rising sun above a wordmark.
- * The sun is intentionally the dominant element: it should read as a
- * distinctive brand signature at every size.
+ * Sol Mediterraneo brand mark — the hand-drawn rising sun supplied by the
+ * client. The PNG is served from the CDN via lovable-assets so we render it
+ * as an <img>. For the ivory variant on dark backgrounds we invert the
+ * gold to a pale tone using a CSS filter that preserves the sun's texture.
  */
 export function Logo({ className, variant = "full", color = "navy" }: Props) {
-  const stroke = color === "ivory" ? "var(--ivory)" : "var(--navy)";
-  const gold = "var(--gold)";
-  const rays = Array.from({ length: 19 });
+  const src = brandMark.url;
+  // The source PNG is warm gold on transparent. On dark surfaces we lift it
+  // toward ivory; on light surfaces we let the gold shine as-is.
+  const filter =
+    color === "ivory"
+      ? "brightness(0) saturate(100%) invert(94%) sepia(9%) saturate(400%) hue-rotate(3deg) brightness(103%)"
+      : undefined;
 
-  // Mark variant → square viewBox for a large, punchy sun.
   if (variant === "mark") {
     return (
-      <div className={className} aria-label="Sol Mediterraneo Weddings Co.">
-        <svg
-          viewBox="0 0 60 60"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-auto"
-          role="img"
-        >
-          <g transform="translate(30, 34)">
-            {rays.map((_, i) => {
-              const angle = -90 + (i - 9) * 9;
-              const rad = (angle * Math.PI) / 180;
-              const inner = 12;
-              const outer = 12 + (i % 3 === 0 ? 18 : i % 2 === 0 ? 15 : 12);
-              const x1 = Math.cos(rad) * inner;
-              const y1 = Math.sin(rad) * inner;
-              const x2 = Math.cos(rad) * outer;
-              const y2 = Math.sin(rad) * outer;
-              return (
-                <line
-                  key={i}
-                  x1={x1}
-                  y1={y1}
-                  x2={x2}
-                  y2={y2}
-                  stroke={gold}
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                />
-              );
-            })}
-            <path d="M -11 0 A 11 11 0 0 1 11 0" fill="none" stroke={gold} strokeWidth="1.6" strokeLinecap="round" />
-          </g>
-        </svg>
-      </div>
+      <img
+        src={src}
+        alt="Sol Mediterraneo Weddings Co."
+        className={className}
+        style={{ filter, objectFit: "contain" }}
+        draggable={false}
+      />
     );
   }
 
-  // Full variant → sun above wordmark, sun enlarged for stronger presence.
+  const wordColor = color === "ivory" ? "var(--ivory)" : "var(--navy)";
+
   return (
-    <div className={className} aria-label="Sol Mediterraneo Weddings Co.">
-      <svg
-        viewBox="0 0 200 90"
-        xmlns="http://www.w3.org/2000/svg"
+    <div className={`flex flex-col items-center ${className ?? ""}`} aria-label="Sol Mediterraneo Weddings Co.">
+      <img
+        src={src}
+        alt=""
         className="w-full h-auto"
-        role="img"
+        style={{ filter, objectFit: "contain" }}
+        draggable={false}
+      />
+      <span
+        className="font-serif tracking-[0.18em] uppercase mt-2"
+        style={{ color: wordColor, fontSize: "0.72rem" }}
       >
-        <g transform="translate(100, 42)">
-          {rays.map((_, i) => {
-            const angle = -90 + (i - 9) * 9;
-            const rad = (angle * Math.PI) / 180;
-            const inner = 14;
-            const outer = 14 + (i % 3 === 0 ? 22 : i % 2 === 0 ? 18 : 14);
-            const x1 = Math.cos(rad) * inner;
-            const y1 = Math.sin(rad) * inner;
-            const x2 = Math.cos(rad) * outer;
-            const y2 = Math.sin(rad) * outer;
-            return (
-              <line
-                key={i}
-                x1={x1}
-                y1={y1}
-                x2={x2}
-                y2={y2}
-                stroke={gold}
-                strokeWidth="1.1"
-                strokeLinecap="round"
-              />
-            );
-          })}
-          <path d="M -13 0 A 13 13 0 0 1 13 0" fill="none" stroke={gold} strokeWidth="1.6" strokeLinecap="round" />
-        </g>
-        <text
-          x="100"
-          y="82"
-          textAnchor="middle"
-          fill={stroke}
-          style={{ fontFamily: "var(--font-serif)", fontSize: "14px", letterSpacing: "0.01em" }}
-        >
-          Sol Mediterraneo
-        </text>
-      </svg>
+        Sol Mediterraneo
+      </span>
     </div>
   );
 }

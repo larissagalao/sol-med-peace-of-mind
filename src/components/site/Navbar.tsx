@@ -51,62 +51,50 @@ export function Navbar() {
     <>
       <header
         className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
-          scrolled || open ? "bg-ivory/95 backdrop-blur-md border-b border-border" : "bg-transparent"
+          scrolled || open
+            ? "bg-ivory/95 backdrop-blur-md border-b border-border/70 shadow-[0_1px_0_0_color-mix(in_oklab,var(--gold)_20%,transparent)]"
+            : "bg-transparent"
         }`}
       >
-        <div className="container-editorial flex items-center justify-between py-4">
-          <Link
-            to={homeHref}
-            className="flex items-center gap-3"
-            aria-label={c.nav.home}
-          >
-            <Logo variant="mark" className="w-12 h-12 md:w-14 md:h-14" />
-            <span className="font-serif text-xl md:text-2xl tracking-tight text-navy hidden sm:inline leading-none">
-              Sol Mediterraneo
-            </span>
-          </Link>
+        {/* Row 1 — mark centered, lang & CTA flank */}
+        <div className="container-editorial grid grid-cols-3 items-center pt-4 pb-3">
+          <div className="hidden md:flex items-center gap-3 text-[0.68rem] tracking-[0.28em] uppercase">
+            <button
+              onClick={() => switchTo("en")}
+              className={`transition-colors ${lang === "en" ? "text-gold" : "text-navy/50 hover:text-navy"}`}
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+            <span className="text-navy/25">·</span>
+            <button
+              onClick={() => switchTo("pt")}
+              className={`transition-colors ${lang === "pt" ? "text-gold" : "text-navy/50 hover:text-navy"}`}
+              aria-label="Mudar para Português"
+            >
+              PT
+            </button>
+          </div>
 
-          <nav className="hidden lg:flex items-center gap-7">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.id}
-                to={ROUTES[item.id][lang]}
-                className="text-sm text-navy/80 hover:text-gold transition-colors font-medium"
-                activeProps={{ className: "text-gold" }}
-                activeOptions={{ exact: item.id === "home" }}
-              >
-                {c.nav[item.key]}
-              </Link>
-            ))}
-          </nav>
+          <div className="col-start-1 md:col-start-2 flex justify-start md:justify-center">
+            <Link
+              to={homeHref}
+              className="flex items-center gap-3 md:flex-col md:gap-1"
+              aria-label={c.nav.home}
+            >
+              <Logo variant="mark" className="w-14 h-10 md:w-20 md:h-14" />
+              <span className="font-serif text-navy tracking-[0.22em] uppercase text-[0.7rem] md:text-[0.72rem] leading-none">
+                Sol Mediterraneo
+              </span>
+            </Link>
+          </div>
 
-          <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-1 text-xs tracking-widest">
-              <button
-                onClick={() => switchTo("en")}
-                className={`px-1.5 py-1 uppercase transition-colors ${
-                  lang === "en" ? "text-gold" : "text-navy/50 hover:text-navy"
-                }`}
-                aria-label="Switch to English"
-              >
-                EN
-              </button>
-              <span className="text-navy/30">/</span>
-              <button
-                onClick={() => switchTo("pt")}
-                className={`px-1.5 py-1 uppercase transition-colors ${
-                  lang === "pt" ? "text-gold" : "text-navy/50 hover:text-navy"
-                }`}
-                aria-label="Mudar para Português"
-              >
-                PT
-              </button>
-            </div>
+          <div className="col-start-3 flex items-center justify-end gap-3">
             <a
               href={SITE_CONFIG.discoveryCallUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex btn-primary text-[0.7rem] py-3 px-5"
+              className="hidden md:inline-flex btn-primary text-[0.65rem] py-2.5 px-4"
             >
               {c.nav.cta}
             </a>
@@ -115,7 +103,7 @@ export function Navbar() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? c.nav.close : c.nav.menu}
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
                 {open ? (
                   <path d="M6 6l12 12M6 18L18 6" strokeLinecap="round" />
                 ) : (
@@ -129,6 +117,28 @@ export function Navbar() {
           </div>
         </div>
 
+        {/* Row 2 — nav links, generously spaced, editorial hairline above */}
+        <nav
+          className={`hidden lg:block border-t transition-colors ${
+            scrolled ? "border-border/60" : "border-navy/10"
+          }`}
+        >
+          <ul className="container-editorial flex items-center justify-center gap-x-12 py-3">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.id}>
+                <Link
+                  to={ROUTES[item.id][lang]}
+                  className="relative text-[0.72rem] tracking-[0.28em] uppercase text-navy/70 hover:text-gold transition-colors font-medium"
+                  activeProps={{ className: "text-gold" }}
+                  activeOptions={{ exact: item.id === "home" }}
+                >
+                  {c.nav[item.key]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         {open && (
           <div className="lg:hidden border-t border-border bg-ivory">
             <div className="container-editorial py-6 flex flex-col gap-5">
@@ -136,7 +146,7 @@ export function Navbar() {
                 <Link
                   key={item.id}
                   to={ROUTES[item.id][lang]}
-                  className="text-base font-serif text-navy"
+                  className="text-base font-serif text-navy tracking-wide"
                 >
                   {c.nav[item.key]}
                 </Link>
@@ -168,7 +178,8 @@ export function Navbar() {
           </div>
         )}
       </header>
-      <div className="h-20" aria-hidden />
+      {/* Two-row navbar reserves more space */}
+      <div className="h-24 md:h-28" aria-hidden />
     </>
   );
 }

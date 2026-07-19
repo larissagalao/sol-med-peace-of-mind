@@ -24,84 +24,78 @@ export function HomePage({ lang }: { lang: Lang }) {
 
   return (
     <SiteLayout>
-      {/* HERO */}
-      <section className="relative isolate -mt-20 pt-20 overflow-hidden">
+      {/* HERO — luminous editorial: light image, navy typography, generous negative space */}
+      <section className="relative isolate -mt-24 md:-mt-28 pt-24 md:pt-28 overflow-hidden bg-ivory">
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Mediterranean villa terrace set for a wedding dinner at golden hour"
+            alt="Sun-drenched Mediterranean terrace set for a wedding dinner, olive hills beyond"
             width={1920}
             height={1280}
             className="w-full h-full object-cover object-center"
             fetchPriority="high"
           />
-          {/* Editorial darkening: navy from bottom, gentle ivory kiss at top edge for the fixed nav. */}
+          {/* Ivory kiss at top so the navbar reads, and a soft left-side veil so navy text sits on paler pixels. */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, color-mix(in oklab, var(--navy) 55%, transparent) 0%, color-mix(in oklab, var(--navy) 35%, transparent) 40%, color-mix(in oklab, var(--navy) 78%, transparent) 100%)",
+                "linear-gradient(180deg, color-mix(in oklab, var(--ivory) 82%, transparent) 0%, color-mix(in oklab, var(--ivory) 20%, transparent) 22%, transparent 55%)",
             }}
             aria-hidden
           />
-          {/* Focused vignette behind headline for guaranteed contrast */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse at 30% 70%, color-mix(in oklab, var(--navy) 55%, transparent) 0%, transparent 60%)",
+                "linear-gradient(90deg, color-mix(in oklab, var(--ivory) 78%, transparent) 0%, color-mix(in oklab, var(--ivory) 45%, transparent) 32%, transparent 62%)",
             }}
             aria-hidden
           />
         </div>
-        <div className="relative container-editorial min-h-[92vh] flex flex-col justify-end pb-24 md:pb-32">
-          <div className="max-w-3xl fade-up">
-            <div className="eyebrow mb-6 text-gold-soft">{t.hero.eyebrow}</div>
-            <h1 className="text-ivory text-balance whitespace-pre-line drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]">
+
+        <div className="relative container-editorial min-h-[86vh] md:min-h-[92vh] flex flex-col justify-center pb-28 md:pb-36">
+          <div className="max-w-2xl fade-up">
+            <div className="flex items-center gap-4 mb-8">
+              <span className="h-px w-10 bg-gold" aria-hidden />
+              <span className="eyebrow text-gold">{t.hero.eyebrow}</span>
+            </div>
+            <h1 className="text-navy text-balance whitespace-pre-line font-serif">
               {t.hero.title}
             </h1>
-            <p className="mt-8 text-lg md:text-xl text-ivory/95 max-w-2xl leading-relaxed">
+            <p className="mt-10 text-lg md:text-xl text-navy/75 max-w-xl leading-relaxed">
               {t.hero.body}
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-12 flex flex-wrap items-center gap-6">
               <a
                 href={SITE_CONFIG.discoveryCallUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
-                style={{ background: "var(--gold)", borderColor: "var(--gold)" }}
               >
                 {t.hero.primary}
               </a>
               <Link
                 to={ROUTES.services[lang]}
-                className="btn-outline"
-                style={{ color: "var(--ivory)", borderColor: "color-mix(in oklab, var(--ivory) 60%, transparent)" }}
+                className="text-[0.72rem] tracking-[0.28em] uppercase font-medium text-navy/70 hover:text-gold transition-colors underline-offset-8 underline decoration-gold/40 hover:decoration-gold"
               >
                 {t.hero.secondary}
               </Link>
             </div>
           </div>
         </div>
-        {/* Scroll cue */}
+
+        {/* Scroll cue — a thin editorial line with a slow-traveling dot */}
         <a
           href="#promise"
           aria-label={c.common.scrollCue}
-          className="absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-8 flex flex-col items-center gap-2 text-ivory/85 hover:text-gold transition-colors"
+          className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-10 flex flex-col items-center gap-4 text-navy/70 hover:text-gold transition-colors group"
         >
-          <span className="text-[0.65rem] tracking-[0.3em] uppercase font-medium">
+          <span className="font-serif italic text-sm tracking-wide text-navy/70 group-hover:text-gold transition-colors">
             {c.common.scrollCue}
           </span>
-          <span className="scroll-cue">
-            <svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden>
-              <rect x="1" y="1" width="20" height="28" rx="10" />
-              <line x1="11" y1="7" x2="11" y2="13" strokeLinecap="round" />
-            </svg>
-          </span>
-          <span className="scroll-cue" style={{ animationDelay: "150ms" }}>
-            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden>
-              <path d="M2 2 L9 8 L16 2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+          <span className="relative block h-14 w-px bg-navy/30 overflow-hidden">
+            <span className="scroll-dot absolute left-1/2 -translate-x-1/2 top-0 block h-2 w-2 rounded-full bg-gold" />
           </span>
         </a>
       </section>
