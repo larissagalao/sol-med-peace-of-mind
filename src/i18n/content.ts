@@ -182,6 +182,7 @@ export type Content = {
       budgetOptions: string[];
     };
     success: { title: string; body: string };
+    error: { title: string; body: string };
     directContact: { label: string; email: string };
   };
 };
@@ -675,6 +676,10 @@ const en: Content = {
       title: "Thank you — your message is on its way.",
       body: "We'll be in touch within one business day to schedule a discovery call. In the meantime, feel free to reply to our confirmation email with anything else you'd like us to know.",
     },
+    error: {
+      title: "Something went wrong sending your message.",
+      body: "We couldn't send your message right now. Please try again in a moment, or email us directly at hello@solmediterraneo.com and we'll get right back to you.",
+    },
     directContact: { label: "Prefer email?", email: "hello@solmediterraneo.com" },
   },
 };
@@ -1167,6 +1172,10 @@ const pt: Content = {
     success: {
       title: "Obrigado — sua mensagem está a caminho.",
       body: "Entraremos em contato em até um dia útil para agendar uma conversa. Enquanto isso, sinta-se à vontade para responder ao nosso e-mail de confirmação com qualquer outra coisa que quiser nos contar.",
+    },
+    error: {
+      title: "Algo deu errado ao enviar sua mensagem.",
+      body: "Não conseguimos enviar sua mensagem agora. Tente novamente em instantes ou escreva diretamente para hello@solmediterraneo.com que retornaremos o quanto antes.",
     },
     directContact: { label: "Prefere e-mail?", email: "hello@solmediterraneo.com" },
   },
