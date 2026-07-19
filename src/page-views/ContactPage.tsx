@@ -6,7 +6,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 // Google Apps Script web app that records the submission in the Contatos sheet
 // and emails contacto@solmediterraneoweddings.com.
 const CONTACT_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbxsTpTfYNw-cAiWTd3TY0SSvVodTrsG9_j3ggNZP7C8Fbz2p3nzgkf14YbRUtjEnIUn/exec";
+  "https://script.google.com/macros/s/AKfycbyIrXbYeVmOCjqiN0Otp5rgq1K3XB8AGhrzwje3agS-AbRcnZQJlYtWPVQpkBsYqYV8/exec";
 
 type Status = "idle" | "sending" | "success" | "error";
 
