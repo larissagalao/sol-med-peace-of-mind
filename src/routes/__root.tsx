@@ -72,9 +72,10 @@ const ORG_JSONLD = {
   name: "Sol Mediterraneo Weddings Co.",
   description:
     "Boutique destination wedding planner in Spain, specializing in weddings for international couples.",
+  url: SITE_CONFIG.url,
   areaServed: [{ "@type": "Country", name: "Spain" }],
   knowsLanguage: ["en", "pt", "es", "ca"],
-  email: "hello@solmediterraneo.com",
+  email: SITE_CONFIG.contactEmail,
   address: { "@type": "PostalAddress", addressCountry: "ES" },
   sameAs: [],
 };
