@@ -69,58 +69,6 @@ export function ServicesPage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* PRICING / INVESTMENT */}
-      <section className="bg-sand/50 py-24 md:py-32">
-        <div className="container-editorial">
-          <SectionHeader eyebrow={p.eyebrow} title={p.title} body={p.intro} align="center" />
-
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {p.tiers.map((tier) => (
-              <article key={tier.label} className="bg-ivory border border-border p-10 flex flex-col">
-                <div className="eyebrow mb-4">{tier.label}</div>
-                <div className="font-serif text-3xl md:text-4xl text-navy leading-tight">{tier.range}</div>
-                <p className="mt-6 text-navy/70 leading-relaxed text-base">{tier.note}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-14 max-w-3xl mx-auto space-y-5 text-navy/80 leading-relaxed text-lg">
-            <p className="italic">{p.disclaimer}</p>
-            <p>{p.flexibility}</p>
-            <p className="pt-4 border-t border-border">{p.venueNote}</p>
-          </div>
-
-          <div className="mt-12 flex justify-center">
-            <a
-              href={SITE_CONFIG.discoveryCallUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              {c.common.bookCall}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* CONCIERGE */}
-      <section className="bg-navy text-ivory py-24 md:py-32">
-        <div className="container-editorial grid grid-cols-1 md:grid-cols-12 gap-10">
-          <div className="md:col-span-5">
-            <div className="eyebrow mb-5 text-gold-soft">+</div>
-            <h2 className="text-ivory text-balance">{t.concierge.title}</h2>
-            <p className="mt-6 text-lg text-ivory/80 leading-relaxed">{t.concierge.body}</p>
-          </div>
-          <ul className="md:col-span-6 md:col-start-7 grid grid-cols-1 gap-y-4">
-            {t.concierge.items.map((it) => (
-              <li key={it} className="flex items-start gap-4 py-3 border-b border-ivory/15">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold shrink-0" aria-hidden />
-                <span className="text-ivory/90">{it}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
 
       <CTABanner />
       {/* silence unused import warning */}

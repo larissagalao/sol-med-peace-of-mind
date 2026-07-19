@@ -7,15 +7,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
 import { SectionHeader } from "@/components/site/SectionHeader";
 import tablescape from "@/assets/tablescape.jpg";
-import costaBrava from "@/assets/costa-brava.jpg";
-import mallorca from "@/assets/mallorca.jpg";
-import ibiza from "@/assets/ibiza.jpg";
-import barcelona from "@/assets/barcelona.jpg";
-import andalusia from "@/assets/andalusia.jpg";
-import catalonia from "@/assets/catalonia.jpg";
 
-// Order mirrors home.regions.items in content.ts
-const REGION_IMAGES = [barcelona, catalonia, costaBrava, mallorca, ibiza, andalusia];
 
 export function HomePage({ lang }: { lang: Lang }) {
   const c = getContent(lang);
@@ -54,7 +46,7 @@ export function HomePage({ lang }: { lang: Lang }) {
           />
         </div>
 
-        <div className="relative container-editorial min-h-[86vh] md:min-h-[92vh] flex flex-col justify-center pb-28 md:pb-36">
+        <div className="relative container-editorial min-h-[86vh] md:min-h-[92vh] flex flex-col justify-end pb-28 md:pb-36 pt-8">
           <div className="max-w-2xl fade-up">
             <div className="flex items-center gap-4 mb-8">
               <span className="h-px w-10 bg-gold" aria-hidden />
@@ -100,20 +92,9 @@ export function HomePage({ lang }: { lang: Lang }) {
         </a>
       </section>
 
-      {/* TRUST STRIP */}
-      <section className="border-y border-border bg-sand/40">
-        <div className="container-editorial py-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-navy/70">
-          {t.trust.map((item) => (
-            <div key={item.label} className="flex items-center gap-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-gold" aria-hidden />
-              <span className="text-xs tracking-[0.25em] uppercase font-medium">{item.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* PROMISE */}
-      <section id="promise" className="container-editorial py-24 md:py-32 scroll-mt-24">
+      <section id="promise" className="container-editorial py-24 md:py-32 scroll-mt-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-5">
             <div className="eyebrow mb-5">{t.promise.eyebrow}</div>
@@ -130,7 +111,7 @@ export function HomePage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES — HOW WE HELP */}
       <section className="relative py-24 md:py-32 bg-sand/50">
         <div className="container-editorial">
           <SectionHeader eyebrow={t.services.eyebrow} title={t.services.title} body={t.services.intro} align="center" />
@@ -157,7 +138,7 @@ export function HomePage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* PROCESS */}
+      {/* PROCESS — HOW WE WORK */}
       <section className="container-editorial py-24 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5">
@@ -191,66 +172,6 @@ export function HomePage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* REGIONS */}
-      <section className="py-24 md:py-32 bg-navy text-ivory">
-        <div className="container-editorial">
-          <div className="max-w-3xl">
-            <div className="eyebrow mb-5 text-gold-soft">{t.regions.eyebrow}</div>
-            <h2 className="text-ivory text-balance">{t.regions.title}</h2>
-            <p className="mt-6 text-lg text-ivory/75 leading-relaxed">{t.regions.intro}</p>
-          </div>
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {t.regions.items.map((r, i) => (
-              <article key={r.name} className="group">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img
-                    src={REGION_IMAGES[i]}
-                    alt={`${r.name} wedding scene`}
-                    loading="lazy"
-                    width={800}
-                    height={1000}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="mt-5 text-ivory text-xl">{r.name}</h3>
-                <p className="mt-2 text-sm text-ivory/70 leading-relaxed">{r.body}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-16">
-            <Link
-              to={ROUTES.destination[lang]}
-              className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-gold hover:text-ivory transition-colors"
-            >
-              {c.common.viewAll} →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIAL PREVIEW */}
-      <section className="container-editorial py-24 md:py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="eyebrow mb-8 flex justify-center">{t.testimonialsSection.eyebrow}</div>
-          <blockquote className="font-serif text-3xl md:text-4xl leading-snug text-navy text-balance">
-            "{c.testimonials.items[0].quote}"
-          </blockquote>
-          <div className="mt-10 flex flex-col items-center gap-1">
-            <div className="hairline mb-4" />
-            <div className="text-sm tracking-widest uppercase text-navy">
-              {c.testimonials.items[0].couple}
-            </div>
-            <div className="text-xs text-navy/60">
-              {c.testimonials.items[0].origin} · {c.testimonials.items[0].region}
-            </div>
-          </div>
-          <div className="mt-12">
-            <Link to={ROUTES.testimonials[lang]} className="btn-ghost-gold">
-              {c.common.viewAll} →
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <CTABanner />
     </SiteLayout>
