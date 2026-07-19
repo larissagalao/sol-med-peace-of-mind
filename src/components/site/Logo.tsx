@@ -13,7 +13,7 @@ interface Props {
  * gold to a pale tone using a CSS filter that preserves the sun's texture.
  */
 export function Logo({ className, variant = "full", color = "navy" }: Props) {
-  const src = brandMark.url;
+  const src = brandMark;
   // The source PNG is warm gold on transparent. On dark surfaces we lift it
   // toward ivory; on light surfaces we let the gold shine as-is.
   const filter =
