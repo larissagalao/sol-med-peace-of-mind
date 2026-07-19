@@ -206,7 +206,7 @@ const en: Content = {
     tagline: "You keep living your life. We take care of everything in Spain.",
     columns: { explore: "Explore", company: "Company", contact: "Get in touch" },
     based: "Based in Spain. Planning for couples worldwide.",
-    email: "hello@solmediterraneo.com",
+    email: "hello@solmediterraneoweddings.com",
     rights: "All rights reserved.",
     legal: "A boutique destination wedding consultancy.",
   },
@@ -678,9 +678,9 @@ const en: Content = {
     },
     error: {
       title: "Something went wrong sending your message.",
-      body: "We couldn't send your message right now. Please try again in a moment, or email us directly at hello@solmediterraneo.com and we'll get right back to you.",
+      body: "We couldn't send your message right now. Please try again in a moment, or email us directly at hello@solmediterraneoweddings.com and we'll get right back to you.",
     },
-    directContact: { label: "Prefer email?", email: "hello@solmediterraneo.com" },
+    directContact: { label: "Prefer email?", email: "hello@solmediterraneoweddings.com" },
   },
 };
 
@@ -703,7 +703,7 @@ const pt: Content = {
     tagline: "Você segue com a sua vida. Nós cuidamos de tudo na Espanha.",
     columns: { explore: "Explorar", company: "A empresa", contact: "Fale com a gente" },
     based: "Baseados na Espanha. Planejamos para casais no mundo inteiro.",
-    email: "hello@solmediterraneo.com",
+    email: "hello@solmediterraneoweddings.com",
     rights: "Todos os direitos reservados.",
     legal: "Consultoria boutique em Destination Weddings.",
   },
@@ -1175,9 +1175,9 @@ const pt: Content = {
     },
     error: {
       title: "Algo deu errado ao enviar sua mensagem.",
-      body: "Não conseguimos enviar sua mensagem agora. Tente novamente em instantes ou escreva diretamente para hello@solmediterraneo.com que retornaremos o quanto antes.",
+      body: "Não conseguimos enviar sua mensagem agora. Tente novamente em instantes ou escreva diretamente para hello@solmediterraneoweddings.com que retornaremos o quanto antes.",
     },
-    directContact: { label: "Prefere e-mail?", email: "hello@solmediterraneo.com" },
+    directContact: { label: "Prefere e-mail?", email: "hello@solmediterraneoweddings.com" },
   },
 };
 
