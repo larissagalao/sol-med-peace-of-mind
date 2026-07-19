@@ -3,25 +3,37 @@ import type { Lang } from "@/i18n/routes";
 import { getContent } from "@/i18n/content";
 import { SiteLayout } from "@/components/site/SiteLayout";
 
+// Google Apps Script web app that records the submission in the Contatos sheet
+// and emails contacto@solmediterraneoweddings.com.
+const CONTACT_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbxsTpTfYNw-cAiWTd3TY0SSvVodTrsG9_j3ggNZP7C8Fbz2p3nzgkf14YbRUtjEnIUn/exec";
+
+type Status = "idle" | "sending" | "success" | "error";
+
 export function ContactPage({ lang }: { lang: Lang }) {
   const c = getContent(lang);
   const t = c.contact;
   const f = t.formLabels;
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Client-side only for now — Cloud not enabled. Store submissions in
-    // localStorage as a temporary log so nothing is lost while backend is off.
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    setStatus("sending");
     try {
-      const data = Object.fromEntries(new FormData(e.currentTarget).entries());
-      const prior = JSON.parse(localStorage.getItem("sol.contact.submissions") || "[]");
-      prior.push({ ...data, at: new Date().toISOString(), lang });
-      localStorage.setItem("sol.contact.submissions", JSON.stringify(prior));
+      const res = await fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        // text/plain keeps this a "simple" request and avoids a CORS preflight
+        // that the Apps Script endpoint does not answer.
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ ...data, lang }),
+      });
+      const result = await res.json();
+      if (!res.ok || !result?.success) throw new Error(result?.error || "Request failed");
+      setStatus("success");
     } catch {
-      /* noop */
+      setStatus("error");
     }
-    setSent(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -36,7 +48,7 @@ export function ContactPage({ lang }: { lang: Lang }) {
       </section>
 
       <section className="container-editorial pb-24 md:pb-32">
-        {sent ? (
+        {status === "success" ? (
           <div className="max-w-2xl mx-auto text-center py-24">
             <div className="eyebrow mb-6 flex justify-center">✓</div>
             <h2 className="text-balance">{t.success.title}</h2>
@@ -85,8 +97,16 @@ export function ContactPage({ lang }: { lang: Lang }) {
                   className="w-full bg-ivory border border-input px-4 py-3 text-navy focus:border-gold focus:outline-none transition-colors resize-none"
                 />
               </div>
+              {status === "error" && (
+                <div className="md:col-span-2 p-5 bg-sand/60 border border-gold/40" role="alert">
+                  <div className="font-serif text-lg text-navy">{t.error.title}</div>
+                  <p className="mt-2 text-sm text-navy/80 leading-relaxed">{t.error.body}</p>
+                </div>
+              )}
               <div className="md:col-span-2 pt-4">
-                <button type="submit" className="btn-primary">{f.submit}</button>
+                <button type="submit" className="btn-primary" disabled={status === "sending"}>
+                  {status === "sending" ? `${f.submit}…` : f.submit}
+                </button>
               </div>
             </form>
           </div>
