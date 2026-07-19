@@ -49,29 +49,6 @@ export function AboutPage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* BOUTIQUE / 12 WEDDINGS */}
-      <section className="container-editorial py-24 md:py-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-5 text-center md:text-left">
-            <div className="eyebrow mb-6">{t.boutique.eyebrow}</div>
-            <div className="font-serif text-[10rem] md:text-[13rem] leading-[0.9] text-gold">
-              {t.boutique.stat.number}
-            </div>
-            <div className="mt-4 text-sm tracking-[0.25em] uppercase text-navy/70">
-              {t.boutique.stat.label}
-            </div>
-          </div>
-          <div className="md:col-span-6 md:col-start-7">
-            <h2 className="text-balance">{t.boutique.title}</h2>
-            <p className="mt-6 text-xl font-serif italic text-navy/85 leading-snug">
-              {t.boutique.lead}
-            </p>
-            <div className="mt-6 space-y-5 text-lg text-navy/80 leading-relaxed">
-              {t.boutique.body.map((p, i) => <p key={i}>{p}</p>)}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* TRUST */}
       <section className="bg-sand/40 py-24 md:py-32">
