@@ -46,7 +46,7 @@ export function HomePage({ lang }: { lang: Lang }) {
           />
         </div>
 
-        <div className="relative container-editorial min-h-[86vh] md:min-h-[92vh] flex flex-col justify-end pb-28 md:pb-36 pt-8">
+        <div className="relative container-editorial min-h-[86vh] md:min-h-[72vh] flex flex-col justify-end pb-28 md:pb-24 pt-8 md:pt-40">
           <div className="max-w-2xl fade-up">
             <div className="flex items-center gap-4 mb-8">
               <span className="h-px w-10 bg-gold" aria-hidden />
