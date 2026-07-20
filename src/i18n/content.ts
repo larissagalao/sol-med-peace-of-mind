@@ -112,6 +112,14 @@ export type Content = {
       stat: { number: string; label: string };
     };
     howWeWork: { title: string; steps: { name: string; body: string }[] };
+    founder: {
+      eyebrow: string;
+      title: string;
+      name: string;
+      role: string;
+      body: string[];
+      signature: string;
+    };
   };
   services: {
     meta: PageMeta;
@@ -352,6 +360,18 @@ const en: Content = {
         { name: "We handle Spain, in Spain", body: "Venues, licenses, translations, tastings, room blocks, transport — the entire local machinery is ours to run." },
         { name: "We stay calm when things move", body: "Weddings are living things. Suppliers get sick. Rain arrives. Guests change plans. Our job is to absorb all of that so you never feel it." },
       ],
+    },
+    founder: {
+      eyebrow: "Meet the founder",
+      title: "The person behind every wedding.",
+      name: "Marina Costa",
+      role: "Founder & lead planner",
+      body: [
+        "I'm Marina — Brazilian by origin, based in Spain for the last decade. I started Sol Mediterraneo after years of watching friends abroad fall in love with the idea of a Spanish wedding, and then quietly panic at the logistics of pulling it off from another continent.",
+        "I grew up in São Paulo, moved to Barcelona for love (a long story, told over a good glass of Priorat), and stayed for the light. I know what it feels like to plan a life between two countries, in two languages, on two timelines — because I've been doing it since I was twenty-four.",
+        "When I'm not planning a wedding, I'm walking in the Empordà, cooking too much for too few people, or hunting down the best pan con tomate in whatever village we're scouting that week. That is the woman who will pick up your call.",
+      ],
+      signature: "— Marina",
     },
   },
 
@@ -849,6 +869,18 @@ const pt: Content = {
         { name: "Cuidamos da Espanha, na Espanha", body: "Locais, licenças, traduções, degustações, blocos de hotel, transporte — a máquina local inteira é nossa." },
         { name: "Mantemos a calma quando as coisas mudam", body: "Casamentos são vivos. Fornecedores adoecem. Chove. Convidados mudam de plano. Nosso trabalho é absorver tudo isso para que vocês nem sintam." },
       ],
+    },
+    founder: {
+      eyebrow: "Conheça a fundadora",
+      title: "A pessoa por trás de cada casamento.",
+      name: "Marina Costa",
+      role: "Fundadora e Wedding Planner principal",
+      body: [
+        "Sou a Marina — brasileira de origem, morando na Espanha há uma década. Comecei a Sol Mediterraneo depois de ver, durante anos, amigos no exterior se apaixonarem pela ideia de um casamento espanhol e, em silêncio, entrarem em pânico com a logística de fazer isso acontecer de outro continente.",
+        "Cresci em São Paulo, mudei para Barcelona por amor (uma história longa, para uma boa taça de Priorat) e fiquei pela luz. Sei o que é planejar uma vida entre dois países, em dois idiomas, em dois fusos — faço isso desde os vinte e quatro anos.",
+        "Quando não estou planejando um casamento, estou caminhando pelo Empordà, cozinhando demais para pouca gente, ou caçando o melhor pan con tomate no vilarejo em que estamos visitando naquela semana. É essa mulher que vai atender a sua ligação.",
+      ],
+      signature: "— Marina",
     },
   },
 

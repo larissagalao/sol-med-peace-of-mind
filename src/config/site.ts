@@ -18,4 +18,10 @@ export const SITE_CONFIG = {
   heroImage: heroDefault,
   // Google Analytics measurement id.
   gaMeasurementId: "G-8BDDE8ZMJ0",
+  // Instagram profile.
+  instagramHandle: "@solmediterraneo.weddings",
+  instagramUrl: "https://www.instagram.com/solmediterraneo.weddings",
+  // WhatsApp contact.
+  whatsappNumber: "+34 615 589 115",
+  whatsappUrl: "https://wa.me/34615589115",
 } as const;
