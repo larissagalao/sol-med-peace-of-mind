@@ -77,19 +77,6 @@ export function HomePage({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        {/* Scroll cue — a thin editorial line with a slow-traveling dot */}
-        <a
-          href="#promise"
-          aria-label={c.common.scrollCue}
-          className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-10 flex flex-col items-center gap-4 text-navy/70 hover:text-gold transition-colors group"
-        >
-          <span className="font-serif italic text-sm tracking-wide text-navy/70 group-hover:text-gold transition-colors">
-            {c.common.scrollCue}
-          </span>
-          <span className="relative block h-14 w-px bg-navy/30 overflow-hidden">
-            <span className="scroll-dot absolute left-1/2 -translate-x-1/2 top-0 block h-2 w-2 rounded-full bg-gold" />
-          </span>
-        </a>
       </section>
 
 
