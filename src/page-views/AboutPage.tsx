@@ -6,6 +6,7 @@ import { CTABanner } from "@/components/site/CTABanner";
 import { SectionHeader } from "@/components/site/SectionHeader";
 import interior from "@/assets/interior.jpg";
 import oliveGrove from "@/assets/olive-grove.jpg";
+import founderPortrait from "@/assets/founder.jpg";
 
 export function AboutPage({ lang }: { lang: Lang }) {
   const c = getContent(lang);
@@ -48,6 +49,38 @@ export function AboutPage({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
+
+      {/* FOUNDER */}
+      <section className="container-editorial py-24 md:py-32">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
+          <div className="md:col-span-5">
+            <div className="relative">
+              <img
+                src={founderPortrait}
+                alt={`${t.founder.name}, ${t.founder.role}`}
+                loading="lazy"
+                width={900}
+                height={1200}
+                className="w-full h-auto shadow-elegant"
+              />
+              <div className="absolute -bottom-4 -right-4 hidden md:block w-24 h-24 border border-gold/60" aria-hidden />
+            </div>
+          </div>
+          <div className="md:col-span-6 md:col-start-7">
+            <div className="eyebrow mb-5">{t.founder.eyebrow}</div>
+            <h2 className="text-balance">{t.founder.title}</h2>
+            <p className="mt-6 font-serif text-xl text-gold italic">
+              {t.founder.name} <span className="text-navy/50 not-italic text-base tracking-widest uppercase ml-2">· {t.founder.role}</span>
+            </p>
+            <div className="mt-8 space-y-5 text-lg text-navy/80 leading-relaxed">
+              {t.founder.body.map((p, i) => <p key={i}>{p}</p>)}
+            </div>
+            <p className="mt-8 font-serif text-2xl text-navy italic">{t.founder.signature}</p>
+          </div>
+        </div>
+      </section>
+
+
 
 
       {/* TRUST */}

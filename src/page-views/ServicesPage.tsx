@@ -69,6 +69,39 @@ export function ServicesPage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
+      {/* INVESTMENT */}
+      <section className="bg-sand/50 py-24 md:py-32">
+        <div className="container-editorial">
+          <SectionHeader eyebrow={p.eyebrow} title={p.title} body={p.intro} align="center" />
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {p.tiers.map((tier, i) => (
+              <article key={tier.label} className="bg-ivory p-10 border border-border/60 flex flex-col">
+                <div className="font-serif text-5xl text-gold/40 leading-none mb-6">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 className="text-navy text-xl">{tier.label}</h3>
+                <p className="mt-4 font-serif text-2xl text-gold">{tier.range}</p>
+                <p className="mt-4 text-navy/75 leading-relaxed text-base">{tier.note}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-16 max-w-3xl mx-auto space-y-6 text-navy/75 leading-relaxed">
+            <p>{p.disclaimer}</p>
+            <p>{p.venueNote}</p>
+            <p className="italic text-navy/80">{p.flexibility}</p>
+          </div>
+          <div className="mt-12 flex justify-center">
+            <a
+              href={SITE_CONFIG.discoveryCallUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              {c.common.bookCall}
+            </a>
+          </div>
+        </div>
+      </section>
 
       <CTABanner />
       {/* silence unused import warning */}
