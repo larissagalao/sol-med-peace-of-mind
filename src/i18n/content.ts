@@ -649,6 +649,104 @@ const en: Content = {
     },
   },
 
+  partners: {
+    meta: {
+      title: "Wedding Partners in Spain — Venues, Catering & Photographers | Sol Mediterraneo",
+      description:
+        "The trusted circle of wedding venues, catering teams and photographers we plan with across Spain — Catalonia, Costa Brava, Mallorca, Ibiza, Andalusia and Barcelona.",
+    },
+    hero: {
+      eyebrow: "Our trusted circle",
+      title: "The people and places behind every wedding.",
+      body: "A destination wedding in Spain is only as calm as the people building it with you. Over the years we've assembled a small circle of venues, catering teams and photographers we plan with again and again — because the answer is yes, they show up, and the wedding feels the way it should.",
+    },
+    intro: [
+      "We are wedding planners, not a directory. We don't take commissions, we don't sell listings, and we don't push partners onto couples. What follows is a plain-language guide to the kind of venues, catering teams and photographers we work with in Spain — how we choose them, where they are, and why it matters for a destination wedding.",
+      "Every wedding we take on is matched to the right partners for the couple, the guest count and the region. Introductions happen through us — quietly, personally, and after the discovery call.",
+    ],
+    categories: [
+      {
+        key: "venues",
+        eyebrow: "01",
+        title: "Wedding venues in Spain",
+        lead: "Private villas, masias, country estates and boutique hotels — chosen for the wedding, not the brochure.",
+        body: [
+          "The venue sets the tone of the entire wedding: how guests arrive, where the ceremony breathes, whether dinner runs long under the stars. In Spain, that means understanding the difference between a masia in Catalonia, a finca in Mallorca, a cortijo in Andalusia and a cliffside villa on Ibiza — and matching the right one to the couple's guest count, season and taste.",
+          "We visit every venue we recommend. We know the owners, the caretakers and the practical limits — noise curfews, catering rules, guest capacity, wet-weather plans. When we introduce a couple to a venue, it's because we've already answered the questions you don't know to ask yet.",
+        ],
+        criteria: {
+          title: "How we choose venues",
+          items: [
+            "Character over prestige — the space has to feel like the couple, not like a magazine",
+            "Realistic guest capacity for the wedding you actually want, not the maximum on the brochure",
+            "A serious wet-weather plan, so a Spanish sky is never the whole plan",
+            "Clear, fair contracts in a language you can read, with owners we can pick up the phone to",
+            "Sensible logistics for guests coming from abroad — accommodation, transfers, curfews",
+          ],
+        },
+        regionsLabel: "Where we plan",
+        regions: ["Costa Brava", "Catalonia (masias, vineyards, country estates)", "Barcelona (private villas, historic estates)", "Mallorca (fincas and coastal villas)", "Ibiza (cliffside villas and quiet fincas)", "Andalusia (cortijos in Seville and Granada)"],
+      },
+      {
+        key: "catering",
+        eyebrow: "02",
+        title: "Wedding catering in Spain",
+        lead: "Chefs and catering teams that treat a wedding menu as a piece of writing, not a buffet.",
+        body: [
+          "Food is the one thing every guest at a destination wedding remembers. In Spain that's a gift — the produce, the seafood, the wine, the way a long table under olive trees turns dinner into the evening. But great weddings need great catering teams: chefs who can hold a menu for 60 people at the top of a hill, and service that keeps its calm from vermouth hour through the last cocktail.",
+          "We work with a small number of catering partners across the regions we plan in. Some are venue-based, some travel with us, and all of them cook Mediterranean food that tastes like where the wedding is happening.",
+        ],
+        criteria: {
+          title: "How we choose catering teams",
+          items: [
+            "Menus built around Spanish and Mediterranean produce in season",
+            "Kitchen brigades sized for the wedding, not stretched thin across three events that night",
+            "Real dietary care — celiac, vegetarian, vegan, allergies handled seriously, not as a footnote",
+            "Wine and bar programs curated with the couple, not pulled off a template",
+            "Service that speaks the couple's language (English, Portuguese, Spanish, Catalan)",
+          ],
+        },
+        regionsLabel: "Where we plan",
+        regions: ["Costa Brava and Catalonia (Mediterranean, slow-food, wine country)", "Barcelona (contemporary Catalan and tasting-menu teams)", "Mallorca and Ibiza (island produce, seafood, farm-to-table)", "Andalusia (traditional Andalusian menus with modern editing)"],
+      },
+      {
+        key: "photographers",
+        eyebrow: "03",
+        title: "Wedding photographers in Spain",
+        lead: "Documentary-minded photographers whose work looks like the wedding actually was.",
+        body: [
+          "A wedding album is the only thing that survives the day. Most of the wedding photography we love in Spain is quiet, editorial and documentary — long-lens portraits, real reactions, the light that only happens at 8:47pm in September on the Costa Brava.",
+          "We introduce couples to photographers whose bodies of work fit the wedding we're planning together — not the trendiest name on Instagram. Some are based in Barcelona, some in Mallorca, some travel with us across Spain.",
+        ],
+        criteria: {
+          title: "How we choose photographers",
+          items: [
+            "A consistent, editorial body of work — not one lucky album",
+            "Documentary instincts: people first, details second",
+            "Comfortable directing without staging — real moments still need help sometimes",
+            "Reliable delivery timelines, clear contracts, second shooter when needed",
+            "A calm presence on the day; guests should barely notice they're being photographed",
+          ],
+        },
+        regionsLabel: "Where we plan",
+        regions: ["Barcelona and Costa Brava", "Catalonia (vineyards and country estates)", "Mallorca and Ibiza", "Andalusia (Seville and Granada)"],
+      },
+    ],
+    trust: {
+      title: "Why introductions happen through us",
+      body: [
+        "Every partner listed above is someone we've worked with — often more than once, across seasons, across couples. We know how they behave when a supplier drops out on a Thursday, how they price honestly, and how they treat guests who don't speak Spanish.",
+        "That's the whole point of a boutique Wedding Planner in Spain. You don't need a longer list of vendors. You need the short list that already knows how to build your wedding.",
+      ],
+    },
+    closing: {
+      title: "Ready to meet the right people for your wedding?",
+      body: "Introductions happen after the discovery call, once we understand the wedding you're picturing. Book a quiet 30-minute conversation and we'll take it from there.",
+    },
+  },
+
+
+
   faq: {
     meta: {
       title: "FAQ — Wedding Planning in Spain for International Couples | Sol Mediterraneo",
