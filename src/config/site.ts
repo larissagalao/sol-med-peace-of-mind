@@ -22,6 +22,14 @@ export const SITE_CONFIG = {
   instagramHandle: "@solmediterraneo.weddings",
   instagramUrl: "https://www.instagram.com/solmediterraneo.weddings",
   // WhatsApp contact.
+  // WhatsApp contact. The URL includes a pre-filled message so a tap opens
+  // the chat with the greeting already typed.
   whatsappNumber: "+34 615 589 115",
-  whatsappUrl: "https://wa.me/34615589115",
+  whatsappUrl:
+    "https://wa.me/34615589115?text=" +
+    encodeURIComponent(
+      "Hi Sol Mediterraneo! I'd love to learn more about planning our wedding in Spain.",
+    ),
 } as const;
+
+
