@@ -35,12 +35,14 @@ export type Content = {
     services: string;
     destination: string;
     testimonials: string;
+    partners: string;
     faq: string;
     contact: string;
     cta: string;
     menu: string;
     close: string;
   };
+
   footer: {
     tagline: string;
     columns: { explore: string; company: string; contact: string };
