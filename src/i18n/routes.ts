@@ -8,6 +8,7 @@ export type PageId =
   | "services"
   | "destination"
   | "testimonials"
+  | "partners"
   | "faq"
   | "contact";
 
@@ -17,14 +18,19 @@ export const ROUTES: Record<PageId, Record<Lang, string>> = {
   services:      { en: "/services",                      pt: "/pt/servicos" },
   destination:   { en: "/destination-weddings-spain",    pt: "/pt/casar-na-espanha" },
   testimonials:  { en: "/testimonials",                  pt: "/pt/depoimentos" },
+  partners:      { en: "/partners",                      pt: "/pt/parceiros" },
   faq:           { en: "/faq",                           pt: "/pt/faq" },
   contact:       { en: "/contact",                       pt: "/pt/contato" },
 };
 
+// Note: "testimonials" is intentionally omitted from ALL_PAGE_IDS while the
+// Real Wedding case study is hidden — this keeps it out of the sitemap and
+// nav lookups. The route file still resolves for any existing links.
 export const ALL_PAGE_IDS: PageId[] = [
-  "home", "about", "services", "destination", "testimonials", "faq", "contact",
+  "home", "about", "services", "destination", "partners", "faq", "contact",
 ];
 
 export function altPath(pageId: PageId, lang: Lang): string {
   return ROUTES[pageId][lang];
 }
+
