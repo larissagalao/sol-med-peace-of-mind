@@ -171,6 +171,23 @@ export type Content = {
       galleryNote: string;
     };
   };
+  partners: {
+    meta: PageMeta;
+    hero: { eyebrow: string; title: string; body: string };
+    intro: string[];
+    categories: {
+      key: "venues" | "catering" | "photographers";
+      eyebrow: string;
+      title: string;
+      lead: string;
+      body: string[];
+      criteria: { title: string; items: string[] };
+      regionsLabel: string;
+      regions: string[];
+    }[];
+    trust: { title: string; body: string[] };
+    closing: { title: string; body: string };
+  };
   faq: {
     meta: PageMeta;
     hero: { eyebrow: string; title: string; body: string };
