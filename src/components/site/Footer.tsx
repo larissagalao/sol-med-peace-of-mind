@@ -15,7 +15,7 @@ export function Footer() {
     { label: c.nav.about, href: ROUTES.about[lang] },
     { label: c.nav.services, href: ROUTES.services[lang] },
     { label: c.nav.destination, href: ROUTES.destination[lang] },
-    { label: c.nav.testimonials, href: ROUTES.testimonials[lang] },
+    { label: c.nav.partners, href: ROUTES.partners[lang] },
     { label: c.nav.faq, href: ROUTES.faq[lang] },
   ];
 

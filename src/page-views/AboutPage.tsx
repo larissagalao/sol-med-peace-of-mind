@@ -50,7 +50,7 @@ export function AboutPage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* FOUNDER */}
+      {/* FOUNDER — hidden until portrait photo is available.
       <section className="container-editorial py-24 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
           <div className="md:col-span-5">
@@ -79,6 +79,7 @@ export function AboutPage({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
+      */}
 
 
 
