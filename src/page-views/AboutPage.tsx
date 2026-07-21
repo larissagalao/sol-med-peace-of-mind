@@ -6,7 +6,7 @@ import { CTABanner } from "@/components/site/CTABanner";
 import { SectionHeader } from "@/components/site/SectionHeader";
 import interior from "@/assets/interior.jpg";
 import oliveGrove from "@/assets/olive-grove.jpg";
-import founderPortrait from "@/assets/founder.jpg";
+// import founderPortrait from "@/assets/founder.jpg"; // re-enable when FOUNDER section returns
 
 export function AboutPage({ lang }: { lang: Lang }) {
   const c = getContent(lang);
