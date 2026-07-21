@@ -1257,6 +1257,104 @@ const pt: Content = {
     },
   },
 
+  partners: {
+    meta: {
+      title: "Parceiros para Casamento na Espanha — Venues, Catering e Fotógrafos | Sol Mediterraneo",
+      description:
+        "O círculo de confiança de venues, equipes de catering e fotógrafos com quem planejamos casamentos na Espanha — Catalunha, Costa Brava, Mallorca, Ibiza, Andaluzia e Barcelona.",
+    },
+    hero: {
+      eyebrow: "Nosso círculo de confiança",
+      title: "As pessoas e os lugares por trás de cada casamento.",
+      body: "Um Destination Wedding na Espanha é tão tranquilo quanto as pessoas que constroem ele com você. Ao longo dos anos reunimos um pequeno círculo de venues, equipes de catering e fotógrafos com quem planejamos repetidamente — porque a resposta é sim, eles aparecem, e o casamento acontece do jeito que deveria.",
+    },
+    intro: [
+      "Somos Wedding Planners, não um diretório. Não trabalhamos com comissões, não vendemos listagens e não empurramos fornecedores para os casais. O que segue é um guia direto sobre os venues, equipes de catering e fotógrafos com quem trabalhamos na Espanha — como escolhemos, onde estão e por que isso importa em um Destination Wedding.",
+      "Cada casamento que aceitamos é combinado com os parceiros certos para o casal, o número de convidados e a região. As apresentações acontecem por meio da gente — de forma discreta, pessoal, depois da conversa inicial.",
+    ],
+    categories: [
+      {
+        key: "venues",
+        eyebrow: "01",
+        title: "Venues para casamento na Espanha",
+        lead: "Villas privadas, masias, casas de campo e hotéis boutique — escolhidos para o casamento, não para o folder.",
+        body: [
+          "O venue define o tom do casamento inteiro: como os convidados chegam, onde a cerimônia respira, se o jantar se estende sob as estrelas. Na Espanha, isso significa entender a diferença entre uma masia na Catalunha, uma finca em Mallorca, um cortijo na Andaluzia e uma villa na beira de um penhasco em Ibiza — e combinar o venue certo com o número de convidados, a estação do ano e o gosto do casal.",
+          "Visitamos pessoalmente cada venue que recomendamos. Conhecemos os donos, os caseiros e os limites práticos — horários de silêncio, regras de catering, capacidade, plano B para chuva. Quando apresentamos um venue a um casal, é porque já respondemos as perguntas que vocês ainda nem sabem que precisam fazer.",
+        ],
+        criteria: {
+          title: "Como escolhemos os venues",
+          items: [
+            "Personalidade acima de prestígio — o espaço tem que se parecer com o casal, não com uma revista",
+            "Capacidade real para o casamento que vocês querem, não o máximo que o folder promete",
+            "Um plano B para chuva sério, para que o céu espanhol nunca seja o plano inteiro",
+            "Contratos claros e justos, com donos com quem conseguimos falar por telefone",
+            "Logística sensata para convidados vindo de fora — hospedagem, transfers, horários",
+          ],
+        },
+        regionsLabel: "Onde planejamos",
+        regions: ["Costa Brava", "Catalunha (masias, vinhedos, casas de campo)", "Barcelona (villas privadas, propriedades históricas)", "Mallorca (fincas e villas litorâneas)", "Ibiza (villas em penhascos e fincas discretas)", "Andaluzia (cortijos em Sevilha e Granada)"],
+      },
+      {
+        key: "catering",
+        eyebrow: "02",
+        title: "Catering para casamento na Espanha",
+        lead: "Chefs e equipes de catering que tratam o menu de casamento como uma obra, não como um buffet.",
+        body: [
+          "Comida é a única coisa que todo convidado lembra de um Destination Wedding. Na Espanha, isso é um presente — os produtos, os frutos do mar, o vinho, o modo como uma mesa longa embaixo das oliveiras transforma o jantar na noite inteira. Mas grandes casamentos precisam de grandes equipes de catering: chefs capazes de manter um menu para 60 pessoas no alto de uma colina, e um serviço que mantém a calma da hora do vermute até o último drink.",
+          "Trabalhamos com um pequeno número de parceiros de catering nas regiões onde planejamos. Alguns são do venue, outros viajam com a gente, e todos cozinham comida mediterrânea que tem o sabor do lugar onde o casamento está acontecendo.",
+        ],
+        criteria: {
+          title: "Como escolhemos as equipes de catering",
+          items: [
+            "Menus construídos em torno de produtos espanhóis e mediterrâneos da estação",
+            "Brigadas dimensionadas para o casamento, não esticadas em três eventos na mesma noite",
+            "Cuidado real com restrições — celíaco, vegetariano, vegano, alergias — tratadas a sério",
+            "Programas de vinho e bar curados junto com o casal, não tirados de um template",
+            "Serviço que fala o idioma dos convidados (inglês, português, espanhol, catalão)",
+          ],
+        },
+        regionsLabel: "Onde planejamos",
+        regions: ["Costa Brava e Catalunha (mediterrâneo, slow-food, região vinícola)", "Barcelona (catalão contemporâneo e menus degustação)", "Mallorca e Ibiza (produtos das ilhas, frutos do mar, farm-to-table)", "Andaluzia (menus andaluzes tradicionais com edição moderna)"],
+      },
+      {
+        key: "photographers",
+        eyebrow: "03",
+        title: "Fotógrafos de casamento na Espanha",
+        lead: "Fotógrafos documentais cujas imagens parecem com o casamento que realmente aconteceu.",
+        body: [
+          "O álbum é a única coisa que sobrevive ao dia. A fotografia de casamento que amamos na Espanha é discreta, editorial e documental — retratos com teleobjetiva, reações reais, aquela luz que só acontece às 20h47 de um dia de setembro na Costa Brava.",
+          "Apresentamos aos casais fotógrafos cujo portfólio combina com o casamento que estamos planejando juntos — não o nome mais em alta no Instagram. Alguns são de Barcelona, outros de Mallorca, e alguns viajam com a gente pela Espanha inteira.",
+        ],
+        criteria: {
+          title: "Como escolhemos os fotógrafos",
+          items: [
+            "Um portfólio editorial consistente — não um único álbum de sorte",
+            "Instinto documental: pessoas primeiro, detalhes depois",
+            "Confortável direcionando sem forçar — momentos reais às vezes precisam de um empurrão",
+            "Prazos de entrega confiáveis, contratos claros, segundo fotógrafo quando necessário",
+            "Presença calma no dia; os convidados quase não deveriam perceber que estão sendo fotografados",
+          ],
+        },
+        regionsLabel: "Onde planejamos",
+        regions: ["Barcelona e Costa Brava", "Catalunha (vinhedos e casas de campo)", "Mallorca e Ibiza", "Andaluzia (Sevilha e Granada)"],
+      },
+    ],
+    trust: {
+      title: "Por que as apresentações passam pela gente",
+      body: [
+        "Cada parceiro listado acima é alguém com quem já trabalhamos — muitas vezes, ao longo de estações, com casais diferentes. Sabemos como se comportam quando um fornecedor cai numa quinta-feira, como precificam com honestidade e como tratam convidados que não falam espanhol.",
+        "É esse o sentido de um Wedding Planner boutique na Espanha. Vocês não precisam de uma lista mais longa de fornecedores. Precisam da lista curta que já sabe como construir o casamento de vocês.",
+      ],
+    },
+    closing: {
+      title: "Prontos para conhecer as pessoas certas para o casamento de vocês?",
+      body: "As apresentações acontecem depois da conversa inicial, quando entendemos o casamento que vocês estão imaginando. Agendem 30 minutos calmos com a gente e seguimos a partir dali.",
+    },
+  },
+
+
+
   faq: {
     meta: {
       title: "Perguntas Frequentes — Wedding Planning na Espanha | Sol Mediterraneo",
