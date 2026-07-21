@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as DestinationWeddingsSpainRouteImport } from './routes/destination-weddings-spain'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -20,6 +21,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as PtIndexRouteImport } from './routes/pt.index'
 import { Route as PtSobreRouteImport } from './routes/pt.sobre'
 import { Route as PtServicosRouteImport } from './routes/pt.servicos'
+import { Route as PtParceirosRouteImport } from './routes/pt.parceiros'
 import { Route as PtFaqRouteImport } from './routes/pt.faq'
 import { Route as PtDepoimentosRouteImport } from './routes/pt.depoimentos'
 import { Route as PtContatoRouteImport } from './routes/pt.contato'
@@ -38,6 +40,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
@@ -81,6 +88,11 @@ const PtServicosRoute = PtServicosRouteImport.update({
   path: '/pt/servicos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PtParceirosRoute = PtParceirosRouteImport.update({
+  id: '/pt/parceiros',
+  path: '/pt/parceiros',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PtFaqRoute = PtFaqRouteImport.update({
   id: '/pt/faq',
   path: '/pt/faq',
@@ -108,6 +120,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/destination-weddings-spain': typeof DestinationWeddingsSpainRoute
   '/faq': typeof FaqRoute
+  '/partners': typeof PartnersRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
@@ -115,6 +128,7 @@ export interface FileRoutesByFullPath {
   '/pt/contato': typeof PtContatoRoute
   '/pt/depoimentos': typeof PtDepoimentosRoute
   '/pt/faq': typeof PtFaqRoute
+  '/pt/parceiros': typeof PtParceirosRoute
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
   '/pt/': typeof PtIndexRoute
@@ -125,6 +139,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/destination-weddings-spain': typeof DestinationWeddingsSpainRoute
   '/faq': typeof FaqRoute
+  '/partners': typeof PartnersRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
@@ -132,6 +147,7 @@ export interface FileRoutesByTo {
   '/pt/contato': typeof PtContatoRoute
   '/pt/depoimentos': typeof PtDepoimentosRoute
   '/pt/faq': typeof PtFaqRoute
+  '/pt/parceiros': typeof PtParceirosRoute
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
   '/pt': typeof PtIndexRoute
@@ -143,6 +159,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/destination-weddings-spain': typeof DestinationWeddingsSpainRoute
   '/faq': typeof FaqRoute
+  '/partners': typeof PartnersRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
@@ -150,6 +167,7 @@ export interface FileRoutesById {
   '/pt/contato': typeof PtContatoRoute
   '/pt/depoimentos': typeof PtDepoimentosRoute
   '/pt/faq': typeof PtFaqRoute
+  '/pt/parceiros': typeof PtParceirosRoute
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
   '/pt/': typeof PtIndexRoute
@@ -162,6 +180,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/destination-weddings-spain'
     | '/faq'
+    | '/partners'
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
@@ -169,6 +188,7 @@ export interface FileRouteTypes {
     | '/pt/contato'
     | '/pt/depoimentos'
     | '/pt/faq'
+    | '/pt/parceiros'
     | '/pt/servicos'
     | '/pt/sobre'
     | '/pt/'
@@ -179,6 +199,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/destination-weddings-spain'
     | '/faq'
+    | '/partners'
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
@@ -186,6 +207,7 @@ export interface FileRouteTypes {
     | '/pt/contato'
     | '/pt/depoimentos'
     | '/pt/faq'
+    | '/pt/parceiros'
     | '/pt/servicos'
     | '/pt/sobre'
     | '/pt'
@@ -196,6 +218,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/destination-weddings-spain'
     | '/faq'
+    | '/partners'
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
@@ -203,6 +226,7 @@ export interface FileRouteTypes {
     | '/pt/contato'
     | '/pt/depoimentos'
     | '/pt/faq'
+    | '/pt/parceiros'
     | '/pt/servicos'
     | '/pt/sobre'
     | '/pt/'
@@ -214,6 +238,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DestinationWeddingsSpainRoute: typeof DestinationWeddingsSpainRoute
   FaqRoute: typeof FaqRoute
+  PartnersRoute: typeof PartnersRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TestimonialsRoute: typeof TestimonialsRoute
@@ -221,6 +246,7 @@ export interface RootRouteChildren {
   PtContatoRoute: typeof PtContatoRoute
   PtDepoimentosRoute: typeof PtDepoimentosRoute
   PtFaqRoute: typeof PtFaqRoute
+  PtParceirosRoute: typeof PtParceirosRoute
   PtServicosRoute: typeof PtServicosRoute
   PtSobreRoute: typeof PtSobreRoute
   PtIndexRoute: typeof PtIndexRoute
@@ -247,6 +273,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/faq': {
@@ -305,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtServicosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pt/parceiros': {
+      id: '/pt/parceiros'
+      path: '/pt/parceiros'
+      fullPath: '/pt/parceiros'
+      preLoaderRoute: typeof PtParceirosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pt/faq': {
       id: '/pt/faq'
       path: '/pt/faq'
@@ -342,6 +382,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DestinationWeddingsSpainRoute: DestinationWeddingsSpainRoute,
   FaqRoute: FaqRoute,
+  PartnersRoute: PartnersRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TestimonialsRoute: TestimonialsRoute,
@@ -349,6 +390,7 @@ const rootRouteChildren: RootRouteChildren = {
   PtContatoRoute: PtContatoRoute,
   PtDepoimentosRoute: PtDepoimentosRoute,
   PtFaqRoute: PtFaqRoute,
+  PtParceirosRoute: PtParceirosRoute,
   PtServicosRoute: PtServicosRoute,
   PtSobreRoute: PtSobreRoute,
   PtIndexRoute: PtIndexRoute,
