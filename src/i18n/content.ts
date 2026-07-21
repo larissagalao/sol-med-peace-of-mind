@@ -831,6 +831,7 @@ const pt: Content = {
     services: "Serviços",
     destination: "Casar na Espanha",
     testimonials: "Casamento Real",
+    partners: "Parceiros",
     faq: "Perguntas",
     contact: "Contato",
     cta: "Agende uma conversa",
