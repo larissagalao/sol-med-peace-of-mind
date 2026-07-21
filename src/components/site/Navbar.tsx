@@ -11,10 +11,11 @@ const NAV_ITEMS: { id: PageId; key: keyof ReturnType<typeof getContent>["nav"] }
   { id: "about", key: "about" },
   { id: "services", key: "services" },
   { id: "destination", key: "destination" },
-  { id: "testimonials", key: "testimonials" },
+  { id: "partners", key: "partners" },
   { id: "faq", key: "faq" },
   { id: "contact", key: "contact" },
 ];
+
 
 export function Navbar() {
   const { lang, setLang } = useLang();
