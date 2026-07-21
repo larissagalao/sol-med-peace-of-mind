@@ -30,4 +30,6 @@ export const SITE_CONFIG = {
     encodeURIComponent(
       "Hi Sol Mediterraneo! I'd love to learn more about planning our wedding in Spain.",
     ),
+} as const;
+
 
