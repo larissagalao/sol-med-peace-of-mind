@@ -223,6 +223,7 @@ const en: Content = {
     services: "Services",
     destination: "Weddings in Spain",
     testimonials: "Real Wedding",
+    partners: "Partners",
     faq: "FAQ",
     contact: "Contact",
     cta: "Book a Discovery Call",
