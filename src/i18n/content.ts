@@ -500,9 +500,9 @@ const en: Content = {
 
   destination: {
     meta: {
-      title: "Destination Weddings in Spain — The Complete Guide | Sol Mediterraneo",
+      title: "Destination Weddings in Spain: Complete Guide",
       description:
-        "Everything international couples need to know about planning a Destination Wedding in Spain: legal requirements, costs, regions, timeline, and common mistakes to avoid.",
+        "Everything international couples need to plan a Destination Wedding in Spain: legal requirements, costs, regions, timeline and mistakes to avoid.",
     },
     hero: {
       eyebrow: "The complete guide",
