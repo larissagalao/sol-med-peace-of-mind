@@ -867,9 +867,9 @@ const pt: Content = {
 
   home: {
     meta: {
-      title: "Sol Mediterraneo Weddings Co. — Wedding Planner de Destination Weddings na Espanha",
+      title: "Destination Wedding Planner na Espanha | Sol Mediterraneo",
       description:
-        "Consultoria boutique de Wedding Planning para Destination Weddings na Espanha. Planejamos casamentos elegantes e tranquilos para casais internacionais — enquanto você segue com a sua vida, nós cuidamos de tudo aqui.",
+        "Consultoria boutique para Destination Weddings na Espanha. Planejamos casamentos elegantes para casais internacionais — enquanto você segue sua vida.",
     },
     hero: {
       eyebrow: "Destination Weddings na Espanha",
