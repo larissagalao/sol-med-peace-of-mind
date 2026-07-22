@@ -1,7 +1,5 @@
-import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
-import { ROUTES } from "@/i18n/routes";
 import { SITE_CONFIG } from "@/config/site";
 import { Logo } from "./Logo";
 
@@ -9,15 +7,6 @@ export function Footer() {
   const { lang } = useLang();
   const c = getContent(lang);
   const year = new Date().getFullYear();
-
-  const explore: { label: string; href: string }[] = [
-    { label: c.nav.home, href: ROUTES.home[lang] },
-    { label: c.nav.about, href: ROUTES.about[lang] },
-    { label: c.nav.services, href: ROUTES.services[lang] },
-    { label: c.nav.destination, href: ROUTES.destination[lang] },
-    { label: c.nav.partners, href: ROUTES.partners[lang] },
-    { label: c.nav.faq, href: ROUTES.faq[lang] },
-  ];
 
   return (
     <footer className="bg-navy text-ivory mt-24">
@@ -33,20 +22,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-3">
-            <div className="eyebrow text-gold-soft mb-5">{c.footer.columns.explore}</div>
-            <ul className="space-y-3">
-              {explore.map((l) => (
-                <li key={l.href}>
-                  <Link to={l.href} className="text-sm text-ivory/80 hover:text-gold transition-colors">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="md:col-span-4">
+          <div className="md:col-span-7">
             <div className="eyebrow text-gold-soft mb-5">{c.footer.columns.contact}</div>
             <a
               href={`mailto:${c.footer.email}`}
