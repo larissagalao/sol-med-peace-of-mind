@@ -101,6 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#faf5ec" },
+      { name: "google-site-verification", content: "l2QvtfkV-IWIyw6YjvnAHkv82g-lAWQNGZX2X4ZuHLA" },
       { property: "og:title", content: "Sol Mediterraneo Weddings Co. — Destination Wedding Planner in Spain" },
       { name: "twitter:title", content: "Sol Mediterraneo Weddings Co. — Destination Wedding Planner in Spain" },
       { property: "og:description", content: "Boutique destination wedding planner in Spain for international couples. You keep living your life. We take care of everything in Spain." },
