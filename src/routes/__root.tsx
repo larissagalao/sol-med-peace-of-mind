@@ -95,6 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Sol Mediterraneo Weddings Co." },
       { name: "theme-color", content: "#faf5ec" },
       { name: "google-site-verification", content: "GNpgiX5rbzENuwjB920zUten4nhHu06HvC0OOcSyBDY" },
+      { name: "google-site-verification", content: "l2QvtfkV-IWIyw6YjvnAHkv82g-lAWQNGZX2X4ZuHLA" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
