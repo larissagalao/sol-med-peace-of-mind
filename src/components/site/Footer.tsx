@@ -1,7 +1,5 @@
-import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
-import { ROUTES } from "@/i18n/routes";
 import { SITE_CONFIG } from "@/config/site";
 import { Logo } from "./Logo";
 
