@@ -749,9 +749,9 @@ const en: Content = {
 
   faq: {
     meta: {
-      title: "FAQ — Wedding Planning in Spain for International Couples | Sol Mediterraneo",
+      title: "FAQ — Weddings in Spain | Sol Mediterraneo",
       description:
-        "Answers to the most common questions from international couples planning a wedding in Spain: legal requirements, costs, travel, language, payments, and more.",
+        "Answers to common questions from international couples planning a wedding in Spain: legal steps, costs, travel, language and payments.",
     },
     hero: {
       eyebrow: "Frequently asked",
