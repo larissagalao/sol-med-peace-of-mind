@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.solmediterraneoweddings.com/sitemap.xml
+Sitemap: https://sol-med-peace-of-mind.lovable.app/sitemap.xml

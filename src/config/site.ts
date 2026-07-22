@@ -5,7 +5,7 @@ import heroDefault from "@/assets/hero-villa.jpg";
 export const SITE_CONFIG = {
   // Canonical production origin, NO trailing slash. Used to build absolute
   // URLs for canonical/og/hreflang tags and the sitemap.
-  url: "https://www.solmediterraneoweddings.com",
+  url: "https://sol-med-peace-of-mind.lovable.app",
   // Default Open Graph / Twitter share image (relative path served from
   // public/). Made absolute with SITE_CONFIG.url where needed.
   ogImagePath: "/og-image.jpg",
