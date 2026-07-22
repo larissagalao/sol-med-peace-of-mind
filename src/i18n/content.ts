@@ -1357,7 +1357,7 @@ const pt: Content = {
 
   faq: {
     meta: {
-      title: "Perguntas Frequentes — Wedding Planning na Espanha | Sol Mediterraneo",
+      title: "FAQ — Casamentos na Espanha | Sol Mediterraneo",
       description:
         "Respostas para as perguntas mais comuns de casais internacionais planejando um casamento na Espanha: requisitos legais, custos, viagens, idioma e pagamentos.",
     },
