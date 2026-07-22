@@ -399,7 +399,7 @@ const en: Content = {
     meta: {
       title: "Services — Wedding Planning in Spain | Sol Mediterraneo",
       description:
-        "Full planning, partial planning, wedding day coordination, and elopement services for Destination Weddings in Spain. Discover the right level of support for your wedding.",
+        "Full planning, partial planning, wedding day coordination and elopement services for Destination Weddings in Spain.",
     },
     hero: {
       eyebrow: "Services",
