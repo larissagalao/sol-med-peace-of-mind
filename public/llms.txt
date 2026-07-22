@@ -1,0 +1,20 @@
+# Sol Mediterraneo Weddings Co.
+
+> Boutique destination wedding planner in Spain for international couples. We don't sell wedding planning — we sell peace of mind. You keep living your life; we take care of everything in Spain.
+
+Sol Mediterraneo is a boutique consultancy planning a maximum of 12 weddings per year across Spain. The founder is Brazilian, based in Spain, and works as a single point of contact for international couples — bridging language, culture and local vendors. Services include full planning, partial planning, wedding day coordination and elopements. Regions covered: Catalonia, Costa Brava, Mallorca, Ibiza, Andalusia and Barcelona.
+
+## Core pages
+- [Home](https://www.solmediterraneoweddings.com/): Destination wedding planner in Spain — brand promise, how we help, how we work.
+- [About](https://www.solmediterraneoweddings.com/about): The story, planning philosophy, and the boutique 12-wedding cap.
+- [Services](https://www.solmediterraneoweddings.com/services): Full planning, partial planning, wedding day coordination, elopements, and reference investment ranges.
+- [Destination Weddings in Spain](https://www.solmediterraneoweddings.com/destination-weddings-spain): Complete guide — legal requirements, civil vs symbolic ceremony, regions, costs, timeline.
+- [Partners](https://www.solmediterraneoweddings.com/partners): Trusted circle of venues, caterers and photographers across Spain.
+- [FAQ](https://www.solmediterraneoweddings.com/faq): Common questions from international couples — legal steps, costs, travel, language, payments.
+- [Contact](https://www.solmediterraneoweddings.com/contact): Book a 30-minute discovery call.
+
+## Portuguese
+- [Início](https://www.solmediterraneoweddings.com/pt): Versão em português do site.
+
+## Optional
+- [Sitemap](https://www.solmediterraneoweddings.com/sitemap.xml)

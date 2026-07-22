@@ -259,9 +259,9 @@ const en: Content = {
 
   home: {
     meta: {
-      title: "Sol Mediterraneo Weddings Co. — Destination Wedding Planner in Spain",
+      title: "Destination Wedding Planner in Spain | Sol Mediterraneo",
       description:
-        "A boutique Destination Wedding planner in Spain. We plan quiet, elegant weddings for international couples — so you can keep living your life while we take care of everything on the ground.",
+        "Boutique destination wedding planner in Spain for international couples. You keep living your life — we take care of everything.",
     },
     hero: {
       eyebrow: "Destination Weddings in Spain",
@@ -329,7 +329,7 @@ const en: Content = {
     meta: {
       title: "About — Sol Mediterraneo Weddings Co.",
       description:
-        "Meet Sol Mediterraneo — a boutique Destination Wedding consultancy in Spain, planning weddings for international couples. Brazilian founder living in Spain, bridging both worlds.",
+        "Boutique destination wedding consultancy in Spain for international couples. Brazilian founder living in Spain, bridging both worlds.",
     },
     hero: {
       eyebrow: "About us",
@@ -399,7 +399,7 @@ const en: Content = {
     meta: {
       title: "Services — Wedding Planning in Spain | Sol Mediterraneo",
       description:
-        "Full planning, partial planning, wedding day coordination, and elopement services for Destination Weddings in Spain. Discover the right level of support for your wedding.",
+        "Full planning, partial planning, wedding day coordination and elopement services for Destination Weddings in Spain.",
     },
     hero: {
       eyebrow: "Services",
@@ -500,9 +500,9 @@ const en: Content = {
 
   destination: {
     meta: {
-      title: "Destination Weddings in Spain — The Complete Guide | Sol Mediterraneo",
+      title: "Destination Weddings in Spain: Complete Guide",
       description:
-        "Everything international couples need to know about planning a Destination Wedding in Spain: legal requirements, costs, regions, timeline, and common mistakes to avoid.",
+        "Everything international couples need to plan a Destination Wedding in Spain: legal requirements, costs, regions, timeline and mistakes to avoid.",
     },
     hero: {
       eyebrow: "The complete guide",
@@ -651,9 +651,9 @@ const en: Content = {
 
   partners: {
     meta: {
-      title: "Wedding Partners in Spain — Venues, Catering & Photographers | Sol Mediterraneo",
+      title: "Wedding Partners in Spain | Sol Mediterraneo",
       description:
-        "The trusted circle of wedding venues, catering teams and photographers we plan with across Spain — Catalonia, Costa Brava, Mallorca, Ibiza, Andalusia and Barcelona.",
+        "Our trusted circle of venues, caterers and photographers across Spain — Catalonia, Costa Brava, Mallorca, Ibiza, Andalusia and Barcelona.",
     },
     hero: {
       eyebrow: "Our trusted circle",
@@ -749,9 +749,9 @@ const en: Content = {
 
   faq: {
     meta: {
-      title: "FAQ — Wedding Planning in Spain for International Couples | Sol Mediterraneo",
+      title: "FAQ — Weddings in Spain | Sol Mediterraneo",
       description:
-        "Answers to the most common questions from international couples planning a wedding in Spain: legal requirements, costs, travel, language, payments, and more.",
+        "Answers to common questions from international couples planning a wedding in Spain: legal steps, costs, travel, language and payments.",
     },
     hero: {
       eyebrow: "Frequently asked",
@@ -867,9 +867,9 @@ const pt: Content = {
 
   home: {
     meta: {
-      title: "Sol Mediterraneo Weddings Co. — Wedding Planner de Destination Weddings na Espanha",
+      title: "Destination Wedding Planner na Espanha | Sol Mediterraneo",
       description:
-        "Consultoria boutique de Wedding Planning para Destination Weddings na Espanha. Planejamos casamentos elegantes e tranquilos para casais internacionais — enquanto você segue com a sua vida, nós cuidamos de tudo aqui.",
+        "Consultoria boutique para Destination Weddings na Espanha. Planejamos casamentos elegantes para casais internacionais — enquanto você segue sua vida.",
     },
     hero: {
       eyebrow: "Destination Weddings na Espanha",
@@ -937,7 +937,7 @@ const pt: Content = {
     meta: {
       title: "Sobre — Sol Mediterraneo Weddings Co.",
       description:
-        "Conheça a Sol Mediterraneo — consultoria boutique de Destination Weddings na Espanha. Fundadora brasileira vivendo na Espanha, fazendo a ponte entre casais internacionais e o mundo dos fornecedores locais.",
+        "Consultoria boutique de Destination Weddings na Espanha. Fundadora brasileira vivendo na Espanha, entre casais internacionais e fornecedores locais.",
     },
     hero: {
       eyebrow: "Sobre nós",
@@ -1108,9 +1108,9 @@ const pt: Content = {
 
   destination: {
     meta: {
-      title: "Casar na Espanha — O Guia Completo de Destination Weddings | Sol Mediterraneo",
+      title: "Casar na Espanha — Guia Completo | Sol Mediterraneo",
       description:
-        "Tudo o que casais internacionais precisam saber para planejar um Destination Wedding na Espanha: requisitos legais, custos, regiões, cronograma e erros a evitar.",
+        "Tudo o que casais internacionais precisam para planejar um Destination Wedding na Espanha: requisitos legais, custos, regiões, cronograma e erros a evitar.",
     },
     hero: {
       eyebrow: "Guia completo",
@@ -1259,9 +1259,9 @@ const pt: Content = {
 
   partners: {
     meta: {
-      title: "Parceiros para Casamento na Espanha — Venues, Catering e Fotógrafos | Sol Mediterraneo",
+      title: "Parceiros para Casamento na Espanha | Sol Mediterraneo",
       description:
-        "O círculo de confiança de venues, equipes de catering e fotógrafos com quem planejamos casamentos na Espanha — Catalunha, Costa Brava, Mallorca, Ibiza, Andaluzia e Barcelona.",
+        "Nosso círculo de venues, caterings e fotógrafos em toda Espanha — Catalunha, Costa Brava, Mallorca, Ibiza, Andaluzia e Barcelona.",
     },
     hero: {
       eyebrow: "Nosso círculo de confiança",
@@ -1357,7 +1357,7 @@ const pt: Content = {
 
   faq: {
     meta: {
-      title: "Perguntas Frequentes — Wedding Planning na Espanha | Sol Mediterraneo",
+      title: "FAQ — Casamentos na Espanha | Sol Mediterraneo",
       description:
         "Respostas para as perguntas mais comuns de casais internacionais planejando um casamento na Espanha: requisitos legais, custos, viagens, idioma e pagamentos.",
     },
