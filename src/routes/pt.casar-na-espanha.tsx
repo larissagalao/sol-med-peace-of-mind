@@ -1,16 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { DestinationPage, destinationArticleJsonLd } from "@/page-views/DestinationPage";
-import { buildHead } from "@/lib/page-head";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/pt/casar-na-espanha")({
-  head: () => {
-    const base = buildHead({ pageId: "destination", lang: "pt" });
-    return {
-      ...base,
-      scripts: [
-        { type: "application/ld+json", children: JSON.stringify(destinationArticleJsonLd("pt")) },
-      ],
-    };
+  beforeLoad: () => {
+    throw redirect({
+      to: "/pt/casamentos-destino/regioes-da-espanha",
+      statusCode: 301,
+    });
   },
-  component: () => <DestinationPage lang="pt" />,
+  server: {
+    handlers: {
+      GET: async () =>
+        new Response(null, {
+          status: 301,
+          headers: { Location: "/pt/casamentos-destino/regioes-da-espanha" },
+        }),
+    },
+  },
 });

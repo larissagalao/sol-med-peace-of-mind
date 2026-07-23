@@ -15,15 +15,15 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const pairs: Pair[] = [];
 
-        // Core pages
+        // Core pages (skip "destination" — the hub below owns that URL now)
         for (const id of ALL_PAGE_IDS) {
-          const priority = id === "home" ? "1.0" : id === "destination" ? "0.9" : "0.7";
-          const changefreq = id === "destination" ? "monthly" : "weekly";
-          pairs.push({ en: ROUTES[id].en, pt: ROUTES[id].pt, changefreq, priority });
+          if (id === "destination") continue;
+          const priority = id === "home" ? "1.0" : "0.7";
+          pairs.push({ en: ROUTES[id].en, pt: ROUTES[id].pt, changefreq: "weekly", priority });
         }
 
         // Regions hub
-        pairs.push({ en: HUB_SLUGS.en, pt: HUB_SLUGS.pt, changefreq: "monthly", priority: "0.8" });
+        pairs.push({ en: HUB_SLUGS.en, pt: HUB_SLUGS.pt, changefreq: "monthly", priority: "0.9" });
 
         // Region spokes
         for (const key of REGION_KEYS) {
