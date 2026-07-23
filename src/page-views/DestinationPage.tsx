@@ -95,22 +95,43 @@ export function DestinationPage({ lang }: { lang: Lang }) {
                 )}
 
                 {s.id === "regions" && (
-                  <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {t.regions.map((r) => (
-                      <article key={r.key} className="group">
-                        <div className="aspect-[4/3] overflow-hidden">
-                          <img
-                            src={REGION_IMAGE_BY_KEY[r.key] ?? oliveGrove}
-                            alt={`${r.name} wedding scene`}
-                            loading="lazy"
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                          />
-                        </div>
-                        <h3 className="mt-5 text-navy">{r.name}</h3>
-                        <p className="mt-2 text-navy/75 leading-relaxed text-base">{r.body}</p>
-                      </article>
-                    ))}
-                  </div>
+                  <>
+                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      {t.regions.map((r) => {
+                        const inner = (
+                          <>
+                            <div className="aspect-[4/3] overflow-hidden">
+                              <img
+                                src={REGION_IMAGE_BY_KEY[r.key] ?? oliveGrove}
+                                alt={`${r.name} wedding scene`}
+                                loading="lazy"
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                              />
+                            </div>
+                            <h3 className="mt-5 text-navy group-hover:text-gold transition-colors">{r.name}</h3>
+                            <p className="mt-2 text-navy/75 leading-relaxed text-base">{r.body}</p>
+                          </>
+                        );
+                        return hasSpoke(r.key) ? (
+                          <Link key={r.key} to={REGION_SLUGS[r.key][lang]} className="group block">
+                            {inner}
+                          </Link>
+                        ) : (
+                          <article key={r.key} className="group">
+                            {inner}
+                          </article>
+                        );
+                      })}
+                    </div>
+                    <div className="mt-8">
+                      <Link
+                        to={HUB_SLUGS[lang]}
+                        className="text-sm tracking-widest uppercase text-gold hover:text-navy transition-colors"
+                      >
+                        {lang === "pt" ? "Ver o guia completo por região" : "See the full regions guide"} →
+                      </Link>
+                    </div>
+                  </>
                 )}
 
                 {s.id === "common-mistakes" && (
