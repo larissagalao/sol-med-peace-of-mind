@@ -148,7 +148,7 @@ export function getPostImage(key: PostKey, lang: Lang) {
 
 /* ---------- Publish dates (owner can update) ---------- */
 
-const DATES: Record<PostKey, { datePublished: string; modified: string }> = {
+const DATES: Record<PostKey, { datePublished: string; dateModified: string }> = {
   "cost-of-a-wedding-in-spain":            { datePublished: "2026-06-01", dateModified: "2026-06-01" },
   "wedding-in-spain-planning-timeline":    { datePublished: "2026-06-05", dateModified: "2026-06-05" },
   "wedding-regions-in-spain-compared":     { datePublished: "2026-06-10", dateModified: "2026-06-10" },
