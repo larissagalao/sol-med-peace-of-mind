@@ -4,16 +4,24 @@ import { Logo } from "./Logo";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
 import { ROUTES, ALL_PAGE_IDS, altPath, type PageId } from "@/i18n/routes";
+import { BLOG_INDEX } from "@/i18n/blog";
 import { SITE_CONFIG } from "@/config/site";
 
-const NAV_ITEMS: { id: PageId; key: keyof ReturnType<typeof getContent>["nav"] }[] = [
-  { id: "home", key: "home" },
-  { id: "about", key: "about" },
-  { id: "services", key: "services" },
-  { id: "destination", key: "destination" },
-  { id: "partners", key: "partners" },
-  { id: "faq", key: "faq" },
-  { id: "contact", key: "contact" },
+// Nav items include the blog ("journal") as an extra item that maps to a
+// direct href per language rather than the PageId system.
+type NavItem =
+  | { id: PageId; kind: "page" }
+  | { id: "journal"; kind: "extra"; label: { en: string; pt: string }; href: { en: string; pt: string } };
+
+const NAV_ITEMS: NavItem[] = [
+  { id: "home", kind: "page" },
+  { id: "about", kind: "page" },
+  { id: "services", kind: "page" },
+  { id: "destination", kind: "page" },
+  { id: "partners", kind: "page" },
+  { id: "journal", kind: "extra", label: { en: "Journal", pt: "Diário" }, href: BLOG_INDEX },
+  { id: "faq", kind: "page" },
+  { id: "contact", kind: "page" },
 ];
 
 
