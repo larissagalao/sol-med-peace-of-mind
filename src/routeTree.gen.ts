@@ -34,11 +34,14 @@ import { Route as DestinationWeddingsIbizaRouteImport } from './routes/destinati
 import { Route as DestinationWeddingsGranadaRouteImport } from './routes/destination-weddings.granada'
 import { Route as DestinationWeddingsCostaBravaRouteImport } from './routes/destination-weddings.costa-brava'
 import { Route as DestinationWeddingsCataloniaRouteImport } from './routes/destination-weddings.catalonia'
+import { Route as BlogWhyGetMarriedInSpainRouteImport } from './routes/blog.why-get-married-in-spain'
 import { Route as BlogWhatIsADestinationWeddingRouteImport } from './routes/blog.what-is-a-destination-wedding'
 import { Route as BlogWeddingRegionsInSpainComparedRouteImport } from './routes/blog.wedding-regions-in-spain-compared'
 import { Route as BlogWeddingInSpainPlanningTimelineRouteImport } from './routes/blog.wedding-in-spain-planning-timeline'
 import { Route as BlogWeddingBudgetTipsSpainRouteImport } from './routes/blog.wedding-budget-tips-spain'
+import { Route as BlogGettingMarriedInSpainLegalRequirementsRouteImport } from './routes/blog.getting-married-in-spain-legal-requirements'
 import { Route as BlogCostOfAWeddingInSpainRouteImport } from './routes/blog.cost-of-a-wedding-in-spain'
+import { Route as BlogCommonMistakesPlanningAWeddingInSpainRouteImport } from './routes/blog.common-mistakes-planning-a-wedding-in-spain'
 import { Route as PtBlogIndexRouteImport } from './routes/pt.blog.index'
 import { Route as PtCasamentosDestinoSevilhaRouteImport } from './routes/pt.casamentos-destino.sevilha'
 import { Route as PtCasamentosDestinoRegioesDaEspanhaRouteImport } from './routes/pt.casamentos-destino.regioes-da-espanha'
@@ -48,10 +51,13 @@ import { Route as PtCasamentosDestinoGranadaRouteImport } from './routes/pt.casa
 import { Route as PtCasamentosDestinoCostaBravaRouteImport } from './routes/pt.casamentos-destino.costa-brava'
 import { Route as PtCasamentosDestinoCatalunhaRouteImport } from './routes/pt.casamentos-destino.catalunha'
 import { Route as PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport } from './routes/pt.blog.regioes-para-casar-na-espanha-comparadas'
+import { Route as PtBlogPorQueCasarNaEspanhaRouteImport } from './routes/pt.blog.por-que-casar-na-espanha'
 import { Route as PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport } from './routes/pt.blog.planejamento-casamento-espanha-cronograma'
 import { Route as PtBlogOQueEUmDestinationWeddingRouteImport } from './routes/pt.blog.o-que-e-um-destination-wedding'
+import { Route as PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport } from './routes/pt.blog.erros-comuns-ao-planejar-casamento-na-espanha'
 import { Route as PtBlogDicasOrcamentoCasamentoEspanhaRouteImport } from './routes/pt.blog.dicas-orcamento-casamento-espanha'
 import { Route as PtBlogCustoDeUmCasamentoNaEspanhaRouteImport } from './routes/pt.blog.custo-de-um-casamento-na-espanha'
+import { Route as PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRouteImport } from './routes/pt.blog.casar-legalmente-na-espanha-como-estrangeiro'
 
 const TestimonialsRoute = TestimonialsRouteImport.update({
   id: '/testimonials',
@@ -186,6 +192,12 @@ const DestinationWeddingsCataloniaRoute =
     path: '/destination-weddings/catalonia',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogWhyGetMarriedInSpainRoute =
+  BlogWhyGetMarriedInSpainRouteImport.update({
+    id: '/blog/why-get-married-in-spain',
+    path: '/blog/why-get-married-in-spain',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogWhatIsADestinationWeddingRoute =
   BlogWhatIsADestinationWeddingRouteImport.update({
     id: '/blog/what-is-a-destination-wedding',
@@ -210,10 +222,22 @@ const BlogWeddingBudgetTipsSpainRoute =
     path: '/blog/wedding-budget-tips-spain',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogGettingMarriedInSpainLegalRequirementsRoute =
+  BlogGettingMarriedInSpainLegalRequirementsRouteImport.update({
+    id: '/blog/getting-married-in-spain-legal-requirements',
+    path: '/blog/getting-married-in-spain-legal-requirements',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogCostOfAWeddingInSpainRoute =
   BlogCostOfAWeddingInSpainRouteImport.update({
     id: '/blog/cost-of-a-wedding-in-spain',
     path: '/blog/cost-of-a-wedding-in-spain',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogCommonMistakesPlanningAWeddingInSpainRoute =
+  BlogCommonMistakesPlanningAWeddingInSpainRouteImport.update({
+    id: '/blog/common-mistakes-planning-a-wedding-in-spain',
+    path: '/blog/common-mistakes-planning-a-wedding-in-spain',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PtBlogIndexRoute = PtBlogIndexRouteImport.update({
@@ -269,6 +293,12 @@ const PtBlogRegioesParaCasarNaEspanhaComparadasRoute =
     path: '/pt/blog/regioes-para-casar-na-espanha-comparadas',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PtBlogPorQueCasarNaEspanhaRoute =
+  PtBlogPorQueCasarNaEspanhaRouteImport.update({
+    id: '/pt/blog/por-que-casar-na-espanha',
+    path: '/pt/blog/por-que-casar-na-espanha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute =
   PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport.update({
     id: '/pt/blog/planejamento-casamento-espanha-cronograma',
@@ -279,6 +309,12 @@ const PtBlogOQueEUmDestinationWeddingRoute =
   PtBlogOQueEUmDestinationWeddingRouteImport.update({
     id: '/pt/blog/o-que-e-um-destination-wedding',
     path: '/pt/blog/o-que-e-um-destination-wedding',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute =
+  PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport.update({
+    id: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha',
+    path: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PtBlogDicasOrcamentoCasamentoEspanhaRoute =
@@ -293,6 +329,12 @@ const PtBlogCustoDeUmCasamentoNaEspanhaRoute =
     path: '/pt/blog/custo-de-um-casamento-na-espanha',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute =
+  PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRouteImport.update({
+    id: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro',
+    path: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -304,11 +346,14 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/blog/common-mistakes-planning-a-wedding-in-spain': typeof BlogCommonMistakesPlanningAWeddingInSpainRoute
   '/blog/cost-of-a-wedding-in-spain': typeof BlogCostOfAWeddingInSpainRoute
+  '/blog/getting-married-in-spain-legal-requirements': typeof BlogGettingMarriedInSpainLegalRequirementsRoute
   '/blog/wedding-budget-tips-spain': typeof BlogWeddingBudgetTipsSpainRoute
   '/blog/wedding-in-spain-planning-timeline': typeof BlogWeddingInSpainPlanningTimelineRoute
   '/blog/wedding-regions-in-spain-compared': typeof BlogWeddingRegionsInSpainComparedRoute
   '/blog/what-is-a-destination-wedding': typeof BlogWhatIsADestinationWeddingRoute
+  '/blog/why-get-married-in-spain': typeof BlogWhyGetMarriedInSpainRoute
   '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
   '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
   '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
@@ -325,10 +370,13 @@ export interface FileRoutesByFullPath {
   '/pt/sobre': typeof PtSobreRoute
   '/blog/': typeof BlogIndexRoute
   '/pt/': typeof PtIndexRoute
+  '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro': typeof PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute
   '/pt/blog/custo-de-um-casamento-na-espanha': typeof PtBlogCustoDeUmCasamentoNaEspanhaRoute
   '/pt/blog/dicas-orcamento-casamento-espanha': typeof PtBlogDicasOrcamentoCasamentoEspanhaRoute
+  '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha': typeof PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute
   '/pt/blog/o-que-e-um-destination-wedding': typeof PtBlogOQueEUmDestinationWeddingRoute
   '/pt/blog/planejamento-casamento-espanha-cronograma': typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute
+  '/pt/blog/por-que-casar-na-espanha': typeof PtBlogPorQueCasarNaEspanhaRoute
   '/pt/blog/regioes-para-casar-na-espanha-comparadas': typeof PtBlogRegioesParaCasarNaEspanhaComparadasRoute
   '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
   '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
@@ -349,11 +397,14 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/blog/common-mistakes-planning-a-wedding-in-spain': typeof BlogCommonMistakesPlanningAWeddingInSpainRoute
   '/blog/cost-of-a-wedding-in-spain': typeof BlogCostOfAWeddingInSpainRoute
+  '/blog/getting-married-in-spain-legal-requirements': typeof BlogGettingMarriedInSpainLegalRequirementsRoute
   '/blog/wedding-budget-tips-spain': typeof BlogWeddingBudgetTipsSpainRoute
   '/blog/wedding-in-spain-planning-timeline': typeof BlogWeddingInSpainPlanningTimelineRoute
   '/blog/wedding-regions-in-spain-compared': typeof BlogWeddingRegionsInSpainComparedRoute
   '/blog/what-is-a-destination-wedding': typeof BlogWhatIsADestinationWeddingRoute
+  '/blog/why-get-married-in-spain': typeof BlogWhyGetMarriedInSpainRoute
   '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
   '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
   '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
@@ -370,10 +421,13 @@ export interface FileRoutesByTo {
   '/pt/sobre': typeof PtSobreRoute
   '/blog': typeof BlogIndexRoute
   '/pt': typeof PtIndexRoute
+  '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro': typeof PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute
   '/pt/blog/custo-de-um-casamento-na-espanha': typeof PtBlogCustoDeUmCasamentoNaEspanhaRoute
   '/pt/blog/dicas-orcamento-casamento-espanha': typeof PtBlogDicasOrcamentoCasamentoEspanhaRoute
+  '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha': typeof PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute
   '/pt/blog/o-que-e-um-destination-wedding': typeof PtBlogOQueEUmDestinationWeddingRoute
   '/pt/blog/planejamento-casamento-espanha-cronograma': typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute
+  '/pt/blog/por-que-casar-na-espanha': typeof PtBlogPorQueCasarNaEspanhaRoute
   '/pt/blog/regioes-para-casar-na-espanha-comparadas': typeof PtBlogRegioesParaCasarNaEspanhaComparadasRoute
   '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
   '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
@@ -395,11 +449,14 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/blog/common-mistakes-planning-a-wedding-in-spain': typeof BlogCommonMistakesPlanningAWeddingInSpainRoute
   '/blog/cost-of-a-wedding-in-spain': typeof BlogCostOfAWeddingInSpainRoute
+  '/blog/getting-married-in-spain-legal-requirements': typeof BlogGettingMarriedInSpainLegalRequirementsRoute
   '/blog/wedding-budget-tips-spain': typeof BlogWeddingBudgetTipsSpainRoute
   '/blog/wedding-in-spain-planning-timeline': typeof BlogWeddingInSpainPlanningTimelineRoute
   '/blog/wedding-regions-in-spain-compared': typeof BlogWeddingRegionsInSpainComparedRoute
   '/blog/what-is-a-destination-wedding': typeof BlogWhatIsADestinationWeddingRoute
+  '/blog/why-get-married-in-spain': typeof BlogWhyGetMarriedInSpainRoute
   '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
   '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
   '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
@@ -416,10 +473,13 @@ export interface FileRoutesById {
   '/pt/sobre': typeof PtSobreRoute
   '/blog/': typeof BlogIndexRoute
   '/pt/': typeof PtIndexRoute
+  '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro': typeof PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute
   '/pt/blog/custo-de-um-casamento-na-espanha': typeof PtBlogCustoDeUmCasamentoNaEspanhaRoute
   '/pt/blog/dicas-orcamento-casamento-espanha': typeof PtBlogDicasOrcamentoCasamentoEspanhaRoute
+  '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha': typeof PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute
   '/pt/blog/o-que-e-um-destination-wedding': typeof PtBlogOQueEUmDestinationWeddingRoute
   '/pt/blog/planejamento-casamento-espanha-cronograma': typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute
+  '/pt/blog/por-que-casar-na-espanha': typeof PtBlogPorQueCasarNaEspanhaRoute
   '/pt/blog/regioes-para-casar-na-espanha-comparadas': typeof PtBlogRegioesParaCasarNaEspanhaComparadasRoute
   '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
   '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
@@ -442,11 +502,14 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/blog/common-mistakes-planning-a-wedding-in-spain'
     | '/blog/cost-of-a-wedding-in-spain'
+    | '/blog/getting-married-in-spain-legal-requirements'
     | '/blog/wedding-budget-tips-spain'
     | '/blog/wedding-in-spain-planning-timeline'
     | '/blog/wedding-regions-in-spain-compared'
     | '/blog/what-is-a-destination-wedding'
+    | '/blog/why-get-married-in-spain'
     | '/destination-weddings/catalonia'
     | '/destination-weddings/costa-brava'
     | '/destination-weddings/granada'
@@ -463,10 +526,13 @@ export interface FileRouteTypes {
     | '/pt/sobre'
     | '/blog/'
     | '/pt/'
+    | '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
     | '/pt/blog/custo-de-um-casamento-na-espanha'
     | '/pt/blog/dicas-orcamento-casamento-espanha'
+    | '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
     | '/pt/blog/o-que-e-um-destination-wedding'
     | '/pt/blog/planejamento-casamento-espanha-cronograma'
+    | '/pt/blog/por-que-casar-na-espanha'
     | '/pt/blog/regioes-para-casar-na-espanha-comparadas'
     | '/pt/casamentos-destino/catalunha'
     | '/pt/casamentos-destino/costa-brava'
@@ -487,11 +553,14 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/blog/common-mistakes-planning-a-wedding-in-spain'
     | '/blog/cost-of-a-wedding-in-spain'
+    | '/blog/getting-married-in-spain-legal-requirements'
     | '/blog/wedding-budget-tips-spain'
     | '/blog/wedding-in-spain-planning-timeline'
     | '/blog/wedding-regions-in-spain-compared'
     | '/blog/what-is-a-destination-wedding'
+    | '/blog/why-get-married-in-spain'
     | '/destination-weddings/catalonia'
     | '/destination-weddings/costa-brava'
     | '/destination-weddings/granada'
@@ -508,10 +577,13 @@ export interface FileRouteTypes {
     | '/pt/sobre'
     | '/blog'
     | '/pt'
+    | '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
     | '/pt/blog/custo-de-um-casamento-na-espanha'
     | '/pt/blog/dicas-orcamento-casamento-espanha'
+    | '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
     | '/pt/blog/o-que-e-um-destination-wedding'
     | '/pt/blog/planejamento-casamento-espanha-cronograma'
+    | '/pt/blog/por-que-casar-na-espanha'
     | '/pt/blog/regioes-para-casar-na-espanha-comparadas'
     | '/pt/casamentos-destino/catalunha'
     | '/pt/casamentos-destino/costa-brava'
@@ -532,11 +604,14 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/blog/common-mistakes-planning-a-wedding-in-spain'
     | '/blog/cost-of-a-wedding-in-spain'
+    | '/blog/getting-married-in-spain-legal-requirements'
     | '/blog/wedding-budget-tips-spain'
     | '/blog/wedding-in-spain-planning-timeline'
     | '/blog/wedding-regions-in-spain-compared'
     | '/blog/what-is-a-destination-wedding'
+    | '/blog/why-get-married-in-spain'
     | '/destination-weddings/catalonia'
     | '/destination-weddings/costa-brava'
     | '/destination-weddings/granada'
@@ -553,10 +628,13 @@ export interface FileRouteTypes {
     | '/pt/sobre'
     | '/blog/'
     | '/pt/'
+    | '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
     | '/pt/blog/custo-de-um-casamento-na-espanha'
     | '/pt/blog/dicas-orcamento-casamento-espanha'
+    | '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
     | '/pt/blog/o-que-e-um-destination-wedding'
     | '/pt/blog/planejamento-casamento-espanha-cronograma'
+    | '/pt/blog/por-que-casar-na-espanha'
     | '/pt/blog/regioes-para-casar-na-espanha-comparadas'
     | '/pt/casamentos-destino/catalunha'
     | '/pt/casamentos-destino/costa-brava'
@@ -578,11 +656,14 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TestimonialsRoute: typeof TestimonialsRoute
+  BlogCommonMistakesPlanningAWeddingInSpainRoute: typeof BlogCommonMistakesPlanningAWeddingInSpainRoute
   BlogCostOfAWeddingInSpainRoute: typeof BlogCostOfAWeddingInSpainRoute
+  BlogGettingMarriedInSpainLegalRequirementsRoute: typeof BlogGettingMarriedInSpainLegalRequirementsRoute
   BlogWeddingBudgetTipsSpainRoute: typeof BlogWeddingBudgetTipsSpainRoute
   BlogWeddingInSpainPlanningTimelineRoute: typeof BlogWeddingInSpainPlanningTimelineRoute
   BlogWeddingRegionsInSpainComparedRoute: typeof BlogWeddingRegionsInSpainComparedRoute
   BlogWhatIsADestinationWeddingRoute: typeof BlogWhatIsADestinationWeddingRoute
+  BlogWhyGetMarriedInSpainRoute: typeof BlogWhyGetMarriedInSpainRoute
   DestinationWeddingsCataloniaRoute: typeof DestinationWeddingsCataloniaRoute
   DestinationWeddingsCostaBravaRoute: typeof DestinationWeddingsCostaBravaRoute
   DestinationWeddingsGranadaRoute: typeof DestinationWeddingsGranadaRoute
@@ -599,10 +680,13 @@ export interface RootRouteChildren {
   PtSobreRoute: typeof PtSobreRoute
   BlogIndexRoute: typeof BlogIndexRoute
   PtIndexRoute: typeof PtIndexRoute
+  PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute: typeof PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute
   PtBlogCustoDeUmCasamentoNaEspanhaRoute: typeof PtBlogCustoDeUmCasamentoNaEspanhaRoute
   PtBlogDicasOrcamentoCasamentoEspanhaRoute: typeof PtBlogDicasOrcamentoCasamentoEspanhaRoute
+  PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute: typeof PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute
   PtBlogOQueEUmDestinationWeddingRoute: typeof PtBlogOQueEUmDestinationWeddingRoute
   PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute: typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute
+  PtBlogPorQueCasarNaEspanhaRoute: typeof PtBlogPorQueCasarNaEspanhaRoute
   PtBlogRegioesParaCasarNaEspanhaComparadasRoute: typeof PtBlogRegioesParaCasarNaEspanhaComparadasRoute
   PtCasamentosDestinoCatalunhaRoute: typeof PtCasamentosDestinoCatalunhaRoute
   PtCasamentosDestinoCostaBravaRoute: typeof PtCasamentosDestinoCostaBravaRoute
@@ -791,6 +875,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DestinationWeddingsCataloniaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/why-get-married-in-spain': {
+      id: '/blog/why-get-married-in-spain'
+      path: '/blog/why-get-married-in-spain'
+      fullPath: '/blog/why-get-married-in-spain'
+      preLoaderRoute: typeof BlogWhyGetMarriedInSpainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/what-is-a-destination-wedding': {
       id: '/blog/what-is-a-destination-wedding'
       path: '/blog/what-is-a-destination-wedding'
@@ -819,11 +910,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogWeddingBudgetTipsSpainRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/getting-married-in-spain-legal-requirements': {
+      id: '/blog/getting-married-in-spain-legal-requirements'
+      path: '/blog/getting-married-in-spain-legal-requirements'
+      fullPath: '/blog/getting-married-in-spain-legal-requirements'
+      preLoaderRoute: typeof BlogGettingMarriedInSpainLegalRequirementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/cost-of-a-wedding-in-spain': {
       id: '/blog/cost-of-a-wedding-in-spain'
       path: '/blog/cost-of-a-wedding-in-spain'
       fullPath: '/blog/cost-of-a-wedding-in-spain'
       preLoaderRoute: typeof BlogCostOfAWeddingInSpainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/common-mistakes-planning-a-wedding-in-spain': {
+      id: '/blog/common-mistakes-planning-a-wedding-in-spain'
+      path: '/blog/common-mistakes-planning-a-wedding-in-spain'
+      fullPath: '/blog/common-mistakes-planning-a-wedding-in-spain'
+      preLoaderRoute: typeof BlogCommonMistakesPlanningAWeddingInSpainRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pt/blog/': {
@@ -889,6 +994,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pt/blog/por-que-casar-na-espanha': {
+      id: '/pt/blog/por-que-casar-na-espanha'
+      path: '/pt/blog/por-que-casar-na-espanha'
+      fullPath: '/pt/blog/por-que-casar-na-espanha'
+      preLoaderRoute: typeof PtBlogPorQueCasarNaEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pt/blog/planejamento-casamento-espanha-cronograma': {
       id: '/pt/blog/planejamento-casamento-espanha-cronograma'
       path: '/pt/blog/planejamento-casamento-espanha-cronograma'
@@ -901,6 +1013,13 @@ declare module '@tanstack/react-router' {
       path: '/pt/blog/o-que-e-um-destination-wedding'
       fullPath: '/pt/blog/o-que-e-um-destination-wedding'
       preLoaderRoute: typeof PtBlogOQueEUmDestinationWeddingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha': {
+      id: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
+      path: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
+      fullPath: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
+      preLoaderRoute: typeof PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pt/blog/dicas-orcamento-casamento-espanha': {
@@ -917,6 +1036,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtBlogCustoDeUmCasamentoNaEspanhaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro': {
+      id: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
+      path: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
+      fullPath: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
+      preLoaderRoute: typeof PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -930,13 +1056,18 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TestimonialsRoute: TestimonialsRoute,
+  BlogCommonMistakesPlanningAWeddingInSpainRoute:
+    BlogCommonMistakesPlanningAWeddingInSpainRoute,
   BlogCostOfAWeddingInSpainRoute: BlogCostOfAWeddingInSpainRoute,
+  BlogGettingMarriedInSpainLegalRequirementsRoute:
+    BlogGettingMarriedInSpainLegalRequirementsRoute,
   BlogWeddingBudgetTipsSpainRoute: BlogWeddingBudgetTipsSpainRoute,
   BlogWeddingInSpainPlanningTimelineRoute:
     BlogWeddingInSpainPlanningTimelineRoute,
   BlogWeddingRegionsInSpainComparedRoute:
     BlogWeddingRegionsInSpainComparedRoute,
   BlogWhatIsADestinationWeddingRoute: BlogWhatIsADestinationWeddingRoute,
+  BlogWhyGetMarriedInSpainRoute: BlogWhyGetMarriedInSpainRoute,
   DestinationWeddingsCataloniaRoute: DestinationWeddingsCataloniaRoute,
   DestinationWeddingsCostaBravaRoute: DestinationWeddingsCostaBravaRoute,
   DestinationWeddingsGranadaRoute: DestinationWeddingsGranadaRoute,
@@ -953,13 +1084,18 @@ const rootRouteChildren: RootRouteChildren = {
   PtSobreRoute: PtSobreRoute,
   BlogIndexRoute: BlogIndexRoute,
   PtIndexRoute: PtIndexRoute,
+  PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute:
+    PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute,
   PtBlogCustoDeUmCasamentoNaEspanhaRoute:
     PtBlogCustoDeUmCasamentoNaEspanhaRoute,
   PtBlogDicasOrcamentoCasamentoEspanhaRoute:
     PtBlogDicasOrcamentoCasamentoEspanhaRoute,
+  PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute:
+    PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute,
   PtBlogOQueEUmDestinationWeddingRoute: PtBlogOQueEUmDestinationWeddingRoute,
   PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute:
     PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute,
+  PtBlogPorQueCasarNaEspanhaRoute: PtBlogPorQueCasarNaEspanhaRoute,
   PtBlogRegioesParaCasarNaEspanhaComparadasRoute:
     PtBlogRegioesParaCasarNaEspanhaComparadasRoute,
   PtCasamentosDestinoCatalunhaRoute: PtCasamentosDestinoCatalunhaRoute,
