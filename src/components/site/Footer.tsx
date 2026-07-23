@@ -1,6 +1,8 @@
+import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
 import { SITE_CONFIG } from "@/config/site";
+import { HUB_SLUGS } from "@/i18n/regions";
 import { Logo } from "./Logo";
 
 export function Footer() {
