@@ -651,9 +651,9 @@ const en: Content = {
 
   partners: {
     meta: {
-      title: "Wedding Partners in Spain | Sol Mediterraneo",
+      title: "Wedding Venues, Catering & Photographers in Spain",
       description:
-        "Our trusted circle of venues, caterers and photographers across Spain — Catalonia, Costa Brava, Mallorca, Ibiza, Andalusia and Barcelona.",
+        "Our vetted circle of wedding venues, catering teams and photographers across Catalonia, Costa Brava, Mallorca, Ibiza and Andalusia.",
     },
     hero: {
       eyebrow: "Our trusted circle",
