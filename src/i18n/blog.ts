@@ -592,6 +592,233 @@ const enPosts: Record<PostKey, PostContent> = {
       { label: "Destination weddings in Spain — full guide", href: "/destination-weddings-spain" },
     ],
   },
+
+  "why-get-married-in-spain": {
+    meta: {
+      title: "Why Get Married in Spain? A Calm Case for a Spanish Wedding",
+      description:
+        "Why so many international couples choose Spain — the light, the food, the pace, the ease of gathering people, and the regions that fit different weddings.",
+    },
+    hero: {
+      eyebrow: "Getting started",
+      h1: "Why Get Married in Spain?",
+      dek: "The honest reasons couples keep choosing Spain — and how to tell whether it is the right fit for yours.",
+      readingTime: "8 min read",
+    },
+    ...DATES["why-get-married-in-spain"],
+    image: IMAGE["why-get-married-in-spain"].src,
+    imageAlt: IMAGE["why-get-married-in-spain"].alt.en,
+    body: [
+      { type: "p", text: "Couples come to Spain for different reasons — a grandparent from Andalusia, a summer in Ibiza that never quite left them, a first trip together to Barcelona. What they share is a sense that the country makes hosting easy. The food is generous, the light is long, the pace slows down after lunch, and people know how to sit at a table for four hours without checking a phone. A wedding here inherits all of that." },
+      { type: "p", text: "This isn't a sales piece. It is an honest read on why Spain works for a destination wedding, and where it doesn't — so you can decide with your eyes open." },
+
+      { type: "h2", text: "The light, and what it does to a day" },
+      { type: "p", text: "From May to early October, Spain gives you a long, warm golden hour that reliably lasts more than an hour. Ceremonies land in that light almost by accident. Photographers you'd have to fly in elsewhere will already be here. This is a small technical thing that shapes how the whole day feels." },
+
+      { type: "h2", text: "Food that carries the celebration" },
+      { type: "p", text: "In Spain a wedding meal is not a five-minute course between speeches. It is the celebration. An aperitivo that runs an hour longer than planned because nobody wants to move indoors. A menu built around local produce, without preciousness. Wine your guests will remember by name. You don't have to fight the culture to make the food matter — it already does." },
+
+      { type: "h2", text: "Guests actually come" },
+      { type: "p", text: "Spain sits at the centre of Europe's flight map and is a straightforward long-haul destination from the Americas. Barcelona, Palma, Ibiza, Madrid, Málaga and Seville all have direct routes from most major cities. In practice, RSVPs are higher for a Spanish wedding than for many closer destinations, because people already wanted an excuse to come." },
+
+      { type: "h2", text: "A country of very different weddings" },
+      { type: "p", text: "Spain is not one aesthetic. A masia in the Catalan hills, a finca in Ibiza, a palacio in Seville and a stone estate in Mallorca are four completely different weddings — and all of them are Spain. That variety means your wedding can look like you, not like a template." },
+      { type: "ul", items: [
+        "Catalonia — countryside masias and vineyards, within an hour of Barcelona.",
+        "Costa Brava — pine forests, quiet coves and cliffside villas.",
+        "Ibiza — whitewashed fincas, sunset ceremonies, dance floors that stay full.",
+        "Mallorca — stone estates in the Tramuntana, understated and easy to reach.",
+        "Granada — small palaces with tiled courtyards and the Alhambra on the horizon.",
+        "Seville — palacios with orange trees, warmth in the light and the people.",
+      ] },
+      { type: "callout", body: "Read the full comparison: <a href=\"/blog/wedding-regions-in-spain-compared\">Where to get married in Spain — the regions compared</a>." },
+
+      { type: "h2", text: "Legally simpler than couples expect" },
+      { type: "p", text: "Most international couples who marry in Spain do the legal marriage at home and hold a symbolic ceremony here on the day. That single decision removes almost all of the paperwork friction and gives you full freedom on venue, celebrant and timing. Full civil ceremonies in Spain are possible but usually carry residency and document requirements that don't fit an international guest list — a good planner will walk you through both paths honestly." },
+      { type: "callout", body: "Read more: <a href=\"/blog/getting-married-in-spain-legal-requirements\">Getting legally married in Spain as a foreigner — civil vs symbolic</a>." },
+
+      { type: "h2", text: "A reasonable, honest range on cost" },
+      { type: "p", text: "Spain is not the cheapest country in Europe to marry in, and it isn't the most expensive. The range is wide because the choices are wide: an elopement can sit around €3,000–€9,000, a 30-guest wedding around €20,000–€45,000, and a full 30–100 guest celebration anywhere from €35,000 to €120,000+. What Spain buys you at every level is a certain generosity — good food, real wine, staff who care — that doesn't always exist at the same price elsewhere." },
+
+      { type: "h2", text: "Where Spain might not be your place" },
+      { type: "p", text: "Some couples read this and know quickly. Others don't, and that is worth saying. Spain may not be right if peak summer heat is a hard no for your guests, if you want a fully legal foreign civil ceremony on the day without extra bureaucracy, or if your guest list is concentrated somewhere with no direct flight and a tight budget for travel. Those are honest reasons to look elsewhere — we say so on discovery calls when they apply." },
+
+      { type: "h2", text: "The short version" },
+      { type: "p", text: "Spain works because the whole country already knows how to host. The light, the food, the pace and the range of regions do most of the heavy lifting; a good planner just makes sure you get to enjoy them. If that sounds like the wedding you're picturing, it probably is." },
+    ],
+    cta: {
+      title: "Wondering whether Spain is your place?",
+      body: "A 30-minute discovery call is the calmest way to talk it through, region by region, before anything is booked.",
+      button: "Book a Discovery Call",
+    },
+    relatedTitle: "Keep reading",
+    related: [
+      { label: "Where to get married in Spain — regions compared", href: "/blog/wedding-regions-in-spain-compared" },
+      { label: "Getting legally married in Spain as a foreigner", href: "/blog/getting-married-in-spain-legal-requirements" },
+      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings-spain" },
+    ],
+  },
+
+  "common-mistakes-planning-a-wedding-in-spain": {
+    meta: {
+      title: "Common Mistakes Couples Make Planning a Wedding in Spain",
+      description:
+        "The mistakes we see most often when international couples plan a Spanish destination wedding — and calm, practical ways to avoid each one.",
+    },
+    hero: {
+      eyebrow: "Planning",
+      h1: "Common Mistakes Couples Make When Planning a Wedding in Spain",
+      dek: "Nothing dramatic — just the quiet, avoidable missteps that make destination planning harder than it needs to be.",
+      readingTime: "9 min read",
+    },
+    ...DATES["common-mistakes-planning-a-wedding-in-spain"],
+    image: IMAGE["common-mistakes-planning-a-wedding-in-spain"].src,
+    imageAlt: IMAGE["common-mistakes-planning-a-wedding-in-spain"].alt.en,
+    body: [
+      { type: "p", text: "Most wedding-planning mistakes are not dramatic. They don't ruin the day. They just quietly cost money, add stress, or shift the wedding a little further away from what the couple actually wanted. From ten years of planning in Spain, these are the ones we see most often — and, more importantly, how to sidestep each one." },
+
+      { type: "h2", text: "1. Booking the venue before the region is settled" },
+      { type: "p", text: "It is easy to fall in love with a photograph. It is much harder to unpick that decision once deposits are paid and half your friends have booked flights. The region — Catalonia, Ibiza, Mallorca, Andalusia — sets the rhythm of the whole weekend: heat, travel time, the feel of the light, the kind of food that fits. Choose the region first, then the venue." },
+
+      { type: "h3", text: "How to avoid it" },
+      { type: "p", text: "Give yourself two or three weekends of doing nothing but reading about regions. Talk to a planner honestly about what your Saturday should feel like. Only then look at venues." },
+
+      { type: "h2", text: "2. Underestimating the summer heat" },
+      { type: "p", text: "July and August in Seville, Granada or inland Mallorca can push past 40°C. Guests in wool suits sweat through the ceremony. Elderly relatives struggle. Outdoor ceremonies at 2 p.m. become genuinely uncomfortable. Late June and September usually solve it; a shaded ceremony window and cold drinks on arrival always help." },
+
+      { type: "h2", text: "3. Treating the rain plan as pessimism" },
+      { type: "p", text: "Spain is sunny. It also rains, sometimes hard, especially in shoulder season. A serious rain plan — a tent option, an indoor alternative, agreed cut-off times to make the call — is standard in any well-planned Spanish wedding. Skipping it doesn't save money; it just moves the cost to the week of the wedding, under pressure." },
+
+      { type: "h2", text: "4. Copying an at-home wedding into a foreign country" },
+      { type: "p", text: "The white marquee, the specific band, the caterer from home — every insistence on replicating something exactly usually adds cost, logistics or friction. Spain has its own version of most of these, often better, at a fraction of the effort. The best destination weddings borrow from the country instead of importing over it." },
+
+      { type: "h2", text: "5. Trying to save by skipping a planner" },
+      { type: "p", text: "It is the most expensive kind of saving we see. Couples spend more on individual vendors than a local planner would have negotiated, book venues that don't fit, and arrive at the wedding week exhausted. If a full planning fee doesn't fit, a partial or day-of coordination almost always does — and both pay for themselves." },
+      { type: "callout", title: "See how we work", body: "Our services page lays out full planning, partial planning and wedding day coordination side by side." },
+
+      { type: "h2", text: "6. Not visiting once before the wedding week" },
+      { type: "p", text: "You don't need three trips. But one visit — venue walkthrough, tasting, meeting the planner in person — meaningfully changes how confident you feel in the final months. Weddings planned entirely on video can still be beautiful, and we do them; couples who visit once always sleep better." },
+
+      { type: "h2", text: "7. Confusing legal marriage with symbolic ceremony" },
+      { type: "p", text: "Most international couples end up doing the legal marriage at home and holding a symbolic ceremony in Spain — it is calmer, cheaper and more flexible. The mistake is not knowing that early, and getting anxious about paperwork that turns out not to apply. Ask the question in the first month, decide, then stop worrying about it." },
+      { type: "callout", body: "Read more: <a href=\"/blog/getting-married-in-spain-legal-requirements\">Getting legally married in Spain as a foreigner</a>." },
+
+      { type: "h2", text: "8. Booking wedding-adjacent vendors too late" },
+      { type: "p", text: "Photography, music and hair and makeup all book earlier than most couples expect in Spain — the good ones are locked six to twelve months out. If you're going to be picky about anything, be picky about these three, and be early." },
+
+      { type: "h2", text: "9. Over-scheduling the weekend" },
+      { type: "p", text: "Welcome dinner, hike, ceremony, dinner, brunch, sunset boat, farewell lunch. Ambition looks great on a document and exhausts everyone by Saturday afternoon. The best wedding weekends breathe — one or two anchor moments a day, real gaps in between, guests choosing what they want to do." },
+
+      { type: "h2", text: "10. Not writing a guest guide" },
+      { type: "p", text: "A one-page guide — how to fly in, where to stay, dress code, transport plan, dietary options — solves 80% of the questions guests ask you at 11 p.m. the night before. Send it with the invitations, update it a month before. It is a small kindness that pays back everywhere." },
+
+      { type: "h2", text: "11. Fixating on Instagram and ignoring the room" },
+      { type: "p", text: "A wedding needs to look beautiful in the moment, not just in a saved reel. Uplighting that flatters the room, seating that lets people talk, a band that reads the floor — these decisions barely photograph and change everything. Design the day for the people in it first." },
+
+      { type: "h2", text: "12. Waiting to have a discovery call" },
+      { type: "p", text: "The single most avoidable mistake. Couples spend months reading, spreadsheeting, tab-hoarding — and then in one 30-minute call with a planner, get more clarity than the previous three months combined. Talk early. It saves the rest of the process." },
+
+      { type: "h2", text: "The quiet pattern behind all of them" },
+      { type: "p", text: "Almost every mistake on this list is a version of the same thing: making detail decisions before structural ones. Region before venue. Rain plan before Pinterest board. Planner before caterer. Guest guide before favours. When the big decisions come first, everything downstream feels lighter." },
+    ],
+    cta: {
+      title: "Talk it through before you commit",
+      body: "A discovery call is where most of these mistakes get pre-empted — in 30 minutes, before anything is booked.",
+      button: "Book a Discovery Call",
+    },
+    relatedTitle: "Keep reading",
+    related: [
+      { label: "Month-by-month planning timeline", href: "/blog/wedding-in-spain-planning-timeline" },
+      { label: "Budget adjustments that actually save money", href: "/blog/wedding-budget-tips-spain" },
+      { label: "Our services and how we work", href: "/services" },
+    ],
+  },
+
+  "getting-married-in-spain-legal-requirements": {
+    meta: {
+      title: "Getting Legally Married in Spain as a Foreigner: Civil vs Symbolic",
+      description:
+        "The honest, up-to-date guide to marrying legally in Spain as a foreign couple — civil ceremony requirements, symbolic ceremony, paperwork and timelines.",
+    },
+    hero: {
+      eyebrow: "Legal",
+      h1: "Getting Legally Married in Spain as a Foreigner: Civil vs Symbolic Ceremony",
+      dek: "What the law actually asks of foreign couples marrying in Spain — and why most choose a symbolic ceremony here and a civil marriage at home.",
+      readingTime: "10 min read",
+    },
+    ...DATES["getting-married-in-spain-legal-requirements"],
+    image: IMAGE["getting-married-in-spain-legal-requirements"].src,
+    imageAlt: IMAGE["getting-married-in-spain-legal-requirements"].alt.en,
+    body: [
+      { type: "p", text: "There are two questions couples ask us most often about the legal side of marrying in Spain. Can we legally get married here as foreigners? And, if we can, should we? The honest answers are yes, and usually not — for reasons that have nothing to do with red tape scaremongering and everything to do with how the two paths actually work in practice." },
+      { type: "p", text: "This is a plain-language walkthrough of both options. Anything specific to your citizenship, residency status or autonomous community needs to be confirmed with a local Registro Civil or a Spanish family lawyer — the rules move, and they vary from region to region. We flag every claim you should verify rather than take on faith." },
+
+      { type: "callout", title: "One important caveat", body: "Legal rules for foreign marriages in Spain vary by autonomous community, nationality and religion, and change from time to time. Treat everything below as an accurate general orientation, not legal advice, and confirm the specifics that apply to you with the local Registro Civil or a Spanish family lawyer before making decisions." },
+
+      { type: "h2", text: "The two ceremonies you'll hear about" },
+      { type: "p", text: "Almost every foreign couple marrying in Spain is choosing between two structures." },
+      { type: "h3", text: "Option A — full civil ceremony in Spain" },
+      { type: "p", text: "A legally binding marriage under Spanish law, performed by a civil authority (typically the Registro Civil, an ayuntamiento, or a notary depending on the region). You are legally married the moment the ceremony ends; the marriage is then recorded in the Spanish civil registry and, with an apostilled certificate, recognised in your home country." },
+      { type: "h3", text: "Option B — legal marriage at home, symbolic ceremony in Spain" },
+      { type: "p", text: "You marry legally in your home country (usually a short registry appointment) either before or after the trip. In Spain, on the day, you have a symbolic ceremony at the venue of your choice: a celebrant of your choosing, your vows, rings, readings, and everything your guests would recognise as a wedding — with no legal effect, and no legal restrictions on venue, timing or celebrant." },
+
+      { type: "h2", text: "Why most international couples choose the symbolic route" },
+      { type: "p", text: "This is not a bias of ours — it is a pattern. The symbolic-plus-legal-at-home path removes almost every friction point that comes with foreign civil marriage in Spain, and adds only one small errand at home." },
+      { type: "ul", items: [
+        "Full freedom on venue: masias, fincas, private estates, cliffside terraces — none of which are usually authorised for legal civil ceremonies.",
+        "Full freedom on timing: sunset ceremonies, weekday weddings, whatever suits the day.",
+        "Full freedom on celebrant: someone bilingual, someone who knows you, someone who can lead the ceremony in your language.",
+        "No residency requirement to worry about.",
+        "No document translation and apostille chain to schedule against the wedding date.",
+        "No language barrier during the ceremony itself.",
+      ] },
+      { type: "p", text: "The one trade-off: a separate legal appointment at home. For most couples this is a 20-minute registry visit with two witnesses, done quietly a few weeks before or after the trip. Many treat it as a private moment; some tell no one until after the Spanish celebration." },
+
+      { type: "h2", text: "What a full civil ceremony in Spain actually requires" },
+      { type: "p", text: "If you would still prefer to marry legally in Spain — for family, symbolic or practical reasons — here is the honest picture of what the process typically involves. Details vary by autonomous community; verify with the local Registro Civil that will handle your file." },
+      { type: "h3", text: "1. A residency link" },
+      { type: "p", text: "Spanish civil marriage generally requires at least one of the partners to be a Spanish resident, or to have established sufficient residency in the municipality where you want to marry — historically two years of continuous residency, though this varies. Purely non-resident foreign couples usually cannot marry legally in Spain in a civil ceremony without meeting this requirement." },
+      { type: "h3", text: "2. The document file" },
+      { type: "p", text: "A complete civil-marriage file typically includes, for each partner: valid passport, full birth certificate, certificate of no impediment (or equivalent from your home country stating you are free to marry), proof of residency (empadronamiento), and a sworn declaration of civil status. All foreign documents usually need an apostille and a sworn translation into Spanish (traducción jurada). This assembly is the slowest step; allow months, not weeks." },
+      { type: "h3", text: "3. The registry interview and notice period" },
+      { type: "p", text: "Once the file is submitted to the Registro Civil, there is a review process — often including an interview — followed by a public-notice period before the marriage can take place. The full timeline from first document to legal ceremony commonly runs six months or longer, depending on region and workload." },
+      { type: "h3", text: "4. The ceremony itself" },
+      { type: "p", text: "The civil ceremony is conducted in Spanish by an authorised official at an authorised venue — typically the Registro Civil office, the town hall, a notary, or a venue that has been formally approved for civil weddings. Not every beautiful private venue in Spain is authorised, which is one of the most common surprises for foreign couples." },
+      { type: "callout", title: "Verify before assuming", body: "Requirements, residency thresholds and authorised venues differ across autonomous communities and change over time. Confirm the current rules with the local Registro Civil or a Spanish family lawyer before building a wedding plan around a full civil ceremony in Spain." },
+
+      { type: "h2", text: "Religious ceremonies" },
+      { type: "p", text: "Catholic and certain other religious ceremonies performed in Spain can carry legal effect when performed by an officiant recognised by the Spanish state and registered with the civil registry. Requirements for foreign couples still apply. If a religious ceremony is central for you, treat it as a third path with its own paperwork — and start it early." },
+
+      { type: "h2", text: "A short decision framework" },
+      { type: "p", text: "In our experience, the choice usually resolves cleanly against these questions:" },
+      { type: "ul", items: [
+        "Do you want to marry at a private venue that isn't authorised for civil ceremonies? → Symbolic in Spain, legal at home.",
+        "Is neither partner a Spanish resident? → Symbolic in Spain, legal at home.",
+        "Do you want the ceremony conducted in your own language, by someone who knows you? → Symbolic in Spain, legal at home.",
+        "Do you have Spanish residency, want the legal moment to be here, and are comfortable with the paperwork timeline? → Consider a full civil ceremony in Spain.",
+      ] },
+
+      { type: "h2", text: "What a symbolic ceremony feels like" },
+      { type: "p", text: "This is the piece that reassures couples most. A well-run symbolic ceremony in Spain is indistinguishable from a wedding to everyone in the room. There is an aisle, music, readings, vows, rings, a celebrant who has met you and can lead the ceremony in your language, an emotional structure, and — if you want it — a symbolic act (a handfasting, a sand ceremony, a shared cup, a tree planting). None of it is legally binding. All of it is genuinely a wedding." },
+
+      { type: "h2", text: "The most common quiet trap" },
+      { type: "p", text: "The mistake we see most is couples committing to a beautiful private venue and only afterwards asking whether a full civil ceremony can happen there. Usually it can't. If your heart is set on a specific private estate, plan for a symbolic ceremony on the day and a civil marriage at home. Reverse the order and you will spend months trying to make the paperwork fit the venue instead of the wedding fit the wedding." },
+
+      { type: "h2", text: "How we can help" },
+      { type: "p", text: "As planners, we don't act as your lawyer — but we know the questions to ask, the timelines to protect, and the vendors (celebrants, translators, notaries) who work fluently with foreign couples. On a discovery call we can tell you, in one conversation, which of the two paths fits your situation and how to sequence it against the wedding date." },
+    ],
+    cta: {
+      title: "Not sure which path fits?",
+      body: "A 30-minute discovery call is the calmest way to talk through your specific situation — nationalities, residency, venue, timeline — and decide.",
+      button: "Book a Discovery Call",
+    },
+    relatedTitle: "Keep reading",
+    related: [
+      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings-spain" },
+      { label: "Why get married in Spain?", href: "/blog/why-get-married-in-spain" },
+      { label: "Common mistakes couples make planning a wedding in Spain", href: "/blog/common-mistakes-planning-a-wedding-in-spain" },
+    ],
+  },
 };
 
 /* ============================ PORTUGUESE ============================ */
