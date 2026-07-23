@@ -1108,9 +1108,9 @@ const pt: Content = {
 
   destination: {
     meta: {
-      title: "Casar na Espanha — Guia Completo | Sol Mediterraneo",
+      title: "Casar na Espanha — Guia para Casais Internacionais",
       description:
-        "Tudo o que casais internacionais precisam para planejar um Destination Wedding na Espanha: requisitos legais, custos, regiões, cronograma e erros a evitar.",
+        "Guia completo para planejar um Destination Wedding na Espanha: cerimônia civil vs simbólica, custos, melhores regiões, cronograma e erros a evitar.",
     },
     hero: {
       eyebrow: "Guia completo",
