@@ -10,7 +10,10 @@ export type PostKey =
   | "wedding-in-spain-planning-timeline"
   | "wedding-regions-in-spain-compared"
   | "wedding-budget-tips-spain"
-  | "what-is-a-destination-wedding";
+  | "what-is-a-destination-wedding"
+  | "why-get-married-in-spain"
+  | "common-mistakes-planning-a-wedding-in-spain"
+  | "getting-married-in-spain-legal-requirements";
 
 export const POST_KEYS: PostKey[] = [
   "cost-of-a-wedding-in-spain",
@@ -18,7 +21,11 @@ export const POST_KEYS: PostKey[] = [
   "wedding-regions-in-spain-compared",
   "wedding-budget-tips-spain",
   "what-is-a-destination-wedding",
+  "why-get-married-in-spain",
+  "common-mistakes-planning-a-wedding-in-spain",
+  "getting-married-in-spain-legal-requirements",
 ];
+
 
 export const BLOG_INDEX: Record<Lang, string> = {
   en: "/blog",
