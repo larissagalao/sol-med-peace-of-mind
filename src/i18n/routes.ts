@@ -16,7 +16,7 @@ export const ROUTES: Record<PageId, Record<Lang, string>> = {
   home:          { en: "/",                              pt: "/pt" },
   about:         { en: "/about",                         pt: "/pt/sobre" },
   services:      { en: "/services",                      pt: "/pt/servicos" },
-  destination:   { en: "/destination-weddings-spain",    pt: "/pt/casar-na-espanha" },
+  destination:   { en: "/destination-weddings/spain-regions", pt: "/pt/casamentos-destino/regioes-da-espanha" },
   testimonials:  { en: "/testimonials",                  pt: "/pt/depoimentos" },
   partners:      { en: "/partners",                      pt: "/pt/parceiros" },
   faq:           { en: "/faq",                           pt: "/pt/faq" },
