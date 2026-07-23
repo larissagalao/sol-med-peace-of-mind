@@ -133,33 +133,47 @@ export function Navbar() {
           }`}
         >
           <ul className="container-editorial flex items-center justify-center gap-x-12 py-3">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.id}>
-                <Link
-                  to={ROUTES[item.id][lang]}
-                  className="relative text-[0.72rem] tracking-[0.28em] uppercase text-navy/70 hover:text-gold transition-colors font-medium"
-                  activeProps={{ className: "text-gold" }}
-                  activeOptions={{ exact: item.id === "home" }}
-                >
-                  {c.nav[item.key]}
-                </Link>
-              </li>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              const href = item.kind === "page" ? ROUTES[item.id][lang] : item.href[lang];
+              const label =
+                item.kind === "page"
+                  ? c.nav[item.id as keyof typeof c.nav]
+                  : item.label[lang];
+              return (
+                <li key={item.id}>
+                  <Link
+                    to={href}
+                    className="relative text-[0.72rem] tracking-[0.28em] uppercase text-navy/70 hover:text-gold transition-colors font-medium"
+                    activeProps={{ className: "text-gold" }}
+                    activeOptions={{ exact: item.id === "home" }}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
         {open && (
           <div className="lg:hidden border-t border-border bg-ivory">
             <div className="container-editorial py-6 flex flex-col gap-5">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.id}
-                  to={ROUTES[item.id][lang]}
-                  className="text-base font-serif text-navy tracking-wide"
-                >
-                  {c.nav[item.key]}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const href = item.kind === "page" ? ROUTES[item.id][lang] : item.href[lang];
+                const label =
+                  item.kind === "page"
+                    ? c.nav[item.id as keyof typeof c.nav]
+                    : item.label[lang];
+                return (
+                  <Link
+                    key={item.id}
+                    to={href}
+                    className="text-base font-serif text-navy tracking-wide"
+                  >
+                    {label}
+                  </Link>
+                );
+              })}
               <div className="flex items-center gap-3 pt-4 border-t border-border">
                 <button
                   onClick={() => switchTo("en")}
