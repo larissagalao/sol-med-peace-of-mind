@@ -148,12 +148,12 @@ export function getPostImage(key: PostKey, lang: Lang) {
 
 /* ---------- Publish dates (owner can update) ---------- */
 
-const DATES: Record<PostKey, { published: string; modified: string }> = {
-  "cost-of-a-wedding-in-spain":            { published: "2026-06-01", modified: "2026-06-01" },
-  "wedding-in-spain-planning-timeline":    { published: "2026-06-05", modified: "2026-06-05" },
-  "wedding-regions-in-spain-compared":     { published: "2026-06-10", modified: "2026-06-10" },
-  "wedding-budget-tips-spain":             { published: "2026-06-15", modified: "2026-06-15" },
-  "what-is-a-destination-wedding":         { published: "2026-06-20", modified: "2026-06-20" },
+const DATES: Record<PostKey, { datePublished: string; modified: string }> = {
+  "cost-of-a-wedding-in-spain":            { datePublished: "2026-06-01", dateModified: "2026-06-01" },
+  "wedding-in-spain-planning-timeline":    { datePublished: "2026-06-05", dateModified: "2026-06-05" },
+  "wedding-regions-in-spain-compared":     { datePublished: "2026-06-10", dateModified: "2026-06-10" },
+  "wedding-budget-tips-spain":             { datePublished: "2026-06-15", dateModified: "2026-06-15" },
+  "what-is-a-destination-wedding":         { datePublished: "2026-06-20", dateModified: "2026-06-20" },
 };
 
 /* ============================ ENGLISH ============================ */
