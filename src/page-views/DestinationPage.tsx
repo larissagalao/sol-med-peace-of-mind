@@ -13,6 +13,10 @@ import andalusia from "@/assets/andalusia.jpg";
 import catalonia from "@/assets/catalonia.jpg";
 import oliveGrove from "@/assets/olive-grove.jpg";
 import interior from "@/assets/interior.jpg";
+import { HUB_SLUGS, REGION_SLUGS, type RegionKey } from "@/i18n/regions";
+
+const SPOKE_KEYS: RegionKey[] = ["catalonia", "costa-brava", "ibiza", "mallorca", "granada", "seville"];
+const hasSpoke = (k: string): k is RegionKey => (SPOKE_KEYS as string[]).includes(k);
 
 // Map keyed by destination.regions[].key
 const REGION_IMAGE_BY_KEY: Record<string, string> = {
