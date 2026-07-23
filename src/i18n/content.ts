@@ -500,9 +500,9 @@ const en: Content = {
 
   destination: {
     meta: {
-      title: "Destination Weddings in Spain: Complete Guide",
+      title: "Destination Weddings in Spain — Guide for International Couples",
       description:
-        "Everything international couples need to plan a Destination Wedding in Spain: legal requirements, costs, regions, timeline and mistakes to avoid.",
+        "Complete guide to Destination Weddings in Spain: legal vs symbolic ceremony, costs, best regions, planning timeline and the mistakes to avoid.",
     },
     hero: {
       eyebrow: "The complete guide",
