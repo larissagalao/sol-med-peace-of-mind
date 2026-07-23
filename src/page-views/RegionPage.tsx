@@ -10,6 +10,7 @@ import {
   type RegionSection,
 } from "@/i18n/regions";
 import { SITE_CONFIG } from "@/config/site";
+import { POST_SLUGS } from "@/i18n/blog";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
 import catalonia from "@/assets/catalonia.jpg";
