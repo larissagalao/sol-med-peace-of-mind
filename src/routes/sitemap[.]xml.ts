@@ -35,6 +35,19 @@ export const Route = createFileRoute("/sitemap.xml")({
           });
         }
 
+        // Blog index
+        pairs.push({ en: BLOG_INDEX.en, pt: BLOG_INDEX.pt, changefreq: "weekly", priority: "0.7" });
+
+        // Blog posts
+        for (const key of POST_KEYS) {
+          pairs.push({
+            en: POST_SLUGS[key].en,
+            pt: POST_SLUGS[key].pt,
+            changefreq: "monthly",
+            priority: "0.6",
+          });
+        }
+
         const entries: string[] = [];
         for (const pair of pairs) {
           for (const [loc, hreflang, alternate] of [
