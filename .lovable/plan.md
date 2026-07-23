@@ -1,65 +1,34 @@
+# Add 3 new articles + 1 FAQ Q&A
 
-# Sol Mediterraneo Weddings Co. — Build Plan
+Reuses `ArticlePage`, `buildPostHead`, and the existing FAQ pipeline. No routing, canonical, hreflang, or existing schema changes beyond additive entries.
 
-A boutique, editorial, trust-first website for a destination wedding planner in Spain, targeting international couples. Bilingual (EN/PT), SEO-optimized, conversion-focused.
+## 1. New blog articles (EN + PT)
 
-## Visual direction (locked from brief)
+Each article: 900–1,200 words, one H1, unique title/description, semantic body blocks (h2/h3/p/ul/quote/callout), soft CTA to the discovery call, and 2–3 internal links to related pages (regions, /services, /destination-weddings-spain, sibling articles). BlogPosting + BreadcrumbList JSON-LD comes automatically from `buildPostHead` (author Larissa Ribeiro, org publisher, datePublished, dateModified, image, inLanguage).
 
-- **Feel:** boutique Mediterranean hotel meets editorial magazine. Calm, refined, spacious.
-- **Palette:** warm white / ivory background, sand & stone neutrals, deep navy for text, burnt gold accent, muted olive as secondary.
-- **Typography:** editorial serif for display (à la the logo — "Sol Mediterraneo" wordmark) paired with a refined sans for body. Fonts: **Cormorant Garamond** (display serif) + **Inter** (body) — loaded via `<link>` in `__root.tsx` per Tailwind v4 rules.
-- **Layout:** generous whitespace, large photography, asymmetric editorial grids, thin gold hairlines, small caps eyebrows.
-- **Motion:** restrained — soft fade/rise on scroll, no bounce.
+| Key | EN slug | PT slug |
+|---|---|---|
+| `why-get-married-in-spain` | `/blog/why-get-married-in-spain` | `/pt/blog/por-que-casar-na-espanha` |
+| `common-mistakes-planning-a-wedding-in-spain` | `/blog/common-mistakes-planning-a-wedding-in-spain` | `/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha` |
+| `getting-married-in-spain-legal-requirements` | `/blog/getting-married-in-spain-legal-requirements` | `/pt/blog/casar-legalmente-na-espanha-como-estrangeiro` |
 
-## Design system (`src/styles.css`)
+Article 3 covers legal + civil-vs-symbolic. Legal specifics stay as clear, checkable claims (residency/registry basics, apostilled documents, notice period, symbolic ceremony as the usual path for international couples) with a callout that final requirements depend on the autonomous community and are confirmed with the local Registro Civil.
 
-Semantic tokens in oklch: `--background` (warm white), `--foreground` (deep navy), `--primary` (deep navy), `--accent` (burnt gold), `--olive`, `--sand`, `--stone`, `--ivory`. Custom fonts, radii, elegant shadow, hairline border. Button variants: `primary` (navy), `outline` (hairline gold), `ghost`.
+Brand voice: calm, personal, warm, Mediterranean, trustworthy. Avoid "luxury", "dream come true", "unforgettable moments", "your special day", "passionate about weddings".
 
-## Reusable components (`src/components/site/`)
+## 2. FAQ addition (EN + PT)
 
-Navbar (with language switcher), Footer, Hero, SectionEyebrow, CTA Banner, ServiceCard, FeatureCard, ProcessStep, Timeline, Testimonial, TestimonialCarousel, FAQ (accordion + Schema), Stats, LocationCard, ImageGallery, SectionDivider, Button variants, Form fields, Logo (SVG recreation of the sun mark).
+Add one new item — "Why hire a local wedding planner in Spain?" / "Por que contratar um wedding planner local na Espanha?" — to the existing FAQ array in `src/i18n/content.ts`. The FAQPage JSON-LD in `src/routes/faq.tsx` and `src/routes/pt.faq.tsx` is generated from that same array via `faqJsonLd(getContent(lang).faq.items)`, so it updates in place — no second block.
 
-## i18n
+## 3. Wiring
 
-- Custom lightweight context: `LanguageProvider` in `__root.tsx`.
-- Detects `navigator.language` on first visit → `pt` if starts with `pt`, else `en`.
-- Persists to `localStorage` (`sol.lang`).
-- URL strategy: EN at `/`, `/about`, `/services`, `/destination-weddings-spain`, `/testimonials`, `/faq`, `/contact`. PT mirrored at `/pt`, `/pt/sobre`, `/pt/servicos`, `/pt/casar-na-espanha`, `/pt/depoimentos`, `/pt/faq`, `/pt/contato`.
-- Language switcher navigates to the mirrored route.
-- Auto-redirect on first `/` visit if PT browser and no stored preference.
-- `hreflang` alternates + `x-default` on each route's `head()`.
+- `src/i18n/blog.ts`: add 3 keys to `POST_KEYS`, EN+PT slugs in `POST_SLUGS`, hero image mapping in `IMAGE` (reuse existing editorial imagery — no new asset generation), and the EN+PT `PostContent` bodies.
+- Route files (6): `src/routes/blog.why-get-married-in-spain.tsx`, `blog.common-mistakes-planning-a-wedding-in-spain.tsx`, `blog.getting-married-in-spain-legal-requirements.tsx`, and the three PT siblings under `src/routes/pt.blog.*.tsx`. Each is 5 lines following the existing template.
+- `src/routes/sitemap[.]xml.ts`: no code change needed — it iterates `POST_KEYS` automatically.
+- Add contextual internal links from Destination and relevant Region pages to the new legal article.
 
-## Routes & content
+## 4. Out of scope
 
-Each route: unique `<title>`, meta description, og:title/description/url, canonical (relative), semantic H1/H2/H3, JSON-LD where relevant. `og:image` only on leaf routes with a real hero image (generated).
+No deletions, no redirects, no image regeneration, no design-system changes, no changes to existing article content, no navbar/footer edits beyond what the automatic Journal listing already covers.
 
-1. **Home** (`/`, `/pt`) — hero with generated Mediterranean villa photo, promise statement ("You keep living your life. We take care of everything in Spain."), trust strip, services preview (3 cards), "How we work" 4-step process, regions preview, testimonial carousel, CTA banner. Organization + LocalBusiness JSON-LD.
-2. **About** (`/about`, `/pt/sobre`) — Our Story, Why Couples Trust Us, Planning Philosophy, How We Work, team-adjacent editorial imagery, CTA, mini-FAQ.
-3. **Services** (`/services`, `/pt/servicos`) — Full Planning, Partial Planning, Elopements & Micro-weddings, Destination Concierge. Each with inclusions, deliverables, ideal-for.
-4. **Destination Weddings in Spain** (`/destination-weddings-spain`, `/pt/casar-na-espanha`) — SEO pillar page: Why Spain, Legal requirements, Civil vs symbolic, Costs, Best regions (Barcelona / Costa Brava / Mallorca / Ibiza / Andalusia), Timeline, Common mistakes, Why local planner. Article JSON-LD.
-5. **Testimonials** (`/testimonials`, `/pt/depoimentos`) — editorial testimonial grid with couple names, origin country, wedding region, quote. Review JSON-LD.
-6. **FAQ** (`/faq`, `/pt/faq`) — expanded FAQ (foreigners marrying in Spain, cost, travel frequency, accommodation, English-speaking vendors, payment, timeline, etc.). FAQPage JSON-LD.
-7. **Contact** (`/contact`, `/pt/contato`) — discovery-call form (name, partners, email, wedding date, region, guest count, budget range, message). Client-side only for now (no backend); shows confirmation on submit. Prominent trust reassurance next to form.
-
-## Images
-
-Generate 6–8 editorial hero/section images: Mediterranean villa terrace, Costa Brava sea view, olive grove tablescape, Barcelona architecture detail, boutique hotel interior, elegant place setting, natural-light couple silhouette. Reuse across pages to control cost.
-
-## SEO & discoverability
-
-- `robots.txt` under `public/`.
-- `sitemap.xml` server route (`src/routes/sitemap[.]xml.ts`) with all 14 routes (7 × 2 langs), relative BASE_URL (no domain yet).
-- Root head: charset, viewport, site defaults, org JSON-LD.
-- Per-route head: full metadata + hreflang.
-
-## Out of scope for this build
-
-- Backend / form persistence (Cloud not enabled — form is client-only until user wants submissions stored/emailed).
-- Blog + individual venue/city landing pages (nav is structured so they can be added later).
-- CMS.
-
-## Delivery
-
-Given the scope, I'll ship in one pass: tokens & fonts → shared components + i18n → all routes with EN+PT content → sitemap/robots → verify build & preview. Then hand over for review before iterating on copy or generating more imagery.
-
-Approve and I'll start building.
+Reply "build it" to proceed.
