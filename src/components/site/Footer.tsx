@@ -3,6 +3,7 @@ import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
 import { SITE_CONFIG } from "@/config/site";
 import { HUB_SLUGS } from "@/i18n/regions";
+import { BLOG_INDEX } from "@/i18n/blog";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -64,6 +65,12 @@ export function Footer() {
                 className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-ivory/80 hover:text-gold transition-colors"
               >
                 {lang === "pt" ? "Regiões da Espanha" : "Where to marry in Spain"} →
+              </Link>
+              <Link
+                to={BLOG_INDEX[lang]}
+                className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-ivory/80 hover:text-gold transition-colors"
+              >
+                {lang === "pt" ? "O Diário" : "The Journal"} →
               </Link>
               <a
                 href={SITE_CONFIG.discoveryCallUrl}

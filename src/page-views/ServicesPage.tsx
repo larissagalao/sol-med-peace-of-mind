@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { Lang } from "@/i18n/routes";
 import { ROUTES } from "@/i18n/routes";
 import { getContent } from "@/i18n/content";
+import { POST_SLUGS } from "@/i18n/blog";
 import { SITE_CONFIG } from "@/config/site";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
@@ -100,6 +101,37 @@ export function ServicesPage({ lang }: { lang: Lang }) {
               {c.common.bookCall}
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Contextual reading */}
+      <section className="container-editorial pb-16">
+        <div className="max-w-3xl border-t border-navy/10 pt-10">
+          <div className="eyebrow mb-4">{lang === "pt" ? "Leituras relacionadas" : "Related reading"}</div>
+          <ul className="space-y-3">
+            <li>
+              <Link
+                to={POST_SLUGS["cost-of-a-wedding-in-spain"][lang]}
+                className="group inline-flex items-baseline gap-3 font-serif text-xl text-navy hover:text-gold transition-colors"
+              >
+                <span className="text-gold">→</span>
+                <span className="underline decoration-gold/30 underline-offset-4 group-hover:decoration-gold">
+                  {lang === "pt" ? "Quanto custa um casamento na Espanha?" : "How much does a wedding in Spain cost?"}
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={POST_SLUGS["wedding-budget-tips-spain"][lang]}
+                className="group inline-flex items-baseline gap-3 font-serif text-xl text-navy hover:text-gold transition-colors"
+              >
+                <span className="text-gold">→</span>
+                <span className="underline decoration-gold/30 underline-offset-4 group-hover:decoration-gold">
+                  {lang === "pt" ? "Ajustes de orçamento que economizam de verdade" : "Budget adjustments that actually save money"}
+                </span>
+              </Link>
+            </li>
+          </ul>
         </div>
       </section>
 

@@ -14,6 +14,7 @@ import catalonia from "@/assets/catalonia.jpg";
 import oliveGrove from "@/assets/olive-grove.jpg";
 import interior from "@/assets/interior.jpg";
 import { HUB_SLUGS, REGION_SLUGS, type RegionKey } from "@/i18n/regions";
+import { POST_SLUGS } from "@/i18n/blog";
 
 const SPOKE_KEYS: RegionKey[] = ["catalonia", "costa-brava", "ibiza", "mallorca", "granada", "seville"];
 const hasSpoke = (k: string): k is RegionKey => (SPOKE_KEYS as string[]).includes(k);
@@ -164,6 +165,35 @@ export function DestinationPage({ lang }: { lang: Lang }) {
                 <Link to={ROUTES.services[lang]} className="btn-outline">{c.common.exploreServices}</Link>
               </div>
             </section>
+          </div>
+
+          {/* Contextual reading */}
+          <div className="mt-16 border-t border-navy/10 pt-10 max-w-3xl">
+            <div className="eyebrow mb-4">{lang === "pt" ? "Leituras relacionadas" : "Related reading"}</div>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to={POST_SLUGS["what-is-a-destination-wedding"][lang]}
+                  className="group inline-flex items-baseline gap-3 font-serif text-xl text-navy hover:text-gold transition-colors"
+                >
+                  <span className="text-gold">→</span>
+                  <span className="underline decoration-gold/30 underline-offset-4 group-hover:decoration-gold">
+                    {lang === "pt" ? "O que é, exatamente, um Destination Wedding?" : "What is a destination wedding, exactly?"}
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={POST_SLUGS["wedding-in-spain-planning-timeline"][lang]}
+                  className="group inline-flex items-baseline gap-3 font-serif text-xl text-navy hover:text-gold transition-colors"
+                >
+                  <span className="text-gold">→</span>
+                  <span className="underline decoration-gold/30 underline-offset-4 group-hover:decoration-gold">
+                    {lang === "pt" ? "Cronograma mês a mês para casar na Espanha" : "A month-by-month timeline for a Spain wedding"}
+                  </span>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </article>

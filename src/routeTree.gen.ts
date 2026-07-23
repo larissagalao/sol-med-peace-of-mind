@@ -19,6 +19,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PtIndexRouteImport } from './routes/pt.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as PtSobreRouteImport } from './routes/pt.sobre'
 import { Route as PtServicosRouteImport } from './routes/pt.servicos'
 import { Route as PtParceirosRouteImport } from './routes/pt.parceiros'
@@ -33,6 +34,12 @@ import { Route as DestinationWeddingsIbizaRouteImport } from './routes/destinati
 import { Route as DestinationWeddingsGranadaRouteImport } from './routes/destination-weddings.granada'
 import { Route as DestinationWeddingsCostaBravaRouteImport } from './routes/destination-weddings.costa-brava'
 import { Route as DestinationWeddingsCataloniaRouteImport } from './routes/destination-weddings.catalonia'
+import { Route as BlogWhatIsADestinationWeddingRouteImport } from './routes/blog.what-is-a-destination-wedding'
+import { Route as BlogWeddingRegionsInSpainComparedRouteImport } from './routes/blog.wedding-regions-in-spain-compared'
+import { Route as BlogWeddingInSpainPlanningTimelineRouteImport } from './routes/blog.wedding-in-spain-planning-timeline'
+import { Route as BlogWeddingBudgetTipsSpainRouteImport } from './routes/blog.wedding-budget-tips-spain'
+import { Route as BlogCostOfAWeddingInSpainRouteImport } from './routes/blog.cost-of-a-wedding-in-spain'
+import { Route as PtBlogIndexRouteImport } from './routes/pt.blog.index'
 import { Route as PtCasamentosDestinoSevilhaRouteImport } from './routes/pt.casamentos-destino.sevilha'
 import { Route as PtCasamentosDestinoRegioesDaEspanhaRouteImport } from './routes/pt.casamentos-destino.regioes-da-espanha'
 import { Route as PtCasamentosDestinoMaiorcaRouteImport } from './routes/pt.casamentos-destino.maiorca'
@@ -40,6 +47,11 @@ import { Route as PtCasamentosDestinoIbizaRouteImport } from './routes/pt.casame
 import { Route as PtCasamentosDestinoGranadaRouteImport } from './routes/pt.casamentos-destino.granada'
 import { Route as PtCasamentosDestinoCostaBravaRouteImport } from './routes/pt.casamentos-destino.costa-brava'
 import { Route as PtCasamentosDestinoCatalunhaRouteImport } from './routes/pt.casamentos-destino.catalunha'
+import { Route as PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport } from './routes/pt.blog.regioes-para-casar-na-espanha-comparadas'
+import { Route as PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport } from './routes/pt.blog.planejamento-casamento-espanha-cronograma'
+import { Route as PtBlogOQueEUmDestinationWeddingRouteImport } from './routes/pt.blog.o-que-e-um-destination-wedding'
+import { Route as PtBlogDicasOrcamentoCasamentoEspanhaRouteImport } from './routes/pt.blog.dicas-orcamento-casamento-espanha'
+import { Route as PtBlogCustoDeUmCasamentoNaEspanhaRouteImport } from './routes/pt.blog.custo-de-um-casamento-na-espanha'
 
 const TestimonialsRoute = TestimonialsRouteImport.update({
   id: '/testimonials',
@@ -90,6 +102,11 @@ const IndexRoute = IndexRouteImport.update({
 const PtIndexRoute = PtIndexRouteImport.update({
   id: '/pt/',
   path: '/pt/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PtSobreRoute = PtSobreRouteImport.update({
@@ -169,6 +186,41 @@ const DestinationWeddingsCataloniaRoute =
     path: '/destination-weddings/catalonia',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogWhatIsADestinationWeddingRoute =
+  BlogWhatIsADestinationWeddingRouteImport.update({
+    id: '/blog/what-is-a-destination-wedding',
+    path: '/blog/what-is-a-destination-wedding',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogWeddingRegionsInSpainComparedRoute =
+  BlogWeddingRegionsInSpainComparedRouteImport.update({
+    id: '/blog/wedding-regions-in-spain-compared',
+    path: '/blog/wedding-regions-in-spain-compared',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogWeddingInSpainPlanningTimelineRoute =
+  BlogWeddingInSpainPlanningTimelineRouteImport.update({
+    id: '/blog/wedding-in-spain-planning-timeline',
+    path: '/blog/wedding-in-spain-planning-timeline',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogWeddingBudgetTipsSpainRoute =
+  BlogWeddingBudgetTipsSpainRouteImport.update({
+    id: '/blog/wedding-budget-tips-spain',
+    path: '/blog/wedding-budget-tips-spain',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogCostOfAWeddingInSpainRoute =
+  BlogCostOfAWeddingInSpainRouteImport.update({
+    id: '/blog/cost-of-a-wedding-in-spain',
+    path: '/blog/cost-of-a-wedding-in-spain',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogIndexRoute = PtBlogIndexRouteImport.update({
+  id: '/pt/blog/',
+  path: '/pt/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PtCasamentosDestinoSevilhaRoute =
   PtCasamentosDestinoSevilhaRouteImport.update({
     id: '/pt/casamentos-destino/sevilha',
@@ -211,6 +263,36 @@ const PtCasamentosDestinoCatalunhaRoute =
     path: '/pt/casamentos-destino/catalunha',
     getParentRoute: () => rootRouteImport,
   } as any)
+const PtBlogRegioesParaCasarNaEspanhaComparadasRoute =
+  PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport.update({
+    id: '/pt/blog/regioes-para-casar-na-espanha-comparadas',
+    path: '/pt/blog/regioes-para-casar-na-espanha-comparadas',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute =
+  PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport.update({
+    id: '/pt/blog/planejamento-casamento-espanha-cronograma',
+    path: '/pt/blog/planejamento-casamento-espanha-cronograma',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogOQueEUmDestinationWeddingRoute =
+  PtBlogOQueEUmDestinationWeddingRouteImport.update({
+    id: '/pt/blog/o-que-e-um-destination-wedding',
+    path: '/pt/blog/o-que-e-um-destination-wedding',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogDicasOrcamentoCasamentoEspanhaRoute =
+  PtBlogDicasOrcamentoCasamentoEspanhaRouteImport.update({
+    id: '/pt/blog/dicas-orcamento-casamento-espanha',
+    path: '/pt/blog/dicas-orcamento-casamento-espanha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogCustoDeUmCasamentoNaEspanhaRoute =
+  PtBlogCustoDeUmCasamentoNaEspanhaRouteImport.update({
+    id: '/pt/blog/custo-de-um-casamento-na-espanha',
+    path: '/pt/blog/custo-de-um-casamento-na-espanha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -222,6 +304,11 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/blog/cost-of-a-wedding-in-spain': typeof BlogCostOfAWeddingInSpainRoute
+  '/blog/wedding-budget-tips-spain': typeof BlogWeddingBudgetTipsSpainRoute
+  '/blog/wedding-in-spain-planning-timeline': typeof BlogWeddingInSpainPlanningTimelineRoute
+  '/blog/wedding-regions-in-spain-compared': typeof BlogWeddingRegionsInSpainComparedRoute
+  '/blog/what-is-a-destination-wedding': typeof BlogWhatIsADestinationWeddingRoute
   '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
   '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
   '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
@@ -236,7 +323,13 @@ export interface FileRoutesByFullPath {
   '/pt/parceiros': typeof PtParceirosRoute
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
+  '/blog/': typeof BlogIndexRoute
   '/pt/': typeof PtIndexRoute
+  '/pt/blog/custo-de-um-casamento-na-espanha': typeof PtBlogCustoDeUmCasamentoNaEspanhaRoute
+  '/pt/blog/dicas-orcamento-casamento-espanha': typeof PtBlogDicasOrcamentoCasamentoEspanhaRoute
+  '/pt/blog/o-que-e-um-destination-wedding': typeof PtBlogOQueEUmDestinationWeddingRoute
+  '/pt/blog/planejamento-casamento-espanha-cronograma': typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute
+  '/pt/blog/regioes-para-casar-na-espanha-comparadas': typeof PtBlogRegioesParaCasarNaEspanhaComparadasRoute
   '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
   '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
   '/pt/casamentos-destino/granada': typeof PtCasamentosDestinoGranadaRoute
@@ -244,6 +337,7 @@ export interface FileRoutesByFullPath {
   '/pt/casamentos-destino/maiorca': typeof PtCasamentosDestinoMaiorcaRoute
   '/pt/casamentos-destino/regioes-da-espanha': typeof PtCasamentosDestinoRegioesDaEspanhaRoute
   '/pt/casamentos-destino/sevilha': typeof PtCasamentosDestinoSevilhaRoute
+  '/pt/blog/': typeof PtBlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -255,6 +349,11 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/blog/cost-of-a-wedding-in-spain': typeof BlogCostOfAWeddingInSpainRoute
+  '/blog/wedding-budget-tips-spain': typeof BlogWeddingBudgetTipsSpainRoute
+  '/blog/wedding-in-spain-planning-timeline': typeof BlogWeddingInSpainPlanningTimelineRoute
+  '/blog/wedding-regions-in-spain-compared': typeof BlogWeddingRegionsInSpainComparedRoute
+  '/blog/what-is-a-destination-wedding': typeof BlogWhatIsADestinationWeddingRoute
   '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
   '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
   '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
@@ -269,7 +368,13 @@ export interface FileRoutesByTo {
   '/pt/parceiros': typeof PtParceirosRoute
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
+  '/blog': typeof BlogIndexRoute
   '/pt': typeof PtIndexRoute
+  '/pt/blog/custo-de-um-casamento-na-espanha': typeof PtBlogCustoDeUmCasamentoNaEspanhaRoute
+  '/pt/blog/dicas-orcamento-casamento-espanha': typeof PtBlogDicasOrcamentoCasamentoEspanhaRoute
+  '/pt/blog/o-que-e-um-destination-wedding': typeof PtBlogOQueEUmDestinationWeddingRoute
+  '/pt/blog/planejamento-casamento-espanha-cronograma': typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute
+  '/pt/blog/regioes-para-casar-na-espanha-comparadas': typeof PtBlogRegioesParaCasarNaEspanhaComparadasRoute
   '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
   '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
   '/pt/casamentos-destino/granada': typeof PtCasamentosDestinoGranadaRoute
@@ -277,6 +382,7 @@ export interface FileRoutesByTo {
   '/pt/casamentos-destino/maiorca': typeof PtCasamentosDestinoMaiorcaRoute
   '/pt/casamentos-destino/regioes-da-espanha': typeof PtCasamentosDestinoRegioesDaEspanhaRoute
   '/pt/casamentos-destino/sevilha': typeof PtCasamentosDestinoSevilhaRoute
+  '/pt/blog': typeof PtBlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -289,6 +395,11 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/blog/cost-of-a-wedding-in-spain': typeof BlogCostOfAWeddingInSpainRoute
+  '/blog/wedding-budget-tips-spain': typeof BlogWeddingBudgetTipsSpainRoute
+  '/blog/wedding-in-spain-planning-timeline': typeof BlogWeddingInSpainPlanningTimelineRoute
+  '/blog/wedding-regions-in-spain-compared': typeof BlogWeddingRegionsInSpainComparedRoute
+  '/blog/what-is-a-destination-wedding': typeof BlogWhatIsADestinationWeddingRoute
   '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
   '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
   '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
@@ -303,7 +414,13 @@ export interface FileRoutesById {
   '/pt/parceiros': typeof PtParceirosRoute
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
+  '/blog/': typeof BlogIndexRoute
   '/pt/': typeof PtIndexRoute
+  '/pt/blog/custo-de-um-casamento-na-espanha': typeof PtBlogCustoDeUmCasamentoNaEspanhaRoute
+  '/pt/blog/dicas-orcamento-casamento-espanha': typeof PtBlogDicasOrcamentoCasamentoEspanhaRoute
+  '/pt/blog/o-que-e-um-destination-wedding': typeof PtBlogOQueEUmDestinationWeddingRoute
+  '/pt/blog/planejamento-casamento-espanha-cronograma': typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute
+  '/pt/blog/regioes-para-casar-na-espanha-comparadas': typeof PtBlogRegioesParaCasarNaEspanhaComparadasRoute
   '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
   '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
   '/pt/casamentos-destino/granada': typeof PtCasamentosDestinoGranadaRoute
@@ -311,6 +428,7 @@ export interface FileRoutesById {
   '/pt/casamentos-destino/maiorca': typeof PtCasamentosDestinoMaiorcaRoute
   '/pt/casamentos-destino/regioes-da-espanha': typeof PtCasamentosDestinoRegioesDaEspanhaRoute
   '/pt/casamentos-destino/sevilha': typeof PtCasamentosDestinoSevilhaRoute
+  '/pt/blog/': typeof PtBlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -324,6 +442,11 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/blog/cost-of-a-wedding-in-spain'
+    | '/blog/wedding-budget-tips-spain'
+    | '/blog/wedding-in-spain-planning-timeline'
+    | '/blog/wedding-regions-in-spain-compared'
+    | '/blog/what-is-a-destination-wedding'
     | '/destination-weddings/catalonia'
     | '/destination-weddings/costa-brava'
     | '/destination-weddings/granada'
@@ -338,7 +461,13 @@ export interface FileRouteTypes {
     | '/pt/parceiros'
     | '/pt/servicos'
     | '/pt/sobre'
+    | '/blog/'
     | '/pt/'
+    | '/pt/blog/custo-de-um-casamento-na-espanha'
+    | '/pt/blog/dicas-orcamento-casamento-espanha'
+    | '/pt/blog/o-que-e-um-destination-wedding'
+    | '/pt/blog/planejamento-casamento-espanha-cronograma'
+    | '/pt/blog/regioes-para-casar-na-espanha-comparadas'
     | '/pt/casamentos-destino/catalunha'
     | '/pt/casamentos-destino/costa-brava'
     | '/pt/casamentos-destino/granada'
@@ -346,6 +475,7 @@ export interface FileRouteTypes {
     | '/pt/casamentos-destino/maiorca'
     | '/pt/casamentos-destino/regioes-da-espanha'
     | '/pt/casamentos-destino/sevilha'
+    | '/pt/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -357,6 +487,11 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/blog/cost-of-a-wedding-in-spain'
+    | '/blog/wedding-budget-tips-spain'
+    | '/blog/wedding-in-spain-planning-timeline'
+    | '/blog/wedding-regions-in-spain-compared'
+    | '/blog/what-is-a-destination-wedding'
     | '/destination-weddings/catalonia'
     | '/destination-weddings/costa-brava'
     | '/destination-weddings/granada'
@@ -371,7 +506,13 @@ export interface FileRouteTypes {
     | '/pt/parceiros'
     | '/pt/servicos'
     | '/pt/sobre'
+    | '/blog'
     | '/pt'
+    | '/pt/blog/custo-de-um-casamento-na-espanha'
+    | '/pt/blog/dicas-orcamento-casamento-espanha'
+    | '/pt/blog/o-que-e-um-destination-wedding'
+    | '/pt/blog/planejamento-casamento-espanha-cronograma'
+    | '/pt/blog/regioes-para-casar-na-espanha-comparadas'
     | '/pt/casamentos-destino/catalunha'
     | '/pt/casamentos-destino/costa-brava'
     | '/pt/casamentos-destino/granada'
@@ -379,6 +520,7 @@ export interface FileRouteTypes {
     | '/pt/casamentos-destino/maiorca'
     | '/pt/casamentos-destino/regioes-da-espanha'
     | '/pt/casamentos-destino/sevilha'
+    | '/pt/blog'
   id:
     | '__root__'
     | '/'
@@ -390,6 +532,11 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/blog/cost-of-a-wedding-in-spain'
+    | '/blog/wedding-budget-tips-spain'
+    | '/blog/wedding-in-spain-planning-timeline'
+    | '/blog/wedding-regions-in-spain-compared'
+    | '/blog/what-is-a-destination-wedding'
     | '/destination-weddings/catalonia'
     | '/destination-weddings/costa-brava'
     | '/destination-weddings/granada'
@@ -404,7 +551,13 @@ export interface FileRouteTypes {
     | '/pt/parceiros'
     | '/pt/servicos'
     | '/pt/sobre'
+    | '/blog/'
     | '/pt/'
+    | '/pt/blog/custo-de-um-casamento-na-espanha'
+    | '/pt/blog/dicas-orcamento-casamento-espanha'
+    | '/pt/blog/o-que-e-um-destination-wedding'
+    | '/pt/blog/planejamento-casamento-espanha-cronograma'
+    | '/pt/blog/regioes-para-casar-na-espanha-comparadas'
     | '/pt/casamentos-destino/catalunha'
     | '/pt/casamentos-destino/costa-brava'
     | '/pt/casamentos-destino/granada'
@@ -412,6 +565,7 @@ export interface FileRouteTypes {
     | '/pt/casamentos-destino/maiorca'
     | '/pt/casamentos-destino/regioes-da-espanha'
     | '/pt/casamentos-destino/sevilha'
+    | '/pt/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -424,6 +578,11 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TestimonialsRoute: typeof TestimonialsRoute
+  BlogCostOfAWeddingInSpainRoute: typeof BlogCostOfAWeddingInSpainRoute
+  BlogWeddingBudgetTipsSpainRoute: typeof BlogWeddingBudgetTipsSpainRoute
+  BlogWeddingInSpainPlanningTimelineRoute: typeof BlogWeddingInSpainPlanningTimelineRoute
+  BlogWeddingRegionsInSpainComparedRoute: typeof BlogWeddingRegionsInSpainComparedRoute
+  BlogWhatIsADestinationWeddingRoute: typeof BlogWhatIsADestinationWeddingRoute
   DestinationWeddingsCataloniaRoute: typeof DestinationWeddingsCataloniaRoute
   DestinationWeddingsCostaBravaRoute: typeof DestinationWeddingsCostaBravaRoute
   DestinationWeddingsGranadaRoute: typeof DestinationWeddingsGranadaRoute
@@ -438,7 +597,13 @@ export interface RootRouteChildren {
   PtParceirosRoute: typeof PtParceirosRoute
   PtServicosRoute: typeof PtServicosRoute
   PtSobreRoute: typeof PtSobreRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   PtIndexRoute: typeof PtIndexRoute
+  PtBlogCustoDeUmCasamentoNaEspanhaRoute: typeof PtBlogCustoDeUmCasamentoNaEspanhaRoute
+  PtBlogDicasOrcamentoCasamentoEspanhaRoute: typeof PtBlogDicasOrcamentoCasamentoEspanhaRoute
+  PtBlogOQueEUmDestinationWeddingRoute: typeof PtBlogOQueEUmDestinationWeddingRoute
+  PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute: typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute
+  PtBlogRegioesParaCasarNaEspanhaComparadasRoute: typeof PtBlogRegioesParaCasarNaEspanhaComparadasRoute
   PtCasamentosDestinoCatalunhaRoute: typeof PtCasamentosDestinoCatalunhaRoute
   PtCasamentosDestinoCostaBravaRoute: typeof PtCasamentosDestinoCostaBravaRoute
   PtCasamentosDestinoGranadaRoute: typeof PtCasamentosDestinoGranadaRoute
@@ -446,6 +611,7 @@ export interface RootRouteChildren {
   PtCasamentosDestinoMaiorcaRoute: typeof PtCasamentosDestinoMaiorcaRoute
   PtCasamentosDestinoRegioesDaEspanhaRoute: typeof PtCasamentosDestinoRegioesDaEspanhaRoute
   PtCasamentosDestinoSevilhaRoute: typeof PtCasamentosDestinoSevilhaRoute
+  PtBlogIndexRoute: typeof PtBlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -518,6 +684,13 @@ declare module '@tanstack/react-router' {
       path: '/pt'
       fullPath: '/pt/'
       preLoaderRoute: typeof PtIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pt/sobre': {
@@ -618,6 +791,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DestinationWeddingsCataloniaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/what-is-a-destination-wedding': {
+      id: '/blog/what-is-a-destination-wedding'
+      path: '/blog/what-is-a-destination-wedding'
+      fullPath: '/blog/what-is-a-destination-wedding'
+      preLoaderRoute: typeof BlogWhatIsADestinationWeddingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/wedding-regions-in-spain-compared': {
+      id: '/blog/wedding-regions-in-spain-compared'
+      path: '/blog/wedding-regions-in-spain-compared'
+      fullPath: '/blog/wedding-regions-in-spain-compared'
+      preLoaderRoute: typeof BlogWeddingRegionsInSpainComparedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/wedding-in-spain-planning-timeline': {
+      id: '/blog/wedding-in-spain-planning-timeline'
+      path: '/blog/wedding-in-spain-planning-timeline'
+      fullPath: '/blog/wedding-in-spain-planning-timeline'
+      preLoaderRoute: typeof BlogWeddingInSpainPlanningTimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/wedding-budget-tips-spain': {
+      id: '/blog/wedding-budget-tips-spain'
+      path: '/blog/wedding-budget-tips-spain'
+      fullPath: '/blog/wedding-budget-tips-spain'
+      preLoaderRoute: typeof BlogWeddingBudgetTipsSpainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/cost-of-a-wedding-in-spain': {
+      id: '/blog/cost-of-a-wedding-in-spain'
+      path: '/blog/cost-of-a-wedding-in-spain'
+      fullPath: '/blog/cost-of-a-wedding-in-spain'
+      preLoaderRoute: typeof BlogCostOfAWeddingInSpainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/': {
+      id: '/pt/blog/'
+      path: '/pt/blog'
+      fullPath: '/pt/blog/'
+      preLoaderRoute: typeof PtBlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pt/casamentos-destino/sevilha': {
       id: '/pt/casamentos-destino/sevilha'
       path: '/pt/casamentos-destino/sevilha'
@@ -667,6 +882,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtCasamentosDestinoCatalunhaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pt/blog/regioes-para-casar-na-espanha-comparadas': {
+      id: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
+      path: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
+      fullPath: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
+      preLoaderRoute: typeof PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/planejamento-casamento-espanha-cronograma': {
+      id: '/pt/blog/planejamento-casamento-espanha-cronograma'
+      path: '/pt/blog/planejamento-casamento-espanha-cronograma'
+      fullPath: '/pt/blog/planejamento-casamento-espanha-cronograma'
+      preLoaderRoute: typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/o-que-e-um-destination-wedding': {
+      id: '/pt/blog/o-que-e-um-destination-wedding'
+      path: '/pt/blog/o-que-e-um-destination-wedding'
+      fullPath: '/pt/blog/o-que-e-um-destination-wedding'
+      preLoaderRoute: typeof PtBlogOQueEUmDestinationWeddingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/dicas-orcamento-casamento-espanha': {
+      id: '/pt/blog/dicas-orcamento-casamento-espanha'
+      path: '/pt/blog/dicas-orcamento-casamento-espanha'
+      fullPath: '/pt/blog/dicas-orcamento-casamento-espanha'
+      preLoaderRoute: typeof PtBlogDicasOrcamentoCasamentoEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/custo-de-um-casamento-na-espanha': {
+      id: '/pt/blog/custo-de-um-casamento-na-espanha'
+      path: '/pt/blog/custo-de-um-casamento-na-espanha'
+      fullPath: '/pt/blog/custo-de-um-casamento-na-espanha'
+      preLoaderRoute: typeof PtBlogCustoDeUmCasamentoNaEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -680,6 +930,13 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TestimonialsRoute: TestimonialsRoute,
+  BlogCostOfAWeddingInSpainRoute: BlogCostOfAWeddingInSpainRoute,
+  BlogWeddingBudgetTipsSpainRoute: BlogWeddingBudgetTipsSpainRoute,
+  BlogWeddingInSpainPlanningTimelineRoute:
+    BlogWeddingInSpainPlanningTimelineRoute,
+  BlogWeddingRegionsInSpainComparedRoute:
+    BlogWeddingRegionsInSpainComparedRoute,
+  BlogWhatIsADestinationWeddingRoute: BlogWhatIsADestinationWeddingRoute,
   DestinationWeddingsCataloniaRoute: DestinationWeddingsCataloniaRoute,
   DestinationWeddingsCostaBravaRoute: DestinationWeddingsCostaBravaRoute,
   DestinationWeddingsGranadaRoute: DestinationWeddingsGranadaRoute,
@@ -694,7 +951,17 @@ const rootRouteChildren: RootRouteChildren = {
   PtParceirosRoute: PtParceirosRoute,
   PtServicosRoute: PtServicosRoute,
   PtSobreRoute: PtSobreRoute,
+  BlogIndexRoute: BlogIndexRoute,
   PtIndexRoute: PtIndexRoute,
+  PtBlogCustoDeUmCasamentoNaEspanhaRoute:
+    PtBlogCustoDeUmCasamentoNaEspanhaRoute,
+  PtBlogDicasOrcamentoCasamentoEspanhaRoute:
+    PtBlogDicasOrcamentoCasamentoEspanhaRoute,
+  PtBlogOQueEUmDestinationWeddingRoute: PtBlogOQueEUmDestinationWeddingRoute,
+  PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute:
+    PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute,
+  PtBlogRegioesParaCasarNaEspanhaComparadasRoute:
+    PtBlogRegioesParaCasarNaEspanhaComparadasRoute,
   PtCasamentosDestinoCatalunhaRoute: PtCasamentosDestinoCatalunhaRoute,
   PtCasamentosDestinoCostaBravaRoute: PtCasamentosDestinoCostaBravaRoute,
   PtCasamentosDestinoGranadaRoute: PtCasamentosDestinoGranadaRoute,
@@ -703,6 +970,7 @@ const rootRouteChildren: RootRouteChildren = {
   PtCasamentosDestinoRegioesDaEspanhaRoute:
     PtCasamentosDestinoRegioesDaEspanhaRoute,
   PtCasamentosDestinoSevilhaRoute: PtCasamentosDestinoSevilhaRoute,
+  PtBlogIndexRoute: PtBlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -10,6 +10,7 @@ import {
   type RegionSection,
 } from "@/i18n/regions";
 import { SITE_CONFIG } from "@/config/site";
+import { POST_SLUGS } from "@/i18n/blog";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
 import catalonia from "@/assets/catalonia.jpg";
@@ -172,6 +173,16 @@ export function RegionPage({ regionKey, lang }: { regionKey: RegionKey; lang: La
         <div className="max-w-2xl">
           <h2 className="text-balance">{r.closing.title}</h2>
           <p className="mt-6 text-lg text-navy/80 leading-relaxed">{r.closing.body}</p>
+          <p className="mt-6 text-navy/70">
+            <Link
+              to={POST_SLUGS["wedding-regions-in-spain-compared"][lang]}
+              className="text-gold hover:text-navy transition-colors underline decoration-gold/30 underline-offset-4"
+            >
+              {lang === "pt"
+                ? "Comparar todas as regiões da Espanha, lado a lado →"
+                : "Compare all Spain wedding regions side by side →"}
+            </Link>
+          </p>
         </div>
       </section>
 

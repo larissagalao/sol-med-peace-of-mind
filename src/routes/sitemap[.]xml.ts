@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { ALL_PAGE_IDS, ROUTES } from "@/i18n/routes";
 import { HUB_SLUGS, REGION_KEYS, REGION_SLUGS } from "@/i18n/regions";
+import { BLOG_INDEX, POST_KEYS, POST_SLUGS } from "@/i18n/blog";
 import { SITE_CONFIG } from "@/config/site";
 
 const BASE_URL = SITE_CONFIG.url;
@@ -31,6 +32,19 @@ export const Route = createFileRoute("/sitemap.xml")({
             pt: REGION_SLUGS[key].pt,
             changefreq: "monthly",
             priority: "0.8",
+          });
+        }
+
+        // Blog index
+        pairs.push({ en: BLOG_INDEX.en, pt: BLOG_INDEX.pt, changefreq: "weekly", priority: "0.7" });
+
+        // Blog posts
+        for (const key of POST_KEYS) {
+          pairs.push({
+            en: POST_SLUGS[key].en,
+            pt: POST_SLUGS[key].pt,
+            changefreq: "monthly",
+            priority: "0.6",
           });
         }
 
