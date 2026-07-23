@@ -66,6 +66,12 @@ export function Footer() {
               >
                 {lang === "pt" ? "Regiões da Espanha" : "Where to marry in Spain"} →
               </Link>
+              <Link
+                to={BLOG_INDEX[lang]}
+                className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-ivory/80 hover:text-gold transition-colors"
+              >
+                {lang === "pt" ? "O Diário" : "The Journal"} →
+              </Link>
               <a
                 href={SITE_CONFIG.discoveryCallUrl}
                 target="_blank"
