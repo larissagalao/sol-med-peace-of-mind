@@ -38,8 +38,7 @@ export function RegionHubPage({ lang }: { lang: Lang }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: lang === "pt" ? "Início" : "Home", item: `${SITE_CONFIG.url}${ROUTES.home[lang]}` },
-      { "@type": "ListItem", position: 2, name: lang === "pt" ? "Casamentos na Espanha" : "Weddings in Spain", item: `${SITE_CONFIG.url}${ROUTES.destination[lang]}` },
-      { "@type": "ListItem", position: 3, name: t.hero.h1, item: `${SITE_CONFIG.url}${path}` },
+      { "@type": "ListItem", position: 2, name: t.hero.h1, item: `${SITE_CONFIG.url}${path}` },
     ],
   };
 
@@ -85,6 +84,29 @@ export function RegionHubPage({ lang }: { lang: Lang }) {
           {t.lead.map((p, i) => <p key={i}>{p}</p>)}
         </div>
       </section>
+
+      {/* PRIMER — short intro links to core reads */}
+      <section className="border-y border-border/60 bg-ivory-warm">
+        <div className="container-editorial py-16 md:py-20">
+          <SectionHeader title={t.primer.title} body={t.primer.body} />
+          <ul className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6 max-w-5xl">
+            {t.primer.items.map((it) => (
+              <li key={it.href}>
+                <a
+                  href={it.href}
+                  className="group block border-t border-navy/15 pt-4 hover:border-gold transition-colors"
+                >
+                  <div className="eyebrow text-navy group-hover:text-gold transition-colors">
+                    {it.label}
+                  </div>
+                  <p className="mt-2 text-navy/75 leading-relaxed">{it.body}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
 
       {/* CHOOSE */}
       <section className="bg-ivory-warm">
