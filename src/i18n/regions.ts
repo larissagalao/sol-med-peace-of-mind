@@ -56,10 +56,13 @@ export type RegionContent = {
   closing: { title: string; body: string };
 };
 
+export type HubPrimerItem = { label: string; body: string; href: string };
+
 export type HubContent = {
   meta: { title: string; description: string };
   hero: { eyebrow: string; h1: string; intro: string };
   lead: string[];
+  primer: { title: string; body: string; items: HubPrimerItem[] };
   choose: { title: string; body: string; questions: string[] };
   regionsIntro: { title: string; body: string };
   cards: Record<RegionKey, { name: string; blurb: string; bestFor: string }>;
@@ -70,20 +73,33 @@ export type HubContent = {
 
 const enHub: HubContent = {
   meta: {
-    title: "Where to Get Married in Spain | Regions Guide",
+    title: "Destination Weddings in Spain — Where to Get Married | Sol Mediterraneo",
     description:
-      "A boutique guide to the best regions for a destination wedding in Spain — Catalonia, Costa Brava, Ibiza, Mallorca, Granada and Seville.",
+      "Planning a destination wedding in Spain? A boutique guide to the regions, the legal side, real cost ranges and the timeline — from a wedding planner based in Spain.",
   },
   hero: {
     eyebrow: "Destination Weddings in Spain",
-    h1: "Where to get married in Spain",
+    h1: "Destination weddings in Spain — where to get married",
     intro:
-      "Six regions, six very different weddings. This is the quiet guide we walk our couples through before we ever discuss venues — so the place you choose actually matches the day you're picturing.",
+      "A destination wedding in Spain is really six very different weddings, depending on where you land. This is the quiet guide we walk our couples through before we ever discuss venues — so the place you choose actually matches the day you're picturing.",
   },
   lead: [
     "Spain is not one country when it comes to weddings. A masia in the Catalan countryside feels nothing like a whitewashed finca in Ibiza, and a Sevillian palace has a different soul than a Mallorcan estate above the sea.",
-    "As a boutique Wedding Planner working exclusively on Destination Weddings in Spain, we help international couples narrow the map before they narrow the guest list. Below is our honest read on the six regions we know best.",
+    "As a boutique wedding planner working exclusively on destination weddings in Spain, we help international couples narrow the map before they narrow the guest list. Below is our honest read on the six regions we know best.",
   ],
+  primer: {
+    title: "What a destination wedding in Spain involves",
+    body:
+      "Six short reads that cover almost every question couples bring us on a discovery call — before we ever open a map.",
+    items: [
+      { label: "Legal & ceremony", body: "Civil vs symbolic, and what foreign couples actually do.", href: "/blog/getting-married-in-spain-legal-requirements" },
+      { label: "Real cost ranges", body: "What a Spanish wedding costs, by guest count and region.", href: "/blog/cost-of-a-wedding-in-spain" },
+      { label: "Planning timeline", body: "A calm, month-by-month plan from first idea to the day.", href: "/blog/wedding-in-spain-planning-timeline" },
+      { label: "Why Spain", body: "The honest reasons couples keep choosing Spain.", href: "/blog/why-get-married-in-spain" },
+      { label: "Common mistakes", body: "The quiet, avoidable missteps we see most often.", href: "/blog/common-mistakes-planning-a-wedding-in-spain" },
+      { label: "Why hire a local planner", body: "What a local wedding planner in Spain actually changes.", href: "/faq" },
+    ],
+  },
   choose: {
     title: "How to choose your region",
     body:
@@ -616,20 +632,33 @@ const enRegions: Record<RegionKey, RegionContent> = {
 
 const ptHub: HubContent = {
   meta: {
-    title: "Onde Casar na Espanha | Guia por Regiões",
+    title: "Destination Weddings na Espanha — Onde Casar | Sol Mediterraneo",
     description:
-      "Um guia boutique das melhores regiões para um Destination Wedding na Espanha — Catalunha, Costa Brava, Ibiza, Maiorca, Granada e Sevilha.",
+      "Planejando um Destination Wedding na Espanha? Um guia boutique das regiões, do lado legal, das faixas reais de custo e do cronograma — de uma wedding planner baseada na Espanha.",
   },
   hero: {
     eyebrow: "Destination Weddings na Espanha",
-    h1: "Onde casar na Espanha",
+    h1: "Destination Weddings na Espanha — onde casar",
     intro:
-      "Seis regiões, seis casamentos completamente diferentes. Este é o guia tranquilo que oferecemos aos nossos casais antes mesmo de falarmos em venues — para que o lugar escolhido combine com o dia que vocês estão imaginando.",
+      "Um Destination Wedding na Espanha é, na verdade, seis casamentos completamente diferentes, dependendo de onde vocês pousam. Este é o guia tranquilo que oferecemos aos nossos casais antes mesmo de falarmos em venues — para que o lugar escolhido combine com o dia que vocês estão imaginando.",
   },
   lead: [
     "A Espanha não é um único país quando o assunto é casamento. Uma masia no interior catalão é outra coisa em relação a uma finca caiada em Ibiza, e um palácio sevilhano tem uma alma diferente de uma propriedade maiorquina sobre o mar.",
     "Como Wedding Planner boutique dedicada exclusivamente a Destination Weddings na Espanha, ajudamos casais internacionais a estreitar o mapa antes de estreitar a lista de convidados. Abaixo, nossa leitura honesta das seis regiões que mais conhecemos.",
   ],
+  primer: {
+    title: "O que envolve um Destination Wedding na Espanha",
+    body:
+      "Seis leituras curtas que cobrem quase toda pergunta que casais nos trazem em uma discovery call — antes mesmo de abrirmos o mapa.",
+    items: [
+      { label: "Legal & cerimônia", body: "Civil vs simbólica, e o que casais estrangeiros de fato fazem.", href: "/pt/blog/casar-legalmente-na-espanha-como-estrangeiro" },
+      { label: "Faixas reais de custo", body: "Quanto custa um casamento na Espanha, por número de convidados e região.", href: "/pt/blog/custo-de-um-casamento-na-espanha" },
+      { label: "Cronograma de planejamento", body: "Um plano tranquilo, mês a mês, da primeira ideia ao dia.", href: "/pt/blog/planejamento-casamento-espanha-cronograma" },
+      { label: "Por que a Espanha", body: "As razões honestas pelas quais casais continuam escolhendo a Espanha.", href: "/pt/blog/por-que-casar-na-espanha" },
+      { label: "Erros comuns", body: "Os deslizes silenciosos e evitáveis que mais vemos.", href: "/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha" },
+      { label: "Por que contratar planner local", body: "O que um wedding planner local na Espanha realmente muda.", href: "/pt/faq" },
+    ],
+  },
   choose: {
     title: "Como escolher a sua região",
     body:

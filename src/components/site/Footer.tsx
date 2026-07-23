@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
 import { SITE_CONFIG } from "@/config/site";
-import { HUB_SLUGS } from "@/i18n/regions";
+import { HUB_SLUGS, REGION_KEYS, REGION_SLUGS } from "@/i18n/regions";
 import { BLOG_INDEX } from "@/i18n/blog";
 import { Logo } from "./Logo";
 
@@ -11,11 +11,22 @@ export function Footer() {
   const c = getContent(lang);
   const year = new Date().getFullYear();
 
+  const destinationsLabel = lang === "pt" ? "Destinos" : "Destinations";
+  const hubLabel = lang === "pt" ? "Onde casar na Espanha" : "Where to marry in Spain";
+  const regionLabel: Record<string, string> = {
+    catalonia: lang === "pt" ? "Catalunha" : "Catalonia",
+    "costa-brava": "Costa Brava",
+    ibiza: "Ibiza",
+    mallorca: lang === "pt" ? "Maiorca" : "Mallorca",
+    granada: "Granada",
+    seville: lang === "pt" ? "Sevilha" : "Seville",
+  };
+
   return (
     <footer className="bg-navy text-ivory mt-24">
       <div className="container-editorial py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <Logo variant="mark" color="ivory" className="w-16 h-16 mb-6" />
             <p className="font-serif text-2xl leading-snug text-ivory/95 max-w-sm">
               {c.footer.tagline}
@@ -25,7 +36,31 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-7">
+          <div className="md:col-span-4">
+            <div className="eyebrow text-gold-soft mb-5">{destinationsLabel}</div>
+            <ul className="flex flex-col gap-3 text-sm">
+              <li>
+                <Link
+                  to={HUB_SLUGS[lang]}
+                  className="text-ivory/80 hover:text-gold transition-colors"
+                >
+                  {hubLabel}
+                </Link>
+              </li>
+              {REGION_KEYS.map((key) => (
+                <li key={key}>
+                  <Link
+                    to={REGION_SLUGS[key][lang]}
+                    className="text-ivory/80 hover:text-gold transition-colors"
+                  >
+                    {regionLabel[key]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-4">
             <div className="eyebrow text-gold-soft mb-5">{c.footer.columns.contact}</div>
             <a
               href={`mailto:${c.footer.email}`}
@@ -61,12 +96,6 @@ export function Footer() {
             </div>
             <div className="mt-6 flex flex-col gap-3">
               <Link
-                to={HUB_SLUGS[lang]}
-                className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-ivory/80 hover:text-gold transition-colors"
-              >
-                {lang === "pt" ? "Regiões da Espanha" : "Where to marry in Spain"} →
-              </Link>
-              <Link
                 to={BLOG_INDEX[lang]}
                 className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-ivory/80 hover:text-gold transition-colors"
               >
@@ -92,3 +121,4 @@ export function Footer() {
     </footer>
   );
 }
+

@@ -1,16 +1,22 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { DestinationPage, destinationArticleJsonLd } from "@/page-views/DestinationPage";
-import { buildHead } from "@/lib/page-head";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+// 301 redirect: the old destination page has been consolidated into the
+// regions hub. Both server-rendered requests and client navigations resolve
+// via the beforeLoad redirect below.
 export const Route = createFileRoute("/destination-weddings-spain")({
-  head: () => {
-    const base = buildHead({ pageId: "destination", lang: "en" });
-    return {
-      ...base,
-      scripts: [
-        { type: "application/ld+json", children: JSON.stringify(destinationArticleJsonLd("en")) },
-      ],
-    };
+  beforeLoad: () => {
+    throw redirect({
+      to: "/destination-weddings/spain-regions",
+      statusCode: 301,
+    });
   },
-  component: () => <DestinationPage lang="en" />,
+  server: {
+    handlers: {
+      GET: async () =>
+        new Response(null, {
+          status: 301,
+          headers: { Location: "/destination-weddings/spain-regions" },
+        }),
+    },
+  },
 });

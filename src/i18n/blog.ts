@@ -384,7 +384,7 @@ const enPosts: Record<PostKey, PostContent> = {
     related: [
       { label: "What is a destination wedding, exactly?", href: "/blog/what-is-a-destination-wedding" },
       { label: "How much does a wedding in Spain cost?", href: "/blog/cost-of-a-wedding-in-spain" },
-      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings-spain" },
+      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings/spain-regions" },
     ],
   },
 
@@ -589,7 +589,7 @@ const enPosts: Record<PostKey, PostContent> = {
     related: [
       { label: "Where to get married in Spain — regions compared", href: "/blog/wedding-regions-in-spain-compared" },
       { label: "Month-by-month planning timeline", href: "/blog/wedding-in-spain-planning-timeline" },
-      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings-spain" },
+      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings/spain-regions" },
     ],
   },
 
@@ -655,7 +655,7 @@ const enPosts: Record<PostKey, PostContent> = {
     related: [
       { label: "Where to get married in Spain — regions compared", href: "/blog/wedding-regions-in-spain-compared" },
       { label: "Getting legally married in Spain as a foreigner", href: "/blog/getting-married-in-spain-legal-requirements" },
-      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings-spain" },
+      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings/spain-regions" },
     ],
   },
 
@@ -814,7 +814,7 @@ const enPosts: Record<PostKey, PostContent> = {
     },
     relatedTitle: "Keep reading",
     related: [
-      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings-spain" },
+      { label: "Destination weddings in Spain — full guide", href: "/destination-weddings/spain-regions" },
       { label: "Why get married in Spain?", href: "/blog/why-get-married-in-spain" },
       { label: "Common mistakes couples make planning a wedding in Spain", href: "/blog/common-mistakes-planning-a-wedding-in-spain" },
     ],
@@ -1006,7 +1006,7 @@ const ptPosts: Record<PostKey, PostContent> = {
     related: [
       { label: "O que é, exatamente, um Destination Wedding?", href: "/pt/blog/o-que-e-um-destination-wedding" },
       { label: "Quanto custa um casamento na Espanha?", href: "/pt/blog/custo-de-um-casamento-na-espanha" },
-      { label: "Destination Wedding na Espanha — guia completo", href: "/pt/casar-na-espanha" },
+      { label: "Destination Wedding na Espanha — guia completo", href: "/pt/casamentos-destino/regioes-da-espanha" },
     ],
   },
 
@@ -1211,7 +1211,7 @@ const ptPosts: Record<PostKey, PostContent> = {
     related: [
       { label: "Onde casar na Espanha — regiões comparadas", href: "/pt/blog/regioes-para-casar-na-espanha-comparadas" },
       { label: "Cronograma mês a mês", href: "/pt/blog/planejamento-casamento-espanha-cronograma" },
-      { label: "Destination Wedding na Espanha — guia completo", href: "/pt/casar-na-espanha" },
+      { label: "Destination Wedding na Espanha — guia completo", href: "/pt/casamentos-destino/regioes-da-espanha" },
     ],
   },
 
@@ -1277,7 +1277,7 @@ const ptPosts: Record<PostKey, PostContent> = {
     related: [
       { label: "Onde casar na Espanha — regiões comparadas", href: "/pt/blog/regioes-para-casar-na-espanha-comparadas" },
       { label: "Casar legalmente na Espanha como estrangeiro", href: "/pt/blog/casar-legalmente-na-espanha-como-estrangeiro" },
-      { label: "Destination Wedding na Espanha — guia completo", href: "/pt/casar-na-espanha" },
+      { label: "Destination Wedding na Espanha — guia completo", href: "/pt/casamentos-destino/regioes-da-espanha" },
     ],
   },
 
@@ -1435,7 +1435,7 @@ const ptPosts: Record<PostKey, PostContent> = {
     },
     relatedTitle: "Continue lendo",
     related: [
-      { label: "Destination Wedding na Espanha — guia completo", href: "/pt/casar-na-espanha" },
+      { label: "Destination Wedding na Espanha — guia completo", href: "/pt/casamentos-destino/regioes-da-espanha" },
       { label: "Por que casar na Espanha?", href: "/pt/blog/por-que-casar-na-espanha" },
       { label: "Erros comuns ao planejar um casamento na Espanha", href: "/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha" },
     ],
