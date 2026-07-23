@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { Lang } from "@/i18n/routes";
 import { ROUTES } from "@/i18n/routes";
 import { getContent } from "@/i18n/content";
+import { POST_SLUGS } from "@/i18n/blog";
 import { SITE_CONFIG } from "@/config/site";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTABanner } from "@/components/site/CTABanner";
