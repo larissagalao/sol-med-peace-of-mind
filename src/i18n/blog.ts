@@ -159,6 +159,27 @@ const IMAGE: Record<PostKey, { src: string; alt: { en: string; pt: string } }> =
       pt: "Pátio andaluz com laranjeiras — a imagem que casais imaginam.",
     },
   },
+  "why-get-married-in-spain": {
+    src: mallorca,
+    alt: {
+      en: "A stone estate above the Mediterranean — the kind of place couples come to Spain for.",
+      pt: "Uma propriedade em pedra acima do Mediterrâneo — o tipo de lugar pelo qual casais escolhem a Espanha.",
+    },
+  },
+  "common-mistakes-planning-a-wedding-in-spain": {
+    src: tablescape,
+    alt: {
+      en: "A long, quietly styled wedding table in Spain — considered planning, not spectacle.",
+      pt: "Mesa longa e discretamente estilizada de casamento na Espanha — planejamento considerado.",
+    },
+  },
+  "getting-married-in-spain-legal-requirements": {
+    src: oliveGrove,
+    alt: {
+      en: "An olive grove in Spain — a common setting for symbolic ceremonies.",
+      pt: "Olival na Espanha — cenário comum para cerimônias simbólicas.",
+    },
+  },
 };
 
 export function getPostImage(key: PostKey, lang: Lang) {
