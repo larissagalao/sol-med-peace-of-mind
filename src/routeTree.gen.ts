@@ -26,6 +26,20 @@ import { Route as PtFaqRouteImport } from './routes/pt.faq'
 import { Route as PtDepoimentosRouteImport } from './routes/pt.depoimentos'
 import { Route as PtContatoRouteImport } from './routes/pt.contato'
 import { Route as PtCasarNaEspanhaRouteImport } from './routes/pt.casar-na-espanha'
+import { Route as DestinationWeddingsSpainRegionsRouteImport } from './routes/destination-weddings.spain-regions'
+import { Route as DestinationWeddingsSevilleRouteImport } from './routes/destination-weddings.seville'
+import { Route as DestinationWeddingsMallorcaRouteImport } from './routes/destination-weddings.mallorca'
+import { Route as DestinationWeddingsIbizaRouteImport } from './routes/destination-weddings.ibiza'
+import { Route as DestinationWeddingsGranadaRouteImport } from './routes/destination-weddings.granada'
+import { Route as DestinationWeddingsCostaBravaRouteImport } from './routes/destination-weddings.costa-brava'
+import { Route as DestinationWeddingsCataloniaRouteImport } from './routes/destination-weddings.catalonia'
+import { Route as PtCasamentosDestinoSevilhaRouteImport } from './routes/pt.casamentos-destino.sevilha'
+import { Route as PtCasamentosDestinoRegioesDaEspanhaRouteImport } from './routes/pt.casamentos-destino.regioes-da-espanha'
+import { Route as PtCasamentosDestinoMaiorcaRouteImport } from './routes/pt.casamentos-destino.maiorca'
+import { Route as PtCasamentosDestinoIbizaRouteImport } from './routes/pt.casamentos-destino.ibiza'
+import { Route as PtCasamentosDestinoGranadaRouteImport } from './routes/pt.casamentos-destino.granada'
+import { Route as PtCasamentosDestinoCostaBravaRouteImport } from './routes/pt.casamentos-destino.costa-brava'
+import { Route as PtCasamentosDestinoCatalunhaRouteImport } from './routes/pt.casamentos-destino.catalunha'
 
 const TestimonialsRoute = TestimonialsRouteImport.update({
   id: '/testimonials',
@@ -113,6 +127,90 @@ const PtCasarNaEspanhaRoute = PtCasarNaEspanhaRouteImport.update({
   path: '/pt/casar-na-espanha',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DestinationWeddingsSpainRegionsRoute =
+  DestinationWeddingsSpainRegionsRouteImport.update({
+    id: '/destination-weddings/spain-regions',
+    path: '/destination-weddings/spain-regions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsSevilleRoute =
+  DestinationWeddingsSevilleRouteImport.update({
+    id: '/destination-weddings/seville',
+    path: '/destination-weddings/seville',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsMallorcaRoute =
+  DestinationWeddingsMallorcaRouteImport.update({
+    id: '/destination-weddings/mallorca',
+    path: '/destination-weddings/mallorca',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsIbizaRoute =
+  DestinationWeddingsIbizaRouteImport.update({
+    id: '/destination-weddings/ibiza',
+    path: '/destination-weddings/ibiza',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsGranadaRoute =
+  DestinationWeddingsGranadaRouteImport.update({
+    id: '/destination-weddings/granada',
+    path: '/destination-weddings/granada',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsCostaBravaRoute =
+  DestinationWeddingsCostaBravaRouteImport.update({
+    id: '/destination-weddings/costa-brava',
+    path: '/destination-weddings/costa-brava',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsCataloniaRoute =
+  DestinationWeddingsCataloniaRouteImport.update({
+    id: '/destination-weddings/catalonia',
+    path: '/destination-weddings/catalonia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoSevilhaRoute =
+  PtCasamentosDestinoSevilhaRouteImport.update({
+    id: '/pt/casamentos-destino/sevilha',
+    path: '/pt/casamentos-destino/sevilha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoRegioesDaEspanhaRoute =
+  PtCasamentosDestinoRegioesDaEspanhaRouteImport.update({
+    id: '/pt/casamentos-destino/regioes-da-espanha',
+    path: '/pt/casamentos-destino/regioes-da-espanha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoMaiorcaRoute =
+  PtCasamentosDestinoMaiorcaRouteImport.update({
+    id: '/pt/casamentos-destino/maiorca',
+    path: '/pt/casamentos-destino/maiorca',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoIbizaRoute =
+  PtCasamentosDestinoIbizaRouteImport.update({
+    id: '/pt/casamentos-destino/ibiza',
+    path: '/pt/casamentos-destino/ibiza',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoGranadaRoute =
+  PtCasamentosDestinoGranadaRouteImport.update({
+    id: '/pt/casamentos-destino/granada',
+    path: '/pt/casamentos-destino/granada',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoCostaBravaRoute =
+  PtCasamentosDestinoCostaBravaRouteImport.update({
+    id: '/pt/casamentos-destino/costa-brava',
+    path: '/pt/casamentos-destino/costa-brava',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoCatalunhaRoute =
+  PtCasamentosDestinoCatalunhaRouteImport.update({
+    id: '/pt/casamentos-destino/catalunha',
+    path: '/pt/casamentos-destino/catalunha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -124,6 +222,13 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
+  '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
+  '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
+  '/destination-weddings/ibiza': typeof DestinationWeddingsIbizaRoute
+  '/destination-weddings/mallorca': typeof DestinationWeddingsMallorcaRoute
+  '/destination-weddings/seville': typeof DestinationWeddingsSevilleRoute
+  '/destination-weddings/spain-regions': typeof DestinationWeddingsSpainRegionsRoute
   '/pt/casar-na-espanha': typeof PtCasarNaEspanhaRoute
   '/pt/contato': typeof PtContatoRoute
   '/pt/depoimentos': typeof PtDepoimentosRoute
@@ -132,6 +237,13 @@ export interface FileRoutesByFullPath {
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
   '/pt/': typeof PtIndexRoute
+  '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
+  '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
+  '/pt/casamentos-destino/granada': typeof PtCasamentosDestinoGranadaRoute
+  '/pt/casamentos-destino/ibiza': typeof PtCasamentosDestinoIbizaRoute
+  '/pt/casamentos-destino/maiorca': typeof PtCasamentosDestinoMaiorcaRoute
+  '/pt/casamentos-destino/regioes-da-espanha': typeof PtCasamentosDestinoRegioesDaEspanhaRoute
+  '/pt/casamentos-destino/sevilha': typeof PtCasamentosDestinoSevilhaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -143,6 +255,13 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
+  '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
+  '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
+  '/destination-weddings/ibiza': typeof DestinationWeddingsIbizaRoute
+  '/destination-weddings/mallorca': typeof DestinationWeddingsMallorcaRoute
+  '/destination-weddings/seville': typeof DestinationWeddingsSevilleRoute
+  '/destination-weddings/spain-regions': typeof DestinationWeddingsSpainRegionsRoute
   '/pt/casar-na-espanha': typeof PtCasarNaEspanhaRoute
   '/pt/contato': typeof PtContatoRoute
   '/pt/depoimentos': typeof PtDepoimentosRoute
@@ -151,6 +270,13 @@ export interface FileRoutesByTo {
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
   '/pt': typeof PtIndexRoute
+  '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
+  '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
+  '/pt/casamentos-destino/granada': typeof PtCasamentosDestinoGranadaRoute
+  '/pt/casamentos-destino/ibiza': typeof PtCasamentosDestinoIbizaRoute
+  '/pt/casamentos-destino/maiorca': typeof PtCasamentosDestinoMaiorcaRoute
+  '/pt/casamentos-destino/regioes-da-espanha': typeof PtCasamentosDestinoRegioesDaEspanhaRoute
+  '/pt/casamentos-destino/sevilha': typeof PtCasamentosDestinoSevilhaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -163,6 +289,13 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/destination-weddings/catalonia': typeof DestinationWeddingsCataloniaRoute
+  '/destination-weddings/costa-brava': typeof DestinationWeddingsCostaBravaRoute
+  '/destination-weddings/granada': typeof DestinationWeddingsGranadaRoute
+  '/destination-weddings/ibiza': typeof DestinationWeddingsIbizaRoute
+  '/destination-weddings/mallorca': typeof DestinationWeddingsMallorcaRoute
+  '/destination-weddings/seville': typeof DestinationWeddingsSevilleRoute
+  '/destination-weddings/spain-regions': typeof DestinationWeddingsSpainRegionsRoute
   '/pt/casar-na-espanha': typeof PtCasarNaEspanhaRoute
   '/pt/contato': typeof PtContatoRoute
   '/pt/depoimentos': typeof PtDepoimentosRoute
@@ -171,6 +304,13 @@ export interface FileRoutesById {
   '/pt/servicos': typeof PtServicosRoute
   '/pt/sobre': typeof PtSobreRoute
   '/pt/': typeof PtIndexRoute
+  '/pt/casamentos-destino/catalunha': typeof PtCasamentosDestinoCatalunhaRoute
+  '/pt/casamentos-destino/costa-brava': typeof PtCasamentosDestinoCostaBravaRoute
+  '/pt/casamentos-destino/granada': typeof PtCasamentosDestinoGranadaRoute
+  '/pt/casamentos-destino/ibiza': typeof PtCasamentosDestinoIbizaRoute
+  '/pt/casamentos-destino/maiorca': typeof PtCasamentosDestinoMaiorcaRoute
+  '/pt/casamentos-destino/regioes-da-espanha': typeof PtCasamentosDestinoRegioesDaEspanhaRoute
+  '/pt/casamentos-destino/sevilha': typeof PtCasamentosDestinoSevilhaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -184,6 +324,13 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/destination-weddings/catalonia'
+    | '/destination-weddings/costa-brava'
+    | '/destination-weddings/granada'
+    | '/destination-weddings/ibiza'
+    | '/destination-weddings/mallorca'
+    | '/destination-weddings/seville'
+    | '/destination-weddings/spain-regions'
     | '/pt/casar-na-espanha'
     | '/pt/contato'
     | '/pt/depoimentos'
@@ -192,6 +339,13 @@ export interface FileRouteTypes {
     | '/pt/servicos'
     | '/pt/sobre'
     | '/pt/'
+    | '/pt/casamentos-destino/catalunha'
+    | '/pt/casamentos-destino/costa-brava'
+    | '/pt/casamentos-destino/granada'
+    | '/pt/casamentos-destino/ibiza'
+    | '/pt/casamentos-destino/maiorca'
+    | '/pt/casamentos-destino/regioes-da-espanha'
+    | '/pt/casamentos-destino/sevilha'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -203,6 +357,13 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/destination-weddings/catalonia'
+    | '/destination-weddings/costa-brava'
+    | '/destination-weddings/granada'
+    | '/destination-weddings/ibiza'
+    | '/destination-weddings/mallorca'
+    | '/destination-weddings/seville'
+    | '/destination-weddings/spain-regions'
     | '/pt/casar-na-espanha'
     | '/pt/contato'
     | '/pt/depoimentos'
@@ -211,6 +372,13 @@ export interface FileRouteTypes {
     | '/pt/servicos'
     | '/pt/sobre'
     | '/pt'
+    | '/pt/casamentos-destino/catalunha'
+    | '/pt/casamentos-destino/costa-brava'
+    | '/pt/casamentos-destino/granada'
+    | '/pt/casamentos-destino/ibiza'
+    | '/pt/casamentos-destino/maiorca'
+    | '/pt/casamentos-destino/regioes-da-espanha'
+    | '/pt/casamentos-destino/sevilha'
   id:
     | '__root__'
     | '/'
@@ -222,6 +390,13 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/destination-weddings/catalonia'
+    | '/destination-weddings/costa-brava'
+    | '/destination-weddings/granada'
+    | '/destination-weddings/ibiza'
+    | '/destination-weddings/mallorca'
+    | '/destination-weddings/seville'
+    | '/destination-weddings/spain-regions'
     | '/pt/casar-na-espanha'
     | '/pt/contato'
     | '/pt/depoimentos'
@@ -230,6 +405,13 @@ export interface FileRouteTypes {
     | '/pt/servicos'
     | '/pt/sobre'
     | '/pt/'
+    | '/pt/casamentos-destino/catalunha'
+    | '/pt/casamentos-destino/costa-brava'
+    | '/pt/casamentos-destino/granada'
+    | '/pt/casamentos-destino/ibiza'
+    | '/pt/casamentos-destino/maiorca'
+    | '/pt/casamentos-destino/regioes-da-espanha'
+    | '/pt/casamentos-destino/sevilha'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -242,6 +424,13 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TestimonialsRoute: typeof TestimonialsRoute
+  DestinationWeddingsCataloniaRoute: typeof DestinationWeddingsCataloniaRoute
+  DestinationWeddingsCostaBravaRoute: typeof DestinationWeddingsCostaBravaRoute
+  DestinationWeddingsGranadaRoute: typeof DestinationWeddingsGranadaRoute
+  DestinationWeddingsIbizaRoute: typeof DestinationWeddingsIbizaRoute
+  DestinationWeddingsMallorcaRoute: typeof DestinationWeddingsMallorcaRoute
+  DestinationWeddingsSevilleRoute: typeof DestinationWeddingsSevilleRoute
+  DestinationWeddingsSpainRegionsRoute: typeof DestinationWeddingsSpainRegionsRoute
   PtCasarNaEspanhaRoute: typeof PtCasarNaEspanhaRoute
   PtContatoRoute: typeof PtContatoRoute
   PtDepoimentosRoute: typeof PtDepoimentosRoute
@@ -250,6 +439,13 @@ export interface RootRouteChildren {
   PtServicosRoute: typeof PtServicosRoute
   PtSobreRoute: typeof PtSobreRoute
   PtIndexRoute: typeof PtIndexRoute
+  PtCasamentosDestinoCatalunhaRoute: typeof PtCasamentosDestinoCatalunhaRoute
+  PtCasamentosDestinoCostaBravaRoute: typeof PtCasamentosDestinoCostaBravaRoute
+  PtCasamentosDestinoGranadaRoute: typeof PtCasamentosDestinoGranadaRoute
+  PtCasamentosDestinoIbizaRoute: typeof PtCasamentosDestinoIbizaRoute
+  PtCasamentosDestinoMaiorcaRoute: typeof PtCasamentosDestinoMaiorcaRoute
+  PtCasamentosDestinoRegioesDaEspanhaRoute: typeof PtCasamentosDestinoRegioesDaEspanhaRoute
+  PtCasamentosDestinoSevilhaRoute: typeof PtCasamentosDestinoSevilhaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -373,6 +569,104 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtCasarNaEspanhaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/destination-weddings/spain-regions': {
+      id: '/destination-weddings/spain-regions'
+      path: '/destination-weddings/spain-regions'
+      fullPath: '/destination-weddings/spain-regions'
+      preLoaderRoute: typeof DestinationWeddingsSpainRegionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/seville': {
+      id: '/destination-weddings/seville'
+      path: '/destination-weddings/seville'
+      fullPath: '/destination-weddings/seville'
+      preLoaderRoute: typeof DestinationWeddingsSevilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/mallorca': {
+      id: '/destination-weddings/mallorca'
+      path: '/destination-weddings/mallorca'
+      fullPath: '/destination-weddings/mallorca'
+      preLoaderRoute: typeof DestinationWeddingsMallorcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/ibiza': {
+      id: '/destination-weddings/ibiza'
+      path: '/destination-weddings/ibiza'
+      fullPath: '/destination-weddings/ibiza'
+      preLoaderRoute: typeof DestinationWeddingsIbizaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/granada': {
+      id: '/destination-weddings/granada'
+      path: '/destination-weddings/granada'
+      fullPath: '/destination-weddings/granada'
+      preLoaderRoute: typeof DestinationWeddingsGranadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/costa-brava': {
+      id: '/destination-weddings/costa-brava'
+      path: '/destination-weddings/costa-brava'
+      fullPath: '/destination-weddings/costa-brava'
+      preLoaderRoute: typeof DestinationWeddingsCostaBravaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/catalonia': {
+      id: '/destination-weddings/catalonia'
+      path: '/destination-weddings/catalonia'
+      fullPath: '/destination-weddings/catalonia'
+      preLoaderRoute: typeof DestinationWeddingsCataloniaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/sevilha': {
+      id: '/pt/casamentos-destino/sevilha'
+      path: '/pt/casamentos-destino/sevilha'
+      fullPath: '/pt/casamentos-destino/sevilha'
+      preLoaderRoute: typeof PtCasamentosDestinoSevilhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/regioes-da-espanha': {
+      id: '/pt/casamentos-destino/regioes-da-espanha'
+      path: '/pt/casamentos-destino/regioes-da-espanha'
+      fullPath: '/pt/casamentos-destino/regioes-da-espanha'
+      preLoaderRoute: typeof PtCasamentosDestinoRegioesDaEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/maiorca': {
+      id: '/pt/casamentos-destino/maiorca'
+      path: '/pt/casamentos-destino/maiorca'
+      fullPath: '/pt/casamentos-destino/maiorca'
+      preLoaderRoute: typeof PtCasamentosDestinoMaiorcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/ibiza': {
+      id: '/pt/casamentos-destino/ibiza'
+      path: '/pt/casamentos-destino/ibiza'
+      fullPath: '/pt/casamentos-destino/ibiza'
+      preLoaderRoute: typeof PtCasamentosDestinoIbizaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/granada': {
+      id: '/pt/casamentos-destino/granada'
+      path: '/pt/casamentos-destino/granada'
+      fullPath: '/pt/casamentos-destino/granada'
+      preLoaderRoute: typeof PtCasamentosDestinoGranadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/costa-brava': {
+      id: '/pt/casamentos-destino/costa-brava'
+      path: '/pt/casamentos-destino/costa-brava'
+      fullPath: '/pt/casamentos-destino/costa-brava'
+      preLoaderRoute: typeof PtCasamentosDestinoCostaBravaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/catalunha': {
+      id: '/pt/casamentos-destino/catalunha'
+      path: '/pt/casamentos-destino/catalunha'
+      fullPath: '/pt/casamentos-destino/catalunha'
+      preLoaderRoute: typeof PtCasamentosDestinoCatalunhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -386,6 +680,13 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TestimonialsRoute: TestimonialsRoute,
+  DestinationWeddingsCataloniaRoute: DestinationWeddingsCataloniaRoute,
+  DestinationWeddingsCostaBravaRoute: DestinationWeddingsCostaBravaRoute,
+  DestinationWeddingsGranadaRoute: DestinationWeddingsGranadaRoute,
+  DestinationWeddingsIbizaRoute: DestinationWeddingsIbizaRoute,
+  DestinationWeddingsMallorcaRoute: DestinationWeddingsMallorcaRoute,
+  DestinationWeddingsSevilleRoute: DestinationWeddingsSevilleRoute,
+  DestinationWeddingsSpainRegionsRoute: DestinationWeddingsSpainRegionsRoute,
   PtCasarNaEspanhaRoute: PtCasarNaEspanhaRoute,
   PtContatoRoute: PtContatoRoute,
   PtDepoimentosRoute: PtDepoimentosRoute,
@@ -394,17 +695,15 @@ const rootRouteChildren: RootRouteChildren = {
   PtServicosRoute: PtServicosRoute,
   PtSobreRoute: PtSobreRoute,
   PtIndexRoute: PtIndexRoute,
+  PtCasamentosDestinoCatalunhaRoute: PtCasamentosDestinoCatalunhaRoute,
+  PtCasamentosDestinoCostaBravaRoute: PtCasamentosDestinoCostaBravaRoute,
+  PtCasamentosDestinoGranadaRoute: PtCasamentosDestinoGranadaRoute,
+  PtCasamentosDestinoIbizaRoute: PtCasamentosDestinoIbizaRoute,
+  PtCasamentosDestinoMaiorcaRoute: PtCasamentosDestinoMaiorcaRoute,
+  PtCasamentosDestinoRegioesDaEspanhaRoute:
+    PtCasamentosDestinoRegioesDaEspanhaRoute,
+  PtCasamentosDestinoSevilhaRoute: PtCasamentosDestinoSevilhaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

@@ -1,6 +1,8 @@
+import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageProvider";
 import { getContent } from "@/i18n/content";
 import { SITE_CONFIG } from "@/config/site";
+import { HUB_SLUGS } from "@/i18n/regions";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -56,14 +58,22 @@ export function Footer() {
                 <span>Instagram</span>
               </a>
             </div>
-            <a
-              href={SITE_CONFIG.discoveryCallUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-ivory transition-colors"
-            >
-              {c.nav.cta} →
-            </a>
+            <div className="mt-6 flex flex-col gap-3">
+              <Link
+                to={HUB_SLUGS[lang]}
+                className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-ivory/80 hover:text-gold transition-colors"
+              >
+                {lang === "pt" ? "Regiões da Espanha" : "Where to marry in Spain"} →
+              </Link>
+              <a
+                href={SITE_CONFIG.discoveryCallUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-gold hover:text-ivory transition-colors"
+              >
+                {c.nav.cta} →
+              </a>
+            </div>
           </div>
         </div>
 
