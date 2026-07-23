@@ -53,6 +53,18 @@ export const POST_SLUGS: Record<PostKey, Record<Lang, string>> = {
     en: "/blog/what-is-a-destination-wedding",
     pt: "/pt/blog/o-que-e-um-destination-wedding",
   },
+  "why-get-married-in-spain": {
+    en: "/blog/why-get-married-in-spain",
+    pt: "/pt/blog/por-que-casar-na-espanha",
+  },
+  "common-mistakes-planning-a-wedding-in-spain": {
+    en: "/blog/common-mistakes-planning-a-wedding-in-spain",
+    pt: "/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha",
+  },
+  "getting-married-in-spain-legal-requirements": {
+    en: "/blog/getting-married-in-spain-legal-requirements",
+    pt: "/pt/blog/casar-legalmente-na-espanha-como-estrangeiro",
+  },
 };
 
 /* ---------- Types ---------- */
