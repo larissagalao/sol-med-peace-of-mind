@@ -194,6 +194,9 @@ const DATES: Record<PostKey, { datePublished: string; dateModified: string }> = 
   "wedding-regions-in-spain-compared":     { datePublished: "2026-06-10", dateModified: "2026-06-10" },
   "wedding-budget-tips-spain":             { datePublished: "2026-06-15", dateModified: "2026-06-15" },
   "what-is-a-destination-wedding":         { datePublished: "2026-06-20", dateModified: "2026-06-20" },
+  "why-get-married-in-spain":                            { datePublished: "2026-07-01", dateModified: "2026-07-01" },
+  "common-mistakes-planning-a-wedding-in-spain":         { datePublished: "2026-07-08", dateModified: "2026-07-08" },
+  "getting-married-in-spain-legal-requirements":         { datePublished: "2026-07-15", dateModified: "2026-07-15" },
 };
 
 /* ============================ ENGLISH ============================ */
