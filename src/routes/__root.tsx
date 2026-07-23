@@ -71,13 +71,41 @@ const ORG_JSONLD = {
   "@type": ["Organization", "LocalBusiness"],
   name: "Sol Mediterraneo Weddings Co.",
   description:
-    "Boutique destination wedding planner in Spain, specializing in weddings for international couples.",
-  url: SITE_CONFIG.url,
-  areaServed: [{ "@type": "Country", name: "Spain" }],
-  knowsLanguage: ["en", "pt", "es", "ca"],
-  email: SITE_CONFIG.contactEmail,
-  address: { "@type": "PostalAddress", addressCountry: "ES" },
-  sameAs: [],
+    "Boutique destination wedding planner in Spain, specializing in destination weddings for international couples planning from abroad.",
+  url: "https://www.solmediterraneoweddings.com",
+  logo: "https://www.solmediterraneoweddings.com/brand-mark.png",
+  image: "https://www.solmediterraneoweddings.com/og-image.jpg",
+  email: "hello@solmediterraneoweddings.com",
+  telephone: "+34615589115",
+  priceRange: "From €15,000",
+  foundingDate: "2026",
+  founder: {
+    "@type": "Person",
+    name: "Larissa Ribeiro",
+  },
+  knowsLanguage: ["en", "pt", "es"],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Barcelona",
+    addressRegion: "Catalonia",
+    addressCountry: "ES",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 41.3874,
+    longitude: 2.1686,
+  },
+  areaServed: [
+    { "@type": "Place", name: "Costa Brava" },
+    { "@type": "City", name: "Barcelona" },
+    { "@type": "Place", name: "Mallorca" },
+    { "@type": "Place", name: "Ibiza" },
+    { "@type": "AdministrativeArea", name: "Catalonia" },
+    { "@type": "Country", name: "Spain" },
+  ],
+  sameAs: [
+    "https://www.instagram.com/solmediterraneo.weddings",
+  ],
 };
 
 const GA_ID = SITE_CONFIG.gaMeasurementId;
