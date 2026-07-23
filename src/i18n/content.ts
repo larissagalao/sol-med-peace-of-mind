@@ -935,9 +935,9 @@ const pt: Content = {
 
   about: {
     meta: {
-      title: "Sobre — Sol Mediterraneo Weddings Co.",
+      title: "Sobre — Wedding Planner na Espanha para Casais Internacionais",
       description:
-        "Consultoria boutique de Destination Weddings na Espanha. Fundadora brasileira vivendo na Espanha, entre casais internacionais e fornecedores locais.",
+        "Wedding Planner boutique na Espanha para casais internacionais. Fundadora brasileira baseada na Espanha — um único parceiro local de confiança.",
     },
     hero: {
       eyebrow: "Sobre nós",
