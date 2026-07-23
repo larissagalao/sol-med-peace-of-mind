@@ -327,9 +327,9 @@ const en: Content = {
 
   about: {
     meta: {
-      title: "About — Sol Mediterraneo Weddings Co.",
+      title: "About — Wedding Planner in Spain for International Couples",
       description:
-        "Boutique destination wedding consultancy in Spain for international couples. Brazilian founder living in Spain, bridging both worlds.",
+        "Boutique wedding planner in Spain for international couples. Brazilian founder based in Spain — one trusted local partner from first email to farewell.",
     },
     hero: {
       eyebrow: "About us",
