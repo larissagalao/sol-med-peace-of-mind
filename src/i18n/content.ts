@@ -327,9 +327,9 @@ const en: Content = {
 
   about: {
     meta: {
-      title: "About — Sol Mediterraneo Weddings Co.",
+      title: "About — Wedding Planner in Spain for International Couples",
       description:
-        "Boutique destination wedding consultancy in Spain for international couples. Brazilian founder living in Spain, bridging both worlds.",
+        "Boutique wedding planner in Spain for international couples. Brazilian founder based in Spain — one trusted local partner from first email to farewell.",
     },
     hero: {
       eyebrow: "About us",
@@ -500,9 +500,9 @@ const en: Content = {
 
   destination: {
     meta: {
-      title: "Destination Weddings in Spain: Complete Guide",
+      title: "Destination Weddings in Spain — Guide for International Couples",
       description:
-        "Everything international couples need to plan a Destination Wedding in Spain: legal requirements, costs, regions, timeline and mistakes to avoid.",
+        "Complete guide to Destination Weddings in Spain: legal vs symbolic ceremony, costs, best regions, planning timeline and the mistakes to avoid.",
     },
     hero: {
       eyebrow: "The complete guide",
@@ -651,9 +651,9 @@ const en: Content = {
 
   partners: {
     meta: {
-      title: "Wedding Partners in Spain | Sol Mediterraneo",
+      title: "Wedding Venues, Catering & Photographers in Spain",
       description:
-        "Our trusted circle of venues, caterers and photographers across Spain — Catalonia, Costa Brava, Mallorca, Ibiza, Andalusia and Barcelona.",
+        "Our vetted circle of wedding venues, catering teams and photographers across Catalonia, Costa Brava, Mallorca, Ibiza and Andalusia.",
     },
     hero: {
       eyebrow: "Our trusted circle",
@@ -935,9 +935,9 @@ const pt: Content = {
 
   about: {
     meta: {
-      title: "Sobre — Sol Mediterraneo Weddings Co.",
+      title: "Sobre — Wedding Planner na Espanha para Casais Internacionais",
       description:
-        "Consultoria boutique de Destination Weddings na Espanha. Fundadora brasileira vivendo na Espanha, entre casais internacionais e fornecedores locais.",
+        "Wedding Planner boutique na Espanha para casais internacionais. Fundadora brasileira baseada na Espanha — um único parceiro local de confiança.",
     },
     hero: {
       eyebrow: "Sobre nós",
@@ -1108,9 +1108,9 @@ const pt: Content = {
 
   destination: {
     meta: {
-      title: "Casar na Espanha — Guia Completo | Sol Mediterraneo",
+      title: "Casar na Espanha — Guia para Casais Internacionais",
       description:
-        "Tudo o que casais internacionais precisam para planejar um Destination Wedding na Espanha: requisitos legais, custos, regiões, cronograma e erros a evitar.",
+        "Guia completo para planejar um Destination Wedding na Espanha: cerimônia civil vs simbólica, custos, melhores regiões, cronograma e erros a evitar.",
     },
     hero: {
       eyebrow: "Guia completo",
@@ -1259,9 +1259,9 @@ const pt: Content = {
 
   partners: {
     meta: {
-      title: "Parceiros para Casamento na Espanha | Sol Mediterraneo",
+      title: "Venues, Catering e Fotógrafos de Casamento na Espanha",
       description:
-        "Nosso círculo de venues, caterings e fotógrafos em toda Espanha — Catalunha, Costa Brava, Mallorca, Ibiza, Andaluzia e Barcelona.",
+        "Nosso círculo de venues, catering e fotógrafos na Catalunha, Costa Brava, Mallorca, Ibiza e Andaluzia — parceiros vetados para casamentos internacionais.",
     },
     hero: {
       eyebrow: "Nosso círculo de confiança",
