@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { ALL_PAGE_IDS, ROUTES } from "@/i18n/routes";
 import { HUB_SLUGS, REGION_KEYS, REGION_SLUGS } from "@/i18n/regions";
+import { BLOG_INDEX, POST_KEYS, POST_SLUGS } from "@/i18n/blog";
 import { SITE_CONFIG } from "@/config/site";
 
 const BASE_URL = SITE_CONFIG.url;
