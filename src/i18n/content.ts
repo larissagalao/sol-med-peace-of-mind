@@ -200,10 +200,10 @@ export type Content = {
     trustTitle: string;
     trustPoints: string[];
     formLabels: {
-      name: string; partner: string; email: string;
+      name: string; partner: string; email: string; phone: string;
       date: string; region: string; guests: string; budget: string;
       message: string; submit: string;
-      placeholders: { name: string; partner: string; email: string; message: string };
+      placeholders: { name: string; partner: string; email: string; phone: string; message: string };
       regionOptions: string[];
       guestOptions: string[];
       budgetOptions: string[];
@@ -800,13 +800,14 @@ const en: Content = {
       name: "Your name",
       partner: "Partner's name",
       email: "Email",
+      phone: "Phone number",
       date: "Approximate wedding date",
       region: "Region in Spain",
       guests: "Approximate guest count",
       budget: "Approximate total budget",
       message: "Anything else we should know",
       submit: "Send message",
-      placeholders: { name: "Full name", partner: "Full name", email: "you@example.com", message: "The story so far, in a few lines..." },
+      placeholders: { name: "Full name", partner: "Full name", email: "you@example.com", phone: "+34 600 000 000", message: "The story so far, in a few lines..." },
       regionOptions: ["Not sure yet", "Barcelona", "Catalonia", "Costa Brava", "Mallorca", "Ibiza", "Andalusia", "Seville", "Granada", "Somewhere else"],
       guestOptions: ["Just the two of us", "Under 30", "30–60", "60–100", "100–150", "150+"],
       budgetOptions: ["Under €10,000", "€10,000–€30,000", "€30,000–€60,000", "€60,000–€120,000", "€120,000+", "Rather discuss on the call"],
@@ -1409,13 +1410,14 @@ const pt: Content = {
       name: "Seu nome",
       partner: "Nome do parceiro(a)",
       email: "E-mail",
+      phone: "Telefone",
       date: "Data aproximada do casamento",
       region: "Região na Espanha",
       guests: "Número aproximado de convidados",
       budget: "Orçamento total aproximado",
       message: "Algo mais que devemos saber",
       submit: "Enviar mensagem",
-      placeholders: { name: "Nome completo", partner: "Nome completo", email: "voce@exemplo.com", message: "A história até aqui, em poucas linhas..." },
+      placeholders: { name: "Nome completo", partner: "Nome completo", email: "voce@exemplo.com", phone: "+34 600 000 000", message: "A história até aqui, em poucas linhas..." },
       regionOptions: ["Ainda não sei", "Barcelona", "Catalunha", "Costa Brava", "Mallorca", "Ibiza", "Andaluzia", "Sevilha", "Granada", "Outro lugar"],
       guestOptions: ["Só nós dois", "Menos de 30", "30–60", "60–100", "100–150", "150+"],
       budgetOptions: ["Menos de €10.000", "€10.000–€30.000", "€30.000–€60.000", "€60.000–€120.000", "€120.000+", "Prefiro discutir na conversa"],
