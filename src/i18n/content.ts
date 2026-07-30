@@ -200,10 +200,10 @@ export type Content = {
     trustTitle: string;
     trustPoints: string[];
     formLabels: {
-      name: string; partner: string; email: string;
+      name: string; partner: string; email: string; phone: string;
       date: string; region: string; guests: string; budget: string;
       message: string; submit: string;
-      placeholders: { name: string; partner: string; email: string; message: string };
+      placeholders: { name: string; partner: string; email: string; phone: string; message: string };
       regionOptions: string[];
       guestOptions: string[];
       budgetOptions: string[];
