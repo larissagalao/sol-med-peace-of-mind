@@ -83,7 +83,9 @@ export function ContactPage({ lang }: { lang: Lang }) {
             <form onSubmit={onSubmit} className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
               <Field label={f.name} name="name" placeholder={f.placeholders.name} required />
               <Field label={f.partner} name="partner" placeholder={f.placeholders.partner} />
-              <Field label={f.email} name="email" type="email" placeholder={f.placeholders.email} required className="md:col-span-2" />
+              <Field label={f.email} name="email" type="email" placeholder={f.placeholders.email} required />
+              <Field label={f.phone} name="phone" type="tel" placeholder={f.placeholders.phone} />
+
               <Field label={f.date} name="date" type="month" />
               <SelectField label={f.region} name="region" options={f.regionOptions} />
               <SelectField label={f.guests} name="guests" options={f.guestOptions} />
