@@ -103,7 +103,7 @@ export type Content = {
   about: {
     meta: PageMeta;
     hero: { eyebrow: string; title: string; body: string };
-    story: { title: string; body: string[] };
+    story: { title: string; subtitle: string; body: string[] };
     trust: { title: string; items: { name: string; body: string }[] };
     philosophy: { title: string; body: string[] };
     boutique: {
