@@ -117,7 +117,6 @@ export function AboutPage({ lang }: { lang: Lang }) {
         <div className="absolute inset-0 flex items-end">
           <div className="container-editorial pb-20 md:pb-28 text-ivory">
             <div className="max-w-2xl">
-              <div className="eyebrow mb-5 text-gold-soft">03</div>
               <h2 className="text-ivory text-balance">{t.philosophy.title}</h2>
               <div className="mt-6 space-y-5 text-lg text-ivory/85 leading-relaxed">
                 {t.philosophy.body.map((p, i) => <p key={i}>{p}</p>)}
@@ -129,7 +128,7 @@ export function AboutPage({ lang }: { lang: Lang }) {
 
       {/* HOW WE WORK */}
       <section className="container-editorial py-24 md:py-32">
-        <SectionHeader eyebrow="04" title={t.howWeWork.title} />
+        <SectionHeader title={t.howWeWork.title} />
         <ol className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
           {t.howWeWork.steps.map((step, i) => (
             <li key={step.name} className="pt-8 border-t border-border">
