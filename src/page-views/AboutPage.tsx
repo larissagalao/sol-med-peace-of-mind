@@ -41,7 +41,6 @@ export function AboutPage({ lang }: { lang: Lang }) {
       <section className="bg-sand/50 py-24 md:py-32">
         <div className="container-editorial grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <div className="eyebrow mb-5">01</div>
             <h2 className="text-balance">{t.story.title}</h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-navy/80 leading-relaxed">
@@ -87,7 +86,7 @@ export function AboutPage({ lang }: { lang: Lang }) {
       {/* TRUST */}
       <section className="bg-sand/40 py-24 md:py-32">
         <div className="container-editorial">
-          <SectionHeader eyebrow="02" title={t.trust.title} align="center" />
+          <SectionHeader title={t.trust.title} align="center" />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
             {t.trust.items.map((it, i) => (
               <article key={it.name} className="grid grid-cols-[auto_1fr] gap-6">
