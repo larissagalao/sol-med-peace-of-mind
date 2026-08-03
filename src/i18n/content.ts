@@ -956,9 +956,9 @@ const pt: Content = {
     },
     story: {
       title: "Nossa história",
+      subtitle:
+        "Cada Destination Wedding começa com o mesmo sonho: celebrar em um lugar que pareça extraordinário.\n\nO desafio é fazer isso acontecer a partir de outro país.",
       body: [
-        "Cada Destination Wedding começa com o mesmo sonho: celebrar em um lugar que pareça extraordinário.",
-        "O desafio é fazer isso acontecer a partir de outro país.",
         "Planejar um casamento na Espanha significa lidar com idiomas diferentes, fornecedores desconhecidos, costumes locais e incontáveis decisões a milhares de quilômetros de distância. O que deveria ser empolgante pode rapidamente se tornar sobrecarregador.",
         "Foi por isso que criei a Sol Mediterraneo.",
         "Sempre fui a planejadora — aquela que organiza viagens em família, celebrações e cada detalhe no meio. Criar ordem, antecipar problemas e ajudar as pessoas a se sentirem à vontade sempre veio naturalmente.",
