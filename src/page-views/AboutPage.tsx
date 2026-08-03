@@ -43,11 +43,6 @@ export function AboutPage({ lang }: { lang: Lang }) {
           <div className="md:col-span-4">
             <div className="eyebrow mb-5">01</div>
             <h2 className="text-balance">{t.story.title}</h2>
-            <div className="mt-8 space-y-5 text-lg text-navy/80 leading-relaxed">
-              {t.story.subtitle.split("\n\n").map((p, i) => (
-                <p key={`sub-${i}`}>{p}</p>
-              ))}
-            </div>
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-navy/80 leading-relaxed">
             {t.story.body.map((p, i) => <p key={i}>{p}</p>)}
