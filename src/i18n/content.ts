@@ -338,9 +338,9 @@ const en: Content = {
     },
     story: {
       title: "Our story",
+      subtitle:
+        "Every destination wedding begins with the same dream: celebrating in a place that feels extraordinary.\n\nThe challenge is making it happen from another country.",
       body: [
-        "Every destination wedding begins with the same dream: celebrating in a place that feels extraordinary.",
-        "The challenge is making it happen from another country.",
         "Planning a wedding in Spain means navigating different languages, unfamiliar suppliers, local customs, and countless decisions from thousands of miles away. What should feel exciting can quickly become overwhelming.",
         "That's why I created Sol Mediterraneo.",
         "I've always been the planner — the one organizing family trips, celebrations, and every detail in between. Creating order, anticipating problems, and helping people feel at ease has always come naturally.",
