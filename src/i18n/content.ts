@@ -103,7 +103,7 @@ export type Content = {
   about: {
     meta: PageMeta;
     hero: { eyebrow: string; title: string; body: string };
-    story: { title: string; body: string[] };
+    story: { title: string; subtitle: string; body: string[] };
     trust: { title: string; items: { name: string; body: string }[] };
     philosophy: { title: string; body: string[] };
     boutique: {
@@ -338,9 +338,9 @@ const en: Content = {
     },
     story: {
       title: "Our story",
+      subtitle:
+        "Every destination wedding begins with the same dream: celebrating in a place that feels extraordinary.\n\nThe challenge is making it happen from another country.",
       body: [
-        "Every destination wedding begins with the same dream: celebrating in a place that feels extraordinary.",
-        "The challenge is making it happen from another country.",
         "Planning a wedding in Spain means navigating different languages, unfamiliar suppliers, local customs, and countless decisions from thousands of miles away. What should feel exciting can quickly become overwhelming.",
         "That's why I created Sol Mediterraneo.",
         "I've always been the planner — the one organizing family trips, celebrations, and every detail in between. Creating order, anticipating problems, and helping people feel at ease has always come naturally.",
@@ -956,9 +956,9 @@ const pt: Content = {
     },
     story: {
       title: "Nossa história",
+      subtitle:
+        "Cada Destination Wedding começa com o mesmo sonho: celebrar em um lugar que pareça extraordinário.\n\nO desafio é fazer isso acontecer a partir de outro país.",
       body: [
-        "Cada Destination Wedding começa com o mesmo sonho: celebrar em um lugar que pareça extraordinário.",
-        "O desafio é fazer isso acontecer a partir de outro país.",
         "Planejar um casamento na Espanha significa lidar com idiomas diferentes, fornecedores desconhecidos, costumes locais e incontáveis decisões a milhares de quilômetros de distância. O que deveria ser empolgante pode rapidamente se tornar sobrecarregador.",
         "Foi por isso que criei a Sol Mediterraneo.",
         "Sempre fui a planejadora — aquela que organiza viagens em família, celebrações e cada detalhe no meio. Criar ordem, antecipar problemas e ajudar as pessoas a se sentirem à vontade sempre veio naturalmente.",
