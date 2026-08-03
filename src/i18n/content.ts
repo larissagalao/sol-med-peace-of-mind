@@ -338,8 +338,7 @@ const en: Content = {
     },
     story: {
       title: "Why we do this",
-      subtitle:
-        "Every destination wedding begins with the same dream: celebrating in a place that feels special.\n\nThe challenge is making it happen from another country.",
+      subtitle: "",
       body: [
         "Planning a wedding in Spain should feel exciting—not overwhelming.",
         "I created Sol Mediterraneo for couples who have fallen in love with Spain but are planning it all from abroad. Different languages, unfamiliar suppliers, and the distance can quickly turn excitement into stress.",
@@ -951,8 +950,7 @@ const pt: Content = {
     },
     story: {
       title: "Por que fazemos isso",
-      subtitle:
-        "Cada Destination Wedding começa com o mesmo sonho: celebrar em um lugar que pareça especial.\n\nO desafio é fazer isso acontecer a partir de outro país.",
+      subtitle: "",
       body: [
         "Planejar um casamento na Espanha deveria ser empolgante — não sobrecarregante.",
         "Criei a Sol Mediterraneo para casais que se apaixonaram pela Espanha, mas estão planejando tudo de longe. Idiomas diferentes, fornecedores desconhecidos e a distância podem rapidamente transformar a empolgação em estresse.",
