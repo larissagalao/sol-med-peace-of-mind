@@ -252,8 +252,8 @@ const en: Content = {
   },
   ctaBanner: {
     eyebrow: "The next step",
-    title: "Let's have a quiet conversation about your wedding.",
-    body: "A 30-minute discovery call — no pressure, no scripts. You tell us what you're picturing, we tell you honestly whether we're the right people to bring it to life in Spain.",
+    title: "Let's see if we're the right fit.",
+    body: "A 30-minute discovery call where we get to know your plans, answer your questions, and honestly tell you whether we're the right partner for your wedding in Spain.",
     button: "Book a Discovery Call",
   },
 
@@ -864,8 +864,8 @@ const pt: Content = {
   },
   ctaBanner: {
     eyebrow: "O próximo passo",
-    title: "Vamos ter uma conversa tranquila sobre o seu casamento.",
-    body: "Uma conversa de 30 minutos — sem pressão, sem roteiros. Você conta o que está imaginando, e nós dizemos, com honestidade, se somos as pessoas certas para tornar isso real na Espanha.",
+    title: "Vamos ver se somos o parceiro certo para você.",
+    body: "Uma conversa de 30 minutos para conhecermos seus planos, respondermos às suas perguntas e dizermos, com honestidade, se somos o parceiro certo para o seu casamento na Espanha.",
     button: "Agende uma conversa",
   },
 
