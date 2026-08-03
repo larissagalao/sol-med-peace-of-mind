@@ -339,9 +339,17 @@ const en: Content = {
     story: {
       title: "Our story",
       body: [
-        "I'm Brazilian. I built my life in Spain — and along the way I learned this country the slow way: living in it, cooking in it, arguing about wine in it, driving its back roads on a Sunday.",
-        "Sol Mediterraneo was born out of a simple observation: international couples were falling in love with the idea of a wedding in Spain, and then quietly drowning in the logistics of pulling it off from abroad. Different language, different suppliers, a different way of doing business.",
-        "Because I understand international couples and I understand the local Spanish wedding world, I bridge the two naturally. Nothing gets lost in translation — culturally or literally.",
+        "Every destination wedding begins with the same dream: celebrating in a place that feels extraordinary.",
+        "The challenge is making it happen from another country.",
+        "Planning a wedding in Spain means navigating different languages, unfamiliar suppliers, local customs, and countless decisions from thousands of miles away. What should feel exciting can quickly become overwhelming.",
+        "That's why I created Sol Mediterraneo.",
+        "I've always been the planner — the one organizing family trips, celebrations, and every detail in between. Creating order, anticipating problems, and helping people feel at ease has always come naturally.",
+        "When I moved to Spain, I discovered much more than a new home. I fell in love with its landscapes, its food, its people, and the Mediterranean way of life — warm, relaxed, and centered around sharing meaningful moments.",
+        "The idea for Sol Mediterraneo came after watching close friends struggle to plan weddings abroad. Language barriers, unfamiliar suppliers, logistical challenges, and cultural differences turned what should have been an exciting experience into a stressful one.",
+        "I realized the problem wasn't planning a wedding.",
+        "It was planning one from abroad.",
+        "Today, I help international couples navigate the Spanish wedding industry with clarity, confidence, and local expertise. My role isn't just to organize a wedding — it's to make the entire journey feel calm, seamless, and genuinely enjoyable.",
+        "So you can focus on celebrating, while every detail is thoughtfully taken care of in Spain.",
       ],
     },
     trust: {
@@ -949,9 +957,17 @@ const pt: Content = {
     story: {
       title: "Nossa história",
       body: [
-        "Sou brasileira. Construí a minha vida na Espanha — e no caminho aprendi este país devagar: morando, cozinhando, discutindo sobre vinho, dirigindo por estradas secundárias no domingo.",
-        "A Sol Mediterraneo nasceu de uma observação simples: casais internacionais se apaixonavam pela ideia de um casamento na Espanha e, em seguida, se afogavam em silêncio na logística de fazer isso acontecer de longe. Outro idioma, outros fornecedores, outra forma de fazer negócios.",
-        "Como entendo casais internacionais e entendo o mundo dos fornecedores de casamento espanhóis e catalães, faço a ponte entre os dois de forma natural. Nada se perde na tradução — cultural nem literal.",
+        "Cada Destination Wedding começa com o mesmo sonho: celebrar em um lugar que pareça extraordinário.",
+        "O desafio é fazer isso acontecer a partir de outro país.",
+        "Planejar um casamento na Espanha significa lidar com idiomas diferentes, fornecedores desconhecidos, costumes locais e incontáveis decisões a milhares de quilômetros de distância. O que deveria ser empolgante pode rapidamente se tornar sobrecarregador.",
+        "Foi por isso que criei a Sol Mediterraneo.",
+        "Sempre fui a planejadora — aquela que organiza viagens em família, celebrações e cada detalhe no meio. Criar ordem, antecipar problemas e ajudar as pessoas a se sentirem à vontade sempre veio naturalmente.",
+        "Quando me mudei para a Espanha, descobri muito mais do que um novo lar. Me apaixonei pelas paisagens, pela comida, pelas pessoas e pelo jeito de vida mediterrâneo — caloroso, descontraído e centrado em compartilhar momentos significativos.",
+        "A ideia da Sol Mediterraneo surgiu depois de ver amigos próximos lutando para planejar casamentos no exterior. Barreiras de idioma, fornecedores desconhecidos, desafios logísticos e diferenças culturais transformaram o que deveria ser uma experiência empolgante em algo estressante.",
+        "Percebi que o problema não era planejar um casamento.",
+        "Era planejar um casamento de fora.",
+        "Hoje, ajudo casais internacionais a navegar pelo setor de casamentos da Espanha com clareza, confiança e conhecimento local. Meu papel não é apenas organizar um casamento — é fazer toda a jornada parecer calma, fluida e genuinamente agradável.",
+        "Para que você possa focar em celebrar, enquanto cada detalhe é cuidadosamente resolvido na Espanha.",
       ],
     },
     trust: {
