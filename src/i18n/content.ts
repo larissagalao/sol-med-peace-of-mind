@@ -337,7 +337,7 @@ const en: Content = {
       body: "Planning a wedding abroad shouldn't feel overwhelming. We act as your single point of contact on the ground — simplifying decisions, coordinating locally, and removing the uncertainty of planning from another country.",
     },
     story: {
-      title: "Our story",
+      title: "Why we do this",
       subtitle:
         "Every destination wedding begins with the same dream: celebrating in a place that feels extraordinary.\n\nThe challenge is making it happen from another country.",
       body: [
@@ -950,7 +950,7 @@ const pt: Content = {
       body: "Planejar um casamento no exterior não deveria ser sobrecarregante. Somos o seu único ponto de contato em campo — simplificando decisões, coordenando localmente e removendo a incerteza de planejar de longe.",
     },
     story: {
-      title: "Nossa história",
+      title: "Por que fazemos isso",
       subtitle:
         "Cada Destination Wedding começa com o mesmo sonho: celebrar em um lugar que pareça extraordinário.\n\nO desafio é fazer isso acontecer a partir de outro país.",
       body: [
