@@ -140,7 +140,7 @@ export function TestimonialsPage({ lang }: { lang: Lang }) {
             src={atBrideGarden.url}
             alt="The bride in an ivory gown with a lace cape, standing on the lawn at golden hour"
             loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover shadow-elegant"
+            className="absolute inset-0 h-full w-full object-cover object-[center_38%] shadow-elegant"
           />
         </figure>
       </section>
