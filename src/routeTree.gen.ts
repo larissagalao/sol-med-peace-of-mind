@@ -9,79 +9,69 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TestimonialsRouteImport } from './routes/testimonials'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as PartnersRouteImport } from './routes/partners'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as DestinationWeddingsSpainRouteImport } from './routes/destination-weddings-spain'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PtIndexRouteImport } from './routes/pt.index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DestinationWeddingsSpainRouteImport } from './routes/destination-weddings-spain'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as PartnersRouteImport } from './routes/partners'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as PtSobreRouteImport } from './routes/pt.sobre'
-import { Route as PtServicosRouteImport } from './routes/pt.servicos'
-import { Route as PtParceirosRouteImport } from './routes/pt.parceiros'
-import { Route as PtFaqRouteImport } from './routes/pt.faq'
-import { Route as PtDepoimentosRouteImport } from './routes/pt.depoimentos'
-import { Route as PtContatoRouteImport } from './routes/pt.contato'
-import { Route as PtCasarNaEspanhaRouteImport } from './routes/pt.casar-na-espanha'
-import { Route as DestinationWeddingsSpainRegionsRouteImport } from './routes/destination-weddings.spain-regions'
-import { Route as DestinationWeddingsSevilleRouteImport } from './routes/destination-weddings.seville'
-import { Route as DestinationWeddingsMallorcaRouteImport } from './routes/destination-weddings.mallorca'
-import { Route as DestinationWeddingsIbizaRouteImport } from './routes/destination-weddings.ibiza'
-import { Route as DestinationWeddingsGranadaRouteImport } from './routes/destination-weddings.granada'
-import { Route as DestinationWeddingsCostaBravaRouteImport } from './routes/destination-weddings.costa-brava'
-import { Route as DestinationWeddingsCataloniaRouteImport } from './routes/destination-weddings.catalonia'
-import { Route as BlogWhyGetMarriedInSpainRouteImport } from './routes/blog.why-get-married-in-spain'
-import { Route as BlogWhatIsADestinationWeddingRouteImport } from './routes/blog.what-is-a-destination-wedding'
-import { Route as BlogWeddingRegionsInSpainComparedRouteImport } from './routes/blog.wedding-regions-in-spain-compared'
-import { Route as BlogWeddingInSpainPlanningTimelineRouteImport } from './routes/blog.wedding-in-spain-planning-timeline'
-import { Route as BlogWeddingBudgetTipsSpainRouteImport } from './routes/blog.wedding-budget-tips-spain'
-import { Route as BlogGettingMarriedInSpainLegalRequirementsRouteImport } from './routes/blog.getting-married-in-spain-legal-requirements'
-import { Route as BlogCostOfAWeddingInSpainRouteImport } from './routes/blog.cost-of-a-wedding-in-spain'
 import { Route as BlogCommonMistakesPlanningAWeddingInSpainRouteImport } from './routes/blog.common-mistakes-planning-a-wedding-in-spain'
+import { Route as BlogCostOfAWeddingInSpainRouteImport } from './routes/blog.cost-of-a-wedding-in-spain'
+import { Route as BlogGettingMarriedInSpainLegalRequirementsRouteImport } from './routes/blog.getting-married-in-spain-legal-requirements'
+import { Route as BlogWeddingBudgetTipsSpainRouteImport } from './routes/blog.wedding-budget-tips-spain'
+import { Route as BlogWeddingInSpainPlanningTimelineRouteImport } from './routes/blog.wedding-in-spain-planning-timeline'
+import { Route as BlogWeddingRegionsInSpainComparedRouteImport } from './routes/blog.wedding-regions-in-spain-compared'
+import { Route as BlogWhatIsADestinationWeddingRouteImport } from './routes/blog.what-is-a-destination-wedding'
+import { Route as BlogWhyGetMarriedInSpainRouteImport } from './routes/blog.why-get-married-in-spain'
+import { Route as DestinationWeddingsCataloniaRouteImport } from './routes/destination-weddings.catalonia'
+import { Route as DestinationWeddingsCostaBravaRouteImport } from './routes/destination-weddings.costa-brava'
+import { Route as DestinationWeddingsGranadaRouteImport } from './routes/destination-weddings.granada'
+import { Route as DestinationWeddingsIbizaRouteImport } from './routes/destination-weddings.ibiza'
+import { Route as DestinationWeddingsMallorcaRouteImport } from './routes/destination-weddings.mallorca'
+import { Route as DestinationWeddingsSevilleRouteImport } from './routes/destination-weddings.seville'
+import { Route as DestinationWeddingsSpainRegionsRouteImport } from './routes/destination-weddings.spain-regions'
+import { Route as PtIndexRouteImport } from './routes/pt.index'
+import { Route as PtCasarNaEspanhaRouteImport } from './routes/pt.casar-na-espanha'
+import { Route as PtContatoRouteImport } from './routes/pt.contato'
+import { Route as PtDepoimentosRouteImport } from './routes/pt.depoimentos'
+import { Route as PtFaqRouteImport } from './routes/pt.faq'
+import { Route as PtParceirosRouteImport } from './routes/pt.parceiros'
+import { Route as PtServicosRouteImport } from './routes/pt.servicos'
+import { Route as PtSobreRouteImport } from './routes/pt.sobre'
 import { Route as PtBlogIndexRouteImport } from './routes/pt.blog.index'
-import { Route as PtCasamentosDestinoSevilhaRouteImport } from './routes/pt.casamentos-destino.sevilha'
-import { Route as PtCasamentosDestinoRegioesDaEspanhaRouteImport } from './routes/pt.casamentos-destino.regioes-da-espanha'
-import { Route as PtCasamentosDestinoMaiorcaRouteImport } from './routes/pt.casamentos-destino.maiorca'
-import { Route as PtCasamentosDestinoIbizaRouteImport } from './routes/pt.casamentos-destino.ibiza'
-import { Route as PtCasamentosDestinoGranadaRouteImport } from './routes/pt.casamentos-destino.granada'
-import { Route as PtCasamentosDestinoCostaBravaRouteImport } from './routes/pt.casamentos-destino.costa-brava'
-import { Route as PtCasamentosDestinoCatalunhaRouteImport } from './routes/pt.casamentos-destino.catalunha'
-import { Route as PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport } from './routes/pt.blog.regioes-para-casar-na-espanha-comparadas'
-import { Route as PtBlogPorQueCasarNaEspanhaRouteImport } from './routes/pt.blog.por-que-casar-na-espanha'
-import { Route as PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport } from './routes/pt.blog.planejamento-casamento-espanha-cronograma'
-import { Route as PtBlogOQueEUmDestinationWeddingRouteImport } from './routes/pt.blog.o-que-e-um-destination-wedding'
-import { Route as PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport } from './routes/pt.blog.erros-comuns-ao-planejar-casamento-na-espanha'
-import { Route as PtBlogDicasOrcamentoCasamentoEspanhaRouteImport } from './routes/pt.blog.dicas-orcamento-casamento-espanha'
-import { Route as PtBlogCustoDeUmCasamentoNaEspanhaRouteImport } from './routes/pt.blog.custo-de-um-casamento-na-espanha'
 import { Route as PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRouteImport } from './routes/pt.blog.casar-legalmente-na-espanha-como-estrangeiro'
+import { Route as PtBlogCustoDeUmCasamentoNaEspanhaRouteImport } from './routes/pt.blog.custo-de-um-casamento-na-espanha'
+import { Route as PtBlogDicasOrcamentoCasamentoEspanhaRouteImport } from './routes/pt.blog.dicas-orcamento-casamento-espanha'
+import { Route as PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport } from './routes/pt.blog.erros-comuns-ao-planejar-casamento-na-espanha'
+import { Route as PtBlogOQueEUmDestinationWeddingRouteImport } from './routes/pt.blog.o-que-e-um-destination-wedding'
+import { Route as PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport } from './routes/pt.blog.planejamento-casamento-espanha-cronograma'
+import { Route as PtBlogPorQueCasarNaEspanhaRouteImport } from './routes/pt.blog.por-que-casar-na-espanha'
+import { Route as PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport } from './routes/pt.blog.regioes-para-casar-na-espanha-comparadas'
+import { Route as PtCasamentosDestinoCatalunhaRouteImport } from './routes/pt.casamentos-destino.catalunha'
+import { Route as PtCasamentosDestinoCostaBravaRouteImport } from './routes/pt.casamentos-destino.costa-brava'
+import { Route as PtCasamentosDestinoGranadaRouteImport } from './routes/pt.casamentos-destino.granada'
+import { Route as PtCasamentosDestinoIbizaRouteImport } from './routes/pt.casamentos-destino.ibiza'
+import { Route as PtCasamentosDestinoMaiorcaRouteImport } from './routes/pt.casamentos-destino.maiorca'
+import { Route as PtCasamentosDestinoRegioesDaEspanhaRouteImport } from './routes/pt.casamentos-destino.regioes-da-espanha'
+import { Route as PtCasamentosDestinoSevilhaRouteImport } from './routes/pt.casamentos-destino.sevilha'
 
-const TestimonialsRoute = TestimonialsRouteImport.update({
-  id: '/testimonials',
-  path: '/testimonials',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PartnersRoute = PartnersRouteImport.update({
-  id: '/partners',
-  path: '/partners',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DestinationWeddingsSpainRoute =
@@ -90,24 +80,29 @@ const DestinationWeddingsSpainRoute =
     path: '/destination-weddings-spain',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PtIndexRoute = PtIndexRouteImport.update({
-  id: '/pt/',
-  path: '/pt/',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TestimonialsRoute = TestimonialsRouteImport.update({
+  id: '/testimonials',
+  path: '/testimonials',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -115,117 +110,10 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PtSobreRoute = PtSobreRouteImport.update({
-  id: '/pt/sobre',
-  path: '/pt/sobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PtServicosRoute = PtServicosRouteImport.update({
-  id: '/pt/servicos',
-  path: '/pt/servicos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PtParceirosRoute = PtParceirosRouteImport.update({
-  id: '/pt/parceiros',
-  path: '/pt/parceiros',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PtFaqRoute = PtFaqRouteImport.update({
-  id: '/pt/faq',
-  path: '/pt/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PtDepoimentosRoute = PtDepoimentosRouteImport.update({
-  id: '/pt/depoimentos',
-  path: '/pt/depoimentos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PtContatoRoute = PtContatoRouteImport.update({
-  id: '/pt/contato',
-  path: '/pt/contato',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PtCasarNaEspanhaRoute = PtCasarNaEspanhaRouteImport.update({
-  id: '/pt/casar-na-espanha',
-  path: '/pt/casar-na-espanha',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DestinationWeddingsSpainRegionsRoute =
-  DestinationWeddingsSpainRegionsRouteImport.update({
-    id: '/destination-weddings/spain-regions',
-    path: '/destination-weddings/spain-regions',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DestinationWeddingsSevilleRoute =
-  DestinationWeddingsSevilleRouteImport.update({
-    id: '/destination-weddings/seville',
-    path: '/destination-weddings/seville',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DestinationWeddingsMallorcaRoute =
-  DestinationWeddingsMallorcaRouteImport.update({
-    id: '/destination-weddings/mallorca',
-    path: '/destination-weddings/mallorca',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DestinationWeddingsIbizaRoute =
-  DestinationWeddingsIbizaRouteImport.update({
-    id: '/destination-weddings/ibiza',
-    path: '/destination-weddings/ibiza',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DestinationWeddingsGranadaRoute =
-  DestinationWeddingsGranadaRouteImport.update({
-    id: '/destination-weddings/granada',
-    path: '/destination-weddings/granada',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DestinationWeddingsCostaBravaRoute =
-  DestinationWeddingsCostaBravaRouteImport.update({
-    id: '/destination-weddings/costa-brava',
-    path: '/destination-weddings/costa-brava',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DestinationWeddingsCataloniaRoute =
-  DestinationWeddingsCataloniaRouteImport.update({
-    id: '/destination-weddings/catalonia',
-    path: '/destination-weddings/catalonia',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogWhyGetMarriedInSpainRoute =
-  BlogWhyGetMarriedInSpainRouteImport.update({
-    id: '/blog/why-get-married-in-spain',
-    path: '/blog/why-get-married-in-spain',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogWhatIsADestinationWeddingRoute =
-  BlogWhatIsADestinationWeddingRouteImport.update({
-    id: '/blog/what-is-a-destination-wedding',
-    path: '/blog/what-is-a-destination-wedding',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogWeddingRegionsInSpainComparedRoute =
-  BlogWeddingRegionsInSpainComparedRouteImport.update({
-    id: '/blog/wedding-regions-in-spain-compared',
-    path: '/blog/wedding-regions-in-spain-compared',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogWeddingInSpainPlanningTimelineRoute =
-  BlogWeddingInSpainPlanningTimelineRouteImport.update({
-    id: '/blog/wedding-in-spain-planning-timeline',
-    path: '/blog/wedding-in-spain-planning-timeline',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogWeddingBudgetTipsSpainRoute =
-  BlogWeddingBudgetTipsSpainRouteImport.update({
-    id: '/blog/wedding-budget-tips-spain',
-    path: '/blog/wedding-budget-tips-spain',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogGettingMarriedInSpainLegalRequirementsRoute =
-  BlogGettingMarriedInSpainLegalRequirementsRouteImport.update({
-    id: '/blog/getting-married-in-spain-legal-requirements',
-    path: '/blog/getting-married-in-spain-legal-requirements',
+const BlogCommonMistakesPlanningAWeddingInSpainRoute =
+  BlogCommonMistakesPlanningAWeddingInSpainRouteImport.update({
+    id: '/blog/common-mistakes-planning-a-wedding-in-spain',
+    path: '/blog/common-mistakes-planning-a-wedding-in-spain',
     getParentRoute: () => rootRouteImport,
   } as any)
 const BlogCostOfAWeddingInSpainRoute =
@@ -234,93 +122,133 @@ const BlogCostOfAWeddingInSpainRoute =
     path: '/blog/cost-of-a-wedding-in-spain',
     getParentRoute: () => rootRouteImport,
   } as any)
-const BlogCommonMistakesPlanningAWeddingInSpainRoute =
-  BlogCommonMistakesPlanningAWeddingInSpainRouteImport.update({
-    id: '/blog/common-mistakes-planning-a-wedding-in-spain',
-    path: '/blog/common-mistakes-planning-a-wedding-in-spain',
+const BlogGettingMarriedInSpainLegalRequirementsRoute =
+  BlogGettingMarriedInSpainLegalRequirementsRouteImport.update({
+    id: '/blog/getting-married-in-spain-legal-requirements',
+    path: '/blog/getting-married-in-spain-legal-requirements',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogWeddingBudgetTipsSpainRoute =
+  BlogWeddingBudgetTipsSpainRouteImport.update({
+    id: '/blog/wedding-budget-tips-spain',
+    path: '/blog/wedding-budget-tips-spain',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogWeddingInSpainPlanningTimelineRoute =
+  BlogWeddingInSpainPlanningTimelineRouteImport.update({
+    id: '/blog/wedding-in-spain-planning-timeline',
+    path: '/blog/wedding-in-spain-planning-timeline',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogWeddingRegionsInSpainComparedRoute =
+  BlogWeddingRegionsInSpainComparedRouteImport.update({
+    id: '/blog/wedding-regions-in-spain-compared',
+    path: '/blog/wedding-regions-in-spain-compared',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogWhatIsADestinationWeddingRoute =
+  BlogWhatIsADestinationWeddingRouteImport.update({
+    id: '/blog/what-is-a-destination-wedding',
+    path: '/blog/what-is-a-destination-wedding',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogWhyGetMarriedInSpainRoute =
+  BlogWhyGetMarriedInSpainRouteImport.update({
+    id: '/blog/why-get-married-in-spain',
+    path: '/blog/why-get-married-in-spain',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsCataloniaRoute =
+  DestinationWeddingsCataloniaRouteImport.update({
+    id: '/destination-weddings/catalonia',
+    path: '/destination-weddings/catalonia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsCostaBravaRoute =
+  DestinationWeddingsCostaBravaRouteImport.update({
+    id: '/destination-weddings/costa-brava',
+    path: '/destination-weddings/costa-brava',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsGranadaRoute =
+  DestinationWeddingsGranadaRouteImport.update({
+    id: '/destination-weddings/granada',
+    path: '/destination-weddings/granada',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsIbizaRoute =
+  DestinationWeddingsIbizaRouteImport.update({
+    id: '/destination-weddings/ibiza',
+    path: '/destination-weddings/ibiza',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsMallorcaRoute =
+  DestinationWeddingsMallorcaRouteImport.update({
+    id: '/destination-weddings/mallorca',
+    path: '/destination-weddings/mallorca',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsSevilleRoute =
+  DestinationWeddingsSevilleRouteImport.update({
+    id: '/destination-weddings/seville',
+    path: '/destination-weddings/seville',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationWeddingsSpainRegionsRoute =
+  DestinationWeddingsSpainRegionsRouteImport.update({
+    id: '/destination-weddings/spain-regions',
+    path: '/destination-weddings/spain-regions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtIndexRoute = PtIndexRouteImport.update({
+  id: '/pt/',
+  path: '/pt/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtCasarNaEspanhaRoute = PtCasarNaEspanhaRouteImport.update({
+  id: '/pt/casar-na-espanha',
+  path: '/pt/casar-na-espanha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtContatoRoute = PtContatoRouteImport.update({
+  id: '/pt/contato',
+  path: '/pt/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtDepoimentosRoute = PtDepoimentosRouteImport.update({
+  id: '/pt/depoimentos',
+  path: '/pt/depoimentos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtFaqRoute = PtFaqRouteImport.update({
+  id: '/pt/faq',
+  path: '/pt/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtParceirosRoute = PtParceirosRouteImport.update({
+  id: '/pt/parceiros',
+  path: '/pt/parceiros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtServicosRoute = PtServicosRouteImport.update({
+  id: '/pt/servicos',
+  path: '/pt/servicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PtSobreRoute = PtSobreRouteImport.update({
+  id: '/pt/sobre',
+  path: '/pt/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PtBlogIndexRoute = PtBlogIndexRouteImport.update({
   id: '/pt/blog/',
   path: '/pt/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PtCasamentosDestinoSevilhaRoute =
-  PtCasamentosDestinoSevilhaRouteImport.update({
-    id: '/pt/casamentos-destino/sevilha',
-    path: '/pt/casamentos-destino/sevilha',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtCasamentosDestinoRegioesDaEspanhaRoute =
-  PtCasamentosDestinoRegioesDaEspanhaRouteImport.update({
-    id: '/pt/casamentos-destino/regioes-da-espanha',
-    path: '/pt/casamentos-destino/regioes-da-espanha',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtCasamentosDestinoMaiorcaRoute =
-  PtCasamentosDestinoMaiorcaRouteImport.update({
-    id: '/pt/casamentos-destino/maiorca',
-    path: '/pt/casamentos-destino/maiorca',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtCasamentosDestinoIbizaRoute =
-  PtCasamentosDestinoIbizaRouteImport.update({
-    id: '/pt/casamentos-destino/ibiza',
-    path: '/pt/casamentos-destino/ibiza',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtCasamentosDestinoGranadaRoute =
-  PtCasamentosDestinoGranadaRouteImport.update({
-    id: '/pt/casamentos-destino/granada',
-    path: '/pt/casamentos-destino/granada',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtCasamentosDestinoCostaBravaRoute =
-  PtCasamentosDestinoCostaBravaRouteImport.update({
-    id: '/pt/casamentos-destino/costa-brava',
-    path: '/pt/casamentos-destino/costa-brava',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtCasamentosDestinoCatalunhaRoute =
-  PtCasamentosDestinoCatalunhaRouteImport.update({
-    id: '/pt/casamentos-destino/catalunha',
-    path: '/pt/casamentos-destino/catalunha',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtBlogRegioesParaCasarNaEspanhaComparadasRoute =
-  PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport.update({
-    id: '/pt/blog/regioes-para-casar-na-espanha-comparadas',
-    path: '/pt/blog/regioes-para-casar-na-espanha-comparadas',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtBlogPorQueCasarNaEspanhaRoute =
-  PtBlogPorQueCasarNaEspanhaRouteImport.update({
-    id: '/pt/blog/por-que-casar-na-espanha',
-    path: '/pt/blog/por-que-casar-na-espanha',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute =
-  PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport.update({
-    id: '/pt/blog/planejamento-casamento-espanha-cronograma',
-    path: '/pt/blog/planejamento-casamento-espanha-cronograma',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtBlogOQueEUmDestinationWeddingRoute =
-  PtBlogOQueEUmDestinationWeddingRouteImport.update({
-    id: '/pt/blog/o-que-e-um-destination-wedding',
-    path: '/pt/blog/o-que-e-um-destination-wedding',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute =
-  PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport.update({
-    id: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha',
-    path: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PtBlogDicasOrcamentoCasamentoEspanhaRoute =
-  PtBlogDicasOrcamentoCasamentoEspanhaRouteImport.update({
-    id: '/pt/blog/dicas-orcamento-casamento-espanha',
-    path: '/pt/blog/dicas-orcamento-casamento-espanha',
+const PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute =
+  PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRouteImport.update({
+    id: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro',
+    path: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PtBlogCustoDeUmCasamentoNaEspanhaRoute =
@@ -329,10 +257,82 @@ const PtBlogCustoDeUmCasamentoNaEspanhaRoute =
     path: '/pt/blog/custo-de-um-casamento-na-espanha',
     getParentRoute: () => rootRouteImport,
   } as any)
-const PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRoute =
-  PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRouteImport.update({
-    id: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro',
-    path: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro',
+const PtBlogDicasOrcamentoCasamentoEspanhaRoute =
+  PtBlogDicasOrcamentoCasamentoEspanhaRouteImport.update({
+    id: '/pt/blog/dicas-orcamento-casamento-espanha',
+    path: '/pt/blog/dicas-orcamento-casamento-espanha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRoute =
+  PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport.update({
+    id: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha',
+    path: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogOQueEUmDestinationWeddingRoute =
+  PtBlogOQueEUmDestinationWeddingRouteImport.update({
+    id: '/pt/blog/o-que-e-um-destination-wedding',
+    path: '/pt/blog/o-que-e-um-destination-wedding',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogPlanejamentoCasamentoEspanhaCronogramaRoute =
+  PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport.update({
+    id: '/pt/blog/planejamento-casamento-espanha-cronograma',
+    path: '/pt/blog/planejamento-casamento-espanha-cronograma',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogPorQueCasarNaEspanhaRoute =
+  PtBlogPorQueCasarNaEspanhaRouteImport.update({
+    id: '/pt/blog/por-que-casar-na-espanha',
+    path: '/pt/blog/por-que-casar-na-espanha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtBlogRegioesParaCasarNaEspanhaComparadasRoute =
+  PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport.update({
+    id: '/pt/blog/regioes-para-casar-na-espanha-comparadas',
+    path: '/pt/blog/regioes-para-casar-na-espanha-comparadas',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoCatalunhaRoute =
+  PtCasamentosDestinoCatalunhaRouteImport.update({
+    id: '/pt/casamentos-destino/catalunha',
+    path: '/pt/casamentos-destino/catalunha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoCostaBravaRoute =
+  PtCasamentosDestinoCostaBravaRouteImport.update({
+    id: '/pt/casamentos-destino/costa-brava',
+    path: '/pt/casamentos-destino/costa-brava',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoGranadaRoute =
+  PtCasamentosDestinoGranadaRouteImport.update({
+    id: '/pt/casamentos-destino/granada',
+    path: '/pt/casamentos-destino/granada',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoIbizaRoute =
+  PtCasamentosDestinoIbizaRouteImport.update({
+    id: '/pt/casamentos-destino/ibiza',
+    path: '/pt/casamentos-destino/ibiza',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoMaiorcaRoute =
+  PtCasamentosDestinoMaiorcaRouteImport.update({
+    id: '/pt/casamentos-destino/maiorca',
+    path: '/pt/casamentos-destino/maiorca',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoRegioesDaEspanhaRoute =
+  PtCasamentosDestinoRegioesDaEspanhaRouteImport.update({
+    id: '/pt/casamentos-destino/regioes-da-espanha',
+    path: '/pt/casamentos-destino/regioes-da-espanha',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PtCasamentosDestinoSevilhaRoute =
+  PtCasamentosDestinoSevilhaRouteImport.update({
+    id: '/pt/casamentos-destino/sevilha',
+    path: '/pt/casamentos-destino/sevilha',
     getParentRoute: () => rootRouteImport,
   } as any)
 
@@ -700,53 +700,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/testimonials': {
-      id: '/testimonials'
-      path: '/testimonials'
-      fullPath: '/testimonials'
-      preLoaderRoute: typeof TestimonialsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partners': {
-      id: '/partners'
-      path: '/partners'
-      fullPath: '/partners'
-      preLoaderRoute: typeof PartnersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destination-weddings-spain': {
-      id: '/destination-weddings-spain'
-      path: '/destination-weddings-spain'
-      fullPath: '/destination-weddings-spain'
-      preLoaderRoute: typeof DestinationWeddingsSpainRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -756,18 +714,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/pt/': {
-      id: '/pt/'
-      path: '/pt'
-      fullPath: '/pt/'
-      preLoaderRoute: typeof PtIndexRouteImport
+    '/destination-weddings-spain': {
+      id: '/destination-weddings-spain'
+      path: '/destination-weddings-spain'
+      fullPath: '/destination-weddings-spain'
+      preLoaderRoute: typeof DestinationWeddingsSpainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/testimonials': {
+      id: '/testimonials'
+      path: '/testimonials'
+      fullPath: '/testimonials'
+      preLoaderRoute: typeof TestimonialsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -777,144 +770,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/pt/sobre': {
-      id: '/pt/sobre'
-      path: '/pt/sobre'
-      fullPath: '/pt/sobre'
-      preLoaderRoute: typeof PtSobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/servicos': {
-      id: '/pt/servicos'
-      path: '/pt/servicos'
-      fullPath: '/pt/servicos'
-      preLoaderRoute: typeof PtServicosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/parceiros': {
-      id: '/pt/parceiros'
-      path: '/pt/parceiros'
-      fullPath: '/pt/parceiros'
-      preLoaderRoute: typeof PtParceirosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/faq': {
-      id: '/pt/faq'
-      path: '/pt/faq'
-      fullPath: '/pt/faq'
-      preLoaderRoute: typeof PtFaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/depoimentos': {
-      id: '/pt/depoimentos'
-      path: '/pt/depoimentos'
-      fullPath: '/pt/depoimentos'
-      preLoaderRoute: typeof PtDepoimentosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/contato': {
-      id: '/pt/contato'
-      path: '/pt/contato'
-      fullPath: '/pt/contato'
-      preLoaderRoute: typeof PtContatoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/casar-na-espanha': {
-      id: '/pt/casar-na-espanha'
-      path: '/pt/casar-na-espanha'
-      fullPath: '/pt/casar-na-espanha'
-      preLoaderRoute: typeof PtCasarNaEspanhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destination-weddings/spain-regions': {
-      id: '/destination-weddings/spain-regions'
-      path: '/destination-weddings/spain-regions'
-      fullPath: '/destination-weddings/spain-regions'
-      preLoaderRoute: typeof DestinationWeddingsSpainRegionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destination-weddings/seville': {
-      id: '/destination-weddings/seville'
-      path: '/destination-weddings/seville'
-      fullPath: '/destination-weddings/seville'
-      preLoaderRoute: typeof DestinationWeddingsSevilleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destination-weddings/mallorca': {
-      id: '/destination-weddings/mallorca'
-      path: '/destination-weddings/mallorca'
-      fullPath: '/destination-weddings/mallorca'
-      preLoaderRoute: typeof DestinationWeddingsMallorcaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destination-weddings/ibiza': {
-      id: '/destination-weddings/ibiza'
-      path: '/destination-weddings/ibiza'
-      fullPath: '/destination-weddings/ibiza'
-      preLoaderRoute: typeof DestinationWeddingsIbizaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destination-weddings/granada': {
-      id: '/destination-weddings/granada'
-      path: '/destination-weddings/granada'
-      fullPath: '/destination-weddings/granada'
-      preLoaderRoute: typeof DestinationWeddingsGranadaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destination-weddings/costa-brava': {
-      id: '/destination-weddings/costa-brava'
-      path: '/destination-weddings/costa-brava'
-      fullPath: '/destination-weddings/costa-brava'
-      preLoaderRoute: typeof DestinationWeddingsCostaBravaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/destination-weddings/catalonia': {
-      id: '/destination-weddings/catalonia'
-      path: '/destination-weddings/catalonia'
-      fullPath: '/destination-weddings/catalonia'
-      preLoaderRoute: typeof DestinationWeddingsCataloniaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/why-get-married-in-spain': {
-      id: '/blog/why-get-married-in-spain'
-      path: '/blog/why-get-married-in-spain'
-      fullPath: '/blog/why-get-married-in-spain'
-      preLoaderRoute: typeof BlogWhyGetMarriedInSpainRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/what-is-a-destination-wedding': {
-      id: '/blog/what-is-a-destination-wedding'
-      path: '/blog/what-is-a-destination-wedding'
-      fullPath: '/blog/what-is-a-destination-wedding'
-      preLoaderRoute: typeof BlogWhatIsADestinationWeddingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/wedding-regions-in-spain-compared': {
-      id: '/blog/wedding-regions-in-spain-compared'
-      path: '/blog/wedding-regions-in-spain-compared'
-      fullPath: '/blog/wedding-regions-in-spain-compared'
-      preLoaderRoute: typeof BlogWeddingRegionsInSpainComparedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/wedding-in-spain-planning-timeline': {
-      id: '/blog/wedding-in-spain-planning-timeline'
-      path: '/blog/wedding-in-spain-planning-timeline'
-      fullPath: '/blog/wedding-in-spain-planning-timeline'
-      preLoaderRoute: typeof BlogWeddingInSpainPlanningTimelineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/wedding-budget-tips-spain': {
-      id: '/blog/wedding-budget-tips-spain'
-      path: '/blog/wedding-budget-tips-spain'
-      fullPath: '/blog/wedding-budget-tips-spain'
-      preLoaderRoute: typeof BlogWeddingBudgetTipsSpainRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/getting-married-in-spain-legal-requirements': {
-      id: '/blog/getting-married-in-spain-legal-requirements'
-      path: '/blog/getting-married-in-spain-legal-requirements'
-      fullPath: '/blog/getting-married-in-spain-legal-requirements'
-      preLoaderRoute: typeof BlogGettingMarriedInSpainLegalRequirementsRouteImport
+    '/blog/common-mistakes-planning-a-wedding-in-spain': {
+      id: '/blog/common-mistakes-planning-a-wedding-in-spain'
+      path: '/blog/common-mistakes-planning-a-wedding-in-spain'
+      fullPath: '/blog/common-mistakes-planning-a-wedding-in-spain'
+      preLoaderRoute: typeof BlogCommonMistakesPlanningAWeddingInSpainRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/cost-of-a-wedding-in-spain': {
@@ -924,11 +784,151 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogCostOfAWeddingInSpainRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/common-mistakes-planning-a-wedding-in-spain': {
-      id: '/blog/common-mistakes-planning-a-wedding-in-spain'
-      path: '/blog/common-mistakes-planning-a-wedding-in-spain'
-      fullPath: '/blog/common-mistakes-planning-a-wedding-in-spain'
-      preLoaderRoute: typeof BlogCommonMistakesPlanningAWeddingInSpainRouteImport
+    '/blog/getting-married-in-spain-legal-requirements': {
+      id: '/blog/getting-married-in-spain-legal-requirements'
+      path: '/blog/getting-married-in-spain-legal-requirements'
+      fullPath: '/blog/getting-married-in-spain-legal-requirements'
+      preLoaderRoute: typeof BlogGettingMarriedInSpainLegalRequirementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/wedding-budget-tips-spain': {
+      id: '/blog/wedding-budget-tips-spain'
+      path: '/blog/wedding-budget-tips-spain'
+      fullPath: '/blog/wedding-budget-tips-spain'
+      preLoaderRoute: typeof BlogWeddingBudgetTipsSpainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/wedding-in-spain-planning-timeline': {
+      id: '/blog/wedding-in-spain-planning-timeline'
+      path: '/blog/wedding-in-spain-planning-timeline'
+      fullPath: '/blog/wedding-in-spain-planning-timeline'
+      preLoaderRoute: typeof BlogWeddingInSpainPlanningTimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/wedding-regions-in-spain-compared': {
+      id: '/blog/wedding-regions-in-spain-compared'
+      path: '/blog/wedding-regions-in-spain-compared'
+      fullPath: '/blog/wedding-regions-in-spain-compared'
+      preLoaderRoute: typeof BlogWeddingRegionsInSpainComparedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/what-is-a-destination-wedding': {
+      id: '/blog/what-is-a-destination-wedding'
+      path: '/blog/what-is-a-destination-wedding'
+      fullPath: '/blog/what-is-a-destination-wedding'
+      preLoaderRoute: typeof BlogWhatIsADestinationWeddingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/why-get-married-in-spain': {
+      id: '/blog/why-get-married-in-spain'
+      path: '/blog/why-get-married-in-spain'
+      fullPath: '/blog/why-get-married-in-spain'
+      preLoaderRoute: typeof BlogWhyGetMarriedInSpainRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/catalonia': {
+      id: '/destination-weddings/catalonia'
+      path: '/destination-weddings/catalonia'
+      fullPath: '/destination-weddings/catalonia'
+      preLoaderRoute: typeof DestinationWeddingsCataloniaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/costa-brava': {
+      id: '/destination-weddings/costa-brava'
+      path: '/destination-weddings/costa-brava'
+      fullPath: '/destination-weddings/costa-brava'
+      preLoaderRoute: typeof DestinationWeddingsCostaBravaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/granada': {
+      id: '/destination-weddings/granada'
+      path: '/destination-weddings/granada'
+      fullPath: '/destination-weddings/granada'
+      preLoaderRoute: typeof DestinationWeddingsGranadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/ibiza': {
+      id: '/destination-weddings/ibiza'
+      path: '/destination-weddings/ibiza'
+      fullPath: '/destination-weddings/ibiza'
+      preLoaderRoute: typeof DestinationWeddingsIbizaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/mallorca': {
+      id: '/destination-weddings/mallorca'
+      path: '/destination-weddings/mallorca'
+      fullPath: '/destination-weddings/mallorca'
+      preLoaderRoute: typeof DestinationWeddingsMallorcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/seville': {
+      id: '/destination-weddings/seville'
+      path: '/destination-weddings/seville'
+      fullPath: '/destination-weddings/seville'
+      preLoaderRoute: typeof DestinationWeddingsSevilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-weddings/spain-regions': {
+      id: '/destination-weddings/spain-regions'
+      path: '/destination-weddings/spain-regions'
+      fullPath: '/destination-weddings/spain-regions'
+      preLoaderRoute: typeof DestinationWeddingsSpainRegionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/': {
+      id: '/pt/'
+      path: '/pt'
+      fullPath: '/pt/'
+      preLoaderRoute: typeof PtIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casar-na-espanha': {
+      id: '/pt/casar-na-espanha'
+      path: '/pt/casar-na-espanha'
+      fullPath: '/pt/casar-na-espanha'
+      preLoaderRoute: typeof PtCasarNaEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/contato': {
+      id: '/pt/contato'
+      path: '/pt/contato'
+      fullPath: '/pt/contato'
+      preLoaderRoute: typeof PtContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/depoimentos': {
+      id: '/pt/depoimentos'
+      path: '/pt/depoimentos'
+      fullPath: '/pt/depoimentos'
+      preLoaderRoute: typeof PtDepoimentosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/faq': {
+      id: '/pt/faq'
+      path: '/pt/faq'
+      fullPath: '/pt/faq'
+      preLoaderRoute: typeof PtFaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/parceiros': {
+      id: '/pt/parceiros'
+      path: '/pt/parceiros'
+      fullPath: '/pt/parceiros'
+      preLoaderRoute: typeof PtParceirosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/servicos': {
+      id: '/pt/servicos'
+      path: '/pt/servicos'
+      fullPath: '/pt/servicos'
+      preLoaderRoute: typeof PtServicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/sobre': {
+      id: '/pt/sobre'
+      path: '/pt/sobre'
+      fullPath: '/pt/sobre'
+      preLoaderRoute: typeof PtSobreRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pt/blog/': {
@@ -938,95 +938,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtBlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/pt/casamentos-destino/sevilha': {
-      id: '/pt/casamentos-destino/sevilha'
-      path: '/pt/casamentos-destino/sevilha'
-      fullPath: '/pt/casamentos-destino/sevilha'
-      preLoaderRoute: typeof PtCasamentosDestinoSevilhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/casamentos-destino/regioes-da-espanha': {
-      id: '/pt/casamentos-destino/regioes-da-espanha'
-      path: '/pt/casamentos-destino/regioes-da-espanha'
-      fullPath: '/pt/casamentos-destino/regioes-da-espanha'
-      preLoaderRoute: typeof PtCasamentosDestinoRegioesDaEspanhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/casamentos-destino/maiorca': {
-      id: '/pt/casamentos-destino/maiorca'
-      path: '/pt/casamentos-destino/maiorca'
-      fullPath: '/pt/casamentos-destino/maiorca'
-      preLoaderRoute: typeof PtCasamentosDestinoMaiorcaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/casamentos-destino/ibiza': {
-      id: '/pt/casamentos-destino/ibiza'
-      path: '/pt/casamentos-destino/ibiza'
-      fullPath: '/pt/casamentos-destino/ibiza'
-      preLoaderRoute: typeof PtCasamentosDestinoIbizaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/casamentos-destino/granada': {
-      id: '/pt/casamentos-destino/granada'
-      path: '/pt/casamentos-destino/granada'
-      fullPath: '/pt/casamentos-destino/granada'
-      preLoaderRoute: typeof PtCasamentosDestinoGranadaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/casamentos-destino/costa-brava': {
-      id: '/pt/casamentos-destino/costa-brava'
-      path: '/pt/casamentos-destino/costa-brava'
-      fullPath: '/pt/casamentos-destino/costa-brava'
-      preLoaderRoute: typeof PtCasamentosDestinoCostaBravaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/casamentos-destino/catalunha': {
-      id: '/pt/casamentos-destino/catalunha'
-      path: '/pt/casamentos-destino/catalunha'
-      fullPath: '/pt/casamentos-destino/catalunha'
-      preLoaderRoute: typeof PtCasamentosDestinoCatalunhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/blog/regioes-para-casar-na-espanha-comparadas': {
-      id: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
-      path: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
-      fullPath: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
-      preLoaderRoute: typeof PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/blog/por-que-casar-na-espanha': {
-      id: '/pt/blog/por-que-casar-na-espanha'
-      path: '/pt/blog/por-que-casar-na-espanha'
-      fullPath: '/pt/blog/por-que-casar-na-espanha'
-      preLoaderRoute: typeof PtBlogPorQueCasarNaEspanhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/blog/planejamento-casamento-espanha-cronograma': {
-      id: '/pt/blog/planejamento-casamento-espanha-cronograma'
-      path: '/pt/blog/planejamento-casamento-espanha-cronograma'
-      fullPath: '/pt/blog/planejamento-casamento-espanha-cronograma'
-      preLoaderRoute: typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/blog/o-que-e-um-destination-wedding': {
-      id: '/pt/blog/o-que-e-um-destination-wedding'
-      path: '/pt/blog/o-que-e-um-destination-wedding'
-      fullPath: '/pt/blog/o-que-e-um-destination-wedding'
-      preLoaderRoute: typeof PtBlogOQueEUmDestinationWeddingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha': {
-      id: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
-      path: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
-      fullPath: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
-      preLoaderRoute: typeof PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt/blog/dicas-orcamento-casamento-espanha': {
-      id: '/pt/blog/dicas-orcamento-casamento-espanha'
-      path: '/pt/blog/dicas-orcamento-casamento-espanha'
-      fullPath: '/pt/blog/dicas-orcamento-casamento-espanha'
-      preLoaderRoute: typeof PtBlogDicasOrcamentoCasamentoEspanhaRouteImport
+    '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro': {
+      id: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
+      path: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
+      fullPath: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
+      preLoaderRoute: typeof PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pt/blog/custo-de-um-casamento-na-espanha': {
@@ -1036,11 +952,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtBlogCustoDeUmCasamentoNaEspanhaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro': {
-      id: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
-      path: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
-      fullPath: '/pt/blog/casar-legalmente-na-espanha-como-estrangeiro'
-      preLoaderRoute: typeof PtBlogCasarLegalmenteNaEspanhaComoEstrangeiroRouteImport
+    '/pt/blog/dicas-orcamento-casamento-espanha': {
+      id: '/pt/blog/dicas-orcamento-casamento-espanha'
+      path: '/pt/blog/dicas-orcamento-casamento-espanha'
+      fullPath: '/pt/blog/dicas-orcamento-casamento-espanha'
+      preLoaderRoute: typeof PtBlogDicasOrcamentoCasamentoEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha': {
+      id: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
+      path: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
+      fullPath: '/pt/blog/erros-comuns-ao-planejar-casamento-na-espanha'
+      preLoaderRoute: typeof PtBlogErrosComunsAoPlanejarCasamentoNaEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/o-que-e-um-destination-wedding': {
+      id: '/pt/blog/o-que-e-um-destination-wedding'
+      path: '/pt/blog/o-que-e-um-destination-wedding'
+      fullPath: '/pt/blog/o-que-e-um-destination-wedding'
+      preLoaderRoute: typeof PtBlogOQueEUmDestinationWeddingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/planejamento-casamento-espanha-cronograma': {
+      id: '/pt/blog/planejamento-casamento-espanha-cronograma'
+      path: '/pt/blog/planejamento-casamento-espanha-cronograma'
+      fullPath: '/pt/blog/planejamento-casamento-espanha-cronograma'
+      preLoaderRoute: typeof PtBlogPlanejamentoCasamentoEspanhaCronogramaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/por-que-casar-na-espanha': {
+      id: '/pt/blog/por-que-casar-na-espanha'
+      path: '/pt/blog/por-que-casar-na-espanha'
+      fullPath: '/pt/blog/por-que-casar-na-espanha'
+      preLoaderRoute: typeof PtBlogPorQueCasarNaEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/blog/regioes-para-casar-na-espanha-comparadas': {
+      id: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
+      path: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
+      fullPath: '/pt/blog/regioes-para-casar-na-espanha-comparadas'
+      preLoaderRoute: typeof PtBlogRegioesParaCasarNaEspanhaComparadasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/catalunha': {
+      id: '/pt/casamentos-destino/catalunha'
+      path: '/pt/casamentos-destino/catalunha'
+      fullPath: '/pt/casamentos-destino/catalunha'
+      preLoaderRoute: typeof PtCasamentosDestinoCatalunhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/costa-brava': {
+      id: '/pt/casamentos-destino/costa-brava'
+      path: '/pt/casamentos-destino/costa-brava'
+      fullPath: '/pt/casamentos-destino/costa-brava'
+      preLoaderRoute: typeof PtCasamentosDestinoCostaBravaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/granada': {
+      id: '/pt/casamentos-destino/granada'
+      path: '/pt/casamentos-destino/granada'
+      fullPath: '/pt/casamentos-destino/granada'
+      preLoaderRoute: typeof PtCasamentosDestinoGranadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/ibiza': {
+      id: '/pt/casamentos-destino/ibiza'
+      path: '/pt/casamentos-destino/ibiza'
+      fullPath: '/pt/casamentos-destino/ibiza'
+      preLoaderRoute: typeof PtCasamentosDestinoIbizaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/maiorca': {
+      id: '/pt/casamentos-destino/maiorca'
+      path: '/pt/casamentos-destino/maiorca'
+      fullPath: '/pt/casamentos-destino/maiorca'
+      preLoaderRoute: typeof PtCasamentosDestinoMaiorcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/regioes-da-espanha': {
+      id: '/pt/casamentos-destino/regioes-da-espanha'
+      path: '/pt/casamentos-destino/regioes-da-espanha'
+      fullPath: '/pt/casamentos-destino/regioes-da-espanha'
+      preLoaderRoute: typeof PtCasamentosDestinoRegioesDaEspanhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pt/casamentos-destino/sevilha': {
+      id: '/pt/casamentos-destino/sevilha'
+      path: '/pt/casamentos-destino/sevilha'
+      fullPath: '/pt/casamentos-destino/sevilha'
+      preLoaderRoute: typeof PtCasamentosDestinoSevilhaRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
