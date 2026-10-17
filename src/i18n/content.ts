@@ -223,7 +223,7 @@ const en: Content = {
     about: "About",
     services: "Services",
     destination: "Weddings in Spain",
-    testimonials: "Real Wedding",
+    testimonials: "Testimonials",
     partners: "Partners",
     faq: "FAQ",
     contact: "Contact",
@@ -609,18 +609,18 @@ const en: Content = {
 
   testimonials: {
     meta: {
-      title: "A Real Wedding in Spain — Case Study | Sol Mediterraneo",
+      title: "A Real Wedding in Spain | Sol Mediterraneo",
       description:
-        "A close look at one of the international weddings we planned in Spain — the couple, the location, the planning journey, and what made it feel like theirs.",
+        "A September wedding for A & T on a private estate in the Spanish countryside — planned from abroad, told the way it felt.",
     },
     hero: {
       eyebrow: "A real wedding",
       title: "One wedding, told properly.",
-      body: "We stay small on purpose. Rather than a wall of quotes, here is a proper look at one of the weddings we planned — the couple, the place, and what it took to make it feel effortless.",
+      body: "We stay small on purpose. Rather than a wall of quotes, here is one of the weddings we planned — the way it unfolded, and the way it felt.",
     },
     items: [],
     caseStudy: {
-      eyebrow: "Case study",
+      eyebrow: "Our work, up close",
       title: "A & T, a September wedding in Spain.",
       couple: "A & T",
       location: "A private estate in the Spanish countryside",
@@ -630,14 +630,11 @@ const en: Content = {
         "The days unfolded gently: champagne in the garden as the light turned gold, long tables set low and close, a polaroid guestbook filling up by candlelight. Elegance without noise — every detail chosen to disappear into the atmosphere rather than stand in front of it.",
         "Our work was to keep it that way. Behind the ease: months of quiet planning, a hand-picked team, and a single point of contact, so A & T never had to think about logistics — only about the people around them.",
       ],
-      highlightsTitle: "Planning highlights",
+      highlightsTitle: "From the inside.",
       highlights: [
-        "A private estate, taken over entirely for the weekend",
-        "Champagne welcome in the gardens at golden hour",
-        "A polaroid guestbook, filled over the course of the evening",
-        "Quiet luxury throughout — elegance without performance",
-        "Candlelit dinner under the trees, long after sunset",
-        "One point of contact for A & T, from first call to farewell",
+        "The estate was theirs alone for the weekend — gates closed, gardens open, nothing on the schedule that didn't need to be. Guests drifted in through the afternoon, and the pace slowed before anyone noticed it changing.",
+        "Champagne as the light turned gold. Long tables set low and close, dinner under the trees long after sunset, a polaroid guestbook filling slowly by candlelight — no one watching the clock.",
+        "Behind all of it: months of quiet planning, a team chosen one by one, and a single point of contact from the first call to the farewell.",
       ],
       galleryEyebrow: "The wedding, in pictures",
       galleryTitle: "A closer look.",
@@ -829,7 +826,7 @@ const pt: Content = {
     about: "Sobre",
     services: "Serviços",
     destination: "Casar na Espanha",
-    testimonials: "Casamento Real",
+    testimonials: "Depoimentos",
     partners: "Parceiros",
     faq: "Perguntas",
     contact: "Contato",
@@ -1215,18 +1212,18 @@ const pt: Content = {
 
   testimonials: {
     meta: {
-      title: "Casamento Real na Espanha — Estudo de Caso | Sol Mediterraneo",
+      title: "Um Casamento Real na Espanha | Sol Mediterraneo",
       description:
-        "Um olhar detalhado sobre um dos casamentos internacionais que planejamos na Espanha — o casal, o lugar, o processo de planejamento e o que fez tudo parecer sem esforço.",
+        "Um casamento de setembro para A & T em uma propriedade privada no interior da Espanha — planejado de longe, contado como foi sentido.",
     },
     hero: {
       eyebrow: "Um casamento real",
       title: "Um casamento, contado como merece.",
-      body: "Ficamos pequenos de propósito. No lugar de uma parede de citações, um olhar cuidadoso sobre um dos casamentos que planejamos — o casal, o lugar e o que foi preciso para tudo parecer natural.",
+      body: "Ficamos pequenos de propósito. No lugar de uma parede de citações, um dos casamentos que planejamos — do jeito que aconteceu e do jeito que se sentiu.",
     },
     items: [],
     caseStudy: {
-      eyebrow: "Estudo de caso",
+      eyebrow: "O nosso trabalho, de perto",
       title: "A & T, um casamento em setembro na Espanha.",
       couple: "A & T",
       location: "Uma propriedade privada no interior da Espanha",
@@ -1236,14 +1233,11 @@ const pt: Content = {
         "Os dias se desenrolaram com calma: champanhe no jardim enquanto a luz ficava dourada, mesas longas e próximas, um guestbook de polaroids se preenchendo à luz de velas. Elegância sem ruído — cada detalhe escolhido para desaparecer na atmosfera, e não para se colocar à frente dela.",
         "O nosso trabalho foi manter exatamente assim. Por trás da leveza: meses de Wedding Planning silencioso, uma equipe selecionada a dedo e um único ponto de contato, para que A & T nunca precisasse pensar em logística — apenas nas pessoas ao redor.",
       ],
-      highlightsTitle: "Destaques do planejamento",
+      highlightsTitle: "Por dentro.",
       highlights: [
-        "Uma propriedade privada, reservada por inteiro para o fim de semana",
-        "Boas-vindas com champanhe nos jardins, na golden hour",
-        "Um guestbook de polaroids, preenchido ao longo da noite",
-        "Quiet luxury do começo ao fim — elegância sem performance",
-        "Jantar à luz de velas sob as árvores, muito depois do pôr do sol",
-        "Um único ponto de contato para A & T, da primeira call à despedida",
+        "A propriedade foi só deles pelo fim de semana — portões fechados, jardins abertos, nada na agenda que não precisasse estar. Os convidados foram chegando ao longo da tarde, e o ritmo desacelerou antes que alguém percebesse.",
+        "Champanhe enquanto a luz ficava dourada. Mesas longas, baixas e próximas; jantar sob as árvores, muito depois do pôr do sol; um guestbook de polaroids se preenchendo devagar à luz de velas — ninguém olhando o relógio.",
+        "Por trás de tudo: meses de Wedding Planning silencioso, uma equipe escolhida a dedo e um único ponto de contato, da primeira call à despedida.",
       ],
       galleryEyebrow: "O casamento, em imagens",
       galleryTitle: "Um olhar mais próximo.",
