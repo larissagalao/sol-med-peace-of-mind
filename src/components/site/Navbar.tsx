@@ -18,6 +18,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "about", kind: "page" },
   { id: "services", kind: "page" },
   { id: "destination", kind: "page" },
+  { id: "testimonials", kind: "page" },
   { id: "partners", kind: "page" },
   { id: "journal", kind: "extra", label: { en: "Journal", pt: "Diário" }, href: BLOG_INDEX },
   { id: "faq", kind: "page" },

@@ -23,11 +23,8 @@ export const ROUTES: Record<PageId, Record<Lang, string>> = {
   contact:       { en: "/contact",                       pt: "/pt/contato" },
 };
 
-// Note: "testimonials" is intentionally omitted from ALL_PAGE_IDS while the
-// Real Wedding case study is hidden — this keeps it out of the sitemap and
-// nav lookups. The route file still resolves for any existing links.
 export const ALL_PAGE_IDS: PageId[] = [
-  "home", "about", "services", "destination", "partners", "faq", "contact",
+  "home", "about", "services", "destination", "testimonials", "partners", "faq", "contact",
 ];
 
 export function altPath(pageId: PageId, lang: Lang): string {
