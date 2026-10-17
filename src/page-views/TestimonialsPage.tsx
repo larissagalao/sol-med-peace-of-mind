@@ -116,20 +116,11 @@ export function TestimonialsPage({ lang }: { lang: Lang }) {
             <div className="eyebrow mb-4">{cs.eyebrow}</div>
             <h2 className="text-balance">{cs.title}</h2>
           </div>
-          <div className="md:col-span-5 space-y-3 text-sm text-navy/70">
-            <div className="flex gap-3">
-              <span className="eyebrow text-navy/50 shrink-0 w-24">Couple</span>
-              <span className="text-navy">{cs.couple}</span>
-            </div>
-            <div className="flex gap-3">
-              <span className="eyebrow text-navy/50 shrink-0 w-24">Location</span>
-              <span className="text-navy">{cs.location}</span>
-            </div>
-            <div className="flex gap-3">
-              <span className="eyebrow text-navy/50 shrink-0 w-24">Date</span>
-              <span className="text-navy">{cs.dateLabel}</span>
-            </div>
-          </div>
+          <p className="md:col-span-5 font-serif text-xl italic text-navy/70 leading-relaxed self-end">
+            {lang === "pt"
+              ? "Um fim de semana de setembro. Uma propriedade privada no interior da Espanha. Planejado de longe, sentido como casa."
+              : "A September weekend. A private estate in the Spanish countryside. Planned from abroad, felt like home."}
+          </p>
         </div>
       </section>
 
@@ -147,13 +138,8 @@ export function TestimonialsPage({ lang }: { lang: Lang }) {
 
       {/* STORY */}
       <section className="container-editorial pb-16 md:pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          <div className="md:col-span-4">
-            <div className="eyebrow mb-5">The story</div>
-          </div>
-          <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-navy/80 leading-relaxed">
-            {cs.story.map((p, i) => <p key={i}>{p}</p>)}
-          </div>
+        <div className="max-w-2xl space-y-6 text-lg text-navy/80 leading-relaxed">
+          {cs.story.map((p, i) => <p key={i}>{p}</p>)}
         </div>
       </section>
 
@@ -174,23 +160,16 @@ export function TestimonialsPage({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* PLANNING HIGHLIGHTS */}
+      {/* THE WEEKEND */}
       <section className="container-editorial py-24 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <div className="eyebrow mb-5">Planning</div>
+            <div className="eyebrow mb-5">{lang === "pt" ? "O fim de semana" : "The weekend"}</div>
             <h2 className="text-balance">{cs.highlightsTitle}</h2>
           </div>
-          <ul className="md:col-span-7 md:col-start-6 space-y-4">
-            {cs.highlights.map((h, i) => (
-              <li key={i} className="grid grid-cols-[auto_1fr] gap-5 pb-4 border-b border-border">
-                <span className="font-serif text-2xl text-gold leading-none pt-1">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="text-navy/85 leading-relaxed">{h}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="md:col-span-7 md:col-start-6 space-y-6 text-lg text-navy/85 leading-relaxed">
+            {cs.highlights.map((p, i) => <p key={i}>{p}</p>)}
+          </div>
         </div>
       </section>
 
