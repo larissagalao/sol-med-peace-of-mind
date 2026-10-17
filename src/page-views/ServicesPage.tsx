@@ -111,6 +111,19 @@ export function ServicesPage({ lang }: { lang: Lang }) {
           <ul className="space-y-3">
             <li>
               <Link
+                to={ROUTES.testimonials[lang]}
+                className="group inline-flex items-baseline gap-3 font-serif text-xl text-navy hover:text-gold transition-colors"
+              >
+                <span className="text-gold">→</span>
+                <span className="underline decoration-gold/30 underline-offset-4 group-hover:decoration-gold">
+                  {lang === "pt"
+                    ? "Casamento Real: A & T, um casamento de setembro na Espanha"
+                    : "Real Wedding: A & T, a September wedding in Spain"}
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
                 to={POST_SLUGS["cost-of-a-wedding-in-spain"][lang]}
                 className="group inline-flex items-baseline gap-3 font-serif text-xl text-navy hover:text-gold transition-colors"
               >
