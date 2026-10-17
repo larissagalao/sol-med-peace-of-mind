@@ -117,8 +117,8 @@ export function ServicesPage({ lang }: { lang: Lang }) {
                 <span className="text-gold">→</span>
                 <span className="underline decoration-gold/30 underline-offset-4 group-hover:decoration-gold">
                   {lang === "pt"
-                    ? "Casamento Real: A & T, um casamento de setembro na Espanha"
-                    : "Real Wedding: A & T, a September wedding in Spain"}
+                    ? "Depoimentos: A & T, um casamento de setembro na Espanha"
+                    : "Testimonials: A & T, a September wedding in Spain"}
                 </span>
               </Link>
             </li>
