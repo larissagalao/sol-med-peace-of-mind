@@ -626,9 +626,13 @@ const en: Content = {
       location: "A private estate in the Spanish countryside",
       dateLabel: "September 2026",
       story: [
-        "Some weddings are designed to be seen. A & T's was designed to be felt — a September weekend on a private estate, where the pace slowed the moment guests arrived and nothing needed to prove anything.",
-        "The days unfolded gently: champagne in the garden as the light turned gold, long tables set low and close, a polaroid guestbook filling up by candlelight. Elegance without noise — every detail chosen to disappear into the atmosphere rather than stand in front of it.",
-        "Our work was to keep it that way. Behind the ease: months of quiet planning, a hand-picked team, and a single point of contact, so A & T never had to think about logistics — only about the people around them.",
+        "Some weddings are defined by their details. Others, by the feeling they leave behind.",
+        "A & T's was an intimate celebration at a private villa, bringing together two nationalities, two cultures, and the people who mattered most to them.",
+        "The aesthetic was intentionally understated: a palette of white and silver, carefully chosen flowers, and considered details that came together to create an atmosphere of effortless elegance. Nothing excessive, nothing out of place.",
+        "But beyond the setting, it was the personal touches that made the weekend theirs. Danish traditions met the flavours and customs close to Brazilian hearts, with music, shared meals, and moments that brought both cultures together. Letters written for each guest, heartfelt speeches, and games around the dinner table made space for what mattered most: connection, laughter, and time spent with the people they love.",
+        "Every detail had a purpose, and every choice was made with the guest experience in mind.",
+        "Our role was to bring it all together seamlessly, allowing A & T to be fully present in the moments they had so carefully imagined.",
+        "An elegant celebration, shaped by two cultures and held together by the people who made it special.",
       ],
       highlightsTitle: "From the inside.",
       highlights: [
@@ -1231,9 +1235,13 @@ const pt: Content = {
       location: "Uma propriedade privada no interior da Espanha",
       dateLabel: "Setembro de 2026",
       story: [
-        "Alguns casamentos são feitos para serem vistos. O de A & T foi feito para ser sentido — um fim de semana de setembro em uma propriedade privada, onde o ritmo desacelerou no momento em que os convidados chegaram e nada precisava provar nada.",
-        "Os dias se desenrolaram com calma: champanhe no jardim enquanto a luz ficava dourada, mesas longas e próximas, um guestbook de polaroids se preenchendo à luz de velas. Elegância sem ruído — cada detalhe escolhido para desaparecer na atmosfera, e não para se colocar à frente dela.",
-        "O nosso trabalho foi manter exatamente assim. Por trás da leveza: meses de Wedding Planning silencioso, uma equipe selecionada a dedo e um único ponto de contato, para que A & T nunca precisasse pensar em logística — apenas nas pessoas ao redor.",
+        "Alguns casamentos são definidos pelos seus detalhes. Outros, pelo sentimento que deixam para trás.",
+        "O de A & T foi uma celebração íntima em uma villa privada, reunindo duas nacionalidades, duas culturas e as pessoas que mais importavam para eles.",
+        "A estética foi intencionalmente discreta: uma paleta de branco e prata, flores escolhidas a dedo e detalhes pensados, que se uniram para criar uma atmosfera de elegância sem esforço. Nada em excesso, nada fora do lugar.",
+        "Mas, além do cenário, foram os toques pessoais que fizeram o fim de semana ser deles. As tradições dinamarquesas encontraram os sabores e costumes queridos para o coração brasileiro, com música, refeições compartilhadas e momentos que uniram as duas culturas. Cartas escritas para cada convidado, discursos sinceros e jogos à mesa do jantar abriram espaço para o que mais importava: conexão, risadas e tempo ao lado das pessoas que amam.",
+        "Cada detalhe tinha um propósito, e cada escolha foi feita a pensar na experiência dos convidados.",
+        "O nosso papel foi unir tudo isso de forma impecável, permitindo que A & T estivessem plenamente presentes nos momentos que tinham imaginado com tanto cuidado.",
+        "Uma celebração elegante, moldada por duas culturas e unida pelas pessoas que a tornaram especial.",
       ],
       highlightsTitle: "Por dentro.",
       highlights: [
