@@ -614,9 +614,9 @@ const en: Content = {
         "A September wedding for A & T on a private estate in the Spanish countryside — planned from abroad, told the way it felt.",
     },
     hero: {
-      eyebrow: "A real wedding",
-      title: "One wedding, told properly.",
-      body: "We stay small on purpose. Rather than a wall of quotes, here is one of the weddings we planned — the way it unfolded, and the way it felt.",
+      eyebrow: "Our portfolio",
+      title: "Every wedding tells a story.",
+      body: "No two celebrations are alike. Each one reflects the people, the details, and the moments that make it uniquely theirs. Explore the weddings we've had the pleasure of bringing to life, each thoughtfully planned and personal in its own way.",
     },
     items: [],
     caseStudy: {
@@ -1223,9 +1223,9 @@ const pt: Content = {
         "Um casamento de setembro para A & T em uma propriedade privada no interior da Espanha — planejado de longe, contado como foi sentido.",
     },
     hero: {
-      eyebrow: "Um casamento real",
-      title: "Um casamento, contado como merece.",
-      body: "Ficamos pequenos de propósito. No lugar de uma parede de citações, um dos casamentos que planejamos — do jeito que aconteceu e do jeito que se sentiu.",
+      eyebrow: "O nosso portfólio",
+      title: "Cada casamento conta uma história.",
+      body: "Nenhuma celebração é igual à outra. Cada uma reflete as pessoas, os detalhes e os momentos que a tornam única. Explore os casamentos que tivemos o prazer de realizar — cada um pensado com cuidado e pessoal à sua maneira.",
     },
     items: [],
     caseStudy: {
