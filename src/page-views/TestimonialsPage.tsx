@@ -8,7 +8,7 @@ import atBrideGarden from "@/assets/at-bride-garden.jpeg.asset.json";
 import atHandsUnderTable from "@/assets/at-hands-under-table.jpeg.asset.json";
 
 const atRingsShoulder = {
-  url: "/images/at-rings-shoulder.jpeg",
+  url: "/at-rings-shoulder.jpeg",
 };
 
 import atLaceVeilChandelier from "@/assets/at-lace-veil-chandelier.jpeg.asset.json";
