@@ -138,7 +138,7 @@ export function TestimonialsPage({ lang }: { lang: Lang }) {
 
       {/* STORY */}
       <section className="container-editorial pb-16 md:pb-24">
-        <div className="max-w-2xl space-y-6 text-lg text-navy/80 leading-relaxed">
+        <div className="space-y-6 text-lg text-navy/80 leading-relaxed text-justify">
           {cs.story.map((p, i) => <p key={i}>{p}</p>)}
         </div>
       </section>
