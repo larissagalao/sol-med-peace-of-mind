@@ -6,11 +6,7 @@ import { CTABanner } from "@/components/site/CTABanner";
 
 import atBrideGarden from "@/assets/at-bride-garden.jpeg.asset.json";
 import atHandsUnderTable from "@/assets/at-hands-under-table.jpeg.asset.json";
-
-const atRingsShoulder = {
-  url: "/at-rings-shoulder.jpeg",
-};
-
+import atRingsShoulder from "@/assets/at-hands-under-table.jpeg.asset.json";
 import atLaceVeilChandelier from "@/assets/at-lace-veil-chandelier.jpeg.asset.json";
 import atChampagneTower from "@/assets/at-champagne-tower.jpeg.asset.json";
 import atStepsKiss from "@/assets/at-steps-kiss-bw.jpeg.asset.json";
