@@ -25,7 +25,7 @@ interface Frame {
 /** A & T — September 2026. Editorial gallery, curated rather than exhaustive. */
 const GALLERY: Frame[] = [
   {
-    src: atHandsUnderTable.png,
+    src: atHandsUnderTable.url,
     alt: "The couple holding hands beneath the dinner table",
     aspect: "aspect-[4/3]",
     span: "md:col-span-3",
